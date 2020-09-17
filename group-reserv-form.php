@@ -251,8 +251,6 @@ Template Name: 教育機関・医療機関用、予約フォーム
                                       while ( $the_query->have_posts() ) : $the_query->the_post();
                                       ?>
 
-
-
                         <dl class="p-question-box">
                             <dt class="p-question-box__ttl js-accordion">
                                 <span class="p-question-box__fst-letter u-f-futura c-blue02">Q.</span>
@@ -265,17 +263,11 @@ Template Name: 教育機関・医療機関用、予約フォーム
                         </dl>
 
                     <?php endwhile; wp_reset_postdata(); ?>
-
-
-
                         <a href="<?php echo home_url( '/' ); ?>faq-corporation/" class="c-btn-circle-arw p-question__btn">よくある質問一覧へ</a>
-
-
-
                 </div>
-
-
+                <!-- ./p-question-list -->
     </div>
+    <!-- ./l-inner -->
 </section>
 
 
