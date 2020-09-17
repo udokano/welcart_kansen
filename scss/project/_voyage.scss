@@ -1,0 +1,183 @@
+/*
+海外渡航に関して
+----------------------------*/
+
+.p-voyage-block {
+    padding-top: 2.88rem;
+    margin-bottom: 1.88rem;
+
+    &__desc {
+        margin-bottom: 1.2rem;
+        font-size: rem(19);
+        letter-spacing: .0025em;
+        line-height: 1.78;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        a {
+            word-break: break-all;
+        }
+    }
+}
+
+/* 記事へのリンクボタン */
+
+.p-voyage-links {
+    padding: 1.78rem 0 3.25rem;
+
+    &__ttl {
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.78rem;
+        margin-bottom: 1.55rem;
+    }
+
+    &__desc {
+        font-size: rem(16);
+        line-height: 1.74;
+    }
+}
+
+.p-voyage-btns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+
+    @media (min-width: 768px) {
+        &::after {
+            content: "";
+            display: block;
+            width: 22%;
+        }
+    }
+
+    &__item {
+        width: 22%;
+        height: 67px;
+        background-color: $blue04;
+        margin-bottom: 1.2rem;
+
+        @media (max-width: 767px) {
+            width: 48%;
+            height: 13vw;
+            margin-bottom: .95rem;
+        }
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        position: relative;
+        padding: 0 .68rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: rem(12);
+            border-bottom: rem(3) solid #fff;
+            border-right: rem(3) solid #fff;
+            transform: translateY(-50%) rotate(-45deg);
+            width: rem(10);
+            height: rem(10);
+        }
+    }
+
+    &__ttl {
+        position: absolute;
+        color: #fff;
+        font-size: rem(14);
+        text-align: center;
+        line-height: 1.28;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.c-blue-arw-btn {
+    display: block;
+    background-color: $blue;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: rem(12);
+        border-bottom: rem(3) solid #fff;
+        border-right: rem(3) solid #fff;
+        transform: translateY(-50%) rotate(-45deg);
+        width: rem(10);
+        height: rem(10);
+    }
+}
+
+/*
+
+記事詳細ページ
+--------------------------------*/
+
+.p-single-voyage {
+    padding: 3.88rem 0;
+
+    &__ttl {
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.88rem;
+        line-height: 1.28;
+        letter-spacing: 0.0075em;
+        margin-bottom: 3.55rem;
+    }
+
+    &__intro {
+        font-size: rem(19);
+        letter-spacing: 0.025em;
+        line-height: 1.78;
+        margin-bottom: 2.88rem;
+    }
+
+    &__desc {
+        margin-bottom: 1.2rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 1.4rem;
+        }
+    }
+}
+
+.p-voyage-box {
+    margin-bottom: 2.25rem;
+
+    &__ttl {
+        font-size: 1.37rem;
+        font-weight: 600;
+        margin-bottom: 1.42rem;
+    }
+
+    &__ttl-sub {
+        display: inline-block;
+
+        &::after {
+            background-color: #666;
+        }
+    }
+
+    &__desc {
+        font-size: 1.08rem;
+        line-height: 1.75;
+
+        p {
+            margin-bottom: 1.4rem;
+        }
+    }
+}

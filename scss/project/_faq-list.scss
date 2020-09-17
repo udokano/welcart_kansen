@@ -1,0 +1,119 @@
+/*
+
+よくある質問
+
+----------------------------------*/
+
+/* タブ */
+
+.p-faq-tab {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 3.55rem;
+
+    &__list {
+        display: inline-block;
+        width: 45%;
+        max-width: 255px;
+        margin: 0 .55rem;
+    }
+
+    &__link {
+        font-size: 1.34rem;
+        font-weight: 600;
+        display: block;
+        background-color: #5eb2d0;
+        border: rem(1) solid #5eb2d0;
+        color: #fff;
+        line-height: 1;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        letter-spacing: .075em;
+    }
+}
+
+.is-tab-active {
+    background-color: #fff;
+    color: #5eb2d0;
+}
+
+/* アーカイブ */
+
+.p-faq {
+    padding: 3.5rem 0;
+
+    &__list {
+        margin-bottom: 3.2rem;
+    }
+
+    &__item {
+        margin-bottom: 1.78rem;
+        background-color: #fff;
+        border: 1px solid #579ac1;
+        padding: 1.1rem 1.88rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            padding: 1.78rem 1.2rem;
+        }
+    }
+
+    &__item-box {}
+
+    &__item-ttl, &__item-answer {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item-ttl {
+        border-bottom: 1px solid #d2d2d2;
+        margin-bottom: .62rem;
+
+        @media (max-width: 767px) {
+            padding-bottom: .66rem;
+            margin-bottom: .75rem;
+        }
+    }
+
+    &__item-answer {
+        span {
+            padding-left: .31rem;
+        }
+    }
+
+    &__fst-letter {
+        font-size: 2.7rem;
+        display: inline-block;
+        margin-right: 1.3rem;
+        width: 3.6rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.92rem;
+            width: 10%;
+        }
+    }
+
+    &__qa-text {
+        font-size: 1.42rem;
+        line-height: 1.37;
+        width: 88%;
+
+        @media (max-width: 767px) {
+            font-size: 1.14rem;
+            width: 90%;
+        }
+    }
+
+    &__answer-text {
+        font-size: 1.15rem;
+        width: 88%;
+
+        @media (max-width: 767px) {
+            font-size: 1.01rem;
+            width: 90%;
+        }
+    }
+}

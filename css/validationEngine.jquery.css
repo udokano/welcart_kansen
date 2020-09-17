@@ -1,0 +1,252 @@
+/* Z-INDEX */
+.formError {
+    z-index: 990;
+}
+
+.formError .formErrorContent {
+    z-index: 991;
+}
+
+.formError .formErrorArrow {
+    z-index: 996;
+}
+
+.ui-dialog .formError {
+    z-index: 5000;
+}
+
+.ui-dialog .formError .formErrorContent {
+    z-index: 5001;
+}
+
+.ui-dialog .formError .formErrorArrow {
+    z-index: 5006;
+}
+
+.inputContainer {
+    position: relative;
+    float: left;
+}
+
+.formError {
+    position: absolute;
+
+    /* top: 3.7rem !important; */
+    top: 0;
+    left: 50% !important;
+    transform: translateX(-50%);
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    width: 73%;
+}
+
+/* 購入画面 */
+
+.-op-radio .formError {
+    height: 30px !important;
+    line-height: 30px !important;
+}
+
+@media (max-width: 767px) {
+    .-op-radio .formError {
+        height: 40px !important;
+        line-height: 40px !important;
+    }
+}
+
+.formError.inline {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+
+.ajaxSubmit {
+    padding: 20px;
+    background: #55ea55;
+    border: 1px solid #999;
+    display: none;
+}
+
+.formError .formErrorContent {
+    width: 100%;
+    background: #f57575;
+    position: relative;
+    color: #fff;
+    min-width: 120px;
+    font-size: .98rem;
+    border: 1px solid #f57575;
+    padding: 12px 18px;
+    border-radius: 3px;
+    line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+    .formError {}
+
+    .formError .formErrorContent {
+        padding: .25rem .25rem;
+    }
+}
+
+/* 新規会員ページ */
+
+#new__member__form .formError {
+    top: 54% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+#new__member__form .customer_form .formError .formErrorContent {
+    width: 160px !important;
+}
+
+/* お客様情報 */
+
+.customer_form .formError {
+    top: 45% !important;
+}
+
+.customer_form .formError .formErrorContent {
+    width: 190px !important;
+}
+
+.formError.inline .formErrorContent {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+/* 配送先設定 */
+@media (max-width: 767px) {
+    #delivery_table .formError {
+        left: 40% !important;
+    }
+
+    #delivery_table .formError .formErrorContent {
+        width: 6.8rem !important;
+    }
+}
+
+.greenPopup .formErrorContent {
+    background: #33be40;
+}
+
+.blackPopup .formErrorContent {
+    background: #393939;
+    color: #FFF;
+}
+
+.formError .formErrorArrow {
+    width: 15px;
+    margin: -2px 0 0 13px;
+    position: relative;
+}
+
+body[dir='rtl'] .formError .formErrorArrow,
+body.rtl .formError .formErrorArrow {
+    margin: -2px 13px 0 0;
+}
+
+.formError .formErrorArrowBottom {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    margin: 0px 0 0 12px;
+    top: 2px;
+}
+
+.formError .formErrorArrow div {
+    /*  border-left: 2px solid #ddd;
+     border-right: 2px solid #ddd;
+     box-shadow: 0 2px 3px #444;
+     -moz-box-shadow: 0 2px 3px #444;
+     -webkit-box-shadow: 0 2px 3px #444;
+     -o-box-shadow: 0 2px 3px #444; */
+    font-size: 0px;
+    height: 1px;
+    background: #e35d5d;
+    margin: 0 auto;
+    line-height: 0;
+    font-size: 0;
+    display: block;
+    display: none;
+}
+
+.formError .formErrorArrowBottom div {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+.greenPopup .formErrorArrow div {
+    background: #33be40;
+}
+
+.blackPopup .formErrorArrow div {
+    background: #393939;
+    color: #FFF;
+}
+
+.formError .formErrorArrow .line10 {
+    width: 13px;
+    border: none;
+    display: none;
+}
+
+.formError .formErrorArrow .line9 {
+    width: 11px;
+    border: none;
+    display: none;
+}
+
+.formError .formErrorArrow .line8 {
+    width: 11px;
+    display: none;
+}
+
+.formError .formErrorArrow .line7 {
+    width: 9px;
+    display: none;
+}
+
+.formError .formErrorArrow .line6 {
+    width: 7px;
+    display: none;
+}
+
+.formError .formErrorArrow .line5 {
+    width: 5px;
+    display: none;
+}
+
+.formError .formErrorArrow .line4 {
+    width: 3px;
+    display: none;
+}
+
+.formError .formErrorArrow .line3 {
+    width: 1px;
+    display: none;
+
+    /*  border-left: 2px solid #ddd;
+     border-right: 2px solid #ddd;
+     border-bottom: 0 solid #ddd; */
+}
+
+.formError .formErrorArrow .line2 {
+    width: 3px;
+    border: none;
+    background: #ddd;
+    display: none;
+}
+
+.formError .formErrorArrow .line1 {
+    width: 1px;
+    border: none;
+    background: #ddd;
+    display: none;
+}

@@ -1,0 +1,305 @@
+/* reset & set
+-------------------------------------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    border: 0;
+    outline: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a img:hover,
+a:hover {
+    opacity: 0.8;
+}
+
+li img {
+    display: block;
+}
+
+a img {
+    border-style: none;
+}
+
+img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+//フォームリセット
+
+input,
+label,
+button,
+submit,
+textarea {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font: inherit;
+    box-sizing: border-box;
+    outline: none;
+    background: transparent;
+}
+
+input[type='text'] {
+    appearance: none;
+    line-height: normal;
+
+    &::focus {
+        border: 2px solid #676767;
+    }
+}
+
+input[type='text'], select {
+    &::focus {
+        border-color: #616161;
+    }
+}
+
+input[type="submit"],
+input[type="button"] {
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    -webkit-appearance: button;
+    appearance: button;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+
+    &::-webkit-search-decoration {
+        display: none;
+    }
+
+    &::focus {
+        outline-offset: -2px;
+    }
+}
+
+select {
+    border: none;
+    outline: none;
+    appearance: none;
+    background: #fff url(../img/ec/select_arrow.png) no-repeat 95% 50% / 12px auto;
+
+    &:focus {
+        border: 2px solid #676767;
+    }
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
+}
+
+/* Make webkit render the search input like a normal text field */
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+    display: none;
+}
+
+/* Turn off scroll bars in IE unless needed */
+textarea {
+    overflow: auto;
+    appearance: none;
+}
+
+@font-face {
+    font-family: "DINPro Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DINPro Medium"), url("../fonts/DINPro-Medium tr.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Futura-Bk-Book";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Futura-Bk-Book"), url("../fonts/Futura-Bk-Book.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Blacksword";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Blacksword"), url("../fonts/Blacksword.otf") format("OpenType");
+}
+
+@font-face {
+    font-family: "FuturaPTBook";
+    font-style: normal;
+    font-weight: normal;
+    src: local("FuturaPTBook"), url("../fonts/FuturaPTBook.woff") format("woff");
+}
+
+/* REM PX変換 */
+
+$baseFontsize: 16;
+
+html {
+    //font-size: 100%;
+    font-size: $baseFontsize + px;
+}
+
+@function rem($pixels) {
+    @return $pixels / $baseFontsize * 1rem;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W5", "ヒラギノ角ゴシック W5", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "Yu Gothic UI", sans-serif;
+    color: #404040;
+}
+
+/* トップページのみ */
+
+body.home {
+    font-family: "ヒラギノ角ゴ StdN", "Hiragino Kaku Gothic StdN", sans-serif;
+    color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 3.33333vw;
+    }
+}
+
+/*パンくずリスト*/
+
+.path {
+    text-align: center;
+    display: table;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        display: inline-block;
+    }
+
+    li {
+        display: table-cell;
+        padding-right: 0.7rem;
+        color: #a0a0a0;
+        font-size: 0.5rem;
+        vertical-align: middle;
+
+        @media (max-width: 767px) {
+            display: inline-block;
+        }
+
+        a {
+            font-size: 0.5rem;
+            font-family: $gosic;
+            color: #a0a0a0;
+        }
+
+        &:nth-of-type(2) {
+            line-height: 1;
+        }
+
+        &:last-of-type {
+            margin: 0;
+            padding-right: 0;
+        }
+    }
+}

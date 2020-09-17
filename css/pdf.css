@@ -1,0 +1,459 @@
+/* reset & set
+-------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    border: 0;
+    outline: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a img:hover, a:hover {
+    opacity: 0.8;
+}
+
+li img {
+    display: block;
+}
+
+a img {
+    border-style: none;
+}
+
+img {
+    vertical-align: bottom;
+    width: auto;
+    max-width: 100%;
+}
+
+/*
+./reset
+---------------------------------------------------*/
+
+body {
+    font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','ヒラギノ角ゴシック','Hiragino Sans',YuGothic,'Yu Gothic','メイリオ', Meiryo,'Yu Gothic UI',sans-serif;
+}
+
+/* wrapper */
+
+.wrapper {
+    width: 100%;
+    margin-top: -180px;
+
+    /* height: 800px;
+    border: 2px solid #373737; */
+    padding: 30px 25px;
+}
+
+/* タイトル共通 */
+
+.head {
+    border-bottom: 1px solid #000;
+    margin-bottom: 14px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0 3px;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: serif;
+    letter-spacing: .4em;
+    margin-top: -240px;
+    position: absolute;
+    left: 0;
+    top: 188pt;
+    width: 800px;
+}
+
+h1 span {
+    text-align: center;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+/* 陰性タイトル */
+
+/* .type01 {
+    background-color: #fff2ef;
+    color: #000;
+} */
+
+/* 陽性タイトル */
+
+/* .type02 {
+    background-color: #373737;
+    color: #fff;
+} */
+
+.sq_mark, .sq__text {
+    vertical-align: middle;
+}
+
+.mb0 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 出力表 */
+
+.list {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000;
+}
+
+.ans {
+    margin: 40px 0 60px;
+    text-align: center;
+}
+
+.output__table {
+    width: 100%;
+}
+
+.sq__mark {
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.sq__text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.big__text {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.c01 {
+    color: #5aa9cb;
+    font-size: 48px;
+}
+
+.c02 {
+    color: #bd1c10;
+    font-size: 48px;
+}
+
+.diagnosis__text {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.sub__text {
+    text-align: center;
+    font-size: 12px;
+}
+
+.p-note {
+    position: absolute;
+    left: 305px;
+    top: 325pt;
+    font-size: 10px;
+}
+
+.total {
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 8px;
+
+    /* margin-top: 865px; */
+    width: 100%;
+    position: absolute;
+    top: 290pt;
+    left: 102px;
+    width: 600px;
+
+    /*  border-bottom: 1px solid #000; */
+    /*  display: inline-block; */
+}
+
+.total-last {
+    margin-bottom: 24px;
+    font-size: 26px;
+    display: inline-block;
+    border-bottom: 4px double #000;
+}
+
+.total-line {
+    display: inline-block;
+}
+
+.footer-img {
+    margin: .55rem auto .95rem;
+    width: 100px;
+    display: block;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 13px;
+}
+
+.tb-wrap {
+    position: absolute;
+    left: 70px;
+    top: 355pt;
+    width: 660px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 25px;
+
+    /*  margin-top: 5880px; */
+}
+
+table tr {
+    border: 1px solid #000;
+}
+
+table tr th, table tr td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000;
+    width: 50%;
+    font-size: 18pt;
+}
+
+table thead tr th {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+table tfoot tr th {
+    background-color: #d7d7d7;
+}
+
+.campany-address-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campany-address {
+    font-size: 13px;
+}
+
+.campany-address--text-large {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 20px 0 4px;
+    line-height: 1;
+}
+
+.campany-address--text-middle {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.campany-address--text-large span {
+    /* border-bottom: 3px double #000; */
+    padding-bottom: 1px;
+
+    /*  text-decoration: underline; */
+    display: inline-block;
+}
+
+.other {
+    border: 1px solid #000;
+    padding: 5px;
+    height: 50px;
+    margin-top: 2px;
+    position: absolute;
+    top: 600pt;
+    width: 670px;
+    font-size: 10pt;
+}
+
+.other-text {
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.num {
+    margin-bottom: 0px;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    padding: 2px;
+
+    /* color: #fff; */
+}
+
+.num span {
+    display: inline-block;
+    width: 50%;
+}
+
+.num dt {
+    /*  background-color: #000;
+     border: 1px solid #000; */
+    display: inline;
+    font-size: 12px;
+}
+
+.num dd {
+    border-bottom: 1px solid #000;
+    color: #000;
+    display: inline;
+    font-size: 12px;
+}
+
+.num-last {
+    margin-bottom: 14px;
+}
+
+.iii {
+    text-align: center;
+    display: block;
+    letter-spacing: .2em;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.line {
+    display: inline-block;
+}
+
+.head-wrap {
+    position: relative;
+}
+
+.head-left {
+    width: 480px;
+    height: 120px;
+    position: absolute;
+    left: 62px;
+    top: 165px;
+    font-size: 16pt;
+}
+
+.head-left02 {
+    width: 1080px;
+    height: 120px;
+    position: absolute;
+    left: 62px;
+    top: 165px;
+    font-size: 60pt;
+}
+
+.left-text {
+    font-size: 60pt !important;
+}
+
+.top-name02 {
+    font-size: 60pt;
+}
+
+.right-text {
+    font-size: 18px !important;
+}
+
+.right-inner {
+    position: relative;
+    z-index: 99999;
+}
+
+.hanko {
+    position: absolute;
+    top: 220px;
+    right: 88px;
+    width: 50px;
+}
+
+.top-name {
+    position: absolute;
+    left: 65px;
+    top: 45px;
+    font-size: 20px;
+    height: 68px;
+    width: 450px;
+}
+
+.tc {
+    text-align: center;
+}
+
+.head-right {
+    position: absolute;
+    right: 62px;
+    top: 155px;
+    font-size: 12px;
+}
+
+.right-text--date {
+    font-size: 26px;
+    font-weight: 600;
+    display: block;
+    top: 178px;
+}
+
+.head-right--name {
+    top: 198px;
+    right: 60px;
+}
+
+.head-right--zip {
+    top: 215px;
+    right: 230px;
+}
+
+.head-right--text {
+    top: 230px;
+    right: 102px;
+    position: absolute;
+    font-size: 12px;
+}
+
+.zip {
+    display: inline-block;
+    width: 18px;
+    position: absolute;
+    top: 219px;
+    right: 285px;
+}
+
+.note-bottom, .hurikomi {
+    top: 880px;
+    position: absolute;
+    font-size: 8pt;
+}
+
+.note-bottom {
+    left: 60px;
+}
+
+.hurikomi {
+    right: 57px;
+}

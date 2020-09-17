@@ -1,0 +1,36 @@
+.l-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.l-section {}
+
+.l-inner {
+    width: 1150px;
+
+    //max-width: 1150px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        width: 90%;
+    }
+}
+
+.l--sp-width100 {
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.section__inner {
+    width: 92%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.l-access-inner {
+    max-width: 986px;
+    width: 90%;
+    margin: 0 auto;
+}
