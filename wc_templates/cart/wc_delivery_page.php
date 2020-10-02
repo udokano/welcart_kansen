@@ -53,6 +53,7 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 
 				<div class="error_message"><?php usces_error_message(); ?></div>
 				<form action="<?php usces_url('cart'); ?>" method="post" class="js-cart-form">
+			<?php if (!is_group_item_in_cart()) : ?>
 				<table class="customer_form" >
 					<tr >
 						<th rowspan="2" scope="row"><?php _e('shipping address', 'usces'); ?></th>
@@ -66,7 +67,10 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 } ?> onKeyDown="if (event.keyCode == 13) {return false;}" /> <label for="delivery_flag2"><?php _e('Chose another shipping address.', 'usces'); ?></label></td>
 					</tr>
 				</table>
-				<?php do_action('usces_action_delivery_flag'); ?>
+			<?php endif; ?>
+				<!--
+					複数購入ボタン　一旦非表示
+				<?php do_action('usces_action_delivery_flag'); ?> -->
 
 				<table class="customer_form" id="delivery_table">
 					<?php uesces_addressform( 'delivery', $usces_entries, 'echo' ); ?>
@@ -107,8 +111,10 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 					<tr>
 						<th scope="row"><?php _e('Notes', 'usces'); ?></th>
 						<td colspan="2"><textarea name="offer[note]" id="note" class="notes"><?php echo esc_html($entry_order_note); ?></textarea><br>
+						<?php if (!is_group_item_in_cart()) : ?>
 						<span style="color: red; font-size: 130%; line-height: 1.4; padding-top: 10px; display: block;">領収書が必要な方は備考欄に【領収書】と記載ください。<br>
 ご注文者様のお名前でメールでご案内させて頂いております。</span>
+						<?php endif; ?>
 						</td>
 					</tr>
 				</table>

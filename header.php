@@ -59,6 +59,10 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css?6dbddba84c650683"/>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?<?php echo filemtime( get_stylesheet_directory() . '/css/style.css'); ?>">
 
+<?php if (is_page('usces-member')): ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/add.css?<?php echo filemtime( get_stylesheet_directory() . '/css/add.css'); ?>">
+<?php endif; ?>
+
 <!-- ファビコン読み込み -->
 
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/img/favicon/apple-touch-icon.png?6dbddba84c650683">
@@ -254,7 +258,14 @@ jQuery(document).ready(function(){
 
         <div class="p-header__right p-header__right--top u-pc-display">
               <ul class="p-top-btns">
+
+
                 <li class="p-top-btns__item c-btn-gray">
+                  <a href="<?php echo home_url( '/' ); ?>group-form" class="p-top-btns__link c-btn-gray__link" >
+                  企業・団体様のご案内
+                  </a>
+                </li>
+                  <li class="p-top-btns__item c-btn-gray">
                   <a href="https://souki-kai.or.jp/rslt/" class="p-top-btns__link c-btn-gray__link" target="_blank">
                   結果通知サイトへ
                   </a>
@@ -320,6 +331,12 @@ jQuery(document).ready(function(){
 
         <div class="p-header__right p-header__right--top u-pc-display">
               <ul class="p-top-btns">
+                <li class="p-top-btns__item c-btn-gray">
+                  <a href="<?php echo home_url( '/' ); ?>group-form" class="p-top-btns__link c-btn-gray__link" >
+                  企業・団体様のご案内
+                  </a>
+                </li>
+
                 <li class="p-top-btns__item c-btn-gray">
                   <a href="https://souki-kai.or.jp/rslt/" class="p-top-btns__link c-btn-gray__link" target="_blank">
                   結果通知サイトへ

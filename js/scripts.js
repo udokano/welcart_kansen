@@ -563,6 +563,41 @@ jQuery(function () {
 
 });
 
+jQuery(function () {
+
+
+  jQuery(".customkey_brith_year select").on("change", function () {
+
+    var year_val = jQuery(this).val();
+    var sss = jQuery(".js-cart-form").attr('action').replace(year_val, '');
+    console.log(year_val);
+
+
+    //購入のステップごとにFORM actionの値を取得
+    var src = $(".js-cart-form").attr('action');
+    ///sss = jQuery(".js-cart-form").attr('action').replace("1989年", '');
+
+    jQuery(".js-cart-form").attr("action", sss + year_val);
+    /*  console.log(src);
+     jQuery(".js-cart-form").attr("action", sss); */
+    //確認ページのみクラス付与ができないので、別に指定
+
+    //URLのパラメータを取得
+    //var up = location.search;
+    //テスト出力
+    //console.log(up);
+    //フォームのactionの値にパラメーター連結
+    //jQuery('.js-cart-form').attr('action', pm_url + year_val);
+    //確認ページのみクラス付与ができないので、別に指定
+
+
+
+  });
+
+
+
+});
+
 
 /* var pppp = '?aa=ss'//location.search;
 
@@ -599,14 +634,82 @@ jQuery(function () {
   });
 });
 
+//振込完了フォームモーダル
 
+
+jQuery(function () {
+
+  jQuery(".js-modal-form-open").on('click', function () {
+    jQuery(".js-modal-form").addClass("is-modal-open");
+    jQuery("body").addClass("is-of-hidden");
+    return false;
+  });
+
+  jQuery('.js-modal-close').on('click', function () {
+    jQuery('.js-modal-form').removeClass("is-modal-open");
+    jQuery("body").removeClass("is-of-hidden");
+    return false;
+  });
+});
+
+
+//振込完了モーダルないのインプットに、注文番号と金額を挿入
+
+
+jQuery(".js-modal-form-open").on('click', function () {
+
+  var $ordernum = jQuery(this).parents("tbody").find(".order_number").text();
+  var $total = jQuery(this).parents("tbody").find(".purchase_price").text();
+  var $full_name = jQuery("#hidden__name__full").val();
+  var $email = jQuery("#hidden__mail").val();
+  var $company = jQuery("#hidden__company").val();
+  var $tel = jQuery("#hidden__tel").val();
+
+
+  //$(".wpcf7-response-output").css("display", "none");
+  $("#js-order-num").val($ordernum);
+  $("#js-deposit").val($total);
+  $("#js-name").val($full_name);
+  $("#js-your-email").val($email);
+  $("#js-company-name").val($company);
+  $("#js-tel-number").val($tel);
+
+
+});
+
+$('#js-payment-btn').click(function () {
+  if (!confirm('お振込完了の通知を送りますか？')) {
+    /* キャンセルの時の処理 */
+    return false;
+  } else {
+    /*　OKの時の処理 */
+    return true;
+  }
+});
+
+var wpcf7Elm = document.querySelector('.wpcf7');
+
+wpcf7Elm.addEventListener('wpcf7mailsent', function (event) {
+  /* alert("Fire!"); */
+  jQuery(".wpcf7-response-output").css("display", "block");
+
+  $(function () {
+    setTimeout(function () {
+      jQuery(".js-modal-form").removeClass("is-modal-open");
+      jQuery("body").removeClass("is-of-hidden");
+    }, 2000);
+  });
+
+
+
+
+}, false);
 
 
 
 /*
 
 スマホヘッダー上スクロールのみに表示
-
 ----------------------------------------- */
 
 //スマホ追従フッター

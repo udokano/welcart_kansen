@@ -47,7 +47,7 @@ get_header();
 				</div><!-- end of header_explanation -->
 
 				<div class="error_message"><?php usces_error_message(); ?></div>
-			<?php if (usces_is_membersystem_state()) : ?>
+			<?php if (usces_is_membersystem_state() && is_group_item_in_cart()) : ?>
 				<h5 class="customer-ttl"><?php _e('The member please enter at here.', 'usces'); ?></h5>
 				<form action="<?php usces_url('cart'); ?>" method="post" name="customer_loginform" onKeyDown="if (event.keyCode == 13) {return false;}" class="mb50 js-cart-form">
 				<table width="100%" border="0" cellpadding="0" cellspacing="0" class="customer_form">
@@ -76,7 +76,7 @@ get_header();
 						<th scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('e-mail adress', 'usces'); ?>(<?php _e('Re-input', 'usces'); ?>)</th>
 						<td colspan="2"><input name="customer[mailaddress2]" id="mailaddress2" type="text" value="<?php echo esc_attr($usces_entries['customer']['mailaddress2']); ?>" style="ime-mode: inactive" /></td>
 					</tr>
-			<?php if (usces_is_membersystem_state()) : ?>
+			<?php if (usces_is_membersystem_state() && is_group_item_in_cart()) : ?>
 					<tr>
 						<th scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('password', 'usces'); ?></th>
 						<td colspan="2"><input class="hidden" value=" " /><input name="customer[password1]" id="pass01" type="password" value="<?php echo esc_attr($usces_entries['customer']['password1']); ?>" autocomplete="off" /><?php if ($member_regmode != 'editmemberfromcart') {
@@ -93,6 +93,12 @@ get_header();
 
 			<?php uesces_addressform('customer', $usces_entries, 'echo'); ?>
 				</table>
+
+
+				<p class="u-tc c-pink u-fw600 u-text-under-line">※記載した住所がお間違いがないかをご確認ください。</p>
+
+
+
 				<input name="member_regmode" type="hidden" value="<?php echo $member_regmode; ?>" />
 				<div class="send" id="to__del">
 				<?php usces_get_customer_button(); ?>

@@ -247,9 +247,63 @@
                 </dd>
             </dl>
            </li>
+
+             <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">演劇関連事業</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>200人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide05.jpg?eb0af1f9c343d4c0" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                      <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">スタッフ・出演者のリスクヘッジ</li>
+                         <li class="p-case-slide-check__item">徹底した健康、衛生管理</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                   劇場公演、イベントなど不特定多数の方が集まりやすい演劇関連事業。<br class="">昨今のコロナ禍の中、クラスタの発生を危惧し多くの公演が軒並み中止となってしまう状況でした。<br class="">現在は少しずつではありますが、経済活動の再開に伴い、公演等を開催する動きが見られてきました、そこで、劇場スタッフや出演者のPCR検査を行い、万が一感染者がいた場合、治療に専念して頂き、クラスタの発生を未然に防ぎます。<br class="">検査に掛かる費用も<a href="https://www.bunka.go.jp/shinsei_boshu/kobo/20200706.html" class="c-pink" target="_blank">文化庁</a>の補助制度を利用する事で負担が少なく、検査を受けることが可能です。<br class="">また、検査後にお客様に安心して劇場へ足を運んで頂く為に、陰性証明ポスターをご用意しております。
+                    </p>
+                </dd>
+            </dl>
+           </li>
+
+           <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">スポーツイベント</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>120人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide06.jpg?55555555411" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                      <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">イベント中止といった最悪の事態を未然に防ぐ</li>
+                         <li class="p-case-slide-check__item">安心・安全の為に備える</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                  昨今のコロナ禍で厳しい状況が続いているスポーツイベント<br class="">今後の開催に向けての課題として、安心・安全な環境の整備が一層求められる事となります。<br class="">それに掛かる負担を少しでも軽くする為<a href="https://www.mext.go.jp/sports/b_menu/sports/mcatetop01/list/detail/jsa_00008.html" class="c-pink" target="_blank">スポーツ庁</a>がPCR検査費を補助する制度が用意されており、それを利用するイベント主催者様もいらっしゃいます。<br class="">スタッフ、選手の一斉検査によって予め感染状況を把握することにより、感染のリスクを減らし、予定していたイベントを中止する事なく、円滑にかつ本格的な開催を可能とします。
+                    </p>
+                </dd>
+            </dl>
+           </li>
        </ul>
 
-       <div class="p-pcr-slide-nav" id="js-nav-wrap">
+       <div class="p-pcr-slide-nav --nav-case" id="js-nav-wrap">
 
        </div>
 

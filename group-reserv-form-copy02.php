@@ -37,6 +37,11 @@ Template Name: 教育機関・医療機関用、予約フォーム
             <span class="p-anchor-list__text">よくあるご質問</span>
           </a>
         </li>
+     <!--     <li class="p-anchor-list__item">
+          <a href="#link-com-fax" class="p-anchor-list__link">
+            <span class="p-anchor-list__text">FAX</span>
+          </a>
+        </li> -->
         <li class="p-anchor-list__item">
           <a href="#link-form" class="p-anchor-list__link">
             <span class="p-anchor-list__text">お申し込みフォーム</span>
@@ -246,8 +251,6 @@ Template Name: 教育機関・医療機関用、予約フォーム
                                       while ( $the_query->have_posts() ) : $the_query->the_post();
                                       ?>
 
-
-
                         <dl class="p-question-box">
                             <dt class="p-question-box__ttl js-accordion">
                                 <span class="p-question-box__fst-letter u-f-futura c-blue02">Q.</span>
@@ -260,18 +263,25 @@ Template Name: 教育機関・医療機関用、予約フォーム
                         </dl>
 
                     <?php endwhile; wp_reset_postdata(); ?>
-
-
-
                         <a href="<?php echo home_url( '/' ); ?>faq-corporation/" class="c-btn-circle-arw p-question__btn">よくある質問一覧へ</a>
-
-
-
                 </div>
-
-
+                <!-- ./p-question-list -->
     </div>
+    <!-- ./l-inner -->
 </section>
+
+
+<!-- <section class="p-contact-fax" id="link-com-fax">
+
+  <div class="l-inner">
+        <div class="p-contact-fax__box">
+                  <h2 class="c-ttl-under-center c-blue p-contact-fax__ttl">FAXでのお問い合わせはこちらから</h2>
+                  <p class="u-tc p-contact-fax__number">FAX：06-4708-8105</p>
+        </div>
+
+  </div>
+
+</section> -->
 
 
 <section class="p-contact-form-area" id="link-form">
@@ -281,7 +291,7 @@ Template Name: 教育機関・医療機関用、予約フォーム
   <div class="l-inner">
 
 
-    <h2 class="c-blue p-contact-form-area__ttl"><!-- 教育機関・医療機関 -->企業・団体専用<br class="u-sp">PCR検査ご相談フォーム </h2>
+    <h2 class="c-blue p-contact-form-area__ttl"><!-- 教育機関・医療機関 -->企業・団体専用<br class="u-sp">PCR検査お申し込みフォーム </h2>
 
     <p class="p-contact-form-area__intro">必要事項にご入力の上お申し込みください。また下記項目は全て<span class="c-pink">必須事項</span>となっております。<br>なお、<span class="u-text-under-line c-pink">第二波・第三波の際には、患者様優先で検査を行わせていただく場合がございます。 </span>予めご了承ください。</p>
 

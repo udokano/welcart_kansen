@@ -11,11 +11,12 @@ $usces_members = $usces->get_member();
 	<div id="content" class="two-column">
 		<div class="catbox">
 			<div class="post" id="usces-member">
-				<h1 class="member_page_title tc"><?php _e('Membership', 'usces'); ?></h1>
+				<?php /* <h1 class="member_page_title tc"> _e('Membership', 'usces'); </h1> */ ?>
 				<div class="entry">
 
 					<div id="memberpages">
 						<div id="memberinfo">
+							<?php /*
 							<table>
 								<tr>
 									<th scope="row">
@@ -69,6 +70,7 @@ $usces_members = $usces->get_member();
 								</li>
 								<?php do_action('usces_action_member_submenu_list'); ?>
 							</ul>
+							*/ ?>
 							<div class="header_explanation">
 								<?php do_action('usces_action_memberinfo_page_header'); ?>
 							</div>
@@ -107,8 +109,8 @@ $usces_members = $usces->get_member();
 										<input id="msa_company" name="msa_company" type="text" />
 									</div>
 									<div class="msa_field">
-										<label for="msa_name">
-											<?php _e('氏名', 'usces') ?>（必須）</label>姓
+										<label for="msa_name"><em>＊</em>
+											<?php _e('氏名', 'usces') ?></label>姓
 										<input id="msa_name" name="msa_name" type="text" />名
 										<input id="msa_name2" name="msa_name2" type="text" /><span id="name_message" class="msa_message"></span></div>
 									<div class="msa_field">
@@ -119,15 +121,15 @@ $usces_members = $usces->get_member();
 										<input id="msa_furigana2" name="msa_furigana2" type="text" />
 									</div>
 									<div class="msa_field">
-										<label for="msa_zip">
-											<?php _e('郵便番号', 'usces') ?>（必須）</label>
+										<label for="msa_zip"><em>＊</em>
+											<?php _e('郵便番号', 'usces') ?></label>
 										<input id="msa_zip" name="msa_zip" type="text" />
 										<?php if (isset($usces->options['address_search']) && 'activate' == $usces->options['address_search']) {
     echo "<input type='button' id='search_zipcode' class='search-zipcode button' value='住所検索' onclick=\"AjaxZip3.zip2addr('msa_zip', '', 'msa_pref', 'msa_address1');\">";
 } ?><span id="zip_message" class="msa_message"></span></div>
 									<div class="msa_field">
-										<label for="msa_pref">
-											<?php _e('都道府県', 'usces') ?>（必須）</label>
+										<label for="msa_pref"><em>＊</em>
+											<?php _e('都道府県', 'usces') ?></label>
 										<select name="msa_pref" id="msa_pref" class="pref">
 											<option value="0">--選択--</option>
 											<option value="北海道">北海道</option>
@@ -180,12 +182,12 @@ $usces_members = $usces->get_member();
 										</select><span id="pref_message" class="msa_message"></span>
 									</div>
 									<div class="msa_field">
-										<label for="msa_address1">
-											<?php _e('市区町村', 'usces') ?>（必須）</label>
+										<label for="msa_address1"><em>＊</em>
+											<?php _e('市区町村', 'usces') ?></label>
 										<input id="msa_address1" name="msa_address1" type="text" /><span id="address1_message" class="msa_message"></span></div>
 									<div class="msa_field">
-										<label for="msa_address2">
-											<?php _e('番地', 'usces') ?>（必須）</label>
+										<label for="msa_address2"><em>＊</em>
+											<?php _e('番地', 'usces') ?></label>
 										<input id="msa_address2" name="msa_address2" type="text" /><span id="address2_message" class="msa_message"></span></div>
 									<div class="msa_field">
 										<label for="msa_address3">
@@ -194,8 +196,8 @@ $usces_members = $usces->get_member();
 										<input id="msa_address3" name="msa_address3" type="text" />
 									</div>
 									<div class="msa_field">
-										<label for="msa_tel">
-											<?php _e('電話番号', 'usces') ?>（必須）</label>
+										<label for="msa_tel"><em>＊</em>
+											<?php _e('電話番号', 'usces') ?></label>
 										<input id="msa_tel" name="msa_tel" type="text" /><span id="tel_message" class="msa_message"></span></div>
 									<div class="msa_field">
 										<label for="msa_tel">

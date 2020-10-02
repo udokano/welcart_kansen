@@ -1,6 +1,23 @@
+
+
 <?php
 get_header();
 ?>
+
+<!-- 振込完了モーダル -->
+
+
+ <div class="c-modal js-modal-form">
+      <div class="c-modal__bg js-modal-close"></div>
+      <div class="c-modal__inner p-payment-modal">
+       <?php echo do_shortcode('[contact-form-7 id="570" title="振込完了フォーム"]'); ?>
+      </div>
+
+      <!-- <?php get_template_part("payment-form"); ?> -->
+      <!-- ./c-modal__inner -->
+    </div>
+    <!-- ./c-modal -->
+
 
 <script>
 jQuery(function(){
@@ -19,7 +36,17 @@ jQuery(function(){
 });
 </script>
 
+<?php
+global $usces;
+
+$member_id = usces_memberinfo('ID', 'return');
+
+$value = $usces->get_member_meta_value( 'csmb_company', $member_id );
+
+?>
+
 <div id="content" class="two-column">
+<input type="hidden" id="hidden__company" value="<?php echo $value ;?>">
 <input type="hidden" id="hidden__tel" value="<?php usces_memberinfo("tel");?>">
 		<input type="hidden" id="hidden__name__full" value="<?php usces_the_member_name();?>">
 			<input type="hidden" id="hidden__mail" value="<?php usces_memberinfo('mailaddress1');?>">
@@ -34,7 +61,7 @@ jQuery(function(){
         <?php if (have_posts()) : usces_remove_filter(); ?>
         <div class="post" id="wc_<?php usces_page_name(); ?>">
           <h1 class="member_page_title tc">
-            <?php _e('Membership', 'usces'); ?>
+           <!--  <?php _e('Membership', 'usces'); ?> -->会員情報
           </h1>
           <div class="entry">
             <div id="memberpages">
@@ -52,7 +79,7 @@ jQuery(function(){
 
                     </tr>
                     <tr>
-                      <th scope="row"><?php _e('Full name', 'usces'); ?></th>
+                      <th scope="row">ご担当者お名前</th>
                       <td><?php esc_html_e(sprintf(_x('%s', 'honorific', 'usces'), usces_localized_name(usces_memberinfo('name1', 'return'), usces_memberinfo('name2', 'return'), 'return'))); ?></td>
 
                     </tr>
@@ -75,7 +102,7 @@ jQuery(function(){
                   </table>
                   <ul class="member_submenu">
                     <li class="edit_member"><a href="#edit">
-                      <?php _e('To member information editing', 'usces'); ?>
+                     <!--  <?php _e('To member information editing', 'usces'); ?> -->会員情報編集
                       </a></li>
                     <?php do_action('usces_action_member_submenu_list'); ?>
                     <li class="logout_member">
@@ -90,7 +117,7 @@ jQuery(function(){
                   </h3>
                   <!-- 	<div class="currency_code"><?php _e('Currency', 'usces'); ?> : <?php usces_crcode(); ?></div> -->
                   <?php usces_member_history(); ?>
-                  <h3><a name="edit"></a>
+                  <h3 id="edit"><!-- <a name="edit"></a> -->
                     <?php _e('Member information editing', 'usces'); ?>
                   </h3>
                   <div class="error_message">
@@ -149,5 +176,9 @@ jQuery(function(){
   <!-- end of catbox -->
 </div>
 <!-- end of content -->
+
+
+
+
 
 <?php get_footer(); ?>

@@ -89,9 +89,9 @@ get_header();
 						</tfoot>
 					</table>
 				<!-- 	<div class="currency_code"><?php _e('Currency', 'usces'); ?> : <?php usces_crcode(); ?></div> -->
-					<?php if ($usces_gp) : ?>
+					<?php /* if ($usces_gp) : ?>
 					<img src="<?php bloginfo('template_directory'); ?>/images/gp.gif" alt="<?php _e('Business package discount', 'usces'); ?>" /><br /><?php _e('The price with this mark applys to Business pack discount.', 'usces'); ?>
-					<?php endif; ?>
+					<?php endif; */ ?>
 				</div><!-- end of cart -->
 
 				<?php else : ?>

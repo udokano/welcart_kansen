@@ -136,7 +136,11 @@
                                                     <span class="quantity">個数：<?php usces_the_itemQuant(); ?><?php usces_the_itemSkuUnit(); ?></span>
                                                 </div>
                                                 <div class="p-action__btn p-to-cart-btn">
-                                                    <?php usces_the_itemSkuButton('購入へ進む');?>
+                                                    <?php if (isset($post->ID) && in_category(GROUP_CATEGORY_SLUG, $post->ID)) : ?>
+                                                        <?php usces_the_itemSkuButton('購入・お見積もりに進む');?>
+                                                    <?php else : ?>    
+                                                        <?php usces_the_itemSkuButton('購入へ進む');?>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
                                     </div>

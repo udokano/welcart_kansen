@@ -42,6 +42,7 @@ get_header();
 						</p>
 						<?php do_action('usces_action_login_page_inform'); ?>
 					</form>
+<?php /*
 					<p id="nav">
 						<a href="<?php usces_url('lostmemberpassword'); ?>" title="<?php _e('Did you forget your password?', 'usces'); ?>"><?php _e('Did you forget your password?', 'usces'); ?></a>
 					</p>
@@ -50,6 +51,7 @@ get_header();
 						<a href="<?php usces_url('newmember') . apply_filters('usces_filter_newmember_urlquery', null); ?>" title="<?php _e('New enrollment for membership.', 'usces'); ?>"><?php _e('New enrollment for membership.', 'usces'); ?></a>
 					<?php endif; ?>
 					</p>
+*/ ?>
 				</div>
 
 				<div class="footer_explanation">

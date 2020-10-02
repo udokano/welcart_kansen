@@ -63,11 +63,25 @@ function retrieveGETqs() {
 		<div class="entry">
 
 			<div id="cart_completion">
+			<?php if (is_group_item_in_cart()) : ?>
+			<h1 class="tc">ご依頼完了</h1>
+				<div class="header_explanation">
+				<p class="tc">お見積書のダウンロードは下記の会員ページからお願いします。<br />
+				銀行のお振込みを選択いただいた方は<span style="color: red;">メールにてお振込み先情報</span>をお送りしております。<br />
+				<span style="color: red;">お支払い確認後、マイページから引換コードをダウンロード可能</span>になります。<br />
+				
+				<a href="<?php echo USCES_MEMBER_URL; ?>#history_head" class="p-to-mypage">マイページでお見積り書をダウンロードする</a><br />
+				<?php _e("If you have any questions, please contact us by 'Contact'.", 'usces'); ?></p>
+				<?php do_action('usces_action_cartcompletion_page_header', $usces_entries, $usces_carts); ?>
+				</div><!-- header_explanation -->
+			<?php else : ?>
 			<h1 class="tc">購入完了</h1>
 				<div class="header_explanation">
 				<p class="tc"><?php _e('Thank you for shopping.', 'usces'); ?><br /><?php _e("If you have any questions, please contact us by 'Contact'.", 'usces'); ?></p>
 				<?php do_action('usces_action_cartcompletion_page_header', $usces_entries, $usces_carts); ?>
 				</div><!-- header_explanation -->
+			<?php endif; ?>
+
 
 			<?php usces_completion_settlement(); ?>
 

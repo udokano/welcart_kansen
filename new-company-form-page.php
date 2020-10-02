@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 企業・団体用フォームページ
+Template Name: 新設企業・団体用フォームページ
 */
 ?>
 <?php get_header();?>
@@ -32,7 +32,7 @@ Template Name: 企業・団体用フォームページ
 
     <div class="p-form-content">
 
-    <?php echo do_shortcode('[mwform_formkey key="26"]'); ?>
+    <?php echo do_shortcode('[mwform_formkey key="1334"]'); ?>
 
     </div>
 

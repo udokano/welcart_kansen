@@ -737,6 +737,7 @@ p.p-conf-note {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover;
+            max-height: 560px;
         }
     }
 
@@ -884,7 +885,7 @@ p.p-conf-note {
 .p-action {
     display: flex;
     align-items: center;
-    padding: rem(18) rem(22);
+    padding: rem(18) rem(14);
 
     @media (max-width: 767px) {
         display: block;
@@ -914,7 +915,7 @@ p.p-conf-note {
     }
 
     &__btn {
-        width: 255px;
+        width: 282px;
         height: 56px;
         font-size: rem(18);
 
@@ -925,11 +926,12 @@ p.p-conf-note {
         &::after {
             width: rem(18);
             height: rem(18);
+            right: .67rem;
         }
 
         &::before {
             border-width: 0.275rem 0 0.225rem 0.275rem;
-            right: 1.57rem;
+            right: 1.08rem;
         }
     }
 }

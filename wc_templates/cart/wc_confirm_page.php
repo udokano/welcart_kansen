@@ -194,16 +194,20 @@ get_header();
 			<th><?php _e('Notes', 'usces'); ?></th><td><?php echo nl2br(esc_html($usces_entries['order']['note'])); ?></td>
 		</tr>
 	</table>
-
+<?php if (!is_group_item_in_cart()) : ?>
 	<p class="u-tc u-fw600 c-pink u-mt20">
 	検体の返送は郵送で行っておりますので、<br class="u-sp">確定的な到着日時のお問合せにお答えする事ができません。<br class="">
 	また、検体到着後の検査開始日・完了日のお問合せにもお答えする事ができません。<br class="">
 到着目安を知りたい方は直接、<br class="u-sp">郵便局にお問い合わせくださいますようお願い申し上げます。<br class="">
 検査結果につきましても、より早い検査をお求めの方には、<br class="u-sp">速達でのご返送をご案内しております。<br class="">
-その際、速達に掛かる費用は患者様のご負担となりますので、<br class="u-sp">予めご了承ください。<br class="">
+その際、速達に掛かる費用は患者様のご負担となりますので、<br class="u-sp">予めご了承ください。<br class=""><br class="">
+
+土日・祝日の配達は郵便局が営業していないため、日数を要する可能性がございます。<br class="u-sp">予めご了承ください。<br class="">
+(速達の場合は土日・祝日でも配達が可能)<br class="">
+<br class="">
 以上、ご同意いただける方のみご注文へお進みください。
 	</p>
-
+<?php endif; ?>
 
 
 <?php usces_purchase_button(); ?>
