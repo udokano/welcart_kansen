@@ -8,13 +8,20 @@ Template Name: 教育機関・医療機関用、予約フォーム02
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner">
               <div class="p-pages-ttl-area__texts --company">
                         <h1 class="p-pages-ttl-area__ttl">無償検査</h1>
                 <p class="p-pages-ttl-area__sub">こちらの検査は教育機関・医療機関の方<br>専用の申込フォームになります。</p>
               </div>
         </div>
+</div>
+
+<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
 </div>
 
 

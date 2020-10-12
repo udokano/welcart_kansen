@@ -14,7 +14,7 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 </script>
 
 <div id="content" class="two-column">
-<div class="catbox">
+<div class="catbox" id="js-pages-head">
 
 <section class="cart__area">
 

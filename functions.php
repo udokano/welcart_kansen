@@ -1245,6 +1245,16 @@ function responsive_pagination($pages = '', $range = 4)
     }
 }
 
+function register_my_menus() {
+  register_nav_menus( array( //複数のナビゲーションメニューを登録する関数
+  //'「メニューの位置」の識別子' => 'メニューの説明の文字列',
+     'footer-menu01' => 'footer-menu01',
+    'footer-menu02'  => 'footer-menu02',
+     'footer-menu03'  => 'footer-menu03'
+  ) );
+}
+add_action( 'after_setup_theme', 'register_my_menus' );
+
 
 
 
@@ -1388,12 +1398,12 @@ if (current_user_can('editor')) { // 編集者を対象
     add_action('admin_menu', 'add_page_to_admin_menu002');
 
 
- /*    function add_page_to_admin_menu003_01()
+    function add_page_to_admin_menu003_01()
     {
-        add_menu_page('支払いフォーム管理', '支払いフォーム管理', 'edit_posts', 'admin.php?page=flamingo_inbound', '', 'dashicons-editor-table
+        add_menu_page('支払いフォーム管理', '支払いフォーム管理', 'edit_posts', 'admin.php?page=cfdb7-list.php&fid=570', '', 'dashicons-editor-table
 ', 3);
     }
-    add_action('admin_menu', 'add_page_to_admin_menu003_01'); */
+    add_action('admin_menu', 'add_page_to_admin_menu003_01');
 
 
 

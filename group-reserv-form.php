@@ -7,7 +7,7 @@ Template Name: 教育機関・医療機関用、予約フォーム
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner">
               <div class="p-pages-ttl-area__texts --company">
                         <h1 class="p-pages-ttl-area__ttl">企業・団体様のご案内</h1>
@@ -15,6 +15,18 @@ Template Name: 教育機関・医療機関用、予約フォーム
               </div>
         </div>
 </div>
+
+
+
+
+
+<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
+
 
 
 
@@ -68,7 +80,7 @@ Template Name: 教育機関・医療機関用、予約フォーム
               <div class="p-group-list__text-inner">
                          <p class="p-group-list__step">Step.<span class="p-group-list__num">01</span></p>
                         <h3 class="p-group-list__ttl">お申込み・お見積り</h3>
-                        <p class="p-group-list__desc">企業・団体様は専用フォームからお申込みいただき、折り返しお見積りのご連絡を差し上げます。</p>
+                        <p class="p-group-list__desc">企業・団体様は専用フォームからお申込みいただき、折り返し御見積りのご連絡を差し上げます。</p>
               </div>
 
             </div>
@@ -83,7 +95,7 @@ Template Name: 教育機関・医療機関用、予約フォーム
               <div class="p-group-list__text-inner">
                          <p class="p-group-list__step">Step.<span class="p-group-list__num">02</span></p>
                         <h3 class="p-group-list__ttl">発注書の発行</h3>
-                        <p class="p-group-list__desc">見積もり内容をご確認いただきましたら当院まで発注書を送付してください。</p>
+                        <p class="p-group-list__desc">御見積もり内容をご確認いただきましたら当院まで発注書を送付してください。</p>
               </div>
             </div>
           </li>

@@ -392,7 +392,7 @@ jQuery(document).ready(function(){
 
  <?php if ( is_home() || is_front_page()  ) : ?>
 
-          <nav class="p-global-nav --global-top" id="js-global-nav">
+          <div class="p-global-nav --global-top" id="js-global-nav">
 
                 <ul class="p-global-nav__list --global-top-list">
                   <li class="p-global-nav__item --global-top-item">
@@ -455,11 +455,11 @@ jQuery(document).ready(function(){
                 </div>
 
 
-              </nav>
+              </div>
 
               <?php else : ?>
 
-               <nav class="p-global-nav --global-top --global-pages" id="js-global-nav">
+               <div class="p-global-nav --global-top --global-pages" id="js-global-nav">
 
                 <ul class="p-global-nav__list --global-top-list">
                   <li class="p-global-nav__item --global-top-item">
@@ -518,7 +518,7 @@ jQuery(document).ready(function(){
                   </a>
 
                    <p class="p-header__time">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>-->
-              </nav>
+              </div>
 
 <?php endif; ?>
 

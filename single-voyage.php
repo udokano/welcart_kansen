@@ -3,7 +3,7 @@
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner">
               <div class="p-pages-ttl-area__texts --company">
                         <h1 class="p-pages-ttl-area__ttl">PCR検査陰性証明書</h1>
@@ -12,6 +12,13 @@
         </div>
 </div>
 
+
+<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
 
 

@@ -19,7 +19,6 @@
 
 
 
-
  <?php if ( is_page() ) : ?>
 
  <footer class="l-footer p-footer p-footer-pages">
@@ -32,10 +31,43 @@
 
 
 
-        <?php if ( is_home() || is_front_page() ) : ?>
+<nav class="p-footer-links u-pc-display">
+
+<?php
+  wp_nav_menu( array(
+    'theme_location' => 'footer-menu01',
+     'container' => '',  //コンテナのデフォルト <div> を <nav> に変更
+  'container_id' => '',  //コンテナの ID を指定
+  'menu_id' => 'my_footer_menu_left',  //デフォルトの menu-{メニュー名} を変更
+   'menu_class' => 'my_footer_menu_center p-footer-links__list'
+  ) );
+?>
+
+<?php
+  wp_nav_menu( array(
+    'theme_location' => 'footer-menu02',
+     'container' => '',  //コンテナのデフォルト <> を <nav> に変更
+  'container_id' => '',  //コンテナの ID を指定
+  'menu_id' => 'my_footer_menu_center',  //デフォルトの menu-{メニュー名} を変更
+  'menu_class' => 'my_footer_menu_center p-footer-links__list'
+  ) );
+?>
+
+<?php
+  wp_nav_menu( array(
+    'theme_location' => 'footer-menu03',
+     'container' => '',  //コンテナのデフォルト <> を <nav> に変更
+  'container_id' => '',  //コンテナの ID を指定
+  'menu_id' => 'my_footer_menu_right',  //デフォルトの menu-{メニュー名} を変更
+  'menu_class' => 'my_footer_menu_right p-footer-links__list'
+  ) );
+?>
+
+  </nav>
 
 
-        <div class="p-footer-nav">
+
+        <div class="p-footer-nav u-sp-display">
                  <nav class="p-global-nav --global-top --global-footer">
                   <ul class="p-global-nav__list --global-top-list --global-footer-list">
                     <li class="p-global-nav__item --global-top-item --global-footer-item">
@@ -72,7 +104,7 @@
                 </nav>
         </div>
 
-<?php elseif (is_single()) : ?>
+<?php if (is_singular("post")) : ?>
        <div class="p-credit-card">
         <div class="l-inner p-credit-card__inner">
                      <p class="p-credit-card__guide">各種クレジット決済</p>
@@ -84,16 +116,15 @@
                               <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_cart_item01.png?6dbddba84c650683" alt="mastercard">
                             </li>
 
-                         <!--    <li class="p-credit-card__item">
+                            <li class="p-credit-card__item">
                               <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_cart_item03.png?6dbddba84c650683" alt="JCB">
-                            </li> -->
+                            </li>
                         </ul>
           </div>
              </div>
 
 
 <?php endif; ?>
-
 
 
 

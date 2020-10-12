@@ -7,13 +7,21 @@ Template Name: 送料一覧
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-items u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list u-sp-tc">
                         <h1 class="p-pages-ttl-area__ttl --ttl--item-list">送料一覧</h1>
                 <p class="p-pages-ttl-area__sub">商品購入の際に、<br class="">発生する送料の一覧ページです。</p>
               </div>
         </div>
+</div>
+
+
+<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
 </div>
 
 
@@ -35,7 +43,7 @@ Template Name: 送料一覧
 
 
 
- <div class="p-footer-nav u-border-bottom-none">
+ <!-- <div class="p-footer-nav u-border-bottom-none">
                  <nav class="p-global-nav --global-top --global-footer">
                   <ul class="p-global-nav__list --global-top-list --global-footer-list">
                     <li class="p-global-nav__item --global-top-item --global-footer-item">
@@ -71,7 +79,7 @@ Template Name: 送料一覧
                     </li>
                   </ul>
                 </nav>
-        </div>
+        </div> -->
 
 
 

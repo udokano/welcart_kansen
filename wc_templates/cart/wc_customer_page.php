@@ -10,7 +10,7 @@ get_header();
 
 <div id="content" class="two-column">
 <div class="catbox">
-<section class="cart__area">
+<section class="cart__area" id="js-pages-head">
 
 <div class="section__inner">
 

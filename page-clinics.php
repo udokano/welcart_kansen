@@ -7,13 +7,20 @@ Template Name: クリニクスについて
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-clinics u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-clinics u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-clinics">
               <div class="p-pages-ttl-area__texts --texts--clinics">
                         <h1 class="p-pages-ttl-area__ttl --ttl--clinics">オンライン案内</h1>
                 <p class="p-pages-ttl-area__sub">クリニクスのアカウント作成と<br>予約について</p>
               </div>
         </div>
+</div>
+
+<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
 </div>
 
 
@@ -286,7 +293,7 @@ Template Name: クリニクスについて
                                           <span class="p-tab-flow__step-num">05</span>
                                 </span>
                               </i>
-                              予約時間になったら<br class="u-sp">当院のスタッフとビデオチャット
+                              予約時間になったら<br class="u-sp">スタッフとビデオチャット
                             </h3>
                             <p class="p-tab-flow__desc">オンライン案内日当日は予約時間になり次第、ビデオ通話機能を使って診察を行います。</p>
                                <p class="p-tab-flow__desc"><span class="p-tab-flow__desc--band">オンライン案内を開始する際に保険証、免許、パスポートなどの身分が証明できるもののご用意をお願い致します。</span></p>
@@ -427,7 +434,7 @@ Template Name: クリニクスについて
                                           <span class="p-tab-flow__step-num">05</span>
                                 </span>
                               </i>
-                              予約時間になったら<br class="u-sp">当院のスタッフとビデオチャット
+                              予約時間になったら<br class="u-sp">スタッフとビデオチャット
                             </h3>
                             <p class="p-tab-flow__desc">オンライン案内当日は予約時間になり次第、ビデオ通話機能を使っ<br class="u-pc">て検体採取キットについてのご案内を行います。<br>ご不明点がございましたらお気軽にお申し付けください。</p>
                             <p class="p-tab-flow__desc"><span class="p-tab-flow__desc--band">オンライン案内を開始する際に保険証、免許、パスポートなどの身分が証明できるもののご用意をお願い致します。</span></p>
@@ -480,7 +487,7 @@ Template Name: クリニクスについて
 
 
 
- <div class="p-footer-nav u-border-bottom-none">
+<!--  <div class="p-footer-nav u-border-bottom-none">
                  <nav class="p-global-nav --global-top --global-footer">
                   <ul class="p-global-nav__list --global-top-list --global-footer-list">
                     <li class="p-global-nav__item --global-top-item --global-footer-item">
@@ -516,7 +523,7 @@ Template Name: クリニクスについて
                     </li>
                   </ul>
                 </nav>
-        </div>
+        </div> -->
 
 
 

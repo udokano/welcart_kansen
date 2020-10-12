@@ -7,13 +7,20 @@ Template Name: 新設企業・団体用フォームページ
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner">
               <div class="p-pages-ttl-area__texts --company">
                         <h1 class="p-pages-ttl-area__ttl">ご相談フォーム</h1>
                 <p class="p-pages-ttl-area__sub">企業・団体様用の<br>ご相談フォームになります。</p>
               </div>
         </div>
+</div>
+
+<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
 </div>
 
 

@@ -51,7 +51,7 @@ function retrieveGETqs() {
 
 
 <div id="content" class="two-column">
-<div class="catbox">
+<div class="catbox" id="js-pages-head">
 <section class="cart__area">
 
 <div class="section__inner">
@@ -69,7 +69,7 @@ function retrieveGETqs() {
 				<p class="tc">お見積書のダウンロードは下記の会員ページからお願いします。<br />
 				銀行のお振込みを選択いただいた方は<span style="color: red;">メールにてお振込み先情報</span>をお送りしております。<br />
 				<span style="color: red;">お支払い確認後、マイページから引換コードをダウンロード可能</span>になります。<br />
-				
+
 				<a href="<?php echo USCES_MEMBER_URL; ?>#history_head" class="p-to-mypage">マイページでお見積り書をダウンロードする</a><br />
 				<?php _e("If you have any questions, please contact us by 'Contact'.", 'usces'); ?></p>
 				<?php do_action('usces_action_cartcompletion_page_header', $usces_entries, $usces_carts); ?>

@@ -139,6 +139,14 @@
     }
 }
 
+.--ttl-bg-use {
+    background-image: url(../img/use/bg_ttl.jpg);
+
+    @media (max-width: 767px) {
+        background-image: url(../img/use/bg_ttl_sp.jpg);
+    }
+}
+
 /* 404 */
 
 .p-page-note-find {

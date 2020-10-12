@@ -7,7 +7,7 @@ Template Name: 商品一覧追加
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-items u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
                         <h1 class="p-pages-ttl-area__ttl --ttl--item-list">購入申し込み・証明書発行</h1>
@@ -305,7 +305,7 @@ Template Name: 商品一覧追加
 </section>
 
 
- <div class="p-footer-nav u-border-bottom-none">
+<!--  <div class="p-footer-nav u-border-bottom-none">
                  <nav class="p-global-nav --global-top --global-footer">
                   <ul class="p-global-nav__list --global-top-list --global-footer-list">
                     <li class="p-global-nav__item --global-top-item --global-footer-item">
@@ -341,7 +341,7 @@ Template Name: 商品一覧追加
                     </li>
                   </ul>
                 </nav>
-        </div>
+        </div> -->
 
 
 

@@ -13,7 +13,7 @@ get_header();
        <?php echo do_shortcode('[contact-form-7 id="570" title="振込完了フォーム"]'); ?>
       </div>
 
-      <!-- <?php get_template_part("payment-form"); ?> -->
+      <!--  <?php echo do_shortcode('[mwform_formkey key="1354"]'); ?> -->
       <!-- ./c-modal__inner -->
     </div>
     <!-- ./c-modal -->
@@ -177,6 +177,39 @@ $value = $usces->get_member_meta_value( 'csmb_company', $member_id );
 </div>
 <!-- end of content -->
 
+
+<script>
+
+$('#js-payment-btn').click(function () {
+  if (!confirm('お振込完了の通知を送りますか？')) {
+    /* キャンセルの時の処理 */
+    return false;
+  } else {
+    /*　OKの時の処理 */
+    return true;
+  }
+});
+
+var wpcf7Elm = document.querySelector('.wpcf7');
+
+wpcf7Elm.addEventListener('wpcf7mailsent', function (event) {
+  //alert("Fire!");
+  jQuery(".wpcf7-response-output").css("display", "block");
+
+  $(function () {
+    setTimeout(function () {
+      jQuery(".js-modal-form").removeClass("is-modal-open");
+      jQuery("body").removeClass("is-of-hidden");
+    }, 2000);
+  });
+
+}, false);
+
+
+
+
+
+</script>
 
 
 

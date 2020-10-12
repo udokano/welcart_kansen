@@ -56,22 +56,23 @@
         <p class="p-cost__desc c-blue">検査キット、郵送、採取案内、検査実施を含むお値段です。</p>
 
         <dl class="p-cost-price u-mb10">
-                <dt class="p-cost-price__name">PCR検査</dt>
+                <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査</span></dt>
                 <dd class="p-cost-price__text"><span class="p-cost-price__text-main"><!-- 18,000 -->14,800</span><span class="p-cost-price__text-sub">円(税別)</span></dd>
         </dl>
          <dl class="p-cost-price  u-mb10">
-                <dt class="p-cost-price__name">PCR検査 <br class="u-sp">5回セット</dt>
+                <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">5回セット</span></dt>
                 <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 11,840</span><span class="p-cost-price__text-sub">円(税別)</span><!-- <span class="aaaaa">＊1個あたり</span> -->
+                <div class="aaaaa" style="padding-top:10px;">合計 59,200円(税別)</div>
                 </dd>
         </dl>
 
          <dl class="p-cost-price  u-mb10">
-                <dt class="p-cost-price__name">PCR検査 <br class="u-sp">10回セット</dt>
+                <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">10回セット</span></dt>
                 <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 8,880</span><span class="p-cost-price__text-sub">円(税別)</span>
-                <br class="u-sp"><!-- <span class="aaaaa">＊1個あたり</span> --></dd>
+               <div class="aaaaa" style="padding-top:10px;">合計 88,800円(税別)</div></dd>
         </dl>
 
-        <p class="p-cost__under-desc">当院のPCR 検査は希望する方皆様を対象にした検査のため、自費診療となります。<br>「渡航歴があり体調が優れない」「感染者との濃厚接触歴があり<br class="aaaaa">体調が優れない」方など、行政検査条件を満たす方は自治体管轄の施設で<br class="u-pc">保険診療としてお受けできる場合がございますので、お住まい地域の保健所のご相談窓口へご相談ください。</p>
+        <p class="p-cost__under-desc">当院のPCR 検査は希望する方皆様を対象にした検査のため、自由診療となります。<br>「渡航歴があり体調が優れない」「感染者との濃厚接触歴があり<br class="aaaaa">体調が優れない」方など、行政検査条件を満たす方は自治体管轄の施設で<br class="u-pc">保険診療としてお受けできる場合がございますので、お住まい地域の保健所のご相談窓口へご相談ください。</p>
 
 
         <a href="<?php echo home_url( '/' ); ?>item-list" class="c-btn p-cost-btn">購入・お申込みはこちら</a>
@@ -1085,7 +1086,7 @@
                        <p class="p-use-chart-list-item__text u-tl">検体が当院へ到着後、順に患者様の唾液のPCR検査を行います。<br class="u-pc">混雑状況にもよりますが、検体がクリニックに届いてから、おおよそ1~2日を目安に結果をお知らせいたします。</p>
                             <a href="https://souki-kai.or.jp/rslt/" class="c-btn-circle-arw p-use-chart-list-item__btn p-use-chart-list-item__btn--wide c-bg-deep-pink" target="_blank">
                             <span class="u-pc-display">検査結果確認サイトへ進む</span>
-                            <span class="u-sp-display">検査結果確認<br>サイトへ進む</span>
+                            <span class="u-sp-display"><!-- 検査結果確認<br>サイトへ進む -->検査結果サイトへ</span>
                         </a>
                           </div>
                     </li>
@@ -1100,7 +1101,7 @@
                        <p class="p-use-chart-list-item__text u-tc">クリニクスでアカウント登録後、クリニクス内で「感染症検査クリニック」を検索してオンライン相談の予約を行ってください。<br class="">ご利用にはビデオ通話が行えるスマートフォン、もしくはPCが必要になります。<br class="u-pc">予めご用意ください。</p>
                             <a href="<?php echo home_url( '/' ); ?>clinics" class="c-btn-circle-arw p-use-chart-list-item__btn p-use-chart-list-item__btn--wide c-bg-deep-pink">
                             <span class="u-pc-display">詳しいご説明はこちら</span>
-                            <span class="u-sp-display">詳しいご説明<br>はこちら</span>
+                            <span class="u-sp-display"><!-- 詳しいご説明<br>はこちら -->詳しくはこちら</span>
                         </a>
                           </div>
                     </li>

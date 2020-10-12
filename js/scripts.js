@@ -166,6 +166,29 @@ jQuery(window).scroll(function () {
 
 /*
 
+下層ヘッダーSPヘッダーブンの余白開ける
+
+-------------------------------------*/
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+
+
+  var $pages_header_hight = jQuery("#js-header").outerHeight();
+
+
+  //jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
+
+
+} else {
+
+
+
+
+
+}
+
+/*
+
 ハンバーガートップ
 
 -------------------------------------*/
@@ -574,7 +597,7 @@ jQuery(function () {
 
 
     //購入のステップごとにFORM actionの値を取得
-    var src = $(".js-cart-form").attr('action');
+    var src = jQuery(".js-cart-form").attr('action');
     ///sss = jQuery(".js-cart-form").attr('action').replace("1989年", '');
 
     jQuery(".js-cart-form").attr("action", sss + year_val);
@@ -667,44 +690,15 @@ jQuery(".js-modal-form-open").on('click', function () {
 
 
   //$(".wpcf7-response-output").css("display", "none");
-  $("#js-order-num").val($ordernum);
-  $("#js-deposit").val($total);
-  $("#js-name").val($full_name);
-  $("#js-your-email").val($email);
-  $("#js-company-name").val($company);
-  $("#js-tel-number").val($tel);
+  jQuery("#js-order-num").val($ordernum);
+  jQuery("#js-deposit").val($total);
+  jQuery("#js-name").val($full_name);
+  jQuery("#js-your-email").val($email);
+  jQuery("#js-company-name").val($company);
+  jQuery("#js-tel-number").val($tel);
 
 
 });
-
-$('#js-payment-btn').click(function () {
-  if (!confirm('お振込完了の通知を送りますか？')) {
-    /* キャンセルの時の処理 */
-    return false;
-  } else {
-    /*　OKの時の処理 */
-    return true;
-  }
-});
-
-var wpcf7Elm = document.querySelector('.wpcf7');
-
-wpcf7Elm.addEventListener('wpcf7mailsent', function (event) {
-  /* alert("Fire!"); */
-  jQuery(".wpcf7-response-output").css("display", "block");
-
-  $(function () {
-    setTimeout(function () {
-      jQuery(".js-modal-form").removeClass("is-modal-open");
-      jQuery("body").removeClass("is-of-hidden");
-    }, 2000);
-  });
-
-
-
-
-}, false);
-
 
 
 /*
@@ -713,16 +707,16 @@ wpcf7Elm.addEventListener('wpcf7mailsent', function (event) {
 ----------------------------------------- */
 
 //スマホ追従フッター
-if ($(window).width() < 768) {
+if (jQuery(window).width() < 768) {
 
-  var header = $("#js-header");
+  var header = jQuery("#js-header");
 
   var header_hight = header.outerHeight();
 
   var startPos = 0, winScrollTop = 0;
-  $(window).on("scroll", function () {
+  jQuery(window).on("scroll", function () {
 
-    winScrollTop = $(this).scrollTop();
+    winScrollTop = jQuery(this).scrollTop();
     if (winScrollTop >= startPos) {
       if (winScrollTop >= 200) {
         header.css("top", -header_hight);

@@ -394,7 +394,7 @@
         }
 
         @media (max-width: 767px) {
-            font-size: .8rem;
+            font-size: .95rem;
 
             &::after {
                 right: .83rem;
@@ -411,7 +411,6 @@
             max-width: 275px;
 
             @media (max-width: 767px) {
-                font-size: .62rem;
                 line-height: 1.22;
                 position: relative;
             }

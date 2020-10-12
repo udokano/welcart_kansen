@@ -7,13 +7,20 @@ Template Name: 教育機関・医療機関用、予約フォーム
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-company-reserve u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner">
               <div class="p-pages-ttl-area__texts --company">
                         <h1 class="p-pages-ttl-area__ttl">企業・団体様のご案内</h1>
                 <p class="p-pages-ttl-area__sub">企業・団体様のPCR検査の流れをこちらで<br class="u-pc">ご紹介しております。</p>
               </div>
         </div>
+</div>
+
+<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
 </div>
 
 
