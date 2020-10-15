@@ -29,14 +29,14 @@ Template Name: 唾液採取・抗体検査の手順
 <section class="p-use-area js-tab-wrap">
 
         <ul class="p-use-btn">
-            <li class="p-use-btn__item p-use-btn__item--btn01 js-tab-btn is-tab-active">唾液採取の手順</li>
-            <li class="p-use-btn__item p-use-btn__item--btn02 js-tab-btn">抗体検査の手順</li>
+            <li class="p-use-btn__item p-use-btn__item--btn01 js-tab-btn is-tab-active" id="js-tab-btn01">唾液採取の手順</li>
+            <li class="p-use-btn__item p-use-btn__item--btn02 js-tab-btn" id="js-tab-btn02">抗体検査の手順</li>
         </ul>
 
         <div class="l-inner">
 
                         <!-- タブコンテンツ01 -->
-                        <div class="js-tab-contents p-use-flow-kit is-tab-active">
+                        <div class="js-tab-contents p-use-flow-kit is-tab-active" id="js-tab-content01">
 
                         <div class="p-use-flow-kit__ttl">
                                  <h2 class="c-title-under-circle p-use-flow-kit__ttl-text">唾液採取の手順
@@ -134,7 +134,7 @@ Template Name: 唾液採取・抗体検査の手順
 
 
                          <!-- タブコンテンツ02 -->
-                        <div class="js-tab-contents p-use-flow-kit">
+                        <div class="js-tab-contents p-use-flow-kit" id="js-tab-content02">
 
                         <div class="p-use-flow-kit__ttl">
                                  <h2 class="c-title-under-circle p-use-flow-kit__ttl-text">抗体検査の手順
@@ -299,3 +299,43 @@ Template Name: 唾液採取・抗体検査の手順
 
 
 <?php get_footer();?>
+
+
+<script>
+
+
+ jQuery(function ($) {
+
+    var url = location.protocol + "//" + location.host + location.pathname + location.search;
+    var params = url.split('?');
+    console.log(params);
+    var paramms = params.length > 1 && params[1].split('&');
+    var paramArray = [];
+    console.log(paramArray);
+    for (var i = 0; i < paramms.length; i++) {
+      var vl = paramms[i].split('=');
+      paramArray.push(vl[0]);
+      paramArray[vl[0]] = vl[1];
+
+      var terms = vl[1];
+      console.log(terms);
+
+      if(terms) {
+        if (terms == "01") {
+            $(".js-tab-btn").removeClass("is-tab-active");
+            $(".js-tab-contents").removeClass("is-tab-active");
+            $("#js-tab-btn01").addClass("is-tab-active");
+            $("#js-tab-content01").addClass("is-tab-active");
+        }
+
+         if (terms == "02") {
+          $(".js-tab-btn").removeClass("is-tab-active");
+           $(".js-tab-contents").removeClass("is-tab-active");
+           $("#js-tab-btn02").addClass("is-tab-active");
+           $("#js-tab-content02").addClass("is-tab-active");
+        }
+      }
+    }
+  });
+
+</script>

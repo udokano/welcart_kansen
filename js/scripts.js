@@ -172,18 +172,10 @@ jQuery(window).scroll(function () {
 
 if (window.matchMedia("(max-width: 768px)").matches) {
 
-
   var $pages_header_hight = jQuery("#js-header").outerHeight();
-
-
-  //jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
-
+  jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
 
 } else {
-
-
-
-
 
 }
 
