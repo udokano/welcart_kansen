@@ -907,7 +907,7 @@
                                 <li class="p-pcr-item-box__list-item">・パウチ袋 小</li>
                                  <li class="p-pcr-item-box__list-item">・パウチ袋 大</li>
                             <li class="p-pcr-item-box__list-item">・クッション袋</li>
-                                <li class="p-pcr-item-box__list-item">・パウチ袋 小</li>
+
                                  <li class="p-pcr-item-box__list-item">・吸水紙</li>
                             <li class="p-pcr-item-box__list-item">・確認申込書</li>
                                 <li class="p-pcr-item-box__list-item">・返送用封筒</li>
@@ -988,13 +988,18 @@
                           </div>
                     </li>
                     <li class="p-use-chart-list-item  p-chert-left-row04 p-chert-left-row04--02 p-pos-left c-bdc-water-blue">
-                          <div class="p-use-chart-list-item__inner p-item-pd-pt02 p-inner-left p-inner-row03">
+                          <div class="p-use-chart-list-item__inner p-inner-left p-inner-row03">
                         <div class="p-use-chart-list-item__row">
                                     <div class="p-use-chart-list-item__thumb --spspsp">
                                         <img src="<?php echo get_template_directory_uri(); ?>/img/front/flow_left_thumb01.png?36d7dca331e72df0" alt="thumb">
                                     </div>
 
-                                    <p class="p-use-chart-list-item__l-text">お手元に届いた<span class="c-green">「PCR検査の唾液採取の流れ」</span>に従い検体の採取をお願い致します。</p>
+                                    <p class="p-use-chart-list-item__l-text">お手元に届いたご案内をお読みになるか、以下のページを読みながら検体の採取をお願い致します。<br>
+                                      <a href="<?php echo home_url( '/' ); ?>use?tab=01" class="c-btn-circle-arw p-use-chart-list-item__btn u-mb10"><span class="u-pc">PCR </span>唾液採取の手順</a>
+
+                                      <a href="<?php echo home_url( '/' ); ?>use?tab=02" class="c-btn-circle-arw p-use-chart-list-item__btn u-mt0">抗体検査の手順</a>
+                                    </p>
+
                                       </div>
                         </div>
                     </li>

@@ -151,7 +151,7 @@ Template Name: 商品一覧
                 <p class="p-items__name">PCR検査</p>
                 <div class="p-items__row">
                         <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item01.jpg?55555555555555" alt="PCR検査">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item01_old.jpg?3aed4b4a772c69be" alt="PCR検査">
                         </div>
 
                         <div class="p-items__right">
@@ -175,7 +175,7 @@ Template Name: 商品一覧
                 <p class="p-items__name">PCR検査キット5回セット</p>
                 <div class="p-items__row">
                         <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item10_new.jpg?36d7dca331e72df0" alt="PCR検査">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item10_old.jpg?3aed4b4a772c69be" alt="PCR検査">
                         </div>
 
                         <div class="p-items__right">
@@ -199,7 +199,7 @@ Template Name: 商品一覧
                 <p class="p-items__name">PCR検査キット10回セット</p>
                 <div class="p-items__row">
                         <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item11_new.jpg?36d7dca331e72df0" alt="PCR検査">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item11_old.jpg?3aed4b4a772c69be" alt="PCR検査">
                         </div>
 
                         <div class="p-items__right">
@@ -224,7 +224,7 @@ Template Name: 商品一覧
                                 <p class="p-items__name">PCR検査＋抗体検査</p>
                         <div class="p-items__row">
                                 <div class="p-items__thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item07_new.jpg?55555555555555555555" alt="陰性証明書発行">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item07_old.jpg?3aed4b4a772c69be" alt="陰性証明書発行">
                                 </div>
 
                                 <div class="p-items__right">
@@ -251,7 +251,7 @@ Template Name: 商品一覧
                                 <p class="p-items__name">PCR検査＋抗体検査(5回セット)</p>
                         <div class="p-items__row">
                                 <div class="p-items__thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item12_new.jpg?36d7dca331e72df0" alt="陰性証明書発行">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item12_old.jpg?3aed4b4a772c69be" alt="陰性証明書発行">
                                 </div>
 
                                 <div class="p-items__right">
@@ -278,7 +278,7 @@ Template Name: 商品一覧
                                 <p class="p-items__name">PCR検査＋抗体検査(10回セット)</p>
                         <div class="p-items__row">
                                 <div class="p-items__thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item14_new.jpg?36d7dca331e72df0" alt="陰性証明書発行">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item13_old.jpg?3aed4b4a772c69be" alt="陰性証明書発行">
                                 </div>
 
                                 <div class="p-items__right">
@@ -312,7 +312,7 @@ Template Name: 商品一覧
                             <p class="p-items__desc">検査の結果陰性だった方の証明書の発行も承っております。<br>サイズはA5または名刺サイズからお選び出来ます。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">10,000</span>
+                                <span class="p-items__p-center"><!-- 10,000 -->5,000</span>
                                 <span class="p-items__p-right">
                                     <span class="p-items__tax-sub">(税別)</span>
                                     <span class="p-items__tax">円</span>
@@ -359,7 +359,7 @@ Template Name: 商品一覧
                             <p class="p-items__desc">渡航先指定のフォーマットに合わせて陰性証明書を発行致します。<br>事前にフォーマットやテンプレートの送付をお願い致します。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">20,000</span>
+                                <span class="p-items__p-center"><!-- 20,000 -->10,000</span>
                                 <span class="p-items__p-right">
                                     <span class="p-items__tax-sub">(税別)</span>
                                     <span class="p-items__tax">円</span>

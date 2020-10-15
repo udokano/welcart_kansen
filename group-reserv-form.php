@@ -116,8 +116,8 @@ Template Name: 教育機関・医療機関用、予約フォーム
 
           <li class="p-group-list__item">
             <div class="p-group-list__thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/contact/flow04_new.jpg?36d7dca331e72df0" alt="" class="u-pc">
-                 <img src="<?php echo get_template_directory_uri(); ?>/img/contact/flow04_new_sp.jpg?36d7dca331e72df0" alt="" class="u-sp">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/contact/flow04_old.jpg?36d7dca331e72df0" alt="" class="u-pc">
+                 <img src="<?php echo get_template_directory_uri(); ?>/img/contact/flow04_old_sp.jpg?36d7dca331e72df0" alt="" class="u-sp">
             </div>
             <!-- ./p-group-list__thumb -->
             <div class="p-group-list__text">

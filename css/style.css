@@ -3307,7 +3307,7 @@ input.quantity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 1328px;
+  height: 1458px;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 961px;
@@ -3317,7 +3317,7 @@ input.quantity {
 
 @media (max-width: 767px) {
   .p-use-chart {
-    height: 280vw;
+    height: 295vw;
     padding: 0 .45rem;
     padding-top: 7.78rem;
   }
@@ -3882,12 +3882,12 @@ input.quantity {
 }
 
 .p-chert-left-row09 {
-  top: 32.555rem;
+  top: 41.955rem;
 }
 
 @media (max-width: 767px) {
   .p-chert-left-row09 {
-    top: 37.52248rem;
+    top: 44.52248rem;
   }
 }
 
@@ -3912,12 +3912,12 @@ input.quantity {
 }
 
 .p-chert-left-row06--02 {
-  top: 42.01455rem;
+  top: 52.01455rem;
 }
 
 @media (max-width: 767px) {
   .p-chert-left-row06--02 {
-    top: 47.85477rem;
+    top: 53.85477rem;
   }
 }
 
@@ -3932,12 +3932,12 @@ input.quantity {
 }
 
 .p-chert-left-row07--02 {
-  top: 55.014555rem;
+  top: 63.314555rem;
 }
 
 @media (max-width: 767px) {
   .p-chert-left-row07--02 {
-    top: 61.014555rem;
+    top: 66.014555rem;
   }
 }
 
@@ -3999,12 +3999,12 @@ input.quantity {
 }
 
 .p-chert-right-row05--02 {
-  top: 54.96937rem;
+  top: 63.96937rem;
 }
 
 @media (max-width: 767px) {
   .p-chert-right-row05--02 {
-    top: 59.952441rem;
+    top: 63.952441rem;
   }
 }
 
@@ -8033,7 +8033,6 @@ p.p-conf-note {
 @media (max-width: 767px) {
   .p-header--pages {
     background-color: #fff;
-    position: static;
   }
 }
 
