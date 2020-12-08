@@ -1215,6 +1215,14 @@ DATEチェック用のモーダル
 
             </ul>
 
+            <div class="p-zh-hdc u-tc">
+                 <p class="p-zh-hdc__ttl">当院での検査終了後、陰性証明書を<br class="u-sp">中国駐日本大使館・総領事館に<br class=""><span class="p-zh-hdc__ttl--bg">HSまたはHDCマークのグリーン<br class="u-sp">健康コード申請</span>を行なってください。</p>
+
+                 <p class="p-zh-hdc__note">※2020年12月1日から、紙媒体の陰性証明だけでの<br class="u-sp">渡航は出来なくなりましたので、ご注意ください。</p>
+            </div>
+
+            <a href="http://www.china-embassy.or.jp/jpn/lsfu/t1836108.htm" class="c-link-blank p-zh-hdc__link" target="_blank">中国駐日本大使館のサイトへ</a>
+
               <a href="#link-tab-wrap" class="p-btn-404 c-btn p-tab-link" id="js-to-tabWrap">渡航用ではなく、PCRの検査だけを<br class="u-sp">ご希望の方はこちらから</a>
 
     </div>

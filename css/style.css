@@ -7516,6 +7516,21 @@ p.p-conf-note {
   margin: 0;
 }
 
+.p-upload-status .p-statusbar-top {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.p-upload-status .p-upload-preview, .p-upload-status .ajax-file-upload-filename {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.p-upload-status .p-upload-preview {
+  margin-right: 1.25rem;
+  width: 5.8rem;
+}
+
 .p-upload-status .ajax-file-upload-filename {
   text-align: center;
   width: auto;
@@ -7523,7 +7538,6 @@ p.p-conf-note {
 
 .p-upload-status .ajax-file-upload-preview {
   display: block;
-  margin: 0 auto .78rem;
 }
 
 .p-upload-status .ajax-file-upload-progress {
@@ -7567,7 +7581,7 @@ p.p-conf-note {
 .p-message {
   font-size: 1.12rem;
   font-weight: 600;
-  margin-bottom: .78rem;
+  margin-bottom: .98rem;
   word-break: break-all;
 }
 
@@ -18005,6 +18019,65 @@ input, select {
   .p-ja-ch-pages .p-visit-row01 .p-goto-list__btn {
     margin-top: 1.5625rem;
   }
+}
+
+.p-ja-ch-pages .p-zh-hdc {
+  border: 0.1875rem solid #eb3535;
+  border-radius: 0.625rem;
+  margin-bottom: 1.125rem;
+  padding: 1.25rem 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .p-ja-ch-pages .p-zh-hdc {
+    margin-top: 2.5rem;
+    padding: 1.25rem 0.95rem 1rem;
+  }
+}
+
+.p-ja-ch-pages .p-zh-hdc__ttl {
+  font-size: 1.60938rem;
+  letter-spacing: .075em;
+  line-height: 1.6;
+  margin-bottom: 1.125rem;
+}
+
+@media (max-width: 767px) {
+  .p-ja-ch-pages .p-zh-hdc__ttl {
+    font-size: 1.08rem;
+  }
+}
+
+.p-ja-ch-pages .p-zh-hdc__ttl--bg {
+  background: url(../img/common/c_ttl_bg_cricle.png) repeat-x 0% 100%;
+  background-size: 0.625rem auto;
+  color: #eb3535;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .p-ja-ch-pages .p-zh-hdc__ttl--bg {
+    background-size: 0.4375rem auto;
+    padding-bottom: 0.3125rem;
+  }
+}
+
+.p-ja-ch-pages .p-zh-hdc__note {
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .p-ja-ch-pages .p-zh-hdc__note {
+    font-size: .82rem;
+  }
+}
+
+.p-ja-ch-pages .p-zh-hdc__link {
+  border-bottom-color: #eb3535;
+  color: #eb3535;
+  font-size: 1.0825rem;
+  margin-bottom: 3.8125rem;
 }
 
 .p-ja-ch-pages .p-zh-note {

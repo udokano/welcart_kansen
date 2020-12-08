@@ -1227,6 +1227,57 @@
         }
     }
 
+    .p-zh-hdc {
+        padding: rem(20) 0 rem(16);
+        border: rem(3) solid #eb3535;
+        border-radius: rem(10);
+        margin-bottom: rem(18);
+
+        @media (max-width: 767px) {
+            margin-top: rem(40);
+            padding: rem(20) 0.95rem rem(16);
+        }
+
+        &__ttl {
+            letter-spacing: .075em;
+            font-size: rem(25.75);
+            line-height: 1.6;
+            margin-bottom: rem(18);
+
+            @media (max-width: 767px) {
+                font-size: 1.08rem;
+            }
+
+            &--bg {
+                font-weight: 600;
+                padding-bottom: rem(8);
+                background: url(../img/common/c_ttl_bg_cricle.png) repeat-x 0% 100%;
+                background-size: rem(10) auto;
+                color: #eb3535;
+
+                @media (max-width: 767px) {
+                    padding-bottom: rem(5);
+                    background-size: rem(7) auto;
+                }
+            }
+        }
+
+        &__note {
+            font-size: 1rem;
+
+            @media (max-width: 767px) {
+                font-size: .82rem;
+            }
+        }
+
+        &__link {
+            margin-bottom: rem(61);
+            color: #eb3535;
+            border-bottom-color: #eb3535;
+            font-size: rem(17.32);
+        }
+    }
+
     .p-zh-note {
         padding: rem(46) 0 rem(50);
 

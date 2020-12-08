@@ -367,7 +367,7 @@ var host = location.hostname ;
     maxFileCount:1,
     dragDrop:false,
     showFileCounter:false,
-    showFileSize:false,
+    showFileSize:true,
     statusBarWidth: "90%",
     showPreview:true,
     acceptFiles:"save02/*",
