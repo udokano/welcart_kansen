@@ -2,6 +2,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<script async src="https://s.yimg.jp/images/listing/tool/cv/ytag.js?2dc4c6400b5334cd"></script>
+<script>
+window.yjDataLayer = window.yjDataLayer || [];
+function ytag() { yjDataLayer.push(arguments); }
+ytag({"type":"ycl_cookie"});
+</script>
+
+
+<script async>
+ytag({
+  "type": "yss_conversion",
+  "config": {
+    "yahoo_conversion_id": "1001055258",
+    "yahoo_conversion_label": "UWbyCNr35eIBELiRwuwC",
+    "yahoo_conversion_value": "0"
+  }
+});
+</script>
+
+
 <meta charset="UTF-8">
 <title>
 <?php bloginfo('title'); ?>
@@ -43,52 +64,37 @@
 <div class="l-wrapper">
 
 
-<header class="l-header p-header p-header--top p-header--pages" id="js-header">
+
+<header class="l-header p-header p-header--top" id="js-header">
 
     <div class="p-header__inner p-header__inner--top">
 
         <div class="p-header__logo p-header__logo--top">
           <a href="<?php echo home_url( '/' ); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddbaaaa84c650683" alt="感染症検査クリニック">
           </a>
         </div>
         <!-- ./p-header__logo -->
-         <a href="https://souki-kai.or.jp/rslt/" class="p-header__sp-gray-btn u-sp-display" target="_blank"><span class="p-header__sp-gray-btn-text">検査結果<br>通知サイト</span></a>
+
+
+
         <div class="p-header__right p-header__right--top u-pc-display">
-              <ul class="p-top-btns">
-                <li class="p-top-btns__item c-btn-gray">
-                  <a href="https://souki-kai.or.jp/rslt/" class="p-top-btns__link c-btn-gray__link" target="_blank">
-                  結果通知サイトへ
-                  </a>
-                </li>
-              <!--   <li class="p-top-btns__item c-btn-gray">
-                  <a href="<?php echo home_url( '/' ); ?>clinics" class="p-top-btns__link c-btn-gray__link" target="_blank">
-                  Web案内予約
-                  </a>
-                </li> -->
 
-                <li class="p-top-btns__item c-btn-gray">
-                  <a href="<?php echo home_url( '/' ); ?>item-list" class="p-top-btns__link c-btn-gray__link">
-                  検体採取キットのご購入
-                  </a>
-                </li>
-              </ul>
-              <div class="p-header-tels u-pc-display">
+
+              <div class="p-header__tels u-pc-display">
+
                           <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-header__tel p-header__tel--top u-pc-display">
-                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">個人</span><span class="p-header__number-num">0120-088-120</span></p>
+                <p class="p-header__number p-header__number--top u-font-futura">
+                  <span class="p-header__number-num">0120-088-120</span></p>
+                  <p class="p-header__time p-header__time--top">挂号时间<br>9:00~19:00</p>
               </a>
 
-                <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel p-header__tel--top u-pc-display">
-                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">企業・団体</span><span class="p-header__number-num p-header__number-num--campany">06-4708-8082</span></p>
-              </a>
-
-                <p class="p-header__time p-header__time--top">受付時間：9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
-
+                 <p class="p-header__time p-header__time--note">※お電話は日本語の対応となります。</p>
               </div>
         </div>
         <!-- ./p-header__right -->
 
-        <button class="u-sp-display p-top-menu-btn  --btn--pages" id="js-menu-top-menu-switch">
+              <button class="u-sp-display p-top-menu-btn" id="js-menu-top-menu-switch">
                 <div class="p-top-menu-btn__out-inner">
                   <!--  <img src="<?php echo get_template_directory_uri(); ?>/img/front/menu_switch.png?6dbddba84c650683" alt="ハンバーガー"> -->
                   <div class="p-top-menu-btn__inner">
@@ -97,82 +103,78 @@
                           <span class="p-top-menu-btn__bar"></span>
                           <span class="p-top-menu-btn__bar-other"></span>
                   </div>
-                 </div>
-
+                </div>
               </button>
+
 
     </div>
     <!-- ./p-header__inner -->
-
-
- <nav class="p-global-nav --global-top --global-pages" id="js-global-nav">
+          <div class="p-global-nav --global-top" id="js-global-nav">
 
                 <ul class="p-global-nav__list --global-top-list">
                   <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>#link-use" class="p-global-nav__link --global-top-link">
-                        検査のご利用方法
+                    <a href="<?php echo home_url( '/' ); ?>#link-use" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+                        申请检测的方法
                     </a>
                   </li>
                   <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-global-nav__link --global-top-link">
-                        よくある質問
+                    <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+                        常见问题
                     </a>
                   </li>
                   <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>#link-kit" class="p-global-nav__link --global-top-link">
-                        検体採取キット
+                    <a href="<?php echo home_url( '/' ); ?>#link-kit" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+                        采样套件
                     </a>
                   </li>
-                  <li class="p-global-nav__item --global-top-item">
+                 <!--   <li class="p-global-nav__item --global-top-item">
                     <a href="<?php echo home_url( '/' ); ?>clinics" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
-                        クリニクスの使い方
+                        云医疗支援系统的使用方法
                     </a>
-                  </li>
+                  </li> -->
                   <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>clinic" class="p-global-nav__link --global-top-link">
-                        当院について
+                    <a href="<?php echo home_url( '/' ); ?>clinic" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+                        关于本诊所
                     </a>
                   </li>
 
-                  <li class="p-global-nav__item --global-top-item">
+                  <li class="p-global-nav__item --global-top-item u-pc-display">
                     <a href="<?php echo home_url( '/' ); ?>contact" class="p-global-nav__link --global-top-link" target="_blank">
-                        お問合せ
+                        咨询
                     </a>
                   </li>
-
                 </ul>
 
-                 <div class="p-global-nav__sp-btn-wrap u-sp-display">
-                  <a href="<?php echo home_url( '/' ); ?>item-list" class="p-global-nav__sp-btn">検体採取キットのご購入</a>
-                  <a href="https://souki-kai.or.jp/rslt/" class="p-global-nav__sp-btn" target="_blank">結果通知サイトへ</a>
+                <div class="p-global-nav__sp-btn-wrap u-sp-display">
+                  <a href="<?php echo home_url( '/' ); ?>item-list" class="p-global-nav__sp-btn">购买采样套件</a>
+                  <a href="<?php echo home_url( '/' ); ?>contact" class="p-global-nav__sp-btn" target="_blank">咨询</a>
                 </div>
                 <!-- ./p-global-nav__sp-btn-wrap -->
 
-
-
-               <div class="u-sp-display">
-                   <p class="p-header__guide">お電話でのお問い合わせ</p>
+                <div class="u-sp-display">
+                   <p class="p-header__guide">通过电话联系我们</p>
 
                   <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-header__tel u-sp-display" target="_blank">
 
-                        <p class="p-header__number"><span class="p-header__number-sq">個人</span>
+                        <p class="p-header__number"><!-- <span class="p-header__number-sq">个人</span> -->
                         <span class="p-header__number-num">0120-088-120</span></p>
 
                   </a>
 
-                   <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel u-sp-display" target="_blank">
+                <!--    <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel u-sp-display" target="_blank">
 
-                        <p class="p-header__number"><span class="p-header__number-sq">企業・団体</span>
+                        <p class="p-header__number"><span class="p-header__number-sq">企业及团体</span>
                         <span class="p-header__number-num">06-4708-8082</span></p>
 
-                  </a>
+                  </a> -->
 
-                   <p class="p-header__time">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>-->
-              </nav>
+                   <p class="p-header__time">挂号时间 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+
+                   <p class="p-header__time u-fw600">※お電話は日本語の対応となります。</p>
+                </div>
 
 
-
-
+              </div>
 
 
   </header>

@@ -233,6 +233,21 @@ textarea {
     src: local("FuturaPTBook"), url("../fonts/FuturaPTBook.woff") format("woff");
 }
 
+/* #ui-id-2 {
+    color: transparent;
+    position: relative;
+}
+ */
+
+/* .payment_0 label {
+    color: transparent;
+}
+
+.payment_0 label::after {
+    content: "CARD";
+    color: #454545;
+} */
+
 /* REM PX変換 */
 
 $baseFontsize: 16;
@@ -248,14 +263,14 @@ html {
 
 body {
     line-height: 1.5;
-    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W5", "ヒラギノ角ゴシック W5", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "Yu Gothic UI", sans-serif;
+    font-family: "Noto Sans SC","Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W5", "ヒラギノ角ゴシック W5", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "Yu Gothic UI", sans-serif;
     color: #404040;
 }
 
 /* トップページのみ */
 
 body.home {
-    font-family: "ヒラギノ角ゴ StdN", "Hiragino Kaku Gothic StdN", sans-serif;
+    font-family: "Noto Sans SC" ,"ヒラギノ角ゴ StdN", "Hiragino Kaku Gothic StdN", sans-serif;
     color: #333;
 }
 

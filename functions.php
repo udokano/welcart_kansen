@@ -1,7 +1,17 @@
 <?php
+// 仮会員のステータス
 define("TEMP_MEMBER", 3);
+// 購入まで完了した仮会員のステータス
+define("USED_TEMP_MEMBER", 4);
+
+// 法人・団体商品のカテゴリのスラッグ
 define("GROUP_CATEGORY_SLUG", 'group');
+
+// ダウンロード商品の置き場所
 define("COUPON_FILE_PATH", WP_PLUGIN_DIR .'/wcex_dlseller/coupon');
+
+// 業務パック割引の段階数(拡張前の3件も含めた数)
+define("GP_COUNT", 10);
 
 
 
@@ -11,12 +21,12 @@ WPの更新を非表示にする
 
 -----------------------------------------------------*/
 
-//本体の更新通知を非表示
+/* //本体の更新通知を非表示
 add_filter("pre_site_transient_update_core", "__return_null");
 //プラグインの更新通知を非表示
 add_filter("pre_site_transient_update_plugins", "__return_null");
 //テーマの更新通知を非表示
-add_filter("pre_site_transient_update_themes", "__return_null");
+add_filter("pre_site_transient_update_themes", "__return_null"); */
 
 
 
@@ -104,13 +114,23 @@ function my_scripts()
         '2.6.2',
         true
     );
-    wp_enqueue_script(
-        'jquery.validationEngine-ja.js',
-        get_template_directory_uri() . '/js/jquery.validationEngine-ja.js',
+
+
+
+
+//中国語
+
+     wp_enqueue_script(
+        'jquery.validationEngine-zh_CN',
+        get_template_directory_uri() . '/js/jquery.validationEngine-zh_CN.js',
         array('jquery'),
         '2.0',
         true
     );
+
+
+
+
 }
 
 
@@ -133,6 +153,24 @@ function shortcode_url()
 }
 
 
+
+/*
+
+BOGOでカスタム投稿追加
+------------------------------------*/
+
+/**
+ * Support custom post type with bogo.
+ *
+ * @param array $localizable Supported post types.
+ * @return array
+ */
+function my_localizable_post_types( $localizable ) {
+    $localizable[] = 'voyage';
+    $localizable[] = 'faq';
+    return $localizable;
+}
+add_filter( 'bogo_localizable_post_types', 'my_localizable_post_types', 10, 1 );
 
 
 
@@ -331,7 +369,7 @@ function related_items_list(){
         );
         /*********関連アイテムに法人商品を表示させないようする暫定処理 *********/
         $args['category__in'] = [];
-        $category = get_category_by_slug('group');
+        $category = get_category_by_slug(GROUP_CATEGORY_SLUG);
         if (isset($category->cat_ID)) {
             $ignore_posts = get_posts(['category' => $category->cat_ID]);
             if (!is_null($ignore_posts)) {
@@ -549,7 +587,6 @@ add_filter('usces_filter_orderlist_process_status', 'ag_usces_filter_orderlist_p
 function my_filter_management_status($management_status){
     $management_status += array(
         'mail_ok' => '保留',
-
     );
     return $management_status;
 }
@@ -1102,6 +1139,80 @@ $html = "<ul class='p-note-lists'>
 }
 
 
+//お支払情報
+
+
+add_filter( 'usces_filter_the_payment_method_choices', 'my_filter_the_payment_method_choices', 10, 2 );
+function my_filter_the_payment_method_choices( $html, $payments ) {
+    //処理
+
+
+$payments = usces_get_system_option( 'usces_payment_method', 'sort' );
+	$payments = apply_filters('usces_fiter_the_payment_method', $payments, $value);
+
+	if( defined('WCEX_DLSELLER_VERSION') and version_compare( WCEX_DLSELLER_VERSION, '2.2-beta', '<=' ) ) {
+		$cart = $usces->cart->get_cart();
+		$have_continue_charge = usces_have_continue_charge( $cart );
+		$continue_payment_method = apply_filters( 'usces_filter_the_continue_payment_method', array( 'acting_remise_card', 'acting_paypal_ec' ) );
+	}
+
+	$list = '';
+	$payment_ct = ( $payments && is_array( $payments ) ) ? count( $payments ) : 0;
+	foreach ((array)$payments as $id => $payment) {
+		if( defined('WCEX_DLSELLER_VERSION') and version_compare( WCEX_DLSELLER_VERSION, '2.2-beta', '<=' ) ) {
+			if( $have_continue_charge ) {
+				if( !in_array( $payment['settlement'], $continue_payment_method ) ) {
+					$payment_ct--;
+					continue;
+				}
+				if( isset($usces->options['acting_settings']['remise']['continuation']) && 'on' !== $usces->options['acting_settings']['remise']['continuation'] && 'acting_remise_card' == $payment['settlement']) {
+					$payment_ct--;
+					continue;
+				} elseif( isset($usces->options['acting_settings']['paypal']['continuation']) && 'on' !== $usces->options['acting_settings']['paypal']['continuation'] && 'acting_paypal_ec' == $payment['settlement']) {
+					$payment_ct--;
+					continue;
+				}
+			}
+		}
+		if( $payment['name'] != '' and $payment['use'] != 'deactivate' ) {
+			$module = trim($payment['module']);
+			if( !WCUtils::is_blank($value) ){
+				$checked = ($payment['name'] == $value) ? ' checked' : '';
+			}else if( 1 == $payment_ct ){
+				$checked = ' checked';
+			}else{
+				$checked = '';
+			}
+			$checked = apply_filters( 'usces_fiter_the_payment_method_checked', $checked, $payment, $value );
+			$explanation = apply_filters( 'usces_fiter_the_payment_method_explanation', $payment['explanation'], $payment, $value );
+			if( (empty($module) || !file_exists($usces->options['settlement_path'] . $module)) && $payment['settlement'] == 'acting' ) {
+				$checked = '';
+				$list .= '<dt class="payment_'.$id.'"><label for="payment_name_'.$id.'"><input name="offer[payment_name]" id="payment_name_'.$id.'" type="radio" value="'.esc_attr($payment['name']).'"'.$checked.' disabled onKeyDown="if (event.keyCode == 13) {return false;}" /><span>'.esc_attr($payment['name'])."</span></label> <b>(".__('cannot use this payment method now.','usces').")</b></dt>";
+			}else{
+				$list .= '<dt class="payment_'.$id.'"><label for="payment_name_'.$id.'"><input name="offer[payment_name]" id="payment_name_'.$id.'" type="radio" value="'.esc_attr($payment['name']).'"'.$checked.' onKeyDown="if (event.keyCode == 13) {return false;}" /><span>'.esc_attr($payment['name'])."</span></label></dt>";
+			}
+			if( !empty( $explanation ) ) {
+				$list .= '<dd class="payment_'.$id.'">'.$explanation.'</dd>';
+			}
+		}
+	}
+
+	if( !empty( $list ) ) {
+		$html = '<dl>'.$list.'</dl>';
+	} else {
+		$html = '<div>'.__('Not yet ready for the payment method. Please refer to a manager.', 'usces').'</div>';
+	}
+
+
+	if( $out == 'return' ){
+		return $html;
+	}else{
+		echo $html;
+	}
+}
+
+
+
 //会員登録後のメールに会員番号・お名前・メアド・マイページURL追記
 
 add_filter('usces_filter_send_regmembermail_message', 'my_send_regmembermail_message', 10, 2);
@@ -1147,19 +1258,19 @@ function myzip_filter_set_cart_fees_shipping_charge($shipping_charge, $cart, $en
 //送料50000円以上なら送料無料
 
 
-define('SHIPPING_FREE_PRICE', 50000);//ここに000000円以上の金額を明記
+// define('SHIPPING_FREE_PRICE', 50000);//ここに000000円以上の金額を明記
 
-//カートのないの合計金額が30000円以上なら、送料無料
-function ag_free_set_cart_fees_shipping_charge($shipping_charge, $carts, $entries)
-{
-    $shipping_free_price = SHIPPING_FREE_PRICE; //送料無料条件の金額
-    $total_items_price = $entries['order']['total_items_price'];
-    if( $total_items_price >= $shipping_free_price ){
-        $shipping_charge = 0;
-    }
-    return $shipping_charge;
-}
-add_filter( 'usces_filter_set_cart_fees_shipping_charge', 'ag_free_set_cart_fees_shipping_charge', 10, 3);
+// //カートのないの合計金額が30000円以上なら、送料無料
+// function ag_free_set_cart_fees_shipping_charge($shipping_charge, $carts, $entries)
+// {
+//     $shipping_free_price = SHIPPING_FREE_PRICE; //送料無料条件の金額
+//     $total_items_price = $entries['order']['total_items_price'];
+//     if( $total_items_price >= $shipping_free_price ){
+//         $shipping_charge = 0;
+//     }
+//     return $shipping_charge;
+// }
+// add_filter( 'usces_filter_set_cart_fees_shipping_charge', 'ag_free_set_cart_fees_shipping_charge', 10, 3);
 
 /*
 add_filter('usces_filter_set_cart_fees_shipping_charge', 'mysku_set_cart_fees_shipping_charge', 10, 3);
@@ -1251,10 +1362,10 @@ function register_my_menus() {
      'footer-menu01' => 'footer-menu01',
     'footer-menu02'  => 'footer-menu02',
      'footer-menu03'  => 'footer-menu03'
+
   ) );
 }
 add_action( 'after_setup_theme', 'register_my_menus' );
-
 
 
 
@@ -1619,8 +1730,20 @@ function set_mime_types($mimes) {
 	return $mimes;
 }
 
-/* 法人商品がカートに入っているか返却
----------------------------------------------------------- */
+/**
+ * 現在のURLを取得
+ *
+ * @return string URL
+ */
+function get_current_link() {
+	return (is_ssl() ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+}
+
+/**
+ * 法人商品がカートに入っているか返却
+ *
+ * @return bool true:法人商品あり   false:法人商品なし
+ */
 function is_group_item_in_cart()
 {
     global $usces;
@@ -1636,20 +1759,21 @@ function is_group_item_in_cart()
         }
     }
 
-    return in_array('group', $cat_slugs, true);
+    return in_array(GROUP_CATEGORY_SLUG, $cat_slugs, true);
 }
 
-/* お客様情報入力フォームボタンの差し替え(法人商品がカートにない場合)
----------------------------------------------------------- */
-add_filter('usces_filter_get_customer_button', 'replace_customer_button', 10);
+/**
+ * お客様情報入力フォームボタンの差し替え(法人商品がカートにない場合)
+ *
+ * @param string $res ボタンのhtml
+ * @return string 修正後のhtml
+ */
 function replace_customer_button($res)
 {
     if (!usces_is_membersystem_state() && is_group_item_in_cart()) {
         return $res;
     }
-    if (usces_is_login()) {
-        return $res;
-    }
+
 	$res = '';
 	$res = '<input name="backCart" type="submit" class="back_cart_button" value="'.__('Back', 'usces').'" />&nbsp;&nbsp;';
 
@@ -1658,10 +1782,12 @@ function replace_customer_button($res)
 
     return $res;
 }
+add_filter('usces_filter_get_customer_button', 'replace_customer_button', 10);
 
-/* 会員登録パスワードを自動設定する(法人商品がカートにない場合)
----------------------------------------------------------- */
-add_action('usces_action_before_member_check_fromcart', 'set_temporary_password', 10);
+
+/**
+ * 会員登録パスワードを自動設定する(法人商品がカートにない場合)
+ */
 function set_temporary_password()
 {
     if (!usces_is_membersystem_state() || is_group_item_in_cart() || isset($_POST['customer']['password1']) || isset($_POST['customer']['password2'])) {
@@ -1672,22 +1798,32 @@ function set_temporary_password()
     $_POST['customer']['password1'] = $password;
     $_POST['customer']['password2'] = $password;
 }
+add_action('usces_action_before_member_check_fromcart', 'set_temporary_password', 10);
 
-/* 新規会員登録後に会員ランクを「仮会員」にする(法人商品がカートにない場合)
----------------------------------------------------------- */
-add_action('usces_action_member_registered', 'my_action_member_registered', 10, 2);
-function my_action_member_registered($_POST_member, $user_id)
+
+/**
+ * 新規会員登録後に会員ランクを「仮会員」にする(法人商品がカートにない場合)
+ *
+ * @param array $post_mem
+ * @param int $mem_id メンバーID
+ */
+function set_temporary_member_status($post_mem, $mem_id)
 {
     global $usces;
 
     if (!is_group_item_in_cart()) {
-	    $usces->set_member_info(['mem_status' => TEMP_MEMBER], $user_id);
+	    $usces->set_member_info(['mem_status' => TEMP_MEMBER], $mem_id);
     }
 }
+add_action('usces_action_member_registered', 'set_temporary_member_status', 10, 2);
 
-/* ユーザー情報入力時に同じメアドの仮会員があれば削除する
----------------------------------------------------------- */
-add_filter('usces_filter_member_check_fromcart', 'delete_temporary_member_from_register', 10);
+
+/**
+ * ユーザー情報入力時に同じメアドの仮会員があれば削除する
+ *
+ * @param string $mes メッセージ
+ * @return string $mesそのまま
+ */
 function delete_temporary_member_from_register($mes)
 {
     if (!isset($_POST['customer']['mailaddress1'])) {
@@ -1705,27 +1841,49 @@ function delete_temporary_member_from_register($mes)
 
     return $mes;
 }
+add_filter('usces_filter_member_check_fromcart', 'delete_temporary_member_from_register', 10);
 
-/* 仮会員の場合注文確定後に削除する
----------------------------------------------------------- */
-add_action('usces_action_after_send_ordermail_to_customer', 'delete_temporary_member_from_order', 10, 4);
-function delete_temporary_member_from_order($res, $confirm_para, $entry, $data)
+
+/**
+ * 仮会員の場合注文確定後にメールアドレスとステータスを更新する
+ *
+ * @param bool $res
+ * @param array $confirm_para
+ * @param array $entry
+ * @param array $data 注文情報
+ */
+function update_temporary_member($res, $confirm_para, $entry, $data)
 {
-    global $usces;
+    global $usces, $wpdb;
 
-    if (!isset($data['mem_id'])) {
+    if (!isset($data['mem_id']) || !isset($data['order_email']) || empty($data['order_email'])) {
         return;
     }
 
     $mem_status = get_mem_status_by_id($data['mem_id']);
     if ($mem_status == TEMP_MEMBER) {
-        $usces->member_logout();
-        usces_delete_memberdata($data['mem_id']);
+        $member_table_name = usces_get_tablename( 'usces_member' );
+        $query = $wpdb->prepare(
+            "UPDATE $member_table_name SET `mem_email`=%s, `mem_status`=%d WHERE ID = %d",
+            $data['order_email'] . '_' . time(),
+            USED_TEMP_MEMBER,
+            $data['mem_id']
+        );
+        $res = $wpdb->query( $query );
+
+        if ($res !== false) {
+            $usces->member_logout();
+        }
     }
 }
+add_action('usces_action_after_send_ordermail_to_customer', 'update_temporary_member', 10, 4);
 
-/* メールアドレスからメンバー情報を取得
----------------------------------------------------------- */
+
+/**
+ * メールアドレスからメンバー情報を取得
+ *
+ * @param string $mail_address メールアドレス
+ */
 function get_member_by_mail_address($mail_address)
 {
     global $wpdb;
@@ -1736,8 +1894,11 @@ function get_member_by_mail_address($mail_address)
     return $wpdb->get_row( $query, ARRAY_A );
 }
 
-/* メンバーIDから会員ランクを取得
----------------------------------------------------------- */
+/**
+ * メンバーIDから会員ランクを取得
+ *
+ * @param int $mem_id メンバーID
+ */
 function get_mem_status_by_id($mem_id)
 {
     global $wpdb;
@@ -1749,35 +1910,58 @@ function get_mem_status_by_id($mem_id)
     return isset($row['mem_status']) ? $row['mem_status'] : false;
 }
 
-/* 注文ステータスを未入金から入金に変更したときにクーポンを発行
----------------------------------------------------------- */
-add_action('usces_action_update_orderdata', 'make_coupon_from_order_status_change', 10, 5 );
+/**
+ * 注文が確定したときにクーポンを発行(クレジットカードの場合)
+ *
+ * @param int $order_id 注文番号
+ */
+function make_coupon_from_order($order_id)
+{
+    if (check_payment(get_payment_name('card'))) {
+        make_coupons($order_id);
+    }
+}
+add_action('usces_post_reg_orderdata', 'make_coupon_from_order', 10);
+
+/**
+ * 注文ステータスを未入金から入金に変更したときにクーポンを発行
+ *
+ * @param object $new_orderdata 新しい設定値
+ * @param string $old_status メンバーID
+ * @param $old_orderdata
+ * @param $new_cart
+ * @param $old_cart
+ */
 function make_coupon_from_order_status_change($new_orderdata, $old_status, $old_orderdata, $new_cart, $old_cart)
 {
     if (isset($new_orderdata->order_status) && isset($new_orderdata->ID)) {
         if ($old_status == 'noreceipt' && $new_orderdata->order_status == 'receipted,') {
-            $mem_id = isset($new_orderdata->mem_id) ? $new_orderdata->mem_id : '';
-            make_coupons($new_orderdata->ID, $mem_id);
+            make_coupons($new_orderdata->ID);
         }
     }
 }
+add_action('usces_action_update_orderdata', 'make_coupon_from_order_status_change', 10, 5 );
 
-/* クーポンの発行
----------------------------------------------------------- */
-require_once( WC_COUPON_PLUGIN_DIR . '/admin/ajax_action.php' );
-function make_coupons($order_id, $mem_id = '')
+
+/**
+ * クーポンの発行
+ *
+ * @param int $order_id 注文番号
+ */
+function make_coupons($order_id)
 {
     global $usces, $wpdb;
 
-    $ordercartdata = usces_get_ordercartdata($order_id);
-    $note = '注文番号' .$order_id;
-    if ($mem_id != '') {
-        $company_name = $usces->get_member_meta_value( 'csmb_company', $mem_id );
+    $order_data = $usces->get_order_data($order_id);
+    $note = '注文番号' . $order_id;
+    if (isset($order_data['mem_id'])) {
+        $company_name = $usces->get_member_meta_value('csmb_company', $order_data['mem_id']);
         if (!is_null($company_name)) {
             $note = $company_name .' / ' .$note;
         }
     }
-    foreach ($ordercartdata as $order) {
+    $order_cart_data = usces_get_ordercartdata($order_id);
+    foreach ($order_cart_data as $order) {
         // クーポンの設定値を取得
         $coupon = get_coupon_data($order);
         if (empty($coupon)) {
@@ -1823,12 +2007,17 @@ function make_coupons($order_id, $mem_id = '')
         fclose($fd);
     }
 }
+require_once( WC_COUPON_PLUGIN_DIR . '/admin/ajax_action.php' );
 
-/* クーポンの設定値を取得
----------------------------------------------------------- */
+
+/**
+ * クーポンの設定値を取得
+ *
+ * @param array $order 注文情報
+ */
 function get_coupon_data($order)
 {
-    if (!in_category('group', $order['post_id'])) {
+    if (!in_category(GROUP_CATEGORY_SLUG, $order['post_id'])) {
         return [];
     }
 
@@ -1861,22 +2050,26 @@ function get_coupon_data($order)
     ];
 }
 
-/* 法人用商品をカートに入れた際、カートに個人用商品が含まれていたらカートをクリアにする
-/* 個人用商品をカートに入れた際、カートに法人用商品が含まれていたらカートをクリアにする
----------------------------------------------------------- */
-add_action('usces_action_incart_checked', 'remove_mismatch_category_item', 10, 3);
+
+/**
+ * 法人用商品をカートに入れた際、カートに個人用商品が含まれていたらカートをクリアにする
+ * 個人用商品をカートに入れた際、カートに法人用商品が含まれていたらカートをクリアにする
+ *
+ * @param string $mes
+ * @param int $post_id 商品の投稿ID
+ * @param string $sku
+ */
 function remove_mismatch_category_item($mes, $post_id, $sku)
 {
     global $usces;
 
     // カートに入れようとしている商品が法人用かどうか
-    $is_group_item = in_category('group', $post_id);
-
+    $is_group_item = in_category(GROUP_CATEGORY_SLUG, $post_id);
     if ($is_group_item) {
         if (!is_group_item_in_cart()) {
             // 法人商品をカートに入れようとしたときカートに個人商品があれば空にする
             $usces->cart->clear_cart();
-
+            unset($_SESSION['msa_cart']);
             $member = $usces->get_member();
             if (isset($member['status']) && $member['status'] == TEMP_MEMBER) {
                 $usces->member_logout();
@@ -1886,18 +2079,65 @@ function remove_mismatch_category_item($mes, $post_id, $sku)
         if (is_group_item_in_cart()) {
             // 個人商品をカートに入れようとしたときカートに法人商品があれば空にする
             $usces->cart->clear_cart();
+            unset($_SESSION['msa_cart']);
         }
     }
-}
 
-/* 決済方法の種類を絞る(商品が個人用か法人用かで変わる)
----------------------------------------------------------- */
-add_filter('usces_fiter_the_payment_method', 'filter_payments', 10, 2 );
-function filter_payments($payments, $values)
+    return $mes;
+}
+add_filter('usces_filter_incart_check', 'remove_mismatch_category_item', 5, 3);
+
+
+/**
+ * 物販商品をカートに入れた際、カートにダウンロード商品が含まれていたらカートをクリアにする
+ * ダウンロード商品をカートに入れた際、カートに物販商品が含まれていたらカートをクリアにする
+ *
+ * @param string $mes
+ * @param int $post_id 商品の投稿ID
+ * @param string $sku
+ */
+function remove_mismatch_division_item($mes, $post_id, $sku)
+{
+    global $usces;
+
+    // カートに入れようとしている商品が物販かどうか
+    $is_shipped_item = dlseller_get_division($post_id) === 'shipped';
+    if ($is_shipped_item) {
+        if (!dlseller_have_shipped()) {
+            // 物販商品をカートに入れようとしたときカートに非物販商品があれば空にする
+            $usces->cart->clear_cart();
+            unset($_SESSION['msa_cart']);
+            $member = $usces->get_member();
+            if (isset($member['status']) && $member['status'] == TEMP_MEMBER) {
+                $usces->member_logout();
+            }
+        }
+    } else {
+        if (dlseller_have_shipped()) {
+            // 非物販商品をカートに入れようとしたときカートに物販商品があれば空にする
+            $usces->cart->clear_cart();
+            unset($_SESSION['msa_cart']);
+        }
+    }
+
+    return $mes;
+}
+add_filter('usces_filter_incart_check', 'remove_mismatch_division_item', 6, 3);
+
+
+/**
+ * 決済方法の種類を絞る(商品が個人用か法人用かで変わる)
+ *
+ * @param array $payments 元々の支払方法
+ * @return array 変更後の支払方法
+ */
+function filter_payments($payments)
 {
     $keep_payment_names = [];
     if (is_group_item_in_cart()) {
         // 企業・団体用の商品がカートに入っていれば
+        $keep_payment_names[] = get_payment_name('card');
+        $keep_payment_names[] = get_payment_name('transfer');
         $keep_payment_names[] = get_payment_name('estimate');
     } else {
         $keep_payment_names[] = get_payment_name('card');
@@ -1912,55 +2152,88 @@ function filter_payments($payments, $values)
 
     return $payments;
 }
+add_filter('usces_fiter_the_payment_method', 'filter_payments', 10);
 
-/* 支払方法名を取得する
----------------------------------------------------------- */
+
+/**
+ * 支払方法名を取得する
+ *
+ * @param string $key 支払方法のキー
+ * @return string 支払方法名
+ */
 function get_payment_name($key)
 {
-    // TODO: DB化すべき
+    // キーはコーディングする上でわかりやすい値(任意)
+    // 中身は管理画面で設定されている支払方法名に合わせること
+    // https://ドメイン/wp-admin/admin.php?page=usces_initial
     $data = [
-        // キーは任意、中身は管理画面で設定されている支払方法名に合わせること
-        // https://ドメイン/wp-admin/admin.php?page=usces_initial
-        'card' => 'クレジットカード',
-        'coupon' => '引換コード',
-        'estimate' => '見積り',
+        'card' => '信用卡',
+        'coupon' => '兑换码',
+        'estimate' => '見積り後、銀行振込',
+        'transfer' => '銀行振込',
     ];
 
     return isset($data[$key]) ? $data[$key] : '';
 }
 
-/* クーポンファイル名を取得
----------------------------------------------------------- */
-add_filter('dlseller_filter_filename', 'get_coupon_filename', 10, 3 );
+/**
+ * 支払方法名が引数で指定したものと一致しているか
+ *
+ * @param string $name 支払方法名
+ * @return bool true:一致    false:一致しない
+ */
+function check_payment($name)
+{
+    global $usces;
+
+    $entry = $usces->cart->get_entry();
+    if (isset($entry['order']['payment_name']) && $entry['order']['payment_name'] == $name) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * クーポンファイル名を取得
+ *
+ * @param string $file
+ * @param int $post_id
+ * @param string $sku 商品コード
+ * @return string ファイル名
+ */
 function get_coupon_filename($file, $post_id, $sku)
 {
     $order_id = $_GET['oid'];
 
     return "{$order_id}_{$sku}.csv";
 }
+add_filter('dlseller_filter_filename', 'get_coupon_filename', 10, 3 );
 
-/* クーポン決済でなければクーポン入力フォームの表示処理を無視する
----------------------------------------------------------- */
-add_action( 'usces_action_confirm_after_form', 'ignore_coupon_form', 9 );
+
+/**
+ * クーポン決済でなければクーポン入力フォームの表示処理を無視する
+ */
 function ignore_coupon_form()
 {
-    global $usces;
-
-    $entry = $usces->cart->get_entry();
-
-    if (isset($entry['order']['payment_name']) && $entry['order']['payment_name'] !== get_payment_name('coupon')) {
+    if (!check_payment(get_payment_name('coupon'))) {
         remove_action( 'usces_action_confirm_after_form', 'wccp_action_confirm_after_form' );
     }
 }
+add_action( 'usces_action_confirm_after_form', 'ignore_coupon_form', 9 );
 
-/* クーポン決済でクーポン未入力の場合確認画面に戻す
----------------------------------------------------------- */
-add_filter('usces_purchase_check', 'check_coupon_entry', 10);
+
+/**
+ * クーポン決済でクーポン未入力の場合確認画面に戻す
+ *
+ * @return bool trueの場合正常として処理を続行
+ */
 function check_coupon_entry()
 {
     global $usces;
-    $entry = $usces->cart->get_entry();
-    if ($entry['order']['payment_name'] == get_payment_name('coupon')) {
+
+    if (check_payment(get_payment_name('coupon'))) {
+        $entry = $usces->cart->get_entry();
         if (!isset($entry['order']['usedcoupon'])) {
             $usces->error_message = '引換コードが未入力です。正しい引換コード番号を入力して「引換コードを使用する」を押してご使用ください。';
             $usces->page = 'confirm';
@@ -1983,18 +2256,25 @@ function check_coupon_entry()
 
     return true;
 }
+add_filter('usces_purchase_check', 'check_coupon_entry', 10);
 
-/* MSAの注文履歴を削除
----------------------------------------------------------- */
-add_filter( 'usces_filter_member_history', 'remove_msa_member_history', 14 );
+
+/**
+ * MSAで表示しているマイページの注文履歴を削除
+ */
 function remove_msa_member_history()
 {
     remove_filter('usces_filter_member_history', 'msa_member_history', 1);
 }
+add_filter( 'usces_filter_member_history', 'remove_msa_member_history', 14 );
 
-/* 複数商品、複数量のクーポン決済をはじく
----------------------------------------------------------- */
-add_filter( 'usces_filter_delivery_check', 'check_coupon_order', 20 );
+
+/**
+ * 複数商品、複数量のクーポン決済をはじく
+ *
+ * @param string $mes エラーメッセージ
+ * @return string 変更後のエラーメッセージ
+ */
 function check_coupon_order($mes)
 {
     global $usces;
@@ -2002,71 +2282,88 @@ function check_coupon_order($mes)
     if ($mes == '' && $_POST['offer']['payment_name'] == get_payment_name('coupon')) {
         $cart = $usces->cart->get_cart();
         if (count($cart) > 1) {
-            return '引換コード決済の場合1種類の商品しか注文できません。';
+            $mes = '引換コード決済の場合1種類の商品しか注文できません。';
         }
         if (isset($cart[0]['quantity']) && $cart[0]['quantity'] > 1) {
-            return '引換コード決済の場合数量1つまでしか注文できません。';
+            $mes = '引換コード決済の場合数量1つまでしか注文できません。';
         }
     }
 
     return $mes;
 }
+add_filter( 'usces_filter_delivery_check', 'check_coupon_order', 20 );
 
-/* 見積りの場合注文確定ボタンの文言を変更
----------------------------------------------------------- */
-add_filter( 'usces_filter_confirm_checkout_button_value', 'replace_checkout_button_value', 10 );
+
+/**
+ * 見積りの場合注文確定ボタンの文言を変更
+ *
+ * @param string $button_value 元々の文言
+ * @return string 変更後の文言
+ */
 function replace_checkout_button_value($button_value)
 {
-    global $usces;
-
-    $entry = $usces->cart->get_entry();
-    if ($entry['order']['payment_name'] == get_payment_name('estimate')) {
-        $button_value = '内容の見積もりを依頼する';
+    if (check_payment(get_payment_name('estimate'))) {
+        $button_value = '上記内容の見積もりを依頼する';
     }
 
     return $button_value;
 }
+add_filter( 'usces_filter_confirm_checkout_button_value', 'replace_checkout_button_value', 10 );
 
-/* 支払方法がクーポンの場合メールに振込先を追記しない
----------------------------------------------------------- */
-add_filter( 'usces_filter_mail_transferee', 'remove_transferee_text', 10, 3 );
+
+/**
+ * 支払方法がクーポンの場合メールに振込先を追記しない
+ *
+ * @param string $transferee 元々の文言
+ * @param array $payment
+ * @param int $order_id
+ * @return string 変更後の文言
+ */
 function remove_transferee_text($transferee, $payment, $order_id)
 {
-    global $usces;
-
-    $entry = $usces->cart->get_entry();
-    if ($entry['order']['payment_name'] == get_payment_name('coupon')) {
-        return '';
+    if (check_payment(get_payment_name('coupon'))) {
+        $transferee = '';
     }
 
     return $transferee;
 }
+add_filter( 'usces_filter_mail_transferee', 'remove_transferee_text', 10, 3 );
 
-/* 法人注文の場合フォームの「お名前」の文言を変更
----------------------------------------------------------- */
-add_filter( 'usces_filters_addressform_name_label', 'replace_form_name_label', 10 );
+
+/**
+ * 法人注文の場合フォームの「お名前」の文言を変更
+ *
+ * @param string $text 元々の文言
+ * @return string 変更後の文言
+ */
 function replace_form_name_label($text)
 {
-    global $usces;
-
-    if (is_group_item_in_cart() || get_the_permalink() == USCES_MEMBER_URL) {
-        return 'ご担当者お名前';
+    if (is_group_item_in_cart() || get_current_link() == USCES_MEMBER_URL) {
+        $text = 'ご担当者お名前';
     }
 
     return $text;
 }
+add_filter( 'usces_filters_addressform_name_label', 'replace_form_name_label', 10 );
 
-/* 見積の場合注文完了メールの文言を専用のものに差し替える
----------------------------------------------------------- */
-add_filter( 'usces_send_ordermail_para_to_customer', 'replace_message_with_estimate', 10, 3);
+
+/**
+ * 見積の場合注文完了メールの文言を専用のものに差し替える
+ *
+ * @param array $confirm_para メール情報
+ * @param array $entry 入力情報
+ * @param array $data
+ * @return array 上書きした$confirm_param
+ */
 function replace_message_with_estimate($confirm_para, $entry, $data)
 {
     global $usces;
 
-    $entry = $usces->cart->get_entry();
-    if ($entry['order']['payment_name'] !== get_payment_name('estimate')) {
+    if (!check_payment(get_payment_name('estimate'))) {
         return $confirm_para;
     }
+
+    $entry = $usces->cart->get_entry();
     $order_id = $entry['order']['ID'];
     $_POST['mode'] = 'mitumoriConfirmMail';
     $confirm_para['message'] = usces_order_confirm_message($order_id);
@@ -2076,3 +2373,656 @@ function replace_message_with_estimate($confirm_para, $entry, $data)
 
     return $confirm_para;
 }
+add_filter( 'usces_send_ordermail_para_to_customer', 'replace_message_with_estimate', 10, 3);
+
+
+/**
+ * 業務パック割引の入力欄を拡張する
+ *
+ * @param string $gp_row 入力欄のhtml
+ * @param int $post_id 商品の投稿ID
+ * @return string 上書きしたhtml
+ */
+function add_gp_rows($gp_row, $post_id)
+{
+    $gp_data = get_custom_gp_data($post_id);
+
+    $gp_row = '<th rowspan="' . GP_COUNT . '">' . __('Business package discount', 'usces') . '</th>';
+    foreach ($gp_data as $key => $value) {
+        if ($key > 1) {
+            $gp_row .= '<tr>';
+        }
+        $gp_row .= '<td>' . $key . '.' . sprintf(__('in more than%s%s%s%s%s %s%s%s,', 'usces'), '<input type="text" name="', "itemGpNum{$key}", '" id="', "itemGpNum{$key}", '" class="itemPointrate"', 'value="', esc_attr($value['num']), '" />') . '<input type="text" name="itemGpDis' . $key . '" id="itemGpDis' . $key . '" class="itemPointrate" value="' . esc_attr($value['dis']) . '" />' . __('%discount','usces') . '(' . __('Unit price','usces') . ')</td>
+        </tr>';
+    }
+
+    return $gp_row;
+}
+add_filter( 'usces_item_master_gp_row', 'add_gp_rows', 10, 3);
+
+
+/**
+ * 業務パック割引のデータ登録件数拡張
+ *
+ * @param int $post_id 商品の投稿ID
+ * @param int $post
+ */
+function save_product_custom($post_id, $post)
+{
+    for ($i = 1; $i <= GP_COUNT; $i++) {
+        if(isset($_POST["itemGpNum{$i}"])){
+            $itemGpNum = (int)$_POST["itemGpNum{$i}"];
+            update_post_meta($post_id, "_itemGpNum{$i}", $itemGpNum);
+        }
+        if(isset($_POST["itemGpDis{$i}"])){
+            $itemGpDis = (int)$_POST["itemGpDis{$i}"];
+            update_post_meta($post_id, "_itemGpDis{$i}", $itemGpDis);
+        }
+    }
+}
+add_action( 'usces_action_save_product', 'save_product_custom', 10, 2);
+
+
+/**
+ * カスタム業務パック割引
+ *
+ * @param float $realprice 通常の業務パック割引が適用された値段
+ * @param int $post_id 商品の投稿ID
+ * @param string $p 業務パック割引適応前の値段
+ * @param int $quant 数量
+ * @return int 上書きした$realpriceの値
+ */
+function get_custom_gp_price($realprice, $post_id, $p, $quant)
+{
+    $gp_data = get_custom_gp_data($post_id);
+    foreach ($gp_data as $value) {
+        if (empty($value['num']) || empty($value['dis'])) {
+            break;
+        }
+        if ($quant >= $value['num']) {
+            $realprice = round($p * (100 - $value['dis']) / 100);
+        }
+    }
+
+	return $realprice;
+}
+add_filter( 'usces_filter_get_gp_price', 'get_custom_gp_price', 10, 4);
+
+
+/**
+ * カスタム業務パック割引後の内訳を取得
+ *
+ * @param string $html 元々のhtml
+ * @return string 上書きした$html
+ */
+function get_custom_gp_exp($html)
+{
+    global $post, $usces;
+
+    $post_id = $post->ID;
+    $sku = $usces->itemsku['code'];
+    $unit = $usces->getItemSkuUnit($post_id, $sku);
+    $price = $usces->getItemPrice($post_id, $sku);
+
+    $gp_data = get_custom_gp_data($post_id);
+    if( ($usces->itemsku['gp'] == 0) || empty($gp_data[1]['num']) || empty($gp_data[1]['dis']) ){
+        return $html;
+    }
+
+    $html = "<dl class='itemGpExp'>\n<dt>" . apply_filters( 'usces_filter_itemGpExp_title', __('Business package discount','usces')) . "</dt>\n<dd>\n<ul>\n";
+    for ($i = 1; $i <= GP_COUNT; $i++) {
+        $next_num = $gp_data[$i+1]['num'];
+        $next_dis = $gp_data[$i+1]['dis'];
+        $html .= "<li>";
+        if (empty($next_num) || empty($next_dis)) {
+            $html .= sprintf( __('<span class=%5$s>%1$s</span>%2$s par 1%3$s for more than %4$s%3$s', 'usces'),
+                        $usces->get_currency(round($price * (100 - $gp_data[$i]['dis']) / 100), true, false ),
+                        $usces->getGuidTax(),
+                        esc_html($unit),
+                        $gp_data[$i]['num'],
+                        "'price'"
+                    );
+        } else {
+            $html .= sprintf( __('<span class=%6$s>%1$s</span>%2$s par 1%3$s for %4$s-%5$s%3$s', 'usces'),
+                        $usces->get_currency(round($price * (100 - $gp_data[$i]['dis']) / 100), true, false ),
+                        $usces->getGuidTax(),
+                        esc_html($unit),
+                        $gp_data[$i]['num'],
+                        $gp_data[$i+1]['num']-1,
+                        "'price'"
+                    );
+        }
+        $html .= "</li>\n";
+    }
+    $html .= "</ul></dd></dl>";
+
+    return $html;
+}
+add_filter( 'usces_filter_itemGpExp', 'get_custom_gp_exp', 10 );
+
+
+/**
+ * 業務パック割引の設定値を取得
+ *
+ * @param int|string $post_id 商品の投稿ID
+ * @return array
+ */
+function get_custom_gp_data($post_id) {
+    $gp_data = [];
+    for ($i = 1; $i <= GP_COUNT; $i++) {
+        $gp_data[$i]['num'] = get_post_meta($post_id, '_itemGpNum'.$i, true);
+        $gp_data[$i]['dis'] = get_post_meta($post_id, '_itemGpDis'.$i, true);
+    }
+
+    return $gp_data;
+}
+
+
+/**
+ * 独自の送料計算
+ * 引換コード使用時は送料無料
+ * 引換コード購入時は使用時の送料代わりの料金を設定
+ *
+ * @param int $old_charge 元々の送料
+ * @param array $cart カート情報
+ * @param array $entry 注文情報
+ * @return float 送料(円)
+ */
+function get_custom_shipping_charge($old_charge, $cart, $entry)
+{
+    global $usces;
+
+    if (check_payment(get_payment_name('coupon'))) {
+        return 0;
+    }
+    //配送方法ID
+    $d_method_id = $entry['order']['delivery_method'];
+    //配送方法index
+    $d_method_index = $usces->get_delivery_method_index($d_method_id);
+    //送料ID
+    $fixed_charge_id = ( isset($usces->options['delivery_method'][$d_method_index]['charge']) ) ? $usces->options['delivery_method'][$d_method_index]['charge'] : -1;
+    $individual_quant = 0;
+    $total_quant = 0;
+    $charges = array();
+    $individual_charges = array();
+    $country = (isset($entry['delivery']['country']) && !empty($entry['delivery']['country'])) ? $entry['delivery']['country'] : $entry['customer']['country'];
+    $pref = '';
+    if (!isset($entry['delivery']['pref']) || empty($entry['delivery']['pref']) || $entry['delivery']['pref'] === '--選択--') {
+        $pref = $entry['customer']['pref'];
+    } else {
+        $pref = $entry['delivery']['pref'];
+    }
+
+    foreach ( $cart as $rows ) {
+
+        if( -1 == $fixed_charge_id ){
+            //商品送料ID
+            $s_charge_id = $usces->getItemShippingCharge($rows['post_id']);
+            //商品送料index
+            $s_charge_index = $usces->get_shipping_charge_index($s_charge_id);
+            $s_charge = isset($usces->options['shipping_charge'][$s_charge_index][$country][$pref]) ? (float)$usces->options['shipping_charge'][$s_charge_index][$country][$pref] : 0;
+        }else{
+            $s_charge_index = $usces->get_shipping_charge_index($fixed_charge_id);
+            $s_charge = isset($usces->options['shipping_charge'][$s_charge_index][$country][$pref]) ? (float)$usces->options['shipping_charge'][$s_charge_index][$country][$pref] : 0;
+        }
+
+        if($usces->getItemIndividualSCharge($rows['post_id'])){
+            $individual_quant += (float)$rows['quantity'];
+            $individual_charges[] = (float)$rows['quantity'] * $s_charge;
+        }else{
+            $charges[] = $s_charge;
+        }
+        $total_quant += $rows['quantity'];
+    }
+
+    if( count($charges) > 0 ){
+        rsort($charges);
+        $max_charge = $charges[0];
+        $charge = $max_charge + array_sum($individual_charges);
+    }else{
+        $charge = array_sum($individual_charges);
+    }
+
+    return $charge;
+}
+add_filter( 'usces_filter_getShippingCharge', 'get_custom_shipping_charge', 10, 3);
+
+
+/**
+ * 送料の文言を取得
+ *
+ * @param string $translation 元々の文言
+ * @param string $text 対象となる文言名
+ * @param string $domain 対象となるドメイン
+ * @return string 置き換える文言
+ */
+function get_shipping_text($translation, $text, $domain)
+{
+    if ($text !== 'Shipping' || get_current_link() !== USCES_CART_URL) {
+        return $translation;
+    }
+
+    global $usces;
+
+    $cart = $usces->cart->get_cart();
+    $coupon_charge_name = get_shipping_charge_name('coupon');
+    if (check_shipping_charge($coupon_charge_name, $cart)) {
+        $translation = $coupon_charge_name;
+    }
+
+    return $translation;
+}
+add_filter( 'gettext_usces', 'get_shipping_text', 10, 3);
+
+
+/**
+ * 見積書や請求書、領収書にコード使用時の送料のカラムを追記する
+ *
+ * @param array $label_data 元々のカラム
+ * @param object $data 注文情報
+ * @return array 変更したカラム
+ */
+function get_custom_pdf_footer_lavel($label_data, $data)
+{
+    $cart = isset($data->cart) && is_array($data->cart) ? $data->cart : [];
+    $coupon_charge_name = get_shipping_charge_name('coupon');
+    if (check_shipping_charge($coupon_charge_name, $cart)) {
+        array_splice($label_data, 2, 0, $coupon_charge_name);
+    }
+
+    return $label_data;
+}
+add_filter( 'usces_filter_pdf_footer_label', 'get_custom_pdf_footer_lavel', 10, 2);
+
+
+/**
+ * 見積書や請求書、領収書にコード使用時の送料の値を追記する
+ *
+ * @param array $value_data 値
+ * @param object $data 注文情報
+ * @return array 変更した値
+ */
+function get_custom_pdf_footer_value($value_data, $data)
+{
+    global $usces;
+
+    $cart = isset($data->cart) && is_array($data->cart) ? $data->cart : [];
+    if (check_shipping_charge(get_shipping_charge_name('coupon'), $cart)) {
+        array_splice($value_data, 2, 0, $usces->get_currency($data->order['shipping_charge']));
+    }
+
+    return $value_data;
+}
+add_filter( 'usces_filter_pdf_footer_value', 'get_custom_pdf_footer_value', 10, 2);
+
+
+/**
+ * カート内の送料が引数で指定した名前と一致しているかどうか
+ *
+ * @param string $shipping_charge_name 送料の名前
+ * @param array $cart カート
+ * @return bool true:一致している    false:一致していない(もしくは送料が複数ある)
+ */
+function check_shipping_charge($shipping_charge_name, $cart)
+{
+    global $usces;
+
+    $s_charge_ids = [];
+    foreach ( $cart as $rows ) {
+        $id = $usces->getItemShippingCharge($rows['post_id']);
+        if (!in_array($id, $s_charge_ids, true)) {
+            $s_charge_ids[] = $id;
+        }
+    }
+    if (count($s_charge_ids) !== 1) {
+        return false;
+    }
+    $s_charge_id = $s_charge_ids[0];
+    $s_charge_index = $usces->get_shipping_charge_index($s_charge_id);
+    if (isset($usces->options['shipping_charge'][$s_charge_index]['name']) && $usces->options['shipping_charge'][$s_charge_index]['name'] == $shipping_charge_name) {
+        return true;
+    }
+
+    return false;
+}
+
+
+/**
+ * 送料名を取得する
+ *
+ * @param string $key 送料のキー
+ * @return string 送料名
+ */
+function get_shipping_charge_name($key)
+{
+    // キーはコーディングする上でわかりやすい値(任意)
+    // 中身は管理画面で設定されている送料名に合わせること
+    // https://ドメイン/wp-admin/admin.php?page=usces_delivery
+    $data = [
+        'coupon' => 'コード使用時の送料',
+    ];
+
+    return isset($data[$key]) ? $data[$key] : '';
+}
+
+
+/**
+ * 商品区分(物販かコンテンツファイルか)取得のために受注リストのクエリにpostmetaをjoin
+ *
+ * @param string $join 元々のjoin句
+ * @return string 上書きした$join
+ */
+function get_custom_orderlist_sql_join($join)
+{
+    if (isset($_POST['item_division']) && $_POST['item_division'] == 'all') {
+        return $join;
+    }
+
+    global $wpdb;
+
+    $post_meta_table = $wpdb->prefix.'postmeta';
+    $join .= "LEFT JOIN {$post_meta_table} AS postmeta ON cart.post_id = postmeta.post_id AND postmeta.meta_key = '_item_division' " . "\n";
+
+    return $join;
+}
+add_filter( 'usces_filter_orderlist_sql_jointable', 'get_custom_orderlist_sql_join', 10 );
+
+
+/**
+ * 受注リスト取得クエリの条件に商品区分を指定
+ *
+ * @param string $where 元々のwhere句
+ * @return string 上書きした$where
+ */
+function get_custom_orderlist_sql_where($where)
+{
+    if (!isset($_POST['item_division'])) {
+        $item_division = 'shipped';
+    } elseif ($_POST['item_division'] == 'all') {
+        return $where;
+    } else {
+        $item_division = $_POST['item_division'];
+    }
+
+    if ($where === '') {
+        $where .= "WHERE postmeta.meta_value = '{$item_division}'";
+    } else {
+        $where .= "AND postmeta.meta_value = '{$item_division}'";
+    }
+
+    return $where;
+}
+add_filter( 'usces_filter_orderlist_sql_where', 'get_custom_orderlist_sql_where', 10 );
+
+
+/**
+ * 商品情報項目で検索条件を指定していない場合特定のカラムを表示しない
+ *
+ * @param string $detail 元々のhtml
+ * @param string $value
+ * @param string $key キー(カラム名)
+ * @param string $data
+ * @return string $detail もしくは ''
+ */
+function get_custom_orderlist_sql_select($detail, $value, $key, $data)
+{
+    $usces_serchproduct_column = [
+        'item_code',
+        'item_name',
+        'sku_code',
+        'sku_name',
+        'item_option',
+        'meta_key',
+        'meta_value',
+    ];
+    if (!in_array($key, $usces_serchproduct_column, true)) {
+        return $detail;
+    }
+
+    $is_setted_column = isset($_POST['search']['product_column']) && (!empty($_POST['search']['product_column'][0]) || !empty($_POST['search']['product_column'][1]));
+    $is_setted_word = isset($_POST['search']['product_word']) && (!empty($_POST['search']['product_word'][0]) || !empty($_POST['search']['product_word'][1]));
+    if ($is_setted_column || $is_setted_word) {
+        return $detail;
+    }
+
+    return '';
+}
+add_filter( 'usces_filter_orderlist_detail_value', 'get_custom_orderlist_sql_select', 10, 4);
+
+
+/**
+ * 受注リスト用のラジオボタンを設置
+ */
+function display_radio_for_orderlist()
+{
+    $shipped_select = '';
+    $data_select = '';
+    $all_select = '';
+
+    if (!isset($_POST['item_division'])) {
+        $shipped_select = ' checked="checked"';
+    } elseif ($_POST['item_division'] == 'shipped') {
+        $shipped_select = ' checked="checked"';
+    } elseif ($_POST['item_division'] == 'data') {
+        $data_select = ' checked="checked"';
+    } elseif ($_POST['item_division'] == 'all') {
+        $all_select = ' checked="checked"';
+    }
+?>
+    <tr>
+        <td class="label">商品区分</td>
+        <td>
+            <div>
+                <label for="division_shipped"><input name="item_division" id="division_shipped" type="radio" value="shipped"<?php echo $shipped_select; ?> />&nbsp;<?php _e('Shipped', 'dlseller'); ?></label>&nbsp;&nbsp;
+                <label for="division_data"><input name="item_division" id="division_data" type="radio" value="data"<?php echo $data_select; ?> />&nbsp;<?php _e('Data file', 'dlseller'); ?></label>&nbsp;&nbsp;
+                <label for="division_all"><input name="item_division" id="division_all" type="radio" value="all"<?php echo $all_select; ?> />&nbsp;全て</label>
+            </div>
+        </td>
+    </tr>
+<?php
+}
+
+
+/**
+ * 小計金額を取得(割引されている場合は割引額も追記する)
+ *
+ * @param array $cart_row 対象商品のカート情報
+ * @return string 小計金額として表示する値
+ */
+function get_subtotal_with_discount($cart_row)
+{
+    global $usces;
+
+    $original_unit_price = array_shift($usces->getItemPrice($cart_row['post_id']));
+    $original_price = $original_unit_price * $cart_row['quantity'];
+    $cart_price = $cart_row['price'] * $cart_row['quantity'];
+
+    if ($original_price > $cart_price) {
+        $difference_price = $original_price - $cart_price;
+        $original_price = esc_html($usces->get_currency($original_price, true, false));
+        $difference_price = esc_html($usces->get_currency($difference_price, true, false));
+        $ret = $original_price;
+        $ret .= '<br><font color="red">-' . $difference_price . '</font>';
+    } else {
+        $ret = usces_crform(($cart_price), true, false, 'return');
+    }
+
+    return $ret;
+}
+
+
+/**
+ * 注文番号からカート内容をコピーする
+ */
+function page_cart_from_estimate()
+{
+    global $usces;
+
+    $order_id = $_GET['reorder'];
+    $order_data = $usces->get_order_data($order_id);
+    if (!isset($order_data['mem_id'])) {
+        wp_redirect(USCES_MEMBER_URL);
+        exit;
+    }
+
+    $mem = $usces->get_member();
+    if (!isset($mem['ID']) || $mem['ID'] !== $order_data['mem_id']) {
+        wp_redirect(USCES_MEMBER_URL);
+        exit;
+    }
+
+    $usces->cart->clear_cart();
+    $order_cart_data = usces_get_ordercartdata($order_id);
+    foreach ($order_cart_data as $cart_row) {
+        $_POST = [
+            'quant' => [
+                $cart_row['post_id'] => [
+                    $cart_row['sku_code'] => $cart_row['quantity'],
+                ],
+            ],
+            'skuPrice' => [
+                $cart_row['post_id'] => [
+                    $cart_row['sku_code'] => $cart_row['price'],
+                ],
+            ],
+            'inCart' => [
+                $cart_row['post_id'] => [
+                    $cart_row['sku_code'] => 'reorder',
+                ],
+            ],
+        ];
+
+        $usces->incart_check();
+        if ($usces->error_message) {
+            $usces->cart->clear_cart();
+            break;
+        }
+        $usces->cart->inCart();
+
+        unset($_POST['quant']);
+        unset($_POST['skuPrice']);
+        unset($_POST['inCart']);
+    }
+    if (is_null($usces->error_message) || empty($usces->error_message)) {
+        $_SESSION['usces_reorder'] = $order_id;
+    }
+
+    $usces->page = 'cart';
+    add_action('the_post', array($usces, 'action_cartFilter'));
+    add_filter('yoast-ga-push-after-pageview', 'usces_trackPageview_cart');
+    add_action('template_redirect', array($usces, 'template_redirect'));
+}
+usces_register_action('page_cart_from_estimate', 'get', 'reorder', null, 'page_cart_from_estimate');
+
+
+/**
+ * カートコピーによる注文のエラー処理
+ *
+ * @param array $mes エラーメッセージ
+ * @param string $post_id 商品の投稿ID
+ * @param string $sku_code 商品コード
+ * @return string $mes|空文字列
+ */
+function catch_reorder_error($mes, $post_id, $sku_code)
+{
+    if (!isset($_GET['reorder']) || empty($mes)) {
+        return $mes;
+    }
+
+    global $usces;
+
+    $usces->error_message = '<font color="red">' . $mes[$post_id][$sku_code] . '</font>';
+
+    return '';
+}
+add_filter( 'usces_filter_incart_check', 'catch_reorder_error', 10, 3);
+
+
+/**
+ * カートコピーのセッションデータを削除
+ */
+function delete_reorder_session()
+{
+    unset($_SESSION['usces_reorder']);
+}
+add_action('usces_action_member_logout', 'delete_reorder_session', 10);
+
+
+/**
+ * カートコピーのセッションデータを削除(再注文確定時)
+ *
+ * @param int $new_order_id 新規の注文番号
+ */
+function delete_reorder_session_from_purchase($new_order_id)
+{
+    if (!isset($_SESSION['usces_reorder']) || empty($_SESSION['usces_reorder'])) {
+        return;
+    }
+
+    global $usces;
+
+    $res = $usces->set_order_meta_value('reorder_id', $new_order_id, $_SESSION['usces_reorder']);
+    if ($res) {
+        delete_reorder_session();
+    }
+}
+add_action('usces_post_reg_orderdata', 'delete_reorder_session_from_purchase', 10);
+
+
+/**
+ * カートコピーのセッションデータを削除(ログイン時)
+ */
+function delete_reorder_session_from_login()
+{
+    if (!isset($_SESSION['usces_reorder']) || empty($_SESSION['usces_reorder'])) {
+        return;
+    }
+
+    global $usces;
+
+    $reorder = $usces->get_order_data($_SESSION['usces_reorder']);
+    $login_mem = $usces->get_member();
+    if (!isset($reorder['mem_id']) || !isset($login_mem['ID'])) {
+        delete_reorder_session();
+    } else if ($reorder['mem_id'] !== $login_mem['ID']) {
+        delete_reorder_session();
+    }
+}
+add_action('usces_action_after_login', 'delete_reorder_session_from_login', 10);
+
+
+/**
+ * カートコピーによる注文が確定していたらコピー元の注文を非活性にする
+ *
+ * @param string $html 元々のhtml
+ * @param array $umhs 注文情報
+ * @return string $html 修正後のhtml
+ */
+function deactive_estimate_order($html, $umhs)
+{
+    global $usces;
+
+    if (!preg_match('/noreceipt/', $umhs['order_status'])) {
+        return $html;
+    }
+
+    $reorder_id = $usces->get_order_meta_value('reorder_id', $umhs['ID']);
+    if (is_null($reorder_id)) {
+        return $html;
+    }
+
+    $reorder = $usces->get_order_data($reorder_id);
+    if (!isset($reorder['payment_name']) || empty($reorder['payment_name'])) {
+        return $html;
+    }
+
+    $text = strpos($reorder['status'], 'noreceipt') === false ? '見積・支払済' : '再見積済';
+    $colspan = usces_is_membersystem_point() ? 8 : 6;
+    $html = '<tr><td class="retail" colspan="'.$colspan.'">';
+    $html .= '<span class="deactive_order">' . $text . '</span>';
+    $html .= '</td>';
+    $html .= '<td class="retail"></td></tr>';
+
+    return $html;
+}
+add_filter('usces_filter_member_history_header', 'deactive_estimate_order', 11, 2);

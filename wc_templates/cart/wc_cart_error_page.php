@@ -14,20 +14,26 @@ get_header();
 
 	<div class="post" id="wc_<?php usces_page_name(); ?>">
 
-		<h1 class="cart_page_title tc"><?php _e('Your order has not been completed', 'usces'); ?></h1>
-		<div class="entry">
 
-			<div id="error-page">
 
-				<div class="post tc">
 
-				<?php uesces_get_error_settlement(); ?>
 
-				<!-- <a href="ssssss">ああああああ</a> -->
+						<h1 class="cart_page_title tc">你的订单没有完成。</h1>
+						<div class="entry">
 
-				</div><!-- end of post -->
+							<div id="error-page">
 
-			</div><!-- end of error-page -->
+								<div class="post tc">
+
+								如果您有任何疑问，请联系网站管理员。
+
+								<!-- <a href="ssssss">ああああああ</a> -->
+
+								</div><!-- end of post -->
+
+						</div><!-- end of error-page -->
+
+
 
 		</div><!-- end of entry -->
 	</div><!-- end of post -->

@@ -7,6 +7,8 @@ Template Name: 唾液採取・抗体検査の手順
 
 
 
+
+
 <div class="p-pages-ttl-area --ttl-bg-use u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
@@ -44,7 +46,7 @@ Template Name: 唾液採取・抗体検査の手順
                             <p class="p-use-flow-kit__ttl-note">唾液の採取を行う、30分前から飲食、喫煙、歯磨き、口内洗浄はお控え下さい。</p>
                         </div>
                         <div class="p-flow-list-over">
-                            <ul class="p-flow-list">
+                            <!--<ul class="p-flow-list">
                                 <li class="p-flow-list__item">
                                     <p class="p-flow-list__step c-bdc-use-green">
                                         <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">01</span></span>
@@ -115,7 +117,88 @@ Template Name: 唾液採取・抗体検査の手順
                                     </div>
 
                                     <p class="p-flow-list__desc"><span class="p-flow-list__desc-red">唾液漏れを防ぐため、キャップが完全に閉まっている事を確認してから振り混ぜてください。</span><br class="">おおよそ10秒間ほど振り、不活化保存液と唾液を混ぜます。</p>
+                                </li>-->
+                                
+                                
+                                
+<ul class="p-flow-list">
+                                <li class="p-flow-list__item">
+                                    <p class="p-flow-list__step c-bdc-use-green">
+                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">01</span></span>
+                                    </p>
+                                    <h3 class="c-text-use-green p-flow-list__ttl">キットと付属品の確認</h3>
+                                    <div class="p-flow-list__thumb">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb01.jpg?a7729d12e239877e" alt="">
+                                    </div>
+
+                                    <p class="p-flow-list__desc">キット開封前に手を洗い清潔にしてから開封してください。<br class="">開封後は、同梱物の確認をお願い致します。</p>
                                 </li>
+
+                                <li class="p-flow-list__item">
+                                    <p class="p-flow-list__step c-bdc-use-green">
+                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">02</span></span>
+                                    </p>
+                                    <h3 class="c-text-use-green p-flow-list__ttl">ファネル取付・唾液採取</h3>
+                                    <div class="p-flow-list__thumb">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb02.jpg?a7729d12e239877e" alt="">
+                                    </div>
+
+                                    <p class="p-flow-list__desc">コレクションチューブにファネルを取り付け唾液の採取を行います。<br class="">
+舌の先を器具の上部に押し付け、ゆっくり唾液を吐き出します。<br class="">
+唾液は2mlの目盛まで充填して下さい。<br class="">
+※唾液中の泡は量として見なさないで下さい。</p>
+                                </li>
+
+                                <li class="p-flow-list__item">
+                                    <p class="p-flow-list__step c-bdc-use-green">
+                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">03</span></span>
+                                    </p>
+                                    <h3 class="c-text-use-green p-flow-list__ttl">保存液の添加</h3>
+                                    <div class="p-flow-list__thumb">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb03.jpg?a7729d12e239877e" alt="">
+                                    </div>
+
+                                    <p class="p-flow-list__desc">不活化保存液をチューブに添加します。<br class="">
+この時ボトルに入っている不活化保存液は全て注いで下さい。</p>
+                                </li>
+
+                                <li class="p-flow-list__item">
+                                    <p class="p-flow-list__step c-bdc-use-green">
+                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">04</span></span>
+                                    </p>
+                                    <h3 class="c-text-use-green p-flow-list__ttl">ファネルの取り外し</h3>
+                                    <div class="p-flow-list__thumb">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb04.jpg?a7729d12e239877e" alt="">
+                                    </div>
+
+                                    <p class="p-flow-list__desc">チューブを縦に持ち、上のファネル部分を取り外します。<br class="">次の工程に進む前に必ずファネルは取り外してください。</p>
+                                </li>
+
+                                <li class="p-flow-list__item">
+                                    <p class="p-flow-list__step c-bdc-use-green">
+                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">05</span></span>
+                                    </p>
+                                    <h3 class="c-text-use-green p-flow-list__ttl">キャップを締め、名前の記入</h3>
+                                    <div class="p-flow-list__thumb">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb05.jpg?a7729d12e239877e" alt="">
+                                    </div>
+
+                                    <p class="p-flow-list__desc">チューブのキャップをしっかりと締めて下さい。<br class="">チューブの白色の枠内にお名前を、油性マジックでご記入をお願い致します。</p>
+                                </li>
+
+                                <li class="p-flow-list__item">
+                                    <p class="p-flow-list__step c-bdc-use-green">
+                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">06</span></span>
+                                    </p>
+                                    <h3 class="c-text-use-green p-flow-list__ttl">不活化保存液と唾液を混ぜる</h3>
+                                    <div class="p-flow-list__thumb">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb06.jpg?a7729d12e239877e" alt="">
+                                    </div>
+
+                                    <p class="p-flow-list__desc"><span class="p-flow-list__desc-red">唾液漏れを防ぐため、キャップが完全に閉まっている事を確認してから振り混ぜてください。</span><br class="">おおよそ10秒間ほど振り、不活化保存液と唾液を混ぜます。</p>
+                                </li>
+                                
+                                
                             </ul>
                         </div>
                         <!-- ./p-flow-list-over -->

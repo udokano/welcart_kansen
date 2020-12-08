@@ -9,11 +9,17 @@ Template Name: よくある質問-法人
 
 
 
+
+
+
+
+
+
 <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
-                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">よくある質問一覧</h1>
-                <p class="p-pages-ttl-area__sub">法人・個人向けの<br>よくある質問一覧です。</p>
+                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">常有问题列表</h1>
+                <p class="p-pages-ttl-area__sub">对公司和个人来说：<br>以下是常有问题列表。</p>
               </div>
         </div>
 </div>
@@ -32,12 +38,15 @@ Template Name: よくある質問-法人
   <ul class="p-faq-tab">
 
       <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-faq-tab__link is-tab-active">個人</a>
+        <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-faq-tab__link ">个人</a>
       </li>
        <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-faq-tab__link ">法人</a>
+        <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-faq-tab__link is-tab-active">公司</a>
       </li>
   </ul>
+
+
+
 
 
                                 <ul class="p-faq__list">
@@ -46,6 +55,7 @@ Template Name: よくある質問-法人
                                         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
                                         $args = array(
                                         'post_type' => 'faq',
+                                        'post_status' => 'publish',
                                         'tax_query' => array (
                                                         array (
                                                           'taxonomy' => 'faq_kind',

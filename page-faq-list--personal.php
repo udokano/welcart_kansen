@@ -9,11 +9,14 @@ Template Name: よくある質問-個人
 
 
 
+
+
+
 <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
-                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">よくある質問一覧</h1>
-                <p class="p-pages-ttl-area__sub">法人・個人向けの<br>よくある質問一覧です。</p>
+                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">常有问题列表</h1>
+                <p class="p-pages-ttl-area__sub">对公司和个人来说：<br>以下是常有问题列表。</p>
               </div>
         </div>
 </div>
@@ -24,19 +27,21 @@ Template Name: よくある質問-個人
         bcn_display();
     }?>
 </div>
-                    <section class="p-faq bg-section-gray">
-                                <div class="l-inner">
 
+
+<section class="p-faq bg-section-gray">
+                          <div class="l-inner">
 
   <ul class="p-faq-tab">
-     <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-faq-tab__link ">個人</a>
-      </li>
-      <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-faq-tab__link is-tab-active">法人</a>
-      </li>
 
+      <li class="p-faq-tab__list">
+        <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-faq-tab__link is-tab-active">个人</a>
+      </li>
+       <li class="p-faq-tab__list">
+        <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-faq-tab__link ">公司</a>
+      </li>
   </ul>
+
 
 
 
@@ -47,6 +52,7 @@ Template Name: よくある質問-個人
                         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
                         $args = array(
                         'post_type' => 'faq',
+                        'post_status' => 'publish',
                         'tax_query' => array (
                                         array (
                                           'taxonomy' => 'faq_kind',
@@ -102,43 +108,7 @@ if ($the_query->max_num_pages > 1) {
 
 
 
-<!--  <div class="p-footer-nav u-border-bottom-none">
-                 <nav class="p-global-nav --global-top --global-footer">
-                  <ul class="p-global-nav__list --global-top-list --global-footer-list">
-                    <li class="p-global-nav__item --global-top-item --global-footer-item">
-                      <a href="<?php echo home_url( '/' ); ?>#link-use" class="p-global-nav__link --global-top-link --global-footer-link">
-                          検査のご利用方法
-                      </a>
-                    </li>
-                    <li class="p-global-nav__item --global-top-item  --global-footer-item">
-                      <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-global-nav__link --global-top-link --global-footer-link">
-                          よくある質問
-                      </a>
-                    </li>
-                    <li class="p-global-nav__item --global-top-item  --global-footer-item">
-                      <a href="<?php echo home_url( '/' ); ?>#link-kit" class="p-global-nav__link --global-top-link --global-footer-link">
-                          検体採取キット
-                      </a>
-                    </li>
-                     <li class="p-global-nav__item --global-top-item --global-footer-item">
-                    <a href="<?php echo home_url( '/' ); ?>clinics" class="p-global-nav__link --global-top-link js-sp-clink-menu-close --global-footer-link">
-                        クリニクスの使い方
-                    </a>
-                  </li>
-                    <li class="p-global-nav__item --global-top-item  --global-footer-item">
-                      <a href="<?php echo home_url( '/' ); ?>clinic" class="p-global-nav__link --global-top-link --global-footer-link ">
-                          当院について
-                      </a>
-                    </li>
 
-                    <li class="p-global-nav__item --global-top-item  --global-footer-item">
-                      <a href="<?php echo home_url( '/' ); ?>contact" class="p-global-nav__link --global-top-link --global-footer-link" target="_blank">
-                          お問合せ
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-        </div> -->
 
 
 

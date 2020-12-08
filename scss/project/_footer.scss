@@ -35,6 +35,10 @@
     max-width: 1150px;
     margin: 2.5rem auto;
 
+    &--other {
+        justify-content: space-around;
+    }
+
     &__list {
         // width: 30%;
 
@@ -120,6 +124,11 @@
         font-size: 0.8125rem;
         line-height: 1;
         margin-bottom: 0.4375rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.28rem;
+            margin-bottom: 1.8rem;
+        }
     }
 
     &__list {
@@ -130,6 +139,11 @@
         width: 61px;
         margin-right: .5rem;
         display: inline-block;
+
+        @media (max-width: 767px) {
+            width: 5.22rem;
+            margin: 0 1.01rem 1.78rem;
+        }
     }
 }
 

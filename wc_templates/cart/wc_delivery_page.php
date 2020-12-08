@@ -5,6 +5,8 @@ get_header();
 usces_delivery_info_script();
 ?>
 
+
+
 <script>
 
 
@@ -20,30 +22,32 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 
 <div class="section__inner">
 
-<!-- <div class="p-area-not">
-                                        <p class="p-area-not__ttl">
-											<span class="p-area-not__sub">現在のご購入・回収可能地域</span><br>東京、愛知、大阪、福岡<br><span class="p-area-not__sub">それ以外の地域は順次拡大予定となります。</span>
-											   <div class="p-uuuu">※個人ご利用の場合のみ。<br><span class="p-area-not__sub">企業・団体様のご利用の場合は地域制限はございません。</span></div>
-                                        </p>
-                                </div> -->
-
 
 
 <?php if (have_posts()) : usces_remove_filter(); ?>
 
 	<div class="post" id="wc_<?php usces_page_name(); ?>">
 
-		<h1 class="cart_page_title tc">発送・支払方法</h1>
+
+
+							<h1 class="cart_page_title tc">运输和付款方式</h1>
+
+
+
 		<div class="entry">
 
 			<div id="delivery-info">
 
 				<div class="usccart_navi">
 					<ol class="ucart">
-					<li class="ucart usccart"><?php _e('1.Cart', 'usces'); ?></li>
-					<li class="ucart usccustomer"><?php _e('2.Customer Info', 'usces'); ?></li>
-					<li class="ucart uscdelivery usccart_delivery">発送・支払方法</li>
-					<li class="ucart uscconfirm"><?php _e('4.Confirm', 'usces'); ?></li>
+
+
+														<li class="ucart usccart">购货车</li>
+														<li class="ucart usccustomer">顾客信息</li>
+														<li class="ucart uscdelivery usccart_delivery">发货及支付方式</li>
+														<li class="ucart uscconfirm">内容确认</li>
+
+
 					</ol>
 				</div>
 
@@ -52,11 +56,18 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 				</div>
 
 				<div class="error_message"><?php usces_error_message(); ?></div>
-				<form action="<?php usces_url('cart'); ?>" method="post" class="js-cart-form">
+
+
+
+	<form action="<?php usces_url('cart'); ?>" method="post" class="js-cart-form">
+
+
 			<?php if (!is_group_item_in_cart()) : ?>
 				<table class="customer_form" >
 					<tr >
-						<th rowspan="2" scope="row"><?php _e('shipping address', 'usces'); ?></th>
+
+								<th rowspan="2" scope="row">送货地址</th>
+
 						<td><input name="delivery[delivery_flag]" type="radio" id="delivery_flag1" onclick="document.getElementById('delivery_table').style.display = 'none';" value="0"<?php if ($usces_entries['delivery']['delivery_flag'] == 0) {
     echo ' checked';
 } ?> onKeyDown="if (event.keyCode == 13) {return false;}" /> <label for="delivery_flag1"><?php _e('same as customer information', 'usces'); ?></label></td>
@@ -92,7 +103,13 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 						<td colspan="2"><?php usces_the_delivery_time($usces_entries['order']['delivery_time']); ?></td>
 					</tr> -->
 					<tr>
-						<th scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('payment method', 'usces'); ?></th>
+						<th scope="row">
+							<em><?php _e('*', 'usces'); ?></em>
+
+													支付方式
+
+
+						</th>
 						<td colspan="2" class="u-po_rel"><?php usces_the_payment_method($usces_entries['order']['payment_name']); ?></td>
 					</tr>
 				</table>
@@ -109,11 +126,16 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 			<?php $entry_order_note = empty($usces_entries['order']['note']) ? apply_filters('usces_filter_default_order_note', null) : $usces_entries['order']['note']; ?>
 				<table class="customer_form" id="notes_table">
 					<tr>
-						<th scope="row"><?php _e('Notes', 'usces'); ?></th>
+
+
+									<th scope="row">备注</th>
+
+
 						<td colspan="2"><textarea name="offer[note]" id="note" class="notes"><?php echo esc_html($entry_order_note); ?></textarea><br>
 						<?php if (!is_group_item_in_cart()) : ?>
-						<span style="color: red; font-size: 130%; line-height: 1.4; padding-top: 10px; display: block;">領収書が必要な方は備考欄に【領収書】と記載ください。<br>
-ご注文者様のお名前でメールでご案内させて頂いております。</span>
+
+														<span style="color: red; font-size: 130%; line-height: 1.4; padding-top: 10px; display: block;">需要收据的顾客请在备注栏填写【收据】。<br>用电邮方式以订货顾客的名字通知顾客。</span>
+
 						<?php endif; ?>
 						</td>
 					</tr>
@@ -156,7 +178,7 @@ jQuery("#address3_row th").text("建物名");
 
 
 
-jQuery(document).ready(function(){
+/* jQuery(document).ready(function(){
 jQuery(".to_confirm_button").on("click",function(){
 
 	if(jQuery(".validate[required]").val() === "") {
@@ -170,7 +192,7 @@ jQuery(".to_confirm_button").on("click",function(){
 });
 });
 
-	$(function(){
+	jQuery(function(){
 	    setTimeout(function(){
 	        jQuery(".back_to_delivery_button").on("click",function(){
 		jQuery(".ui-dialog").removeClass("is-card-show");
@@ -180,7 +202,7 @@ jQuery(".to_confirm_button").on("click",function(){
 	});
 
 		// 画像が読み込まれたら実行させる
-	$(window).on('load', function() {
+	jQuery(window).on('load', function() {
 	 
 	    jQuery(".back_to_delivery_button").on("click",function(){
 		jQuery(".ui-dialog").removeClass("is-card-show");
@@ -188,9 +210,133 @@ jQuery(".to_confirm_button").on("click",function(){
 });
 	 
 	});
-
+ */
 
 
 
 
 </script>
+
+
+
+
+<script>
+
+
+
+jQuery(function(){
+	jQuery(".customkey_company th").text("法人名称");
+	jQuery("#name_row th").html("<em>＊</em>名字");
+	jQuery("#furikana_row th").html("读音");
+	jQuery(".customkey_brith_year th").html("<em>＊</em>年(出生年月日)	");
+	jQuery(".customkey_brith_month th").html("<em>＊</em>月(出生年月日)");
+	jQuery(".customkey_brith_day th").html("<em>＊</em>日(出生年月日)	");
+	jQuery("#zipcode_row th").html("<em>＊</em>邮编");
+	jQuery("#states_row th").html("<em>＊</em>都道府县");
+	jQuery("#address1_row th").html("<em>＊</em>市区郡町村");
+	jQuery("#address2_row th").html("<em>＊</em>番地");
+	jQuery("#address3_row th").text("建物名称");
+	jQuery("#tel_row th").html("<em>＊</em>联系电话");
+
+jQuery("#delivery_pref option:first-of-type").text("--选择--");
+
+	jQuery("#search_zipcode").val("搜索");
+
+
+		jQuery("#delivery_flag1").next("label").text("与顾客信息一致");
+	jQuery("#delivery_flag2").next("label").text("指定其他送货地址");
+
+	jQuery(".payment_0 label span").text("信用卡");
+	jQuery(".payment_3 label span").text("兑换码");
+
+
+});
+
+
+
+
+jQuery(function(){
+jQuery("#escott_token_cancel").val("继续购物");
+	jQuery(".back_to_customer_button").val("继续购物");
+	jQuery(".to_confirm_button").val("下一个");
+
+});
+
+
+
+var str = jQuery(".error_message").text();
+
+if ( str.match("引換コード決済の場合数量1つまでしか注文できません。")) {
+//strにhogeを含む場合の処理
+jQuery(".error_message").text("兑换码支付只能订购一个数量。");
+
+}
+
+if ( str.match("引換コード決済の場合数量1つまでしか注文できません。")) {
+//strにhogeを含む場合の処理
+jQuery(".error_message").text("兑换码支付只能订购一个数量。");
+
+}
+
+
+</script>
+
+
+
+<style>
+
+
+	#ui-id-2 {
+    color: transparent;
+    position: relative;
+}
+
+#ui-id-2::before {
+	content: "信用卡信息";
+	font-size: 1.4rem;
+	color: #000;
+}
+
+.customer_form.settlement_form tbody tr:nth-of-type(1) th {
+    color: transparent;
+}
+
+.customer_form#welcart tr:first-of-type td,.customer_form#welcart tr:nth-of-type(2) td{
+	 color: transparent;
+	 position: relative;
+}
+
+.customer_form.settlement_form tbody tr:nth-of-type(1) th::before {
+    content: "卡号";
+    color: #454545;
+}
+
+.customer_form.settlement_form tbody tr:nth-of-type(2) th {
+    color: transparent;
+}
+
+.customer_form.settlement_form tbody tr:nth-of-type(2) th::before {
+    content: "安全码";
+    color: #454545;
+}
+
+.customer_form.settlement_form tbody tr:nth-of-type(3) th {
+    color: transparent;
+}
+
+.customer_form.settlement_form tbody tr:nth-of-type(3) th::before {
+    content: "卡的有效期";
+    color: #454545;
+}
+
+.attention {
+    color: transparent;
+}
+
+.attention::before {
+    content: "不要在数字之间使用空格、连字符(-)和其他非数字符号或字符。";
+    color: #454545;
+}
+
+
+</style>

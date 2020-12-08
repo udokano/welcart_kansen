@@ -48,7 +48,7 @@ gulp.task('sass', function () {
 // 保存時のリロード
 gulp.task('browser-sync', function (done) {
     const browserSyncOption = {
-        proxy: "http://kansenec.local/"
+        proxy: "http://kanseneczh.local/"
     }
     browserSync.init(browserSyncOption)
     done()
@@ -81,7 +81,7 @@ gulp.task('watch', function (done) {
     gulp.watch('./scss/**/*.scss', gulp.task('sass'));
     gulp.watch('./scss/**/*.scss', gulp.task('bs-reload'));
     gulp.watch('./js/*.js', gulp.task('bs-reload'));
-    gulp.watch('./**.php', gulp.task('cache'));
+    //gulp.watch('./**.php', gulp.task('cache'));
     done()
 });
 

@@ -29,12 +29,12 @@
         height: 3.2rem;
         line-height: 3.2rem;
         letter-spacing: .075em;
-    }
-}
 
-.is-tab-active {
-    background-color: #fff;
-    color: #5eb2d0;
+        &.is-tab-active {
+            background-color: #fff;
+            color: #5eb2d0;
+        }
+    }
 }
 
 /* アーカイブ */

@@ -22,56 +22,64 @@ get_header();
 
 <div class="section__inner">
 
-<!-- <div class="p-area-not">
-                                        <p class="p-area-not__ttl">
-                                            <span class="p-area-not__sub">現在のご購入・回収可能地域</span><br>東京、愛知、大阪、福岡<br><span class="p-area-not__sub">それ以外の地域は順次拡大予定となります。</span>
-										</p>
-										<div class="p-uuuu">※個人ご利用の場合のみ。<br><span class="p-area-not__sub">企業・団体様のご利用の場合は地域制限はございません。</span></div>
-                                </div>
-                              -->
+
 
 
 <?php if (have_posts()) : usces_remove_filter(); ?>
 
 <div class="post" id="wc_<?php usces_page_name(); ?>">
 
-<h1 class="cart_page_title tc"><?php _e('Confirmation', 'usces'); ?></h1>
+
+
+<h1 class="cart_page_title tc">内容检查</h1>
+
+
+
 
 <!-- <p class="p-conf-note">検査キットの現在ご購入可能な地域<br><span class="c-under-deco">東京、愛知、大阪、福岡</span></p> -->
 
 <div class="entry">
 
 <div id="info-confirm">
-	<div class="confiem_notice tc">
-	<?php _e('Please do not change product addition and amount of it with the other window with displaying this page.', 'usces'); ?>
-	</div>
 
-	<div class="usccart_navi">
-		<ol class="ucart">
-		<li class="ucart usccart"><?php _e('1.Cart', 'usces'); ?></li>
-		<li class="ucart usccustomer"><?php _e('2.Customer Info', 'usces'); ?></li>
-		<li class="ucart uscdelivery">発送・支払方法</li>
-		<li class="ucart uscconfirm usccart_confirm"><?php _e('4.Confirm', 'usces'); ?></li>
-		</ol>
-	</div>
+
+			<div class="confiem_notice tc">
+				在显示本页面时，请不要在另一个窗口添加产品或更改产品数量。
+			</div>
+
+
+
+	  <div class="usccart_navi">
+					<ol class="ucart">
+
+
+
+												<li class="ucart usccart">购货车</li>
+												<li class="ucart usccustomer">顾客信息</li>
+												<li class="ucart uscdelivery">发货及支付方式</li>
+												<li class="ucart uscconfirm usccart_confirm">内容确认</li>
+
+					</ol>
+		</div>
 
 	<div class="header_explanation">
 <?php do_action('usces_action_confirm_page_header'); ?>
 	</div><!-- end of header_explanation -->
 
 	<div class="error_message"><?php usces_error_message(); ?></div>
-	<div id="cart">
-	<!-- 	<div class="currency_code"><?php _e('Currency', 'usces'); ?> : <?php usces_crcode(); ?></div> -->
-		<table cellspacing="0" id="cart_table">
-			<thead>
+	<div id="cart"><table cellspacing="0" id="cart_table"><thead>
 			<tr>
-				<th scope="row" class="num"><?php _e('No.', 'usces'); ?></th>
-				<!-- <th class="thumbnail">&nbsp;&nbsp;</th> -->
-				<th class="quantity-conf"><?php _e('Items', 'usces'); ?></th>
-			<!-- 	<th class="price"><?php _e('Unit price', 'usces'); ?></th> -->
-				<th class="quantity "><?php _e('Quantity', 'usces'); ?></th>
-				 <th class="subtotal"><?php _e('Amount', 'usces'); ?><?php usces_guid_tax(); ?></th>
-				<!-- <th class="action" colspan="2"></th> -->
+
+
+
+								<th scope="row" class="num"><?php _e('No.', 'usces'); ?></th>
+							<!-- <th class="thumbnail">&nbsp;&nbsp;</th> -->
+							<th class="quantity-conf">商品名称</th>
+							<!-- 	<th class="price"><?php _e('Unit price', 'usces'); ?></th> -->
+							<th class="quantity ">数量</th>
+							<th class="subtotal">金额<em class="tax">(含税)</em></th>
+							<!-- <th class="action" colspan="2"></th> -->
+
 			</tr>
 			</thead>
 			<tbody>
@@ -79,7 +87,12 @@ get_header();
 			</tbody>
 			<tfoot>
 			<tr>
-				<th colspan="2" class="aright"><?php _e('total items', 'usces'); ?></th>
+
+
+
+									<th colspan="2" class="aright">商品总计</th>
+
+
 				<th class="aright " colspan="2"><?php usces_crform($usces_entries['order']['total_items_price'], true, false); ?></th>
 
 			</tr>
@@ -105,7 +118,13 @@ get_header();
 			</tr>
 <?php endif; ?>
 			<tr>
-				<td colspan="2" class="aright"><?php _e('Shipping', 'usces'); ?></td>
+
+
+							<td colspan="2" class="aright">送货费用</td>
+
+
+
+
 				<td class="aright" colspan="2"><?php usces_crform($usces_entries['order']['shipping_charge'], true, false); ?></td>
 			</tr>
 <?php if (!empty($usces_entries['order']['cod_fee'])) : ?>
@@ -117,7 +136,9 @@ get_header();
 <?php endif; ?>
 <?php if (usces_is_tax_display() && 'all' == usces_get_tax_target()) : ?>
 			<tr>
-				<td colspan="2" class="aright "><?php usces_tax_label(); ?></td>
+
+							<td colspan="2" class="aright ">销售税</td>
+
 				<td class="aright " colspan="2"><?php usces_tax($usces_entries) ?></td>
 
 			</tr>
@@ -130,7 +151,9 @@ get_header();
 			</tr>
 <?php endif; ?>
 			<tr>
-				<th colspan="2" class="aright total-price"><?php _e('Total Amount', 'usces'); ?></th>
+
+								<th colspan="2" class="aright total-price">总金额</th>
+
 				<th class="aright total-price" colspan="2"><?php usces_crform($usces_entries['order']['total_full_price'], true, false); ?></th>
 
 			</tr>
@@ -159,7 +182,12 @@ get_header();
 	</div>
 	<table id="confirm_table">
 		<tr class="ttl">
-			<td colspan="2"><h3><?php _e('Customer Information', 'usces'); ?></h3></td>
+			<td colspan="2">
+
+
+						<h3>客户信息</h3>
+
+			</td>
 		</tr>
 		<tr>
 			<th><?php _e('e-mail adress', 'usces'); ?></th>
@@ -167,7 +195,11 @@ get_header();
 		</tr>
 		<?php uesces_addressform('confirm', $usces_entries, 'echo'); ?>
 		<tr>
-			<td class="ttl" colspan="2"><h3><?php _e('Others', 'usces'); ?></h3></td>
+			<td class="ttl" colspan="2">
+
+						<h3>其他</h3>
+
+			</td>
 		</tr>
 
 			<!-- 配送が必要ない場合はここを消す -->
@@ -195,18 +227,29 @@ get_header();
 		</tr>
 	</table>
 <?php if (!is_group_item_in_cart()) : ?>
-	<p class="u-tc u-fw600 c-pink u-mt20">
-	検体の返送は郵送で行っておりますので、<br class="u-sp">確定的な到着日時のお問合せにお答えする事ができません。<br class="">
-	また、検体到着後の検査開始日・完了日のお問合せにもお答えする事ができません。<br class="">
-到着目安を知りたい方は直接、<br class="u-sp">郵便局にお問い合わせくださいますようお願い申し上げます。<br class="">
-検査結果につきましても、より早い検査をお求めの方には、<br class="u-sp">速達でのご返送をご案内しております。<br class="">
-その際、速達に掛かる費用は患者様のご負担となりますので、<br class="u-sp">予めご了承ください。<br class=""><br class="">
 
-土日・祝日の配達は郵便局が営業していないため、日数を要する可能性がございます。<br class="u-sp">予めご了承ください。<br class="">
-(速達の場合は土日・祝日でも配達が可能)<br class="">
-<br class="">
-以上、ご同意いただける方のみご注文へお進みください。
+		<?php
+		$lang_no1 = ($http_langs = $_SERVER['HTTP_ACCEPT_LANGUAGE'])
+		? explode( ',', $http_langs )[0] : 'en';
+		?>
+		<!-- 条件分岐 -->
+
+
+					<p class="u-tc u-fw600 c-pink u-mt20">
+	样本通过邮局寄回，所以不能回答有关确定的到货时间的咨询。<br class="">
+还有也不能回答有关样本送到后的检测开始时间和结束时间的咨询。<br class="">
+如果有顾客想知道什么时候送到，请直接向邮局询问。<br class="">
+关于检测结果，如果有顾客想尽早进行检测，请用快件寄回。<br class="">
+快件所需费用由患者自己负担，请予以理解。<br class="">
+
+周六周日及节假日邮局不营业，因此有可能要多花些时日，请予以理解。<br class="">
+（如果是快件，周六周日及节假日也可以送货）<br class="">
+
+同意如上条件的顾客请进入订货。
 	</p>
+
+
+
 <?php endif; ?>
 
 
@@ -238,7 +281,75 @@ get_header();
 
 <script>
 
-	jQuery(".member-address3-row th").text("建物名");
-	jQuery(".delivery-address3-row th").text("建物名");
+//OPTION ID追加ナンバリング
+jQuery("#confirm_table tbody tr th").each(function (i) {
+    jQuery(this).attr('id', 'confirm-row' + (i + 1));
+
+});
+
+jQuery("#confirm_table tbody tr h3").each(function (i) {
+    jQuery(this).attr('id', 'confirm-ttl' + (i + 1));
+
+});
+
+
+</script>
+
+
+
+
+<script>
+	jQuery("#confirm-row1").text("电子邮件地址");
+	jQuery("#confirm-row2").text("法人名称");
+	jQuery("#confirm-row3").text("名字");
+	//jQuery("#confirm-row4").text("读音");
+
+	jQuery("#confirm-row11").text("邮编");
+	jQuery("#confirm-row7").text("都道府县");
+	jQuery("#confirm-row8").text("市区郡町村");
+	jQuery("#confirm-row9").text("番地");
+	jQuery("#confirm-row10").text("建物名称");
+	jQuery("#confirm-row13").text("电话");
+
+
+	jQuery("#confirm-row14").text("名字");
+	//jQuery("#confirm-row15").text("读音");
+	jQuery("#confirm-row19").text("邮编");
+	jQuery("#confirm-row15").text("都道府县");
+	jQuery("#confirm-row16").text("市区郡町村");
+	jQuery("#confirm-row17").text("番地");
+	jQuery("#confirm-row18").text("建物名称");
+	//jQuery("#confirm-row22").text("联系电话");
+	jQuery("#confirm-ttl2").text("送货地址信息");
+	jQuery("#confirm-row22").text("支付方式");
+	jQuery("#confirm-row23").text("备注");
+
+
+	jQuery(".back_to_delivery_button").val("回去");
+	jQuery(".checkout_button").val("按上诉内容订货");
+
+	jQuery("#coupon_table tr:first-of-type td:first-of-type").text("兑换码");
+	jQuery(".use_coupon_button").val("使用兑换码。");
+	jQuery(".reset_coupon_button").val("收回");
+
+
+
+			var str = jQuery(".error_message").text();
+
+			if ( str.match("引換コードのご利用回数を超えています。")) {
+			//strにhogeを含む場合の処理
+			jQuery(".error_message").text("您已经超过了使用兑换码的次数。");
+
+			} else if ( str.match("値が不正です。半角英数字で入力してください。")) {
+				jQuery(".error_message").text("无效值。 请用半宽的字母数字字符输入数值。");
+			}
+
+			else if ( str.match("Value is invalid. Please enter alphanumeric characters.")) {
+				jQuery(".error_message").text("无效值。 请用半宽的字母数字字符输入数值。");
+			}
+
+			else if ( str.match("You have used the coupon more than the number of times.")) {
+				jQuery(".error_message").text("您已经超过了使用兑换码的次数。");
+			}
 
 	</script>

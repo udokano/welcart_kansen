@@ -34,6 +34,10 @@
     color: #ff5166;
 }
 
+.c-red {
+    color: #ff5353;
+}
+
 .c-pink02 {
     color: #f33434;
 }
@@ -78,10 +82,26 @@
     color: #fff600;
 }
 
+.c-green-blue-i {
+    color: #2e97a3 !important;
+}
+
+.c-light-blue-i {
+    color: #2e79a3 !important;
+}
+
 /* 背景 */
 
 .bg-pink {
     background-color: $menu_pink;
+}
+
+.bg-green-blue-i {
+    background-color: #2e97a3 !important;
+}
+
+.bg-light-blue-i {
+    background-color: #2e79a3 !important;
 }
 
 .bg-light-blue {

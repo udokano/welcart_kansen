@@ -14,13 +14,6 @@ get_header();
 
 <div class="section__inner">
 
-<!-- <div class="p-area-not">
-                                        <p class="p-area-not__ttl">
-											<span class="p-area-not__sub">現在のご購入・回収可能地域</span><br>東京、愛知、大阪、福岡<br><span class="p-area-not__sub">それ以外の地域は順次拡大予定となります。</span>
-											<div class="p-uuuu">※個人ご利用の場合のみ。<br><span class="p-area-not__sub">企業・団体様のご利用の場合は地域制限はございません。</span></div>
-                                        </p>
-                                </div> -->
-
 
 
 
@@ -28,18 +21,26 @@ get_header();
 
 	<div class="post" id="wc_<?php usces_page_name(); ?>">
 
-	<h1 class="cart_page_title tc"><?php _e('Customer Information', 'usces'); ?></h1>
+
+						<h1 class="cart_page_title tc">客户信息</h1>
+
+
+
 		<div class="entry">
 
 			<div id="customer-info">
 
 				<div class="usccart_navi">
-					<ol class="ucart">
-					<li class="ucart usccart"><?php _e('1.Cart', 'usces'); ?></li>
-					<li class="ucart usccustomer usccart_customer"><?php _e('2.Customer Info', 'usces'); ?></li>
-					<li class="ucart uscdelivery">発送・支払方法</li>
-					<li class="ucart uscconfirm"><?php _e('4.Confirm', 'usces'); ?></li>
-					</ol>
+						<ol class="ucart">
+
+
+
+												<li class="ucart usccart">购货车</li>
+												<li class="ucart usccustomer usccart_customer">顾客信息</li>
+												<li class="ucart uscdelivery">发货及支付方式</li>
+												<li class="ucart uscconfirm">内容确认</li>
+
+						</ol>
 				</div>
 
 				<div class="header_explanation">
@@ -66,14 +67,30 @@ get_header();
 				<h5 class="customer-ttl"><?php _e('The nonmember please enter at here.', 'usces'); ?></h5>
 			<?php endif; ?>
 
-				<form action="<?php echo USCES_CART_URL; ?>" method="post" name="customer_form" onKeyDown="if (event.keyCode == 13) {return false;}" class="js-cart-form">
+
+
+	<form action="<?php echo USCES_CART_URL; ?>" method="post" name="customer_form" onKeyDown="if (event.keyCode == 13) {return false;}" class="js-cart-form">
+
+
 				<table border="0" cellpadding="0" cellspacing="0" class="customer_form">
 					<tr>
-						<th scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('e-mail adress', 'usces'); ?></th>
+						<th scope="row">
+								<em><?php _e('*', 'usces'); ?></em>
+
+
+												电子邮件地址
+
+						</th>
 						<td colspan="2"><input name="customer[mailaddress1]" id="mailaddress1" type="text" value="<?php echo esc_attr($usces_entries['customer']['mailaddress1']); ?>" style="ime-mode: inactive" /></td>
 					</tr>
 					<tr>
-						<th scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('e-mail adress', 'usces'); ?>(<?php _e('Re-input', 'usces'); ?>)</th>
+						<th scope="row">
+							<em><?php _e('*', 'usces'); ?></em>
+
+												电子邮件地址(重新输入)
+
+
+						</th>
 						<td colspan="2"><input name="customer[mailaddress2]" id="mailaddress2" type="text" value="<?php echo esc_attr($usces_entries['customer']['mailaddress2']); ?>" style="ime-mode: inactive" /></td>
 					</tr>
 			<?php if (usces_is_membersystem_state() && is_group_item_in_cart()) : ?>
@@ -94,8 +111,9 @@ get_header();
 			<?php uesces_addressform('customer', $usces_entries, 'echo'); ?>
 				</table>
 
+								<p class="u-tc c-pink u-fw600 u-text-under-line">请确认所填写的地址是否有错。</p>
 
-				<p class="u-tc c-pink u-fw600 u-text-under-line">※記載した住所がお間違いがないかをご確認ください。</p>
+
 
 
 
@@ -129,9 +147,60 @@ get_header();
 
 <?php get_footer(); ?>
 
+
+
+
+
+
 <script>
 
-jQuery("#address3_row th").text("建物名");
+
+
+jQuery(function(){
+	jQuery(".customkey_company th").text("法人名称");
+	jQuery("#name_row th").html("<em>＊</em>名字");
+	jQuery("#furikana_row th").html("读音");
+	jQuery(".customkey_brith_year th").html("<em>＊</em>年(出生年月日)	");
+	jQuery(".customkey_brith_month th").html("<em>＊</em>月(出生年月日)");
+	jQuery(".customkey_brith_day th").html("<em>＊</em>日(出生年月日)	");
+	jQuery("#zipcode_row th").html("<em>＊</em>邮编");
+	jQuery("#states_row th").html("<em>＊</em>都道府县");
+	jQuery("#address1_row th").html("<em>＊</em>市区郡町村");
+	jQuery("#address2_row th").html("<em>＊</em>番地");
+	jQuery("#address3_row th").text("建物名称");
+	jQuery("#tel_row th").html("<em>＊</em>联系电话");
+
+
+
+	jQuery("#search_zipcode").val("搜索");
+
+});
+
+
+
+
+jQuery(function(){
+
+	jQuery(".back_cart_button").val("继续购物");
+	jQuery(".to_reganddeliveryinfo_button").val("进入下一步");
+
+	jQuery("#customer_pref option:first-of-type").text("--选择--");
+
+});
+
+var str = jQuery(".error_message").text();
+
+if ( str.match("このメールアドレスは登録できません。")) {
+//strにhogeを含む場合の処理
+jQuery(".error_message").text("您不能注册这个电子邮件地址。");
+
+}
+
+if ( str.match("This e-mail address can not be registered.")) {
+//strにhogeを含む場合の処理
+jQuery(".error_message").text("您不能注册这个电子邮件地址。");
+
+}
 
 
 </script>

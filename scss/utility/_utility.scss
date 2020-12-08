@@ -33,7 +33,9 @@
 }
 
 .u-f-ryu {
-    font-family: a-otf-ryumin-pr6n, serif;
+    //font-family: a-otf-ryumin-pr6n, serif;
+    //font-family: 'Noto Serif JP', serif;
+    font-family: 'Noto Serif SC', serif;
     font-weight: 300;
     font-style: normal;
     font-size: 2.1rem;
@@ -44,6 +46,14 @@
     font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
     font-weight: 300;
     font-style: normal;
+}
+
+.u-f-zh-min {
+    font-family: "Noto Serif SC";
+}
+
+.u-din-pro-mid {
+    font-family: "DINPro Medium";
 }
 
 .u-f-futura {
@@ -72,12 +82,32 @@
     color: $pink;
 }
 
+.u-cursor-pointer {
+    cursor: pointer;
+}
+
 .u-gosic {
     font-family: $gosic;
 }
 
+.u-ff-colum {
+    flex-flow: column;
+}
+
 .u-jc-cent {
     justify-content: center !important;
+}
+
+.u-pl0 {
+    padding-left: 0 !important;
+}
+
+.u-jc-cent {
+    justify-content: center !important;
+}
+
+.u-ju-st {
+    justify-content: flex-start !important;
 }
 
 .u-flex {
@@ -130,6 +160,10 @@
     }
 }
 
+.u-bdb-none {
+    border-bottom: none !important;
+}
+
 .u-text-under-line {
     text-decoration: underline;
 }
@@ -148,6 +182,12 @@
 
 .u-mb0 {
     margin-bottom: 0 !important;
+}
+
+.u-sp-mb0 {
+    @media (max-width: 767px) {
+        margin-bottom: 0 !important;
+    }
 }
 
 .u-mb10 {
@@ -178,6 +218,15 @@
     position: relative;
 }
 
+.u-sp-flex-al-cent {
+    @media (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.25;
+    }
+}
+
 .u-bg-gray {
     background-color: #f9f9f9;
 }
@@ -188,6 +237,14 @@
 
 .u-fz-large {
     font-size: 1.45rem;
+}
+
+.max-width-auto {
+    max-width: none !important;
+}
+
+.height-auto {
+    height: auto !important;
 }
 
 .cf::after {

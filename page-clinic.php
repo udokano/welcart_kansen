@@ -7,10 +7,14 @@ Template Name: 当院について
 
 
 
+
+
+
+
 <div class="p-pages-ttl-area --ttl-bg-clinic u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner">
               <div class="p-pages-ttl-area__texts">
-                        <h1 class="p-pages-ttl-area__ttl  --under-none">クリニック概要</h1>
+                        <h1 class="p-pages-ttl-area__ttl  --under-none">关于本诊所</h1>
               <!--   <p class="p-pages-ttl-area__sub">こちらの検査は教育機関・医療機関の方<br>専用の申込フォームになります。</p> -->
               </div>
         </div>
@@ -34,11 +38,11 @@ Template Name: 当院について
     <div class="l-main-right__inner">
         <div class="p-clinic-info-table-warp">
             <dl class="p-clinic-info-table">
-                <dt class="p-clinic-info-table__ttl">院名</dt>
-                <dd class="p-clinic-info-table__desc"><a href="https://souki-kai.or.jp/group.html" class="u-text-under-line c-blue" target="_blank">医療法人社団 創輝会</a>  <br class="u-sp">感染症検査クリニック</dd>
+                <dt class="p-clinic-info-table__ttl">诊所名称</dt>
+                <dd class="p-clinic-info-table__desc"><a href="https://souki-kai.or.jp/group.html" class="u-text-under-line c-blue" target="_blank">医疗法人社团 创辉会</a>  <br class="u-sp">感染症检测诊所</dd>
             </dl>
             <dl class="p-clinic-info-table">
-                <dt class="p-clinic-info-table__ttl">設立年月日</dt>
+                <dt class="p-clinic-info-table__ttl">设立年月日</dt>
                 <dd class="p-clinic-info-table__desc">2020年8月1日</dd>
             </dl>
           <!--   <dl class="p-clinic-info-table">
@@ -46,14 +50,14 @@ Template Name: 当院について
                 <dd class="p-clinic-info-table__desc">○○ ○○</dd>
             </dl> -->
             <dl class="p-clinic-info-table">
-                <dt class="p-clinic-info-table__ttl">事業内容</dt>
-                <dd class="p-clinic-info-table__desc">感染症検査分析</dd>
+                <dt class="p-clinic-info-table__ttl">业务内容</dt>
+                <dd class="p-clinic-info-table__desc">感染症检测分析</dd>
             </dl>
             <dl class="p-clinic-info-table">
-                <dt class="p-clinic-info-table__ttl">クリニック所在地</dt>
-                <dd class="p-clinic-info-table__desc">〒542-0086 大阪府大阪市中央区西心斎橋2-13-16　おおきに西心斎橋BirthPlaceビル　3階<br><br>
-                <p style="font-size:80%;">直接、ご来院する場合は感染対策の都合上、<br class="u-sp">事前にご連絡ください。<br>
-                <span style="color:red;">新型コロナウイルス感染疑いの症状がある方は入室できません。<!-- <br>
+                <dt class="p-clinic-info-table__ttl">诊所所在地</dt>
+                <dd class="p-clinic-info-table__desc">〒542-0086 大阪府大阪市中央区西心斋桥2-13-16 OOKINI西心斋桥BirthPlace大厦3楼<br><br>
+                <p style="font-size:80%;">由于预防感染的原因，如果直接来医院的话，<br class="u-sp">请事先联系。<br>
+                <span style="color:red;">有疑似新冠肺炎症状的人士不能入内。<!-- <br>
                 また、発熱や味覚障害、感染者との濃厚接触など感染が疑われる症状がある方の受診は行っておりません。 --></span></p>
                 </dd>
             </dl>

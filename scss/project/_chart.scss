@@ -197,6 +197,12 @@
         padding-top: 7.78rem;
     }
 
+    &--other {
+        @media (max-width: 767px) {
+            height: 320vw;
+        }
+    }
+
     &__center {
         //width: 133px;
         width: 6px;
@@ -374,6 +380,12 @@
             font-size: .9rem;
             width: 100%;
         }
+
+        &--other {
+            @media (min-width: 768px) {
+                width: 72%;
+            }
+        }
     }
 
     &__btn {
@@ -425,6 +437,14 @@
                     width: 100%;
                 }
             }
+        }
+
+        &--other {
+            max-width: 100%;
+            font-size: .78rem;
+            height: auto;
+            line-height: 1.22;
+            padding: .37rem 0;
         }
     }
 
@@ -719,6 +739,12 @@
     @media (max-width: 767px) {
         top: 44.52248rem;
     }
+
+    &--other {
+        @media (max-width: 767px) {
+            top: 44.52248rem;
+        }
+    }
 }
 
 .p-chert-left-row05 {
@@ -742,6 +768,12 @@
         @media (max-width: 767px) {
             top: 53.85477rem;
         }
+
+        &--other {
+            @media (max-width: 767px) {
+                top: 57.8547888rem;
+            }
+        }
     }
 }
 
@@ -757,6 +789,12 @@
 
         @media (max-width: 767px) {
             top: 66.014555rem;
+        }
+
+        &--other {
+            @media (max-width: 767px) {
+                top: 69.3145522rem;
+            }
         }
     }
 }
@@ -813,6 +851,12 @@
 
         @media (max-width: 767px) {
             top: 63.952441rem;
+        }
+
+        &--other {
+            @media (max-width: 767px) {
+                top: 64.952441rem;
+            }
         }
     }
 }
@@ -994,6 +1038,10 @@
             background-color: $bottom_color;
             color: #fff;
         }
+
+        &--other {
+            width: rem(270);
+        }
     }
 
     &__desc {
@@ -1099,14 +1147,310 @@
             border-color: #b052b8 transparent transparent transparent;
         }
     }
+
+    &--other {
+        @media (max-width: 767px) {
+            top: 6.88rem;
+        }
+    }
 }
 
 .--down-arw-left {
     left: 9%;
     height: 25.1rem;
+
+    &--other {
+        height: 28.22rem;
+    }
 }
 
 .--down-arw-right {
     right: 9%;
     height: 3.22rem;
+
+    &--other {
+        height: 3.74rem;
+    }
+}
+
+/*
+
+中国語のフロー
+------------------------------*/
+
+.p-zh-flow {
+    padding: rem(85) 0 rem(131);
+
+    &__ttl {
+        font-size: rem(38.94);
+        margin-bottom: rem(28);
+    }
+
+    &__desc {
+        font-size: rem(22);
+        color: #0165a9;
+        line-height: 1.45;
+        margin-bottom: rem(55);
+
+        &--tab02 {
+            color: #656565;
+            font-size: rem(22.03);
+            line-height: 1.45;
+        }
+    }
+}
+
+.p-zh-flow-list {
+    margin-bottom: rem(97);
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+
+    &__item {
+        background-color: #fff;
+        border: 1px solid #2fabff;
+        height: rem(296);
+        width: 100%;
+        max-width: 530px;
+        padding: rem(80) rem(10) rem(30) rem(18);
+        position: relative;
+        margin-bottom: rem(83);
+
+        @media (min-width: 768px) {
+            &:nth-of-type(5), &:nth-of-type(6) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding: rem(60) rem(10) rem(10) rem(10);
+            height: rem(356);
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -3.55rem;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: rem(30) rem(50) 0 rem(50);
+                border-color: #dedede transparent transparent transparent;
+                transform: translateX(-50%);
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        &--col03 {
+            max-width: 322px;
+            padding-left: rem(25);
+            padding-right: rem(25);
+            border-color: #1268a2;
+
+            @media (max-width: 767px) {
+                max-width: 100%;
+                height: 15.5rem;
+                padding: 3.875rem 1.2rem 1.2rem;
+            }
+
+            &::after {
+                @media (min-width: 768px) {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -56px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 22.5px 0 22.5px 15px;
+                    border-color: transparent transparent transparent #c8c7c8;
+                }
+            }
+
+            &:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__ttl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__num-wrap {
+        background-color: #2fabff;
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        padding: rem(9) rem(13);
+        line-height: 1;
+        margin-right: rem(23);
+
+        &--deep-blue {
+            background-color: #1268a2;
+            margin-right: rem(15);
+        }
+    }
+
+    &__step {
+        display: block;
+        line-height: 1;
+        margin-bottom: rem(2);
+    }
+
+    &__number {
+        display: block;
+        font-size: rem(14.47);
+        font-size: rem(26.36);
+        line-height: 1;
+    }
+
+    &__ttl-text {
+        font-size: rem(28);
+        color: #2fabff;
+
+        &--deep-blue {
+            color: #1268a2;
+        }
+    }
+
+    &__bottom {
+        height: 100%;
+    }
+
+    &__left {
+        width: 234px;
+
+        @media (max-width: 767px) {
+            width: 47%;
+        }
+    }
+
+    &__col {
+        margin-top: rem(13);
+    }
+
+    &__wecaht-wrap {
+        @media (max-width: 767px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__wecaht {
+        width: 100%;
+        max-width: 180px;
+        margin: rem(9) auto rem(10);
+
+        @media (max-width: 767px) {
+            width: 40%;
+            margin: 0;
+        }
+    }
+
+    &__note {
+        font-size: 14px;
+        width: 110%;
+        margin-left: -5px;
+        margin-top: 1em;
+
+        @media (max-width: 767px) {
+            margin: 0;
+            margin-bottom: 1.62rem;
+            font-size: .8rem;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        padding-left: rem(13);
+        line-height: 1.56;
+        font-size: rem(16);
+    }
+
+    &__btn {
+        height: rem(35.9);
+        line-height: rem(35.9);
+        margin-top: rem(28);
+        font-size: rem(15.93);
+
+        @media (max-width: 767px) {
+            font-size: .88rem;
+        }
+
+        &::after {
+            right: .775rem;
+
+            @media (max-width: 767px) {
+                //right: .575rem;
+            }
+        }
+
+        &::before {
+            right: .34rem;
+
+            @media (max-width: 767px) {
+                /*  right: .25rem;
+                 height: .89375rem;
+                 width: .89375rem; */
+            }
+        }
+
+        &--wechat {
+            background-color: #80af18;
+        }
+
+        &--wechat02 {
+            background-color: #659505;
+            width: 255px;
+            margin: 0 auto;
+
+            @media (max-width: 767px) {
+                width: 56.5%;
+                margin: 0;
+                height: 2.64375rem;
+                line-height: 2.64375rem;
+            }
+        }
+    }
+
+    &__thumb {
+        width: 230px;
+
+        @media (max-width: 767px) {
+            width: 49.5%;
+        }
+
+        &--wechat {
+            //padding-right: rem(10);
+
+            @media (min-width: 768px) {
+                margin-right: 12px;
+                width: 245px;
+            }
+        }
+
+        &--step06 {
+            @media (min-width: 768px) {
+                margin-bottom: 33px;
+                margin-right: 17px;
+            }
+        }
+    }
 }

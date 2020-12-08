@@ -505,6 +505,16 @@ body.single.single-post {
             opacity: 0;
         }
     }
+
+    &--pt02 {
+        @media (min-width: 768px) {
+            padding-left: 1.55rem;
+        }
+
+        label {
+            margin-right: 1.1rem;
+        }
+    }
 }
 
 .-op-radio {
@@ -668,12 +678,6 @@ body.single.single-post {
             opacity: 1;
         }
     }
-}
-
-.c-under-deco {
-    background: linear-gradient(transparent 75%, #fff6b6 60%);
-    font-weight: 600;
-    font-feature-settings: 'palt' 1;
 }
 
 .--deco-pt {
@@ -878,6 +882,23 @@ p.p-conf-note {
     }
 }
 
+.--inp-schedule {
+    @media (max-width: 767px) {
+        width: 70%;
+    }
+
+    input {
+        background-image: url(../img/common/c_icon_cal.png);
+        background-size: 1.35rem auto;
+        background-repeat: no-repeat;
+        background-position: .35rem 50%;
+    }
+
+    input.iopt_text {
+        padding-left: 2.05rem;
+    }
+}
+
 .--op-last {
     border: none;
 }
@@ -959,11 +980,20 @@ p.p-conf-note {
 
 .p-relation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: rem(0) 0 rem(50);
 
     @media (max-width: 767px) {
         display: block;
+    }
+
+    &::after {
+        @media (min-width: 768px) {
+            display: block;
+            content: "";
+            width: 356px;
+        }
     }
 
     &__item {

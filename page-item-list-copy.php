@@ -188,7 +188,7 @@ Template Name: 商品一覧
                             <p class="p-items__desc">渡航先指定のフォーマットに合わせて陰性証明書を発行致します。<br>事前にフォーマットやテンプレートの送付をお願い致します。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">20,000</span>
+                                <span class="p-items__p-center"><!-- 20,000 -->5,000</span>
                                 <span class="p-items__p-right">
                                     <span class="p-items__tax-sub">(税別)</span>
                                     <span class="p-items__tax">円</span>

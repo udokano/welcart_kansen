@@ -34,17 +34,22 @@ get_header();
 
 	<div class="post" id="wc_<?php usces_page_name(); ?>">
 
-	<h1 class="cart_page_title tc"><?php _e('In the cart', 'usces'); ?></h1>
+		<h1 class="cart_page_title tc">购货车</h1>
+
 		<div class="entry">
 
 			<div id="inside-cart">
 
 				<div class="usccart_navi">
 					<ol class="ucart">
-					<li class="ucart usccart usccart_cart"><?php _e('1.Cart', 'usces'); ?></li>
-					<li class="ucart usccustomer"><?php _e('2.Customer Info', 'usces'); ?></li>
-					<li class="ucart uscdelivery">発送・支払方法</li>
-					<li class="ucart uscconfirm"><?php _e('4.Confirm', 'usces'); ?></li>
+
+												<li class="ucart usccart usccart_cart">购货车</li>
+												<li class="ucart usccustomer">顾客信息</li>
+												<li class="ucart uscdelivery">发货及支付方式</li>
+												<li class="ucart uscconfirm">内容确认</li>
+
+
+
 					</ol>
 				</div>
 
@@ -53,22 +58,39 @@ get_header();
 				</div>
 
 				<div class="error_message"><?php usces_error_message(); ?></div>
-				<form action="<?php usces_url('cart'); ?>" method="post" onKeyDown="if (event.keyCode == 13) {return false;}" class="js-cart-form">
+
+								<form action="<?php usces_url('cart'); ?>" method="post" onKeyDown="if (event.keyCode == 13) {return false;}" class="js-cart-form">
+
 				<?php if (usces_is_cart()) : ?>
 
 				<div id="cart">
-					<div class="upbutton"><?php _e('Press the `update` button when you change the amount of items.', 'usces'); ?><input name="upButton" type="submit" value="<?php _e('Quantity renewal', 'usces'); ?>" onclick="return uscesCart.upCart()" /></div>
+
+
+
+										<div class="upbutton">更改了数量时，请一定按更新按钮。<input name="upButton" type="submit" value="数量更新" onclick="return uscesCart.upCart()" /></div>
+
+
+
+
+
 					<table cellspacing="0" id="cart_table">
 						<thead>
 						<tr>
-							<th scope="row" class="num">No.</th>
-							<!-- <th class="thumbnail"> </th> -->
-							<th class="item__th"><?php _e('item name', 'usces'); ?></th>
-						<!-- 	<th class="quantity"><?php _e('Unit price', 'usces'); ?></th> -->
-							<th class="quantity"><?php _e('Quantity', 'usces'); ?></th>
-							<th class="subtotal"><?php _e('Amount', 'usces'); ?><?php usces_guid_tax(); ?></th>
-						<!-- 	<th class="stock"><?php _e('stock status', 'usces'); ?></th> -->
-							<th class="action">&nbsp;</th>
+
+
+
+
+										<th scope="row" class="num">No.</th>
+										<!-- <th class="thumbnail"> </th> -->
+										<th class="item__th">商品名称</th>
+									<!-- 	<th class="quantity"><?php _e('Unit price', 'usces'); ?></th> -->
+										<th class="quantity">数量</th>
+										<th class="subtotal">金额<em class="tax">(含税)</em></th>
+									<!-- 	<th class="stock"><?php _e('stock status', 'usces'); ?></th> -->
+										<th class="action">&nbsp;</th>
+
+
+
 						</tr>
 						</thead>
 						<tbody>
@@ -76,11 +98,13 @@ get_header();
 						</tbody>
 						<tfoot>
 						<tr>
-						<?php if (wp_is_mobile()) : ?>
-							<th colspan="3" scope="row" class="aright"><?php _e('total items', 'usces'); ?><?php usces_guid_tax(); ?></th>
-						<?php else: ?>
-							<th colspan="3" scope="row" class="aright"><?php _e('total items', 'usces'); ?><?php usces_guid_tax(); ?></th>
-						<?php endif; ?>
+
+
+
+
+													<th colspan="3" scope="row" class="aright">商品总计<em class="tax">(含税)</em></th>
+
+
 
 
 							<th class="tc price__txt" colspan="2"><?php usces_crform(usces_total_price('return'), true, false); ?></th>
@@ -134,6 +158,30 @@ get_header();
 jQuery(function(){
 
 	jQuery("input.quantity").attr("type","number");
+
+});
+
+</script>
+
+
+<!--
+=================================
+
+	外国語の時の翻訳
+	TBODYない・ボタンなどの自動出力される箇所に適応
+
+=================================
+
+-->
+
+
+
+<script>
+
+jQuery(function(){
+jQuery(".delButton").val("删减");
+	jQuery("#previouscart").val("继续购物");
+	jQuery(".to_customerinfo_button").val("进入下一步");
 
 });
 

@@ -63,24 +63,12 @@ function retrieveGETqs() {
 		<div class="entry">
 
 			<div id="cart_completion">
-			<?php if (is_group_item_in_cart()) : ?>
-			<h1 class="tc">ご依頼完了</h1>
-				<div class="header_explanation">
-				<p class="tc">お見積書のダウンロードは下記の会員ページからお願いします。<br />
-				銀行のお振込みを選択いただいた方は<span style="color: red;">メールにてお振込み先情報</span>をお送りしております。<br />
-				<span style="color: red;">お支払い確認後、マイページから引換コードをダウンロード可能</span>になります。<br />
 
-				<a href="<?php echo USCES_MEMBER_URL; ?>#history_head" class="p-to-mypage">マイページでお見積り書をダウンロードする</a><br />
-				<?php _e("If you have any questions, please contact us by 'Contact'.", 'usces'); ?></p>
-				<?php do_action('usces_action_cartcompletion_page_header', $usces_entries, $usces_carts); ?>
-				</div><!-- header_explanation -->
-			<?php else : ?>
-			<h1 class="tc">購入完了</h1>
-				<div class="header_explanation">
-				<p class="tc"><?php _e('Thank you for shopping.', 'usces'); ?><br /><?php _e("If you have any questions, please contact us by 'Contact'.", 'usces'); ?></p>
-				<?php do_action('usces_action_cartcompletion_page_header', $usces_entries, $usces_carts); ?>
-				</div><!-- header_explanation -->
-			<?php endif; ?>
+	  									<h1 class="tc">购买结束</h1>
+										<div class="header_explanation">
+										<p class="tc">感谢您的购买。<br class="">如有不明之处请联系。</p>
+										<?php do_action('usces_action_cartcompletion_page_header', $usces_entries, $usces_carts); ?>
+										</div><!-- header_explanation -->
 
 
 			<?php usces_completion_settlement(); ?>
@@ -91,7 +79,15 @@ function retrieveGETqs() {
 				<?php do_action('usces_action_cartcompletion_page_footer', $usces_entries, $usces_carts); ?>
 				</div><!-- footer_explanation -->
 
-				<div class="send"><a href="<?php echo home_url(); ?>" class="back_to_top_button"><?php _e('Back to the top page.', 'usces'); ?></a></div>
+				<div class="send">
+					<a href="<?php echo home_url(); ?>" class="back_to_top_button">
+
+
+									  返回首页
+
+
+					</a>
+				</div>
 			<?php echo apply_filters('usces_filter_conversion_tracking', null, $usces_entries, $usces_carts); ?>
 
 			</div><!-- end of cart_completion -->

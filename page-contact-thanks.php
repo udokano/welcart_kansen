@@ -13,16 +13,23 @@ Template Name:お問い合わせ-サンクス
 
   <div class="l-inner">
 
-<h2 class="c-blue p-contact-form-area__ttl">送信完了</h2>
+
+
+
+<h2 class="c-blue p-contact-form-area__ttl">传送完成</h2>
 
 
  <div class="p-form-content">
 
  <p class="u-tc">
-    この度は、当院へ<br>お問い合わせいただき誠にありがとうございます。<br>
-    後日担当者より折り返しご連絡いたします。<br>
-    返信まで今しばらくお待ちくださいませ。
+    谢谢您对我们诊所的关注请稍候回复。
 </p>
+
+
+
+
+
+
 
 
 <?php echo do_shortcode('[mwform_formkey key="85"]');?>

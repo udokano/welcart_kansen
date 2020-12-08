@@ -23,15 +23,16 @@
     /></noscript>
 
 
+
+
 <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
-              <div class="p-pages-ttl-area__texts --texts--item-list">
-                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">購入申し込み・証明書発行</h1>
-                <p class="p-pages-ttl-area__sub">検体回収キット、陰性証明書の<br>購入はこちらから</p>
+             <div class="p-pages-ttl-area__texts --texts--item-list">
+                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">申请购买及出具证明</h1>
+                <p class="p-pages-ttl-area__sub">购买样本回收套件及阴性证明的请点击这里</p>
               </div>
         </div>
 </div>
-
 
 
 
@@ -44,24 +45,11 @@
 </div>
 
 
-
-               <!--  <?php if( is_single('pcr')  || is_single('antibody-kit') || is_single('pcr-set03')) : ?>
-                        <div class="l-inner">
-                                 <div class="p-area-not">
-                                        <p class="p-area-not__ttl">
-                                            <span class="p-area-not__sub">現在のご購入・回収可能地域</span><br>東京、愛知、大阪、福岡<br><span class="p-area-not__sub">それ以外の地域は順次拡大予定となります。</span>
-                                            <div class="p-uuuu">※個人ご利用の場合のみ。<br><span class="p-area-not__sub">企業・団体様のご利用の場合は<br class="u-sp">地域制限はございません。</span></div>
-                                        </p>
-                                </div>
-
-                        </div>
-                <?php endif; ?> -->
-
 <!-- 商品ループ -->
 
 <form action="<?php echo USCES_CART_URL ?>" method="post" id="form" class="js-cart-form">
     <?php if (have_posts()) : ?>
-        <?php while (have_posts()) : the_post(); usces_the_item("item01"); ?>
+        <?php while (have_posts()) : the_post(); usces_the_item(); ?>
         <?php usces_have_skus();?>
 
 
@@ -74,63 +62,62 @@
                                 </div>
 
                                 <div class="p-item-row__right">
-                                    <div class="p-item-row__right-top">
-                                        <h2 class="p-item-ttl"><?php usces_the_itemName(); ?></h2>
-                                        <p class="p-item-price"><?php usces_the_itemPrice(); ?><span class="p-item-price__tax">円（税別）</span></p>
+
+
+
+
+                                             <div class="p-item-row__right-top">
+                                            <h2 class="p-item-ttl"><?php usces_the_itemName(); ?></h2>
+                                            <p class="p-item-price"><?php usces_the_itemPrice(); ?><span class="p-item-price__tax">日元（含税）</span></p>
                                         <div class="p-item-desc">
 
                                             <?php if(post_custom('wccs_item_desc')) :?>
 
                                                 <dl class="p-item-cf">
-                                                    <dt class="p-item-cf__item">この商品について</dt>
+                                                    <dt class="p-item-cf__item">关于本产品</dt>
                                                     <dd class="p-item-cf__desc"><?php echo post_custom('wccs_item_desc'); ?></dd>
                                                 </dl>
-
-
 
                                             <?php endif; ?>
 
                                             <?php if(post_custom('wccs_item_sub')) :?>
 
                                               <dl class="p-item-cf">
-                                                    <dt class="p-item-cf__item">付属品・内容物</dt>
+                                                    <dt class="p-item-cf__item">附属品及内容物</dt>
                                                     <dd class="p-item-cf__desc"><?php echo post_custom('wccs_item_sub'); ?></dd>
                                                 </dl>
 
                                             <?php endif; ?>
 
                                         </div>
-
-                                          <?php if( is_single('pcr-set02') || is_single('certificate02') ) : ?>
-
-                                                <a href="<?php echo home_url( '/' ); ?>voyage" class="c-blue-arw-btn p-item-blue-btn">海外渡航用の証明書発行に関して</a>
-
-                                          <?php endif; ?>
-
                                     </div>
+                                        <!-- ./p-item-row__right-top -->
 
-                                     <div class="p-item-row__right-bottom">
-                                                 <?php if( is_single('pcr-set02') || is_single('certificate02') ) : ?>
+
+                                         <div class="p-item-row__right-bottom">
+                                                 <?php if( is_single('pcr-set02-zh') || is_single('certificate02-zh') ) : ?>
                                                  <!-- 渡航用の証明書が含まれる場合」にはオプション出力 -->
                                                   <div class="p-hidden-text-area p-neddddd" id="js-hidden-text">
-                                                    <?php echo usces_the_itemOption("証明書のフォーマット");?>
+                                                    <?php echo usces_the_itemOption("证书格式");?>
                                                     </div>
 
                                                     <div class="p-op-wrap">
-                                                                    <p class="p-tokou-ttl">渡航用の陰性証明書を発行される場合に<br class="u-sp">ご入力ください</p>
 
+
+
+                                                            <p class="p-tokou-ttl">如果你被开具负面的旅行证明<br class="u-sp">请输入您的信息</p>
                                                             <div class="p-item-option">
-                                                                <p class="p-item-option__name">渡航する国を入力 :</p>
+                                                                <p class="p-item-option__name">输入您的目的地国家 :</p>
                                                                 <div class="p-item-option__inp --inp-tokou" id="js-tokou">
-                                                                    <?php echo usces_the_itemOption("渡航する国");?>
+                                                                    <?php echo usces_the_itemOption("前往的国家");?>
                                                                 </div>
                                                             </div>
 
                                                             <div class="p-item-option --op-last">
-                                                                <p class="p-item-option__name">ファイルアップロード :</p>
+                                                                <p class="p-item-option__name">文件上传 :</p>
                                                                 <div class="p-item-option__inp">
                                                                     <input type="file" name="files[]" id="file__btn" multiple />
-                                                                    <label for="file__btn" class="file__btn p-file-btn js-file">ファイル選択</label>
+                                                                    <label for="file__btn" class="file__btn p-file-btn js-file">档案选择</label>
                                                                 </div>
                                                             </div>
 
@@ -143,48 +130,180 @@
                                                 <?php endif; ?>
 
 
+
+                                                   <?php if( !is_single('introduction-zh') && !is_single('certificate02-zh') && !is_single('certificate03-zh') &&!is_single('certificate-zh') && !is_single("visit-set01") && !is_single("visit-set05") && !is_single("visit-set10")) : ?>
+
+                                                   <!-- 紙類以外のキットの場合 -->
+
+
+                                                    <div class="p-op-wrap u-bdb-none">
+
+                                                            <p class="u-fw600">＊如果你不打算去日本旅行，你不需要填写这个表格。</p>
+                                                            <div class="p-item-option u-mb15">
+
+                                                               <p class="p-item-option__name">预定旅行日期 :</p>
+                                                                <div class="p-item-option__inp --inp-schedule" id="js-schedule">
+                                                                    <?php echo usces_the_itemOption("渡航予定日");?>
+                                                                </div>
+                                                            </div>
+
+
+                                                    </div>
+
+                                                    <?php elseif(in_category("visit")) :?>
+
+
+                                                    <div class="p-op-wrap u-bdb-none ">
+
+
+                                                            <div class="p-item-option">
+
+                                                               <p class="p-item-option__name">希望访问的日期 :</p>
+                                                                <div class="p-item-option__inp u-po_rel --inp-schedule" id="js-schedule">
+                                                                    <?php echo usces_the_itemOption("訪問希望日");?>
+                                                                </div>
+                                                            </div>
+
+
+                                                    </div>
+
+                                                     <div class="p-op-wrap u-bdb-none">
+
+
+                                                            <div class="p-item-option">
+
+                                                               <p class="p-item-option__name">门诊 :</p>
+                                                                <div class="p-item-option__inp u-po_rel -op-radio -op-radio--pt02" id="js-option01">
+                                                                    <?php echo usces_the_itemOption("门诊");?>
+                                                                </div>
+                                                            </div>
+
+
+                                                    </div>
+
+                                            <?php endif; ?>
+
                                             <div class="p-action">
-                                                <div class="p-action__quantity">
-                                                    <span class="quantity">個数：<?php usces_the_itemQuant(); ?><?php usces_the_itemSkuUnit(); ?></span>
-                                                </div>
-                                                <div class="p-action__btn p-to-cart-btn">
-                                                    <?php if (isset($post->ID) && in_category(GROUP_CATEGORY_SLUG, $post->ID)) : ?>
-                                                        <?php usces_the_itemSkuButton('購入・お見積もりに進む');?>
-                                                    <?php else : ?>
-                                                        <?php usces_the_itemSkuButton('購入へ進む');?>
-                                                    <?php endif; ?>
-                                                </div>
+                                                         <div class="p-action__quantity">
+                                                            <span class="quantity">数量：<?php usces_the_itemQuant(); ?><?php usces_the_itemSkuUnit(); ?></span>
+                                                        </div>
+                                                        <div class="p-action__btn p-to-cart-btn">
+
+                                                             <?php usces_the_itemSkuButton('进入购买');?>
+
+                                                        </div>
+
+
+
                                             </div>
                                     </div>
+                                    <!-- ./p-item-row__right-bottom -->
+
+
+
 
                                 </div>
                         </div>
-
+            <?php endwhile; endif; ?>
 
                         <!-- 関連商品出力 -->
 
-  <?php related_items_list(); ?>
+
+
+
+                                      <h2 class="p-relation-ttl">相关项目</h2>
+                                        <?php if(!in_category("visit")) :?>
+                            <ul class="p-relation">
+                            <?php //除外する　カテゴリーID　企業用　本番 19 ローカル 19　   英語　本番 24　ローカル 57 中国語 本番 23 ローカル 56
+                            $args = array(
+                                'post_status' => 'publish',
+                                'post_type' => 'post',
+                                 'post__not_in' => array($post->ID),
+                                'category_name' => 'zh',
+                                'category__not_in' => array(59),
+                                'posts_per_page' => 3,
+                                'orderby' => 'rand',
+                            );
+                            $the_query = new WP_Query( $args );
+                            while ( $the_query->have_posts() ) : $the_query->the_post();
+                            ?>
+
+                                <li class="p-relation__item">
+                                    <?php usces_the_item(); usces_have_skus(); ?>
+                                    <a href="<?php the_permalink(); ?>" class="p-relation__link">
+                                        <div class="p-relation__thumb"><?php usces_the_itemImage($number=0, $width=800, $height=800); ?></div>
+                                        <div class="p-relation__bottom">
+                                            <h2 class="p-relation__name"><?php usces_the_itemName(); ?></h2>
+                                            <p class="p-relation__price"><?php usces_the_firstPrice(); ?><span class="yen">日元</span><em class="tax">(含税)</em></p>
+                                        </div>
+
+                                    </a>
+                                </li>
+
+                            <?php endwhile; wp_reset_postdata(); ?>
+
+                            </ul>
+
+
+                            <?php else : ?>
+
+
+                            <ul class="p-relation">
+                            <?php //除外する　カテゴリーID　企業用　本番 19 ローカル 19　   英語　本番 24　ローカル 57 中国語 本番 23 ローカル 56
+                            $args = array(
+                                'post_status' => 'publish',
+                                'post_type' => 'post',
+                                 'post__not_in' => array($post->ID),
+                                'category_name' => 'visit',
+                                'posts_per_page' => 3,
+                                'orderby' => 'rand',
+                            );
+                            $the_query = new WP_Query( $args );
+                            while ( $the_query->have_posts() ) : $the_query->the_post();
+                            ?>
+
+                                <li class="p-relation__item">
+                                    <?php usces_the_item(); usces_have_skus(); ?>
+                                    <a href="<?php the_permalink(); ?>" class="p-relation__link">
+                                        <div class="p-relation__thumb"><?php usces_the_itemImage($number=0, $width=800, $height=800); ?></div>
+                                        <div class="p-relation__bottom">
+                                            <h2 class="p-relation__name"><?php usces_the_itemName(); ?></h2>
+                                            <p class="p-relation__price"><?php usces_the_firstPrice(); ?><span class="yen">日元</span><em class="tax">(含税)</em></p>
+                                        </div>
+
+                                    </a>
+                                </li>
+
+                            <?php endwhile; wp_reset_postdata(); ?>
+
+                            </ul>
+
+                        <?php endif;?>
                 </div>
 
         </section>
 
 
-
-
-
-
-
-
-
-
-     <?php endwhile; endif; ?>
 </form>
 
 
 
 <script>
 
-$("#js-tokou input").attr("placeholder","渡航する国を入力してください");
+
+
+
+
+
+$("#js-tokou input").attr("placeholder","请输入您旅行的国家");
+
+
+
+jQuery('#js-schedule > input').attr("autocomplete","off");
+
+jQuery('#js-schedule > input').attr("placeholder","请输入您的预约日期");
+
+
 
 
 $("#file__btn").on("change",function(){
@@ -198,6 +317,8 @@ $(".delete").on("click",function(){
 
 
 
+
+
    $(window).on('load', function() {
 	    setTimeout(function(){
 	        $(".template-download").remove();
@@ -205,7 +326,7 @@ $(".delete").on("click",function(){
 	});
 
     $(function(){
-$("#js-hidden-text inout").attr("name","");
+$("#js-hidden-text input").attr("name","");
 });
 
 $(function(){
@@ -357,6 +478,150 @@ $("form").attr("enctype","multipart/form-data");
       {% } %}
     </script>
 
+
+
+     <?php elseif(is_single('certificate02-en')): ?>
+        <!-- 渡航用PCRセット -->
+
+        <script id="template-download" type="text/x-tmpl">
+      {% for (var i=0, file; file=o.files[i]; i++) { %}
+          <div class="template-download fade">
+
+
+              <div class="p-option-table__th">
+                   {% if (file.error) { %}
+                    upload failure
+                          {% } else { %}
+                              Upload Complete
+                          {% } %}
+                      {% if (file.error) { %}
+                      <div><span class="label label-danger">error</span>Unauthorized file format.</div>
+                  {% } %}
+             </div>
+              <div class="p-option-table__td">
+                      <p class="name">
+                          {% if (file.url) { %}
+                              <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a><br>
+							  <input type="text" name="itemOption[1683][item03-en][%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88]" value="{%=file.url%}" id="aa" class="sp__hidden ">
+                          {% } else { %}
+                              <span>{%=file.name%}</span>
+                          {% } %}
+                      </p>
+
+                      <p class="btn__cell">
+                  {% if (file.deleteUrl) { %}
+                      <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                          <i class="glyphicon glyphicon-trash"></i>
+                          <span>deletion</span>
+                      </button>
+                      <!--<input type="checkbox" name="delete" value="1" class="toggle">-->
+                  {% } else { %}
+                      <button class="btn btn-warning cancel">
+                          <i class="glyphicon glyphicon-ban-circle"></i>
+                          <span>revocation</span>
+                      </button>
+                  {% } %}
+              </p>
+              </div>
+          </div>
+      {% } %}
+    </script>
+
+     <?php elseif(is_single('certificate02-en')): ?>
+        <!-- 渡航用PCRセット -->
+
+        <script id="template-download" type="text/x-tmpl">
+      {% for (var i=0, file; file=o.files[i]; i++) { %}
+          <div class="template-download fade">
+
+
+              <div class="p-option-table__th">
+                   {% if (file.error) { %}
+                    upload failure
+                          {% } else { %}
+                              Upload Complete
+                          {% } %}
+                      {% if (file.error) { %}
+                      <div><span class="label label-danger">error</span>Unauthorized file format.</div>
+                  {% } %}
+             </div>
+              <div class="p-option-table__td">
+                      <p class="name">
+                          {% if (file.url) { %}
+                              <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a><br>
+							  <input type="text" name="itemOption[1683][item03-en][%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88]" value="{%=file.url%}" id="aa" class="sp__hidden ">
+                          {% } else { %}
+                              <span>{%=file.name%}</span>
+                          {% } %}
+                      </p>
+
+                      <p class="btn__cell">
+                  {% if (file.deleteUrl) { %}
+                      <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                          <i class="glyphicon glyphicon-trash"></i>
+                          <span>deletion</span>
+                      </button>
+                      <!--<input type="checkbox" name="delete" value="1" class="toggle">-->
+                  {% } else { %}
+                      <button class="btn btn-warning cancel">
+                          <i class="glyphicon glyphicon-ban-circle"></i>
+                          <span>revocation</span>
+                      </button>
+                  {% } %}
+              </p>
+              </div>
+          </div>
+      {% } %}
+    </script>
+
+     <?php elseif(is_single('certificate02-zh')): ?>
+        <!-- 渡航用PCRセット -->
+
+        <script id="template-download" type="text/x-tmpl">
+      {% for (var i=0, file; file=o.files[i]; i++) { %}
+          <div class="template-download fade">
+
+
+              <div class="p-option-table__th">
+                   {% if (file.error) { %}
+                    upload failure
+                          {% } else { %}
+                              上传完整版
+                          {% } %}
+                      {% if (file.error) { %}
+                      <div><span class="label label-danger">错误</span>Unauthorized file format.</div>
+                  {% } %}
+             </div>
+              <div class="p-option-table__td">
+                      <p class="name">
+                          {% if (file.url) { %}
+                              <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a><br>
+							  <input type="text" name="itemOption[1650][item03-zh][%E8%AF%81%E4%B9%A6%E6%A0%BC%E5%BC%8F]" value="{%=file.url%}" id="aa" class="sp__hidden ">
+                          {% } else { %}
+                              <span>{%=file.name%}</span>
+                          {% } %}
+                      </p>
+
+                      <p class="btn__cell">
+                  {% if (file.deleteUrl) { %}
+                      <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                          <i class="glyphicon glyphicon-trash"></i>
+                          <span>删减</span>
+                      </button>
+                      <!--<input type="checkbox" name="delete" value="1" class="toggle">-->
+                  {% } else { %}
+                      <button class="btn btn-warning cancel">
+                          <i class="glyphicon glyphicon-ban-circle"></i>
+                          <span>revocation</span>
+                      </button>
+                  {% } %}
+              </p>
+              </div>
+          </div>
+      {% } %}
+    </script>
+
+
             <?php endif; ?>
 
 
@@ -406,6 +671,12 @@ $("form").attr("enctype","multipart/form-data");
       <script src="js/cors/jquery.xdr-transport.js?6dbddba84c650683"></script>
     <![endif]-->
 
+    <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css?6dbddba84c650683">
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js?6dbddba84c650683"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-zh-CN.min.js?6dbddba84c650683"></script>
+
+
     <script>
 
     /*
@@ -432,6 +703,17 @@ $(function () {
     dropZone: $(".js-file")
     });
 });
+
+
+jQuery('#js-schedule input').datepicker({
+  dateFormat: 'yy年mm月dd日',
+  minDate: 0,
+  maxDate: 120,
+  autoclose: true,
+  showOtherMonths: true,
+  selectOtherMonths: true
+});
+
 
 
 

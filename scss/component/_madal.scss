@@ -81,6 +81,21 @@
             line-height: 12vw;
             font-size: 1.5rem;
         }
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__btn02 {
+        max-width: 330px;
+        max-height: none;
+        height: auto;
+        line-height: auto;
+        padding: .31rem 0 .42rem;
+        width: 83%;
+        font-size: 1.74rem;
+        border-bottom: rem(4) solid #bd3131;
     }
 }
 
@@ -91,4 +106,77 @@
 
 .is-of-hidden {
     overflow: hidden;
+}
+
+/* 新規に追加したdate INPUT */
+
+.c-date-select {
+    font-size: 1.23rem;
+    height: rem(52);
+    padding: 0 rem(55);
+    border-radius: rem(3);
+    line-height: auto;
+
+    //padding: .42rem .55rem;
+    border: rem(3) solid #bdbdbd;
+    display: block;
+    width: 100%;
+    background-image: url(../img/common/c_icon_cal.png);
+    background-repeat: no-repeat;
+    background-position: .88rem 50%;
+    background-size: 2.04rem auto;
+
+    //margin-bottom: 2.55rem;
+
+    @media (max-width: 767px) {
+        padding: 0 rem(59);
+    }
+
+    &::placeholder {
+        color: #cdcdcd;
+        font-size: 1.22rem;
+    }
+
+    &:focus {
+        border-color: #ff726e;
+    }
+}
+
+.c-cal-warp {
+    position: relative;
+    margin-bottom: 1.88rem;
+}
+
+.p-else-text-note {
+    color: #de2910;
+    text-decoration: underline;
+
+    //background-color: #de2910;
+    padding: .42rem 0 .46rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.88rem;
+    display: none;
+    margin-bottom: 1.48rem;
+
+    @media (max-width: 767px) {
+        font-size: 1.65rem;
+        margin-bottom: 1.97rem;
+    }
+}
+
+.appendDatepicker {
+    position: relative;
+
+    .ui-datepicker {
+        top: 0 !important;
+        left: 0 !important;
+        position: absolute !important;
+        width: 100% !important;
+    }
+
+    .ui-state-default {
+        text-align: center;
+        padding: .47rem .33rem;
+    }
 }

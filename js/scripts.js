@@ -173,6 +173,7 @@ jQuery(window).scroll(function () {
 if (window.matchMedia("(max-width: 768px)").matches) {
 
   var $pages_header_hight = jQuery("#js-header").outerHeight();
+  console.log($pages_header_hight);
   jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
 
 } else {
@@ -248,6 +249,56 @@ jQuery('#js-option01 label').each(function (i) {
   jQuery(this).attr('for', 'option-radio' + (i + 1));
 });
 
+
+
+/*
+jQuery("#js-rd input").each(function (i) {
+  jQuery(this).attr('id', 'op-rds' + (i + 1));
+
+});
+
+jQuery("#js-rd label").each(function (i) {
+  jQuery(this).attr('for', 'op-rds' + (i + 1));
+
+});
+
+jQuery("#op-rds1").attr("data-price", "0");
+
+jQuery("#op-rds2").attr("data-price", "3000");
+
+
+var $item_price = jQuery("#js-item-price").data("itemprice");
+console.log($item_price);
+var konma = $item_price.replace(/,/g, '');
+console.log(konma);
+jQuery("#js-item-price").attr("data-itemprice", konma);
+
+
+
+jQuery("#js-rd input").on("change", function () {
+  var op = jQuery(this).data("price");
+
+  jQuery("#js-item-price").text(addFigure(parseInt(konma) + parseInt(op)));
+}); */
+
+/*-------------------------------
+        カンマ処理
+        -------------------------------*/
+function addFigure(str) {
+  var num = new String(str).replace(/,/g, "");
+  while (num != (num = num.replace(/^(-?\d+)(\d{3})/, "$1,$2")));
+  return num;
+}
+
+function removeFigure(str) {
+  var num = new String(str).replace(/,/g, "");
+  num = Number(num);
+  return num;
+}
+
+
+
+
 //『選択してください』は無効にする
 
 jQuery('.js-option option:first-child').val('');
@@ -297,6 +348,18 @@ jQuery('.js-tab-btn').click(function () {
   thisTabContents.removeClass(currentClass);
   thisTabContents.eq(thisElmIndex).addClass(currentClass);
 });
+
+
+$('#js-to-tabWrap').on('click', function () {
+
+
+  $('#js-tab-btn01').trigger('click');
+
+
+});
+
+
+
 
 jQuery(".js-mb0").click(function () {
   jQuery(".js-mb0").addClass("u-mb0");
@@ -578,40 +641,6 @@ jQuery(function () {
 
 });
 
-jQuery(function () {
-
-
-  jQuery(".customkey_brith_year select").on("change", function () {
-
-    var year_val = jQuery(this).val();
-    var sss = jQuery(".js-cart-form").attr('action').replace(year_val, '');
-    console.log(year_val);
-
-
-    //購入のステップごとにFORM actionの値を取得
-    var src = jQuery(".js-cart-form").attr('action');
-    ///sss = jQuery(".js-cart-form").attr('action').replace("1989年", '');
-
-    jQuery(".js-cart-form").attr("action", sss + year_val);
-    /*  console.log(src);
-     jQuery(".js-cart-form").attr("action", sss); */
-    //確認ページのみクラス付与ができないので、別に指定
-
-    //URLのパラメータを取得
-    //var up = location.search;
-    //テスト出力
-    //console.log(up);
-    //フォームのactionの値にパラメーター連結
-    //jQuery('.js-cart-form').attr('action', pm_url + year_val);
-    //確認ページのみクラス付与ができないので、別に指定
-
-
-
-  });
-
-
-
-});
 
 
 /* var pppp = '?aa=ss'//location.search;
@@ -721,5 +750,21 @@ if (jQuery(window).width() < 768) {
     startPos = winScrollTop;
 
   });
+
+}
+
+
+/*
+
+下層ヘッダーSPヘッダーブンの余白開ける
+
+-------------------------------------*/
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  $(window).on('load', function () {
+    var $pages_header_hight = jQuery("#js-header").outerHeight();
+    jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
+  })
+} else {
 
 }

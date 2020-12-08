@@ -34,6 +34,12 @@
     }
 }
 
+.c-under-deco {
+    background: linear-gradient(transparent 75%, #fff6b6 60%);
+    font-weight: 600;
+    font-feature-settings: 'palt' 1;
+}
+
 .c-ttl-under-center {
     text-align: center;
     position: relative;
@@ -255,5 +261,42 @@
     &__text {
         font-size: rem(30);
         color: #606060;
+    }
+}
+
+.c-inline-paint {
+    border-bottom-style: solid;
+    border-bottom-width: rem(2);
+
+    &--light-blue {
+        border-bottom-color: #2fabff;
+    }
+
+    &--blue {
+        border-bottom-color: #1268a2;
+    }
+
+    &__text {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        line-height: 1;
+        padding: rem(14) rem(38) rem(12);
+        font-size: rem(26.38);
+        border-radius: rem(5) rem(5) 0 0;
+        font-weight: 600;
+
+        @media (max-width: 767px) {
+            font-size: rem(18);
+            padding: rem(14) rem(16) rem(12);
+        }
+
+        &--light-blue {
+            background-color: #2fabff;
+        }
+
+        &--blue {
+            background-color: #1268a2;
+        }
     }
 }
