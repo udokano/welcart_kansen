@@ -919,6 +919,21 @@ p.p-conf-note {
         margin: 0;
     }
 
+    .p-statusbar-top {
+        text-align: center;
+        margin-bottom: rem(24);
+    }
+
+    .p-upload-preview, .ajax-file-upload-filename {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .p-upload-preview {
+        width: 5.8rem;
+        margin-right: rem(20);
+    }
+
     .ajax-file-upload-filename {
         //display: none;
         text-align: center;
@@ -927,7 +942,6 @@ p.p-conf-note {
 
     .ajax-file-upload-preview {
         display: block;
-        margin: 0 auto .78rem;
     }
 
     .ajax-file-upload-progress {
@@ -970,7 +984,7 @@ p.p-conf-note {
 .p-message {
     font-weight: 600;
     font-size: 1.12rem;
-    margin-bottom: .78rem;
+    margin-bottom: .98rem;
     word-break: break-all;
 }
 
