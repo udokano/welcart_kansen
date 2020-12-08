@@ -1,0 +1,32 @@
+.p-area-not {
+    max-width: 550px;
+    width: 100%;
+    margin: 2.5rem auto 2.5rem;
+    border: rem(6) solid #ef426a;
+    background-color: #fff;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+
+    @media (max-width: 767px) {
+        padding: .88rem .88rem;
+    }
+
+    &__ttl {
+        font-size: 2.2rem;
+        color: #ef426a;
+
+        @media (max-width: 767px) {
+            font-size: 1.7rem;
+        }
+    }
+
+    &__sub {
+        font-size: 1.0rem;
+        color: #333;
+    }
+}
+
+.p-uuuu {
+    margin-top: 1.1rem;
+}

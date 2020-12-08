@@ -1,0 +1,628 @@
+/*
+
+ログインページ
+
+*/
+
+#memberpages {
+    .error_message {
+        text-align: center;
+        color: #bc2c2c;
+    }
+
+    div.loginbox {
+        margin-top: 0;
+        max-width: 465px;
+        width: 100%;
+        padding: 1.42rem 1.68rem;
+        background-color: rgb(244, 244, 244);
+        border: none;
+
+        input[type="text"], input[type="password"] {
+            background-color: #fff;
+            border: 2px solid #ebebeb;
+            width: 100%;
+            line-height: 1.0;
+            padding: 0;
+            padding: .4rem .45rem;
+            border-radius: 0;
+            font-size: .98rem;
+        }
+
+        input.member_login_button {
+            display: block;
+            width: 68%;
+            max-width: 220px;
+            margin: 0 auto;
+            height: 55px;
+            line-height: 55px;
+            background-color: $orange;
+            color: #fff;
+        }
+
+        label {
+            width: 100%;
+
+            span {
+                display: block;
+                margin-bottom: .35rem;
+                font-weight: 600;
+            }
+        }
+
+        #nav {
+            margin-top: 0.55rem;
+        }
+
+        a {
+            font-size: .9rem;
+            display: block;
+            margin-bottom: .28rem;
+            color: $blue;
+            font-weight: 600;
+        }
+
+        .forgetmenot {
+            label {
+                vertical-align: middle;
+
+                span, input {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: auto;
+                    margin-bottom: 0;
+                }
+
+                input {
+                    margin-right: .6rem;
+                }
+
+                span {
+                    line-height: 1.0;
+                }
+            }
+        }
+    }
+
+    #member_login {
+        background-color: $orange;
+        color: #fff;
+        width: 68%;
+        max-width: 220px;
+        margin: 0 auto;
+        height: 55px;
+        line-height: 55px;
+    }
+
+    .lost-guide {
+        font-size: .88rem;
+    }
+
+    #nav {
+        text-align: center;
+        margin-top: 1.25rem;
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    #memberinfo {
+        .member_submenu {
+            text-align: right;
+            font-size: 0;
+
+            @media (max-width: 767px) {
+                padding: 0;
+                text-align: center;
+            }
+
+            li {
+                display: inline-block;
+
+                /*  margin: 0 .88rem; */
+                /* width: 160px; */
+                padding: 0.01rem rem(27);
+                position: relative;
+
+                &:nth-of-type(2) {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    @media (min-width: 768px) {
+                        padding-right: 0;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        display: block;
+                        width: 1px;
+                        height: 100%;
+                        background-color: #e6e6e6;
+                    }
+                }
+            }
+
+            a {
+                color: #007dc4;
+                font-size: .78rem;
+                display: block;
+                text-align: center;
+            }
+
+            li, .gotoedit {
+                display: inline-block;
+
+                /*  padding: 0 .85rem;
+                 height: 55px;
+                 line-height: 55px; */
+
+                @media (max-width: 767px) {
+                    /*  padding: 0;
+                     width: 60%;
+                     max-width: 380px;
+                     display: block;
+                     margin: 0 auto .9rem;
+                     height: 47px;
+                     line-height: 47px; */
+                }
+            }
+
+            li.edit_member {
+                // background-color: $orange;
+           
+            }
+
+            li.logout_member {
+                //background-color: #666;
+           
+            }
+
+            .gotoedit {
+                @media (min-width: 768px) {
+                    margin: 0 .98rem;
+                }
+
+                background-color: $green;
+            }
+        }
+    }
+}
+
+#newmember {
+    .header_explanation {
+        font-size: .7rem;
+        margin-bottom: 1.8rem;
+
+        ul {
+            li {
+                font-size: .7rem;
+            }
+        }
+    }
+
+    .customer_form {
+        input {
+            width: 100%;
+            border: 2px solid #ededed;
+            background-color: #fff;
+            margin-right: .44rem;
+            color: #686868;
+
+            &:focus {
+                border-color: #686868;
+            }
+        }
+
+        input.wh40 {
+            width: 40% !important;
+
+            @media (max-width: 767px) {
+                width: 100% !important;
+            }
+        }
+
+        tr {
+            th {
+                width: 27%;
+                font-size: .9rem;
+            }
+
+            td {
+                font-size: .78rem;
+            }
+
+            td, th {
+                vertical-align: middle;
+                padding: .78rem;
+                position: relative;
+            }
+        }
+    }
+}
+
+/* 入会フォームスタイル調整 */
+#new__member__form {
+    .send {
+        margin-top: 1.5rem;
+    }
+
+    .customer_form {
+        input {
+            padding: 0.38rem .58rem;
+            font-size: 1.08rem;
+        }
+
+        tr {
+            th, td {
+                @media (max-width: 767px) {
+                    display: block;
+                    width: 100%;
+                    border-bottom: none;
+                }
+            }
+
+            th {
+                font-size: .9rem;
+                color: #454545;
+
+                @media (max-width: 767px) {
+                    border-bottom: none;
+                }
+            }
+
+            &:last-of-type {
+                td {
+                    @media (max-width: 767px) {
+                        border-bottom: 1px solid #e8e8e8;
+                    }
+                }
+            }
+        }
+    }
+
+    input[type="submit"] {
+        width: 220px;
+    }
+}
+
+/* マイページスタイル */
+#memberinfo {
+    h3 {
+        font-size: 1.68rem;
+        padding: .7rem 0;
+        text-align: center;
+        background: none;
+        border: none;
+        color: #333;
+
+        /* background-color: #4c94e1;
+        border: none; */
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+
+    /* メンバー情報のテーブル */
+    #member__info__table {
+        margin-bottom: 1.9rem;
+
+        tr {
+            th, td {
+                text-align: left;
+                padding: .7rem 1.2rem !important;
+
+                @media (max-width: 767px) {
+                    padding: .9rem .8rem !important;
+                    display: block;
+                    width: 100%;
+                    border-bottom: none;
+                    font-size: .88rem !important;
+                }
+            }
+
+            th {
+                font-weight: 600;
+                color: #454545;
+
+                @media (min-width: 768px) {
+                    width: 18%;
+                }
+            }
+
+            .member__num {}
+
+            &:last-of-type {
+                @media (max-width: 767px) {
+                    border-bottom: 1px solid #e6e6e6;
+                }
+            }
+        }
+    }
+
+    /* 購入履歴のテーブル */
+
+    /* 注文番号などの情報が書いてあるテーブル */
+
+    .history-area {
+        height: auto;
+    }
+
+    #history_head {
+        tr {
+            th, td {
+                @media (max-width: 767px) {
+                    /* display: block;
+                    width: 100%; */
+                }
+            }
+
+            th {
+                background-color: #545353;
+            }
+
+            .retail {
+                padding: .88rem 0 !important;
+                border-bottom: none;
+
+                @media (max-width: 767px) {
+                    padding: 1.2rem .95rem !important;
+                }
+
+                a {
+                    color: $blue;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    table {
+        font-size: .88rem;
+        border-collapse: collapse;
+
+        a {
+            color: #777;
+            font-size: 0.88rem;
+
+            @media (max-width: 767px) {
+                font-size: .62rem;
+            }
+        }
+
+        tr {
+            td, th {
+                font-size: 0.88rem !important;
+                padding: .8rem !important;
+                text-align: center;
+                vertical-align: middle;
+
+                @media (max-width: 767px) {
+                    font-size: .6rem !important;
+                    padding: .48rem .38rem !important;
+                }
+            }
+
+            th.subtotal {
+                width: 19.7%;
+            }
+
+            td.ssubtotal {
+                @media (min-width: 768px) {
+                    font-size: 1.02rem !important;
+                }
+            }
+
+            td.aleft {
+                text-align: left;
+            }
+        }
+    }
+
+    table {
+        tbody {
+            tr {
+                /* 領収書ダウンロード横の隙間削除 */
+                td.retail {
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #customer_form {
+        margin-bottom: 1.7rem;
+
+        tr {
+            td, th {
+                text-align: left !important;
+                padding: .88rem 1.05rem !important;
+                font-size: 0.7rem !important;
+
+                @media (max-width: 767px) {
+                    display: block;
+                    width: 100%;
+                    border-bottom: none;
+                    padding: 0.99rem 0.77rem 1.2rem !important;
+                }
+
+                input {
+                    width: 100%;
+                    padding: .62rem .88rem;
+                    background-color: #fff;
+                    border: 2px solid #ededed;
+                    color: #686868;
+
+                    @media (min-width: 768px) {
+                        margin-right: .54rem;
+                    }
+                }
+
+                input.w50, #tel {
+                    @media (min-width: 768px) {
+                        width: 50%;
+                    }
+                }
+            }
+
+            th {
+                color: #454545;
+                font-size: 1.08rem !important;
+                font-weight: 600;
+
+                @media (min-width: 768px) {
+                    width: 18%;
+                }
+
+                @media (max-width: 767px) {
+                    font-weight: 600;
+                    font-size: .92rem !important;
+                    line-height: 1;
+                }
+            }
+
+            &:last-of-type {
+                td {
+                    border-bottom: 1px solid #e6e6e6;
+                }
+            }
+        }
+    }
+
+ /*   .back__to__btn {
+       background-color: $yellow;
+   }
+*/
+    .reave__btn {
+        background-color: #777777;
+    }
+
+    .send {
+        input {
+            margin-bottom: .8rem;
+            font-size: .8rem;
+            padding: .7rem .72rem;
+        }
+
+        input[name="editmember"] {
+            background-color: $green;
+        }
+    }
+}
+
+/*
+
+クレジットカード登録・変更画面
+
+--------------------------------*/
+/* 追記 */
+
+.ui-dialog {
+    //visibility: hidden !important;
+}
+
+.ui-widget-content {
+    background-image: none !important;
+}
+
+.is-card-show {
+    visibility: visible !important;
+
+    // display: block !important;
+}
+
+.ui-widget-overlay {
+    background: #000 !important;
+    opacity: 0.7 !important;
+}
+
+/* ./追記 */
+
+#wc_member_update_settlement {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    text-align: center;
+
+    .whitebox {
+        max-width: 680px;
+        margin: auto;
+    }
+
+    p {
+        margin-bottom: 1.2rem;
+    }
+
+    table#welcart {
+        th, td {
+            text-align: left;
+            padding: .85rem .88rem !important;
+        }
+
+        th {
+            @media (min-width: 768px) {
+                width: 25%;
+            }
+
+            font-size: .78rem !important;
+
+            @media (max-width: 767px) {
+                border-right: none;
+                border-left: none;
+            }
+        }
+
+        td {
+            font-size: .66rem !important;
+
+            @media (max-width: 767px) {
+                border: none;
+            }
+
+            p {
+                margin-bottom: 0;
+                padding-left: 0;
+            }
+
+            input {
+                background-color: #fff;
+                border: 2px solid #ebebeb;
+            }
+        }
+    }
+
+    #member-card-info {
+        .send {
+            input[type="button"] {
+                display: inline-block;
+                height: 53px;
+                line-height: 53px;
+                padding: 0 .98rem;
+                color: #fff;
+                background-color: #777;
+
+                @media (max-width: 767px) {
+                    display: block;
+                    width: 73%;
+                    margin: 0 auto .98rem;
+                }
+            }
+
+            input[name="back"] {
+                background-color: #dea324;
+            }
+
+            #card-register, #card-update {
+                background-color: $orange;
+            }
+        }
+    }
+}
+
+#sidebar {
+    display: none;
+}

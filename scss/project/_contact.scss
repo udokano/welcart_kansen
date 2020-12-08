@@ -1,0 +1,815 @@
+/* 企業予約アンカー */
+
+.p-ccc-note {
+    text-align: center;
+    font-size: 1.42rem;
+    font-weight: 600;
+    margin-bottom: .55rem;
+
+    &__sub {
+        font-size: .92rem;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+}
+
+.p-contact-anchor {
+    background: url(../img/front/bg_stripe.png) repeat 0% 0%;
+    padding: rem(75) 0;
+}
+
+.p-anchor-list {
+    display: flex;
+
+    //justify-content: space-between;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 767px) {
+        //display: block;
+    }
+
+    &__item {
+        max-width: 215px;
+        width: 100%;
+        height: 75px;
+        border-radius: rem(3);
+
+        @media (min-width: 768px) {
+            margin: 0 .39rem;
+        }
+
+        @media (max-width: 767px) {
+            margin: .45rem .57rem;
+            width: 45%;
+            height: 17vw;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        position: relative;
+        border: 1px solid #5eb2d0;
+        background-color: #fff;
+        color: #5eb2d0;
+
+        &:hover {
+            background-color: #5eb2d0;
+            color: #fff;
+
+            &::after {
+                border-color: #fff;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: rem(12);
+            width: rem(8);
+            height: rem(8);
+            transform: translateX(-50%) rotate(45deg);
+            border-bottom: 1px solid #5eb2d0;
+            border-right: 1px solid #5eb2d0;
+            border-color: #5eb2d0;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        width: 100%;
+        padding: 0 .38rem;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        left: 50%;
+        top: 42%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* 企業用フロー */
+
+.p-group-flow {
+    background-color: #f8fcff;
+    padding: rem(75) 0 rem(135);
+
+    @media (max-width: 767px) {
+        padding: 2.98rem 0;
+    }
+
+    &__ttl {
+        font-size: rem(39.21);
+        margin-bottom: rem(71);
+    }
+}
+
+/* フロー中身 */
+
+.p-group-list {
+    max-width: 1010px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__item {
+        margin-bottom: rem(37);
+        width: 100%;
+        height: 294px;
+        position: relative;
+
+        @media (min-width: 768px) {
+            padding-left: 490px;
+        }
+
+        @media (max-width: 767px) {
+            padding-left: 45%;
+            height: 68vw;
+        }
+
+        &:nth-of-type(even) {
+            @media (min-width: 768px) {
+                padding-left: 0;
+                padding-right: 490px;
+            }
+
+            @media (max-width: 767px) {
+                padding-left: 0;
+                padding-right: 45%;
+            }
+
+            .p-group-list__thumb {
+                right: 0;
+                left: auto;
+                border-radius: 0 rem(30) rem(30) 0;
+            }
+
+            .p-group-list__text {
+                //border-radius: 0 rem(19) rem(19) 0;
+           
+            }
+        }
+    }
+
+    &__thumb {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 533px;
+        width: 100%;
+        height: 100%;
+        border-radius: rem(30) 0 0 rem(30);
+        overflow: hidden;
+
+        @media (max-width: 767px) {
+            width: 50% !important;
+            z-index: 5000;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 500;
+        background-color: #fff;
+        height: 100%;
+        border-radius: rem(19) rem(30) rem(30) rem(19);
+        display: flex;
+        align-items: center;
+        padding: 0 rem(41);
+        box-shadow: 0 rem(8) rem(25) rgba($color: #5f5f5f, $alpha: 0.15);
+
+        @media (max-width: 767px) {
+            padding: 1.2rem;
+            z-index: 5005;
+        }
+    }
+
+    &__step {
+        color: $blue;
+        font-size: rem(16);
+        letter-spacing: .005em;
+        margin-bottom: rem(8);
+        font-weight: 600;
+
+        @media (max-width: 767px) {
+            font-size: .78rem;
+        }
+    }
+
+    &__num {
+        font-size: rem(22.25);
+        letter-spacing: normal;
+
+        @media (max-width: 767px) {
+            font-size: 1.14rem;
+        }
+    }
+
+    &__ttl {
+        font-size: rem(30.85);
+        font-weight: 600;
+        color: #454545;
+        margin-bottom: rem(15);
+
+        @media (max-width: 767px) {
+            font-size: 1.32rem;
+        }
+    }
+
+    &__desc {
+        font-size: rem(16.03);
+
+        @media (max-width: 767px) {
+            font-size: .86rem;
+            line-height: 1.27;
+        }
+    }
+}
+
+/*
+
+企業用予約フォー、うhuxo-,u
+
+--------------------------*/
+
+.p-contact-form-area {
+    padding: rem(74) 0 rem(52);
+
+    &__ttl {
+        text-align: center;
+        font-size: rem(37.5);
+        margin-bottom: rem(18);
+    }
+
+    &__intro {
+        text-align: center;
+        line-height: 1.81;
+        margin-bottom: rem(32);
+    }
+}
+
+.p-form-content {
+    max-width: 952px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+
+フォーム入力欄
+-------------------------------*/
+
+.p-form-input {
+    padding: rem(5) rem(13);
+    border: 2px solid #999;
+    border-radius: rem(5);
+    font-size: rem(16);
+    letter-spacing: .1em;
+    background-color: #fff;
+    width: 100%;
+    max-width: 479px;
+
+    @media (max-width: 767px) {
+        padding: .88rem .92rem;
+        border-radius: 2px;
+        border-width: 1px;
+    }
+
+    &--tel {
+        max-width: 90px;
+    }
+
+    &--textarea {
+        height: 279px;
+        overflow-y: scroll;
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+        line-height: 1.47;
+        max-width: 100%;
+
+        &:focus {
+            background: none !important;
+        }
+    }
+
+    &--zip {
+        width: 150px;
+    }
+
+    &--date {
+        padding-left: 2.45rem;
+        background: #fff url(../img/common/c_icon_cal.png) no-repeat 2% 50% / 1.5rem auto;
+    }
+
+    &:focus {
+        border-color: #454545;
+    }
+
+    &::placeholder {
+        color: #dcdcdc;
+        letter-spacing: .1em;
+    }
+}
+
+.p-addres-col {
+    margin-bottom: .45rem;
+    position: relative;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.-op-select.p-form-select-wrap {
+    .p-form-select {
+        border-color: #999;
+
+        @media (max-width: 767px) {
+            height: 3.2rem;
+            border-width: 1px;
+        }
+
+        &--short {
+            width: 76px;
+        }
+
+        &--middle {
+            width: 320px;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        &--long {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &--how {
+            width: 118px;
+
+            @media (max-width: 767px) {
+                width: 31%;
+            }
+        }
+    }
+}
+
+.-op-select.p-form-select-wrap {
+    select {
+        border-color: #ebebeb;
+        color: #ebebeb;
+
+        &:focus {
+            border-color: #454545;
+            color: #454545;
+        }
+    }
+}
+
+.is-hidden-p {
+    display: none;
+}
+
+.is-input-show {
+    display: block;
+    margin: .88rem 0;
+}
+
+.p-form-tel-wrap {
+    position: relative;
+}
+
+.p-form-sub-line {
+    color: #666;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin: 0 .2rem;
+    line-height: 1;
+    margin-left: -.25rem;
+}
+
+.p-form-select-sub {
+    line-height: 1;
+    font-size: rem(16);
+    display: inline-block;
+    margin-left: .54rem;
+}
+
+.p-form-row {
+    display: flex;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+
+    &__ttl, &__input {
+        border: 1px solid #ebebeb;
+        border-bottom: none;
+        font-size: rem(20);
+        color: #494949;
+        width: 100%;
+    }
+
+    &__ttl {
+        background-color: #f6f6f6;
+        max-width: 339px;
+        padding: rem(23) rem(18);
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+        }
+
+        &--col-center {
+            @media (min-width: 768px) {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__input {
+        border-left: none;
+        max-width: 886px;
+        padding: rem(19);
+        position: relative;
+
+        @media (max-width: 767px) {
+            border-left: 1px solid #ebebeb;
+        }
+
+        &--tel {
+            display: flex;
+        }
+    }
+
+    &.is-hidden-form {
+        display: none;
+    }
+
+    &.is-hidden-form-show {
+        display: flex;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+}
+
+.p-form-address-row {
+    margin-bottom: 1.2rem;
+    position: relative;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.p-zip-mark {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    margin-right: .38rem;
+}
+
+.p-personal-agree {
+    text-align: center;
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .mwform-checkbox-field-text {
+        padding-left: 1.625rem;
+        position: relative;
+
+        &::after, &::before {
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: ease-in-out .22s;
+        }
+
+        &::after {
+            border: 2px solid #e2e2e2;
+            height: 1.25rem;
+            left: 0;
+            width: 1.25rem;
+        }
+
+        &::before {
+            background-color: #fee01d;
+            height: 0.625rem;
+            left: 0.3125rem;
+            opacity: 0;
+            width: 0.625rem;
+        }
+    }
+
+    input[type="checkbox"]:checked + .mwform-checkbox-field-text {
+        &::before {
+            opacity: 1;
+        }
+
+        &::after {
+            border-color: #fee01d;
+        }
+    }
+}
+
+.p-form-check {
+    @media (min-width: 768px) {
+        flex-flow: column;
+        justify-content: center;
+        display: flex;
+    }
+
+    .mwform-checkbox-field {
+        margin-bottom: .8rem;
+        margin-top: 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        opacity: 0;
+    }
+
+    label {
+        display: block;
+    }
+
+    .mwform-checkbox-field-text {
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 30px;
+        position: relative;
+        width: auto;
+        font-size: .9rem;
+        line-height: 1.28;
+
+        &::before {
+            background: #fff;
+            border: 1px solid #bdbdbd;
+            content: '';
+            display: block;
+            height: 16px;
+            left: 5px;
+            margin-top: -8px;
+            position: absolute;
+            top: 50%;
+            width: 16px;
+        }
+
+        &::after {
+            border-right: 4px solid $blue;
+            border-bottom: 4px solid $blue;
+            content: '';
+            display: block;
+            height: rem(16);
+            left: 10px;
+            opacity: 0;
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%) rotate(45deg);
+            width: rem(8.2);
+
+            @media (max-width: 767px) {
+                height: rem(16);
+                width: rem(9.5);
+            }
+        }
+    }
+}
+
+.p-form-check .p-form-check__item:checked + .mwform-checkbox-field-text::after {
+    opacity: 1;
+}
+
+.p-personal-agree {
+    padding: rem(24) 0;
+    text-align: center;
+    border: 1px solid #ebebeb;
+}
+
+.p-to-confirm.p-form-btn {
+    margin-top: rem(56);
+}
+
+/* エラーメッセージ */
+
+.error {
+    position: absolute;
+    left: 50%;
+    top: -.54rem;
+    transform: translateX(-50%);
+    font-size: .88rem !important;
+    padding: .48rem .88rem;
+    background-color: rgba($color: #ff3e3e, $alpha: 0.8);
+    color: #fff !important;
+    display: inline-block;
+    border-radius: rem(3);
+}
+
+.p-form-tel-wrap {
+    .error {
+        width: 114%;
+        font-size: .78rem !important;
+        text-align: center;
+        top: -1.5rem;
+    }
+}
+
+.p-term {
+    text-align: center;
+
+    &__link {
+        color: $pink;
+    }
+
+    &--small {
+        font-size: .88rem;
+    }
+}
+
+.p-total {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.38rem;
+    letter-spacing: .0075em;
+
+    &--small {
+        font-size: .94rem;
+    }
+
+    .wpcf7-form-control-wrap {
+       /*  min-width: 1em;
+        display: inline-block;
+        position: relative;
+
+        input {
+            width: 100% !important;
+            position: absolute;
+            left: 0;
+            top: 0;
+            white-space: nowrap;
+        } */
+    }
+}
+
+.p-total {
+    .wpcf7-form-control-wrap {
+        line-height: 1;
+        position: relative;
+        text-align: center;
+        display: inline-block;
+
+        .calc {
+            background: transparent;
+            text-align: center !important;
+            width: 1em;
+            line-height: 0;
+            padding: 0;
+            margin: 0;
+            height: 35px;
+            display: inline-block;
+        }
+
+        &::after {
+            content: "円";
+            position: absolute;
+            font-size: 1.08rem;
+            line-height: 1;
+            top: 50%;
+            right: -1.2rem;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.calc-yen {
+    line-height: 1;
+    font-size: 1.42rem;
+    padding-right: 6.78rem;
+    color: #000;
+    display: none;
+
+    //vertical-align: bottom;
+
+    &--small {
+        font-size: .95rem;
+    }
+}
+
+.option {
+    width: 100% !important;
+    height: 39px;
+    border: 2px solid #999 !important;
+    padding-left: 1.1rem;
+    margin-bottom: .78rem;
+    background-color: #fff;
+}
+
+.num-input {
+    padding-left: .88rem;
+    width: 80px;
+    background-color: #fff;
+    border: 2px solid #999 !important;
+    margin-right: .45rem;
+}
+
+.p-total-table {
+    display: table;
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+
+    &__item {
+        display: table-cell;
+        text-align: center;
+        width: 50%;
+        border-right: 1px solid #ebebeb;
+        padding: .88rem 0 .58rem;
+
+        .calc {
+            @media (max-width: 767px) {
+                width: 8.8rem;
+            }
+        }
+
+        .calc-yen {
+            padding-right: 2.2rem;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+}
+
+/* FAX */
+
+.p-contact-fax {
+    padding: 3.55rem 0;
+
+    //background-color: #f8fcff;
+
+    &__box {
+        border: rem(4) solid #016fb9;
+        background-color: #f9fdff;
+        padding: 2.65rem 1.22rem;
+        max-width: 800px;
+        margin: auto;
+
+        @media (max-width: 767px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__ttl {
+        margin-bottom: 2.35rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.22rem;
+        }
+    }
+
+    &__number {
+        color: $blue;
+        font-size: 2.22rem;
+        letter-spacing: .0025em;
+        font-weight: 600;
+
+        @media (max-width: 767px) {
+            font-size: 1.85rem;
+        }
+    }
+}
+
+.p-flow-img {
+    background-color: #e5e5e5;
+    padding: 2.88rem 0;
+}

@@ -1,0 +1,46 @@
+.c-circle-arw {
+    height: rem(22);
+    width: rem(22);
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: rem(5) 0 rem(5) rem(8);
+        border-color: transparent transparent transparent #6980fe;
+        top: 50%;
+        left: 54%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.-arw-yellow {
+    &:before {
+        border-color: transparent transparent transparent $menu_yellow;
+    }
+}
+
+.-arw-blue {
+    &:before {
+        border-color: transparent transparent transparent $menu_blue;
+    }
+}
+
+.-arw-green {
+    &:before {
+        border-color: transparent transparent transparent $menu_green;
+    }
+}
+
+.-arw-pink {
+    &:before {
+        border-color: transparent transparent transparent $menu_pink;
+    }
+}

@@ -1,0 +1,87 @@
+.p-privacy {
+    padding: rem(60) 0;
+
+    &__ttl {
+        font-size: rem(39);
+        margin-bottom: rem(78);
+        text-align: center;
+
+        @media (max-width: 767px) {
+            font-size: 1.54rem;
+        }
+    }
+
+    &__desc {
+        font-size: rem(16);
+        margin-bottom: 1.88rem;
+        line-height: 1.75;
+        text-align: center;
+    }
+
+    &__desc-note {
+        text-align: center;
+        font-size: rem(16);
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 3.25rem;
+        font-size: rem(14);
+        line-height: 1.65;
+        padding: 1.5rem;
+        background-color: #f8f8f8;
+    }
+}
+
+.p-privacy-contents {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    &__ttl {
+        margin-bottom: 2.18rem;
+        font-size: 1.4rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.18rem;
+        }
+    }
+
+    &__text {
+        padding-top: .33rem;
+        padding-bottom: 0.33rem;
+
+        &::after {
+            background-color: #454545;
+        }
+    }
+
+    &__ttl-sub {
+        font-size: 1.2rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+.p-privacy-list {
+    margin-bottom: 4.88rem;
+
+    &__ttl {
+        margin-bottom: .885rem;
+    }
+
+    &__desc {
+        font-size: rem(15);
+        line-height: 1.62;
+    }
+}
+
+.p-privacy-contact {
+    text-align: center;
+    padding: rem(40) 0;
+
+    &__ttl {
+        margin-bottom: 2.55rem;
+
+        &::after {
+            background-color: #717171;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+/*
+会社概要
+----------------------------*/
+.company {
+    background-color: #fbfbfb;
+    padding: 2.8rem 0;
+
+    .section__inner {
+        .company__info {
+            margin-bottom: 3.5rem;
+
+            @media (max-width: 767px) {
+                flex-flow: column;
+            }
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 2.3rem;
+        }
+
+        p {
+            font-size: .62rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .info__text {
+            width: 79%;
+            margin: auto;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+
+            dl {
+                font-size: .7rem;
+                padding: 0.8rem 1.5rem;
+                margin: 0 6.8rem;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #efefef;
+
+                dt {
+                    font-weight: 600;
+                    width: 40%;
+
+                    // padding-left: 10.2rem;
+               
+                }
+
+                dd {
+                    width: 58%;
+                    padding-left: 2.1rem;
+
+                    //  padding-left: 8.8rem;
+                    a {
+                        color: $gd;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    margin: 0;
+                }
+            }
+        }
+
+        .map {
+            width: 100%;
+            height: 16.2rem;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.clinic__list {
+    padding: 3.5rem 0;
+
+    .section__inner {
+        h2 {
+            font-size: 1.22rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .clinic__list__desc {
+            li {
+                width: 23.5%;
+                margin-bottom: 1.5rem;
+                font-size: .60rem;
+                color: #7b7b7b;
+                line-height: 1.6;
+
+                @media (max-width: 767px) {
+                    width: 46.8%;
+                }
+
+                .clinic__list__tit {
+                    font-size: .9rem;
+                    padding-bottom: .25rem;
+                    margin-bottom: .6rem;
+                    border-bottom: 1px solid #ededed;
+                    color: #454545;
+                }
+
+                .clinic__list__name {
+                    color: $gd;
+                    margin-bottom: .5rem;
+                    font-size: .72rem;
+                }
+
+                .clicic__list__post {}
+
+                .clinic__list__address {}
+
+                .clinic__list__tel {}
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+/* ページャーデザイン */
+
+.c-pagination {
+    text-align: center;
+
+    li {
+        display: inline-block;
+        margin: 0 .35rem;
+
+        a {
+            border: 1px solid $blue;
+            display: block;
+            color: $blue;
+            padding: .45rem .92rem;
+        }
+
+        span.current {
+            background-color: $blue;
+            padding: .45rem .92rem;
+            color: #fff;
+            display: block;
+            border: 1px solid $blue;
+        }
+    }
+}

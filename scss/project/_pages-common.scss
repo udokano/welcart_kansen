@@ -1,0 +1,164 @@
+.p-pages-ttl-area {
+    padding: rem(90) 0;
+
+    @media (max-width: 767px) {
+        padding: 3.58rem 0;
+    }
+
+    &__inner {
+        width: 1050px;
+        margin: 0 auto;
+
+        @media (max-width: 767px) {
+            width: 92%;
+        }
+    }
+
+    &__texts {
+        color: #fff;
+        width: 28%;
+        text-align: center;
+
+        @media (max-width: 767px) {
+            width: 67%;
+            text-align: left;
+        }
+    }
+
+    &__ttl {
+        position: relative;
+        display: inline-block;
+        font-size: rem(38);
+        padding-bottom: rem(15);
+        margin-bottom: rem(11);
+        line-height: 1;
+
+        @media (max-width: 767px) {
+            font-size: 1.8rem;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: rem(126);
+            bottom: 0;
+            background-color: #fff;
+
+            @media (max-width: 767px) {
+                width: 6.8rem;
+            }
+        }
+    }
+
+    &__sub {
+        line-height: 1.37;
+        font-size: rem(16.05);
+    }
+}
+
+/* 商品一覧 */
+
+.--inner-item {
+    @media (min-width: 768px) {
+        width: 1150px;
+    }
+}
+
+.--texts--item-list {
+    width: 40%;
+    padding: rem(20) 0;
+
+    @media (max-width: 767px) {
+        padding: 0;
+        width: 65%;
+    }
+}
+
+.--ttl--item-list {
+    font-size: rem(30);
+
+    @media (max-width: 767px) {
+        font-size: 1.25rem;
+    }
+}
+
+.--under-none {
+    margin-bottom: 0;
+    padding: 2.6rem 0;
+
+    &::after {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        padding: 1.0rem 0;
+    }
+}
+
+.--company {
+    width: 380px;
+
+    @media (max-width: 767px) {
+        width: 66%;
+    }
+}
+
+.--ttl-bg-company-reserve {
+    background-image: url(../img/contact/contact_ttl.jpg);
+
+    @media (max-width: 767px) {
+        background-image: url(../img/contact/contact_ttl_sp.jpg);
+        background-position-x: 70%;
+    }
+}
+
+.--ttl-bg-clinic {
+    background-image: url(../img/clinic/page_ttl.jpg);
+
+    @media (max-width: 767px) {
+        background-image: url(../img/clinic/page_ttl_sp.jpg);
+    }
+}
+
+.--ttl-bg-clinics {
+    background-image: url(../img/cinics/ttl_bg.jpg);
+
+    @media (max-width: 767px) {
+        background-image: url(../img/cinics/ttl_bg_sp.jpg);
+    }
+}
+
+.--ttl-bg-items {
+    background-image: url(../img/item-list/ttl_bg.jpg);
+
+    @media (max-width: 767px) {
+        background-image: url(../img/item-list/ttl_bg_sp.jpg);
+    }
+}
+
+.--ttl-bg-use {
+    background-image: url(../img/use/bg_ttl.jpg);
+
+    @media (max-width: 767px) {
+        background-image: url(../img/use/bg_ttl_sp.jpg);
+    }
+}
+
+/* 404 */
+
+.p-page-note-find {
+    padding: 2.78rem 0;
+
+    &__ttl {
+        font-size: 1.4rem;
+        margin-bottom: 1.75rem;
+    }
+
+    &__desc {
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+}

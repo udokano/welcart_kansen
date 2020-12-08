@@ -1,0 +1,12 @@
+/*
+
+syle.cssがいいzれないので追加スタイル記述kizixyutu
+---------------*/
+
+#memberinfo #customer_form input {
+    font-size: 1.12rem;
+}
+
+#my__page__form .send .back__to__btn {
+    display: none;
+}
