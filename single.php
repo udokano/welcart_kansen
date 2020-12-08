@@ -381,6 +381,7 @@ var host = location.hostname ;
 
 //ステータスバーのタグの順序を変更
 
+
  customProgressBar: function(obj,s)
 		{
             var createDOM = $("<div class='p-statusbar-top'></div>");
