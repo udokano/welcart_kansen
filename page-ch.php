@@ -35,7 +35,7 @@ Template Name: 中国人用の案内ページ
                     <dl class="p-new-zh-main__right p-new-zh-fv-price">
                         <dt class="p-new-zh-fv-price__item-name u-tc u-fw600">PCR検査・抗体検査・陰性証明書</dt>
                         <dd class="p-new-zh-fv-price__bottom u-flex u-jc-cent u-al-cent">
-                            <strong class="p-new-zh-fv-price__price-text u-fw600">27,000</strong>
+                            <strong class="p-new-zh-fv-price__price-text u-fw600">26,000</strong>
                             <p class="p-new-zh-fv-price__price-right u-flex u-ju-st u-al-cent">
                                 <span class="p-new-zh-fv-price__sub u-flex u-ff-colum u-al-cent">
                                     <span class="p-new-zh-fv-price__sub-tax">税別</span>
@@ -883,7 +883,7 @@ DATEチェック用のモーダル
                                     <div class="p-goto-list__price-wrap">
                                 <p class="p-goto-list__left">価格</p>
                                 <p class="p-goto-list__price-text">
-                                    <span class="p-goto-list__price">27,000</span>
+                                    <span class="p-goto-list__price">26,000</span>
                                     <span class="p-goto-list__sub">
                                     <em class="p-goto-list__tax">税別</em>
                                     <span class="p-goto-list__yen">円</span>
