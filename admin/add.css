@@ -1,0 +1,34 @@
+.add-note {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.32;
+    color: red;
+}
+
+.is-multi-delivery {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.32;
+    color: orange;
+    margin: 35px 0;
+}
+
+.is-add-del-note {
+    text-align: center;
+    font-weight: 600;
+    color: #4a80e4;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.info_head table tbody td.is-inactive {
+    background-color: #666;
+}
+
+.is-inactive-del tr th, .is-inactive-del tr td {
+    background-color: #ccc !important;
+}
+
+.is-inactive-del tr input, .is-inactive-del tr td select {
+    background-color: #ababab !important;
+}

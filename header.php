@@ -263,17 +263,35 @@ jQuery(document).ready(function(){
 
 <div class="l-wrapper">
 
-<!----------------------------
 
-  BOGOの言語設定が日本語の場合
+  <div class="p-not-yearEnd" id="js-pages-head">
 
-   ---------------------------->
+<input type="checkbox" id="radio-note" class="u-all-hidden is-radio">
+<label for="radio-note" class="p-not-yearEnd__label">
+
+<strong class="p-not-yearEnd__ttl-in">年末年始の検査のお知らせ（重要）</strong>
+<i class="p-not-yearEnd__arw">
+</i>
+</label>
 
 
+<div class="p-not-yearEnd__box is-toggle-box">
+<!-- 28日までの検体は預かる　でも30日まで回せとの指示みたいです。 数日中に結果が出るみたいです。-->
+<p class="p-not-yearEnd__desc">誠に勝手ながら、当クリニックの検体は12月29日までの当院到着分にて、年内検査終了となります。<br class="">年始は、1月4日からの検査受付とさせていただきます。</p>
+<p class="p-not-yearEnd__desc u-mb0">12月30日～1月3日までに届いた検体は十分な状態での保存が厳しい関係で、検査をお受けすることができません。
+<br class="u-pc">予めご了承くださいませ。</p>
+</div>
+<!-- ./box -->
 
-
+</div>
+<!-- ./yearEnd -->
 
   <header class="l-header p-header p-header--top" id="js-header">
+
+
+
+
+
 
     <div class="p-header__inner p-header__inner--top">
 

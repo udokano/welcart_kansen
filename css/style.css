@@ -631,6 +631,10 @@ body.home {
   width: 0;
 }
 
+.u-all-hidden {
+  display: none !important;
+}
+
 @media (max-width: 767px) {
   .u-pc {
     display: none;
@@ -10874,6 +10878,95 @@ p.p-conf-note {
     padding: 1.4rem 0;
     text-align: center;
   }
+}
+
+/*
+
+年末年始のお知らせ
+------------------------------*/
+.p-not-yearEnd {
+  background-color: #a22d2d;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .075em;
+  padding: 1.55rem 0;
+  text-align: center;
+}
+
+.p-not-yearEnd__label {
+  cursor: pointer;
+  display: block;
+  font-size: 2.48rem;
+}
+
+@media (max-width: 767px) {
+  .p-not-yearEnd__label {
+    font-size: 1.48rem;
+  }
+}
+
+.p-not-yearEnd__ttl-in {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.p-not-yearEnd__arw {
+  background-color: transparent;
+  border: 0.1875rem solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 2.6875rem;
+  padding-left: 1.25rem;
+  position: relative;
+  vertical-align: middle;
+  width: 2.6875rem;
+}
+
+.p-not-yearEnd__arw::after, .p-not-yearEnd__arw::before {
+  -webkit-transform: translate(-50%, -50%);
+  background-color: #fff;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-not-yearEnd__arw::before {
+  height: 0.1875rem;
+  width: 72%;
+}
+
+.p-not-yearEnd__arw::after {
+  height: 72%;
+  width: 0.1875rem;
+}
+
+.p-not-yearEnd__box {
+  height: 0;
+  visibility: hidden;
+}
+
+.p-not-yearEnd__desc {
+  font-size: 1.18rem;
+}
+
+@media (max-width: 767px) {
+  .p-not-yearEnd__desc {
+    font-size: 1.04rem;
+    padding: 0 0.5rem;
+  }
+}
+
+.is-radio:checked + .p-not-yearEnd__label .p-not-yearEnd__arw::after {
+  opacity: 0;
+}
+
+.is-radio:checked ~ .is-toggle-box {
+  height: auto;
+  margin-top: 1.02rem;
+  visibility: visible;
 }
 
 .p-item-tab {
