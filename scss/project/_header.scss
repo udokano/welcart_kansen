@@ -671,3 +671,97 @@
         padding: 1.4rem 0;
     }
 }
+
+/*
+
+年末年始のお知らせ
+------------------------------*/
+
+.p-not-yearEnd {
+    text-align: center;
+    background-color: #a22d2d;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: .075em;
+    padding: 1.55rem 0;
+
+    &__label {
+        display: block;
+        cursor: pointer;
+        font-size: 2.48rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.48rem;
+        }
+    }
+
+    &__ttl {
+        //margin-bottom: .88rem;
+   
+    }
+
+    &__ttl-in {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__arw {
+        border-radius: 50%;
+        border: rem(3) solid #fff;
+        background-color: transparent;
+        position: relative;
+        width: rem(43);
+        height: rem(43);
+        display: inline-block;
+        padding-left: rem(20);
+        vertical-align: middle;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::before {
+            width: 72%;
+            height: rem(3);
+        }
+
+        &::after {
+            width: rem(3);
+            height: 72%;
+        }
+    }
+
+    &__box {
+        height: 0;
+        visibility: hidden;
+    }
+
+    &__desc {
+        font-size: 1.18rem;
+
+        //margin-bottom: .88rem;
+
+        @media (max-width: 767px) {
+            padding: 0 rem(8);
+            font-size: 1.04rem;
+        }
+    }
+}
+
+.is-radio:checked + .p-not-yearEnd__label .p-not-yearEnd__arw::after {
+    opacity: 0;
+}
+
+.is-radio {
+    &:checked ~ .is-toggle-box {
+        visibility: visible;
+        height: auto;
+        margin-top: 1.02rem;
+    }
+}
