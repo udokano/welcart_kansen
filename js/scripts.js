@@ -285,7 +285,7 @@ jQuery(function () {
 /*-------------------------------
         カンマ処理
         -------------------------------*/
-function addFigure(str) {
+/* function addFigure(str) {
   var num = new String(str).replace(/,/g, "");
   while (num != (num = num.replace(/^(-?\d+)(\d{3})/, "$1,$2")));
   return num;
@@ -296,7 +296,7 @@ function removeFigure(str) {
   num = Number(num);
   return num;
 }
-
+ */
 
 
 
@@ -719,28 +719,28 @@ jQuery(".js-modal-form-open").on('click', function () {
 
 //スマホ追従フッター
 if (jQuery(window).width() < 768) {
-  $(window).on('load', function () {
-    var header = jQuery("#js-header");
 
-    var header_hight = header.outerHeight();
+  var header = jQuery("#js-header");
 
-    var startPos = 0, winScrollTop = 0;
-    jQuery(window).on("scroll", function () {
+  var header_hight = header.outerHeight();
 
-      winScrollTop = jQuery(this).scrollTop();
-      if (winScrollTop >= startPos) {
-        if (winScrollTop >= 200) {
-          header.css("top", -header_hight);
-        }
+  var startPos = 0, winScrollTop = 0;
+  jQuery(window).on("scroll", function () {
+
+    winScrollTop = jQuery(this).scrollTop();
+    if (winScrollTop >= startPos) {
+      if (winScrollTop >= 200) {
+        header.css("top", -header_hight);
       }
+    }
 
-      else {
-        header.css("top", "0px");
-      }
-      startPos = winScrollTop;
+    else {
+      header.css("top", "0px");
+    }
+    startPos = winScrollTop;
 
-    });
   });
+
 }
 
 
@@ -751,7 +751,7 @@ if (jQuery(window).width() < 768) {
 -------------------------------------*/
 
 if (window.matchMedia("(max-width: 768px)").matches) {
-  $(window).on('load', function () {
+  jQuery(window).on('load', function () {
     var $pages_header_hight = jQuery("#js-header").outerHeight();
     jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
   })

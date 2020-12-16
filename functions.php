@@ -66,50 +66,27 @@ function remove_schedule_delete() {
 add_action('admin_notices', 'current_pagehook'); */
 
 
-// フックする関数
-function custom_enqueue($hook_suffix) {
-	// 新規投稿または編集画面のみ
-	if( 'toplevel_page_usces_orderlist' === $hook_suffix || 'toplevel_page_usces_orderlist' === $hook_suffix ) {
-	echo '<style>
-  .add-note {
-      font-size: 22px;
-      font-weight: 600;
-      line-height: 1.32;
-      color: red;
-  }
-  </style>'.PHP_EOL;
 
-        echo "<script>
-        function note() {
-        // div要素を生成
-var div = document.createElement('div');
-// classを追加
-div.innerHTML = '※領収書を送る場合は、本管理画面からURLを送るのではなく、<br>メールソフトで添付してお送りください。<br><br>※見積一覧は非表示になっています。<br>【操作フィールド】内で商品区分を【全て】にし、【支払い方法】を選択後、【見積】と入力して絞り込みを行ってください。';
-div.className = 'add-note';
+/* 管理画面に外部CSS */
 
-// 生成したdiv要素を追加する
-var element = document.getElementById('usces_admin_status');
-element.parentNode.insertBefore(div, element);
-};
-
-window.addEventListener('load', note, false);
-
-
-
-
-//受注リストの詳細の文言変更
-
-  window.onload = function () {
-var note_text = document.querySelector('#mailBox tbody tr td > span');
-note_text.innerHTML = '※領収書を送る場合は、本管理画面からURLを送るのではなく、メールソフトで添付してお送りください。'
-
-};
-
-  </script>".PHP_EOL;
+function add_admin_style($hook_suffix){
+    if( 'toplevel_page_usces_orderlist' === $hook_suffix || 'toplevel_page_usces_orderlist' === $hook_suffix ) {
+    wp_enqueue_style( 'admin_add', get_template_directory_uri().'/admin/add.css' );
     }
 }
-// "custom_enqueue" 関数を管理画面のキューアクションにフック
-add_action( 'admin_enqueue_scripts', 'custom_enqueue' );
+add_action( 'admin_enqueue_scripts', 'add_admin_style' );
+
+
+/* 管理画面に外部JS */
+
+
+function add_admin_script($hook_suffix){
+   if( 'toplevel_page_usces_orderlist' === $hook_suffix || 'toplevel_page_usces_orderlist' === $hook_suffix ) {
+    // jQuery依存かつ、body要素終了直前で読み込む
+    wp_enqueue_script( 'my_admin_script', get_template_directory_uri().'/admin/add.js', array('jquery'), '', true);
+   }
+}
+add_action( 'admin_enqueue_scripts', 'add_admin_script' );
 
 
 
@@ -2119,6 +2096,7 @@ function filter_payments($payments)
     } else {
         $keep_payment_names[] = get_payment_name('card');
         $keep_payment_names[] = get_payment_name('coupon');
+        //$keep_payment_names[] = get_payment_name('test');
     }
 
     foreach ($payments as &$payment) {
@@ -2147,7 +2125,8 @@ function get_payment_name($key)
         'card' => 'クレジットカード',
         'coupon' => '引換コード',
         'estimate' => '見積り後、銀行振込',
-        'transfer' => '銀行振込',
+        'transfer' => '銀行振込'
+       // 'test' => 'リメールテスト'
     ];
 
     return isset($data[$key]) ? $data[$key] : '';

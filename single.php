@@ -206,11 +206,11 @@
                                                     </div>
                                                     <!-- ./p-op-wrap -->
 
-                                               <!--       <div class="" id="js-rd">
+                                                     <div class="" id="js-rd">
 
                                                         <div id="rd-op01"><?php echo usces_the_itemOption("迅速検査");?></div>
                                                        <div id="rd-op02"><?php echo usces_the_itemOption("抗体検査");?></div>
-                                                     </div> -->
+                                                     </div>
 
 
                                                     <!-- この中にアップロードステータスが挿入される -->
@@ -339,18 +339,20 @@ $("form").attr("enctype","multipart/form-data");
 </script>
 
 
+
+
   <?php if(is_single("file-up")): ?>
 
   <script>
 
   //ステータスが出力されるタグを移動
 
-     $(window).on('load', function() {
+/*      $(window).on('load', function() {
 
 $(".ajax-file-upload-container").appendTo("#js-upload-container");
  });
 
-
+ */
 
 $(document).ready(function()
 {
@@ -366,6 +368,7 @@ var host = location.hostname ;
     showDelete: true,
     maxFileCount:1,
     dragDrop:false,
+    autoSubmit:false,
     showFileCounter:false,
     showFileSize:true,
     statusBarWidth: "90%",
@@ -376,14 +379,15 @@ var host = location.hostname ;
  returnType:"json",
  deleteStr:"削除",
  extErrorStr:"アップロード失敗しました。",
+ /* アップロードさせるファイルを拡張子制限をかけるなら以下を設定 */
  //allowedTypes: "jpg,png,gif",
  uploadStr:"ファイル選択",
 
 //ステータスバーのタグの順序を変更
 
-
  customProgressBar: function(obj,s)
 		{
+
             var createDOM = $("<div class='p-statusbar-top'></div>");
             this.statusbar = $("<div class='ajax-file-upload-statusbar'></div>");
             this.statusbar.prepend(createDOM);
@@ -402,20 +406,24 @@ var host = location.hostname ;
             this.download.addClass("ajax-file-upload-green");
             this.cancel.addClass("ajax-file-upload-red");
             this.del.addClass("ajax-file-upload-red");
-		},
-onLoad: function (obj) {
-					$("#eventsmessage").html($("#eventsmessage").html() + "");
+        },
+
+        onLoad: function (obj) {
+
+                    //エラーメッセージの初期化
+                    $("#eventsmessage").html($("#eventsmessage").html() + "");
+                    //ステータスを別の要素に移動させる
+                    $(".ajax-file-upload-container").appendTo("#js-upload-container");
 				},
-				/* onSubmit: function (files) {
-					$("#eventsmessage").html($("#eventsmessage").html() + "<br/>Submitting:" + JSON.stringify(files));
-					//return false;
-                }, */
+				onSubmit: function (files) {
+					//$("#eventsmessage").html($("#eventsmessage").html() + "<br/>Submitting:" + JSON.stringify(files));
+                    //return false;
+                    uploadObj.startUpload();
+                },
 
                 //アップロード成功時の処理
-
-
-				onSuccess: function (files, data, xhr, pd) {
-                    //不要な点を削除
+		onSuccess: function (files, data, xhr, pd) {
+                    //不要な点("")を削除
                     var fn = JSON.stringify(data);
                     var rpname = fn.replace('"', "");
                      var rpname02 = rpname.replace('"', "");
@@ -424,7 +432,7 @@ onLoad: function (obj) {
                     //確認ようで表にもURLを出力
                     $(".js-add-message").html("<?php echo home_url("/")?>fileup/uploads/" + rpname02 + "<br>アップロードを完了しました");
 
-                    //ここでWELCARTのオプションのテキストにURLを流し込む
+                    //ここでWELLCARTのオプションのテキストにURLを流し込む
                     $("#js-hidden-text input").val("<?php echo home_url("/")?>fileup/uploads/" +rpname02);
 
                     $("#eventsmessage").html("");
@@ -436,30 +444,31 @@ onLoad: function (obj) {
 
 				},
 				onError: function (files, status, errMsg, pd) {
-					$("#eventsmessage").html($("#eventsmessage").html() + "<br/>アップロード失敗" + JSON.stringify(files));
+                    $("#eventsmessage").html($("#eventsmessage").html() + "<br/>アップロード失敗しました" /* + JSON.stringify(files) */);
+
 				},
 				onCancel: function (files, pd) {
 					$("#eventsmessage").html($("#eventsmessage").html() + "<br/>キャンセルしました" + JSON.stringify(files));
 				},
                 deleteCallback: function (data, pd) {
-    for (var i = 0; i < data.length; i++) {
-        $.post("<?php echo home_url("/")?>fileup/delete.php", {op: "delete",name: data[i]},
-            function (resp,textStatus, jqXHR) {
-                //Show Message
-               /*  $(".js-add-message").text("ファイルを削除しました"); */
-                $("#eventsmessage").html( "ファイルを削除しました");
-                  $("#js-hidden-text input").val("");
-            });
-    }
-    pd.statusbar.hide(); //You choice.
-
+                for (var i = 0; i < data.length; i++) {
+                    $.post("<?php echo home_url("/")?>fileup/delete.php", {op: "delete",name: data[i]},
+                        function (resp,textStatus, jqXHR) {
+                            //Show Message
+                        /*  $(".js-add-message").text("ファイルを削除しました"); */
+                            $("#eventsmessage").html( "ファイルを削除しました");
+                            //WELLCARTのオプションの値を一旦からにする
+                            $("#js-hidden-text input").val("");
+                        });
+                }
+                pd.statusbar.hide(); //You choice.
 }
-
 
 });
     });
 
     //$("#aa").text(url);
+
 
 </script>
 
