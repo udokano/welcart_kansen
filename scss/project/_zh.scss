@@ -894,7 +894,13 @@
     .p-zh-flow-sub-ttl {
         margin-bottom: rem(43);
 
-        &__text {}
+        &__text {
+            width: 460px;
+
+            @media (max-width: 767px) {
+                width: 75%;
+            }
+        }
     }
 
     /* 新規追加タブの中身 */
@@ -2049,9 +2055,10 @@
             }
 
             &--col03 {
-                max-width: 322px;
-                padding-left: rem(25);
-                padding-right: rem(25);
+                max-width: 341px;
+                height: rem(210);
+                padding-left: rem(20);
+                padding-right: rem(20);
                 border-color: #1268a2;
 
                 @media (max-width: 767px) {
@@ -2066,7 +2073,7 @@
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
-                        right: -56px;
+                        right: -41px;
                         width: 0;
                         height: 0;
                         border-style: solid;
@@ -2123,6 +2130,10 @@
             font-size: rem(28);
             color: #2fabff;
 
+            @media (max-width: 767px) {
+                font-size: rem(22);
+            }
+
             &--deep-blue {
                 color: #1268a2;
             }
@@ -2137,6 +2148,16 @@
 
             @media (max-width: 767px) {
                 width: 47%;
+            }
+
+            &--wide {
+                @media (min-width: 768px) {
+                    width: 400px;
+                }
+
+                @media (max-width: 767px) {
+                    width: 75%;
+                }
             }
         }
 
@@ -2163,6 +2184,12 @@
             }
         }
 
+        &__text {
+            padding-left: rem(13);
+            line-height: 1.56;
+            font-size: rem(16);
+        }
+
         &__note {
             font-size: 14px;
             width: 110%;
@@ -2175,12 +2202,6 @@
                 font-size: .8rem;
                 width: 100%;
             }
-        }
-
-        &__text {
-            padding-left: rem(13);
-            line-height: 1.56;
-            font-size: rem(16);
         }
 
         &__btn {
@@ -2241,6 +2262,13 @@
 
                 @media (min-width: 768px) {
                     margin-right: 12px;
+                }
+            }
+
+            &--wechat-new {
+                @media (min-width: 768px) {
+                    width: 180px;
+                    margin-right: 37px;
                 }
             }
 
@@ -2524,6 +2552,325 @@
             @media (max-width: 767px) {
                 top: 62%;
             }
+        }
+    }
+}
+
+.p-ttl-right-line {
+    position: relative;
+    font-size: rem(28);
+    font-weight: 600;
+    line-height: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 100%;
+        top: 50%;
+        height: rem(6);
+        transform: translateY(-50%);
+        background: url(../img/zh_new/bg_cricle_line.png) no-repeat 50% 50%;
+        background-size: 100% auto;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 50;
+        padding-right: rem(14);
+        display: inline-block;
+    }
+}
+
+.p-zh-flow-sub-ttl02 {
+    margin-bottom: rem(25);
+
+    &__text {
+        color: #1268a2;
+        font-size: rem(28);
+        background-color: #f5f5f5;
+    }
+}
+
+/*
+
+追加CVエリア
+------------------------*/
+
+.p-zh-conversion {
+    background: url(../img/zh_new/cv_bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    padding: rem(71) 0;
+
+    &__list {
+        text-align: center;
+    }
+
+    &__item {
+        display: inline-block;
+        position: relative;
+        width: 90%;
+        max-width: 540px;
+        height: 120px;
+        margin: 0 rem(13);
+        border-radius: rem(5);
+        box-shadow: 0 rem(6) 0 rgba($color: #000, $alpha: 0.1);
+        transition: bottom ease-in .32s;
+
+        &:hover {
+            bottom: rem(-6);
+            box-shadow: none;
+        }
+
+        @media (max-width: 767px) {
+            display: block;
+            margin: 0 auto;
+            height: 25vw;
+        }
+
+        &--wechat {
+            background-color: #74ca27;
+
+            @media (max-width: 767px) {
+                margin-bottom: 1.25rem;
+            }
+        }
+
+        &--contact {
+            background-color: #e43866;
+        }
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        color: #fff;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: rem(22);
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: rem(16) 0 rem(16) rem(8);
+            border-color: transparent transparent transparent #ffffff;
+
+            @media (max-width: 767px) {
+                right: rem(6);
+                border-width: rem(12) 0 rem(12) rem(6);
+            }
+        }
+    }
+
+    &__texts {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__main {
+        font-size: rem(27.08);
+        font-weight: 600;
+
+        @media (max-width: 767px) {
+            font-size: 1.45rem;
+        }
+
+        &--wechat {
+            padding: rem(10) 0;
+            padding-left: rem(160);
+            background: url(../img/zh_new/cv_icon_wecaht.png) no-repeat 0% 50%;
+            background-size: rem(152) auto;
+        }
+
+        &--contact {
+            padding: rem(2.55) 0;
+            padding-left: rem(59);
+            background: url(../img/zh_new/cv_icon_mail.png) no-repeat 0% 50%;
+            background-size: rem(42) auto;
+        }
+    }
+
+    &__sub {
+        font-size: rem(14.04);
+        display: inline-block;
+        margin-top: rem(6);
+    }
+}
+
+/*
+
+新しい商品エリア
+--------------------*/
+
+.p-new-item-note {
+    font-size: rem(23);
+}
+
+.p-new-item-box {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1021px;
+    border-radius: rem(9);
+    margin: rem(20) auto rem(60);
+
+    &__link {
+        padding: rem(28) rem(44);
+        padding-right: rem(28);
+        display: block;
+
+        @media (max-width: 767px) {
+            padding: 1.43rem 1.35rem;
+        }
+    }
+
+    &__inner {
+        position: relative;
+
+        @media (min-width: 768px) {
+            padding-left: rem(303);
+        }
+    }
+
+    &__ttl {
+        color: #157fbc;
+        font-size: rem(28.57);
+        letter-spacing: 0.025em;
+        margin-bottom: rem(5);
+        line-height: 1.22;
+
+        @media (max-width: 767px) {
+            font-size: 1.34rem;
+            text-align: center;
+        }
+    }
+
+    &__thumb {
+        width: 100%;
+        max-width: 280px;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 500px;
+            width: 92%;
+            margin: 1.05rem auto;
+        }
+    }
+
+    &__thumb-in {
+        position: relative;
+
+        &::after {
+            content: "";
+            z-index: 500;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid #e8e8e8;
+        }
+    }
+
+    &__desc {
+        color: #454545;
+        line-height: 1.65;
+        padding-bottom: rem(15);
+        margin-bottom: rem(17);
+        border-bottom: 1px solid #cbcbcb;
+
+        @media (max-width: 767px) {
+            padding-bottom: rem(23);
+            margin-bottom: rem(23);
+        }
+    }
+
+    &__price-area {
+        margin-bottom: rem(16);
+    }
+}
+
+.p-bottom-price {
+    justify-content: flex-start;
+
+    @media (max-width: 767px) {
+        flex-flow: column;
+        margin-bottom: 1.18rem;
+    }
+
+    &__box-left {
+        margin-right: rem(26);
+
+        @media (max-width: 767px) {
+            margin-bottom: 1.15rem;
+        }
+    }
+
+    &__p-left {
+        padding: rem(8) rem(10);
+        font-size: rem(20.41);
+        text-align: center;
+        border: 1px solid #007394;
+        color: #007394;
+        letter-spacing: .08em;
+        margin-right: rem(10);
+        line-height: 1;
+    }
+
+    &__p-right {
+        color: #ff6a6a;
+        letter-spacing: 0.025em;
+    }
+
+    &__main {
+        font-size: rem(52);
+        line-height: 1;
+    }
+
+    &__sub {
+        line-height: 1;
+    }
+
+    &__tax {
+        line-height: 1;
+        font-size: rem(13);
+    }
+
+    &__yen {
+        line-height: 1;
+        font-size: rem(28.71);
+    }
+
+    &__nots {
+        font-size: rem(15.23);
+        letter-spacing: .025em;
+        padding-left: 1em;
+        text-indent: -1em;
+        font-weight: 600;
+        color: #9c9c9c;
+        letter-spacing: 1.25;
+    }
+}
+
+.p-new-item-btn {
+    .p-goto-list__btn {
+        margin: 0;
+        padding: rem(11) 0;
+
+        @media (max-width: 767px) {
+            margin: 0 auto;
         }
     }
 }

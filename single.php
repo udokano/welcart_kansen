@@ -368,7 +368,7 @@ var host = location.hostname ;
     showDelete: true,
     maxFileCount:1,
     dragDrop:false,
-    autoSubmit:false,
+    autoSubmit:true,
     showFileCounter:false,
     showFileSize:true,
     statusBarWidth: "90%",
@@ -418,7 +418,7 @@ var host = location.hostname ;
 				onSubmit: function (files) {
 					//$("#eventsmessage").html($("#eventsmessage").html() + "<br/>Submitting:" + JSON.stringify(files));
                     //return false;
-                    uploadObj.startUpload();
+                    //uploadObj.startUpload();
                 },
 
                 //アップロード成功時の処理

@@ -813,3 +813,65 @@
     background-color: #e5e5e5;
     padding: 2.88rem 0;
 }
+
+.p-contact-note {
+    padding: 2.78rem 0 3.55rem;
+
+    &__ttl {
+        font-size: 1.6rem;
+        margin-bottom: 1.22rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.38rem;
+        }
+    }
+
+    &__desc {
+        font-size: 1.2rem;
+        margin-bottom: 2.65rem;
+    }
+
+    &__desc02 {
+        font-size: 1.4rem;
+        margin-bottom: 1.22rem;
+        font-weight: 600;
+
+        @media (max-width: 767px) {
+            margin-bottom: 1.35rem;
+        }
+    }
+
+    &__sub-note {
+        font-size: .95rem;
+    }
+
+    &__tel-wrap {
+        width: 90%;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 1.67rem 0;
+        border: 1px solid #62a3ce;
+
+        //background-color: #f8f8f8;
+   
+    }
+
+    &__tel {
+        .p-header__number {
+            background: none;
+            font-size: 2.5rem;
+            padding-left: 0;
+
+            //font-weight: 600;
+
+            @media (max-width: 767px) {
+                margin-bottom: .95rem;
+                font-size: 2.15rem;
+            }
+        }
+    }
+
+    &__time {
+        font-size: .92rem;
+    }
+}

@@ -9,15 +9,6 @@ Template Name: よくある質問-法人
 
 
 
-
-
-
-
-<?php $locale = get_locale();  ?>
-
-<?php if ('ja' == $locale): ?>
-
-
 <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
@@ -26,6 +17,7 @@ Template Name: よくある質問-法人
               </div>
         </div>
 </div>
+
 
 <div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
     <?php if(function_exists('bcn_display'))
@@ -49,73 +41,7 @@ Template Name: よくある質問-法人
   </ul>
 
 
-<?php elseif ('en_US' == $locale): ?>
 
-
-    <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
-        <div class="p-pages-ttl-area__inner --inner-item">
-              <div class="p-pages-ttl-area__texts --texts--item-list">
-                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">Frequently Asked Questions</h1>
-                <p class="p-pages-ttl-area__sub">For corporations and individuals. <br>
-Here is a list of frequently asked questions.</p>
-              </div>
-        </div>
-</div>
-
-<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-    <?php if(function_exists('bcn_display'))
-    {
-        bcn_display();
-    }?>
-</div>
-
-
-<section class="p-faq bg-section-gray">
-                          <div class="l-inner">
-
-  <ul class="p-faq-tab">
-
-      <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-faq-tab__link ">Individuals</a>
-      </li>
-       <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-faq-tab__link is-tab-active">corporation</a>
-      </li>
-  </ul>
-
-<?php elseif ('zh_CN' == $locale): ?>
-
-<div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
-        <div class="p-pages-ttl-area__inner --inner-item">
-              <div class="p-pages-ttl-area__texts --texts--item-list">
-                        <h1 class="p-pages-ttl-area__ttl --ttl--item-list">常有问题列表</h1>
-                <p class="p-pages-ttl-area__sub">对公司和个人来说：<br>以下是常有问题列表。</p>
-              </div>
-        </div>
-</div>
-
-<div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-    <?php if(function_exists('bcn_display'))
-    {
-        bcn_display();
-    }?>
-</div>
-
-
-<section class="p-faq bg-section-gray">
-                          <div class="l-inner">
-
-  <ul class="p-faq-tab">
-
-      <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-faq-tab__link ">个人</a>
-      </li>
-       <li class="p-faq-tab__list">
-        <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-faq-tab__link is-tab-active">公司</a>
-      </li>
-  </ul>
-
-<?php endif; ?>
 
 
 

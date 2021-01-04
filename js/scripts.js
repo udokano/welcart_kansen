@@ -1,5 +1,97 @@
 /*
 
+下層ヘッダーSPヘッダーブンの余白開ける
+
+-------------------------------------*/
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+
+  var $pages_header_hight = jQuery("#js-header").outerHeight();
+  jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
+
+} else {
+
+}
+
+
+
+
+/*
+スマホヘッダー上スクロールのみに表示
+----------------------------------------- */
+
+//スマホ追従フッター
+if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+
+  var header = jQuery("#js-header");
+
+  var header_hight = header.outerHeight();
+
+  var startPos = 0, winScrollTop = 0;
+  jQuery(window).on("scroll", function () {
+
+    winScrollTop = jQuery(this).scrollTop();
+    if (winScrollTop >= startPos) {
+      if (winScrollTop >= 200) {
+        header.css("top", -header_hight);
+      }
+    }
+
+    else {
+      header.css("top", "0px");
+    }
+    startPos = winScrollTop;
+
+  });
+
+}
+
+
+/*
+
+ノーマルスクリプト版
+-----------------------------*/
+
+/* if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+
+  var header = document.getElementById("js-header");
+  var space_top = document.getElementById("js-pages-head");
+  var header_hight = header.offsetHeight;
+
+  space_top.style.marginTop = header_hight + "px";
+
+
+  window.onresize = function () {
+    header_hight = header.offsetHeight;
+    space_top.style.marginTop = header_hight + "px";
+  }
+
+  var startPos = 0, win_sc = 0;
+
+  //関数にする
+  var head_sc_event = function () {
+    win_sc = window.scrollY;
+    console.log(win_sc);
+    if (win_sc >= startPos) {
+      if (win_sc >= 200) {
+        header.style.top = - header_hight + "px";
+      }
+    }
+
+    else {
+      header.style.top = 0;
+    }
+    startPos = win_sc;
+  }
+
+  window.addEventListener('scroll', head_sc_event);
+
+}
+ */
+
+
+/*
+
 スライダー
 
 -------------------------------------*/
@@ -212,115 +304,7 @@ jQuery('#js-sp-menu-switch').on('click', function () {
   }
 });
 
-/*
 
-FORM 関連
-
--------------------------------------*/
-
-/*
-いらないラベル削除
-*/
-
-jQuery('.iopt_label').remove();
-
-/* ラジオボタンにID付与 */
-
-jQuery('#js-option01 input').each(function (i) {
-  jQuery(this).attr('id', 'option-radio' + (i + 1));
-});
-
-jQuery('#js-option01 label').each(function (i) {
-  jQuery(this).attr('for', 'option-radio' + (i + 1));
-});
-
-
-
-
-jQuery("#js-rd input").each(function (i) {
-  jQuery(this).attr('id', 'op-rds' + (i + 1));
-
-});
-
-jQuery("#js-rd label").each(function (i) {
-  jQuery(this).attr('for', 'op-rds' + (i + 1));
-
-});
-
-/* jQuery("#op-rds1").attr("data-price", "0");
-
-jQuery("#op-rds2").attr("data-price", "3000");
-
-jQuery("#op-rds3").attr("data-price", "0");
-
-jQuery("#op-rds4").attr("data-price", "3000");
-var $item_price = jQuery("#js-item-price").data("itemprice");
-console.log($item_price);
-var konma = $item_price.replace(/,/g, '');
-console.log(konma);
-jQuery("#js-item-price").attr("data-itemprice", konma);
-
-
-jQuery(function () {
-
-  var op01 = 0;
-  var op02 = 0;
-
-  jQuery("#rd-op01 input").on("change", function () {
-    op01 = jQuery(this).data("price");
-
-    jQuery("#js-item-price").text(addFigure(parseInt(konma) + parseInt(op01) + parseInt(op02)));
-  });
-
-  jQuery("#rd-op02 input").on("change", function () {
-    op02 = jQuery(this).data("price");
-
-    jQuery("#js-item-price").text(addFigure(parseInt(konma) + parseInt(op01) + parseInt(op02)));
-  });
-
-});
- */
-
-
-/*-------------------------------
-        カンマ処理
-        -------------------------------*/
-/* function addFigure(str) {
-  var num = new String(str).replace(/,/g, "");
-  while (num != (num = num.replace(/^(-?\d+)(\d{3})/, "$1,$2")));
-  return num;
-}
-
-function removeFigure(str) {
-  var num = new String(str).replace(/,/g, "");
-  num = Number(num);
-  return num;
-}
- */
-
-
-
-//『選択してください』は無効にする
-
-jQuery('.js-option option:first-child').val('');
-
-/*
-
-
-セレクトボックス
-２つ目以降の値が選択されたらクラス付与
-
-*/
-
-jQuery('.js-option > select').on('change', function () {
-  /*   var ssss = jQuery(".js-option select option:selected").val("");
-    console.log(ssss); */
-  if (jQuery(this).find('option:selected').val() === '') {
-    jQuery(this).removeClass('is-select');
-  } else {
-    jQuery(this).addClass('is-select');
-  }
-});
 
 /*
 
@@ -711,50 +695,27 @@ jQuery(".js-modal-form-open").on('click', function () {
 
 });
 
+document.querySelector(".customkey_add_name").style.display = "none";
 
-/*
+var radio_event = function () {
+  var radioElm = document.getElementsByName("custom_customer[add]");
+  console.log(radioElm);
+  var target_Elm = document.querySelector(".customkey_add_name");
+  console.log(target_Elm);
 
-スマホヘッダー上スクロールのみに表示
------------------------------------------ */
-
-//スマホ追従フッター
-if (jQuery(window).width() < 768) {
-
-  var header = jQuery("#js-header");
-
-  var header_hight = header.outerHeight();
-
-  var startPos = 0, winScrollTop = 0;
-  jQuery(window).on("scroll", function () {
-
-    winScrollTop = jQuery(this).scrollTop();
-    if (winScrollTop >= startPos) {
-      if (winScrollTop >= 200) {
-        header.css("top", -header_hight);
+  for (var a = "", i = radioElm.length; i--;) {
+    if (radioElm[i].checked) {
+      var a = radioElm[i].value;
+      if (a === "いる") {
+        target_Elm.style.display = "table-row";
       }
+
+      else {
+        target_Elm.style.display = "none";
+      }
+      break;
     }
-
-    else {
-      header.css("top", "0px");
-    }
-    startPos = winScrollTop;
-
-  });
-
+  }
 }
 
-
-/*
-
-下層ヘッダーSPヘッダーブンの余白開ける
-
--------------------------------------*/
-
-if (window.matchMedia("(max-width: 768px)").matches) {
-  jQuery(window).on('load', function () {
-    var $pages_header_hight = jQuery("#js-header").outerHeight();
-    jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
-  })
-} else {
-
-}
+window.addEventListener("change", radio_event, false);

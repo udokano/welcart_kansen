@@ -266,6 +266,31 @@ Template Name: 中国人用の案内ページ
     </div>
 </section>
 
+
+<div class="p-zh-conversion">
+
+    <ul class="p-zh-conversion__list">
+        <li class="p-zh-conversion__item p-zh-conversion__item--wechat">
+            <a href="https://u.wechat.com/ICEBBX89d1dC9f5990yPa14" class="p-zh-conversion__link" target="_blank">
+                <p class="p-zh-conversion__texts">
+                    <span class="p-zh-conversion__main p-zh-conversion__main--wechat">から来院予約</span>
+                    <span class="p-zh-conversion__sub">連絡先追加後、申請欄からご希望の来院日時を入力して下さい</span>
+                </p>
+            </a>
+        </li>
+
+        <li class="p-zh-conversion__item p-zh-conversion__item--contact">
+            <a href="<?php echo home_url( '/' ); ?>contact" class="p-zh-conversion__link">
+                <p class="p-zh-conversion__texts">
+                    <span class="p-zh-conversion__main p-zh-conversion__main--contact">お問合せフォームから来院予約</span>
+                </p>
+            </a>
+        </li>
+    </ul>
+
+</div>
+<!-- ./conversion -->
+
 <style>
 /* 一旦非表示 */
 
@@ -848,7 +873,15 @@ DATEチェック用のモーダル
     <!-- ./c-modal -->
 
 
-        <section class="p-visit">
+
+
+    <style>
+
+
+    /*
+
+
+            <section class="p-visit">
 
             <div class="l-inner">
 
@@ -901,13 +934,7 @@ DATEチェック用のモーダル
                         </a>
                     </li>
 
-                    <style>
 
-
-                    /*
-
-
-                    一旦非表示
 
                        <li class="p-visit-item__content">
                     <a data-link="<?php echo home_url( '/' ); ?>visit-set01" class="js-modal-open">
@@ -989,9 +1016,6 @@ DATEチェック用のモーダル
                         </a>
                     </li>
 
-                    */
-
-                    </style>
 
                 </ul>
 </div>
@@ -999,6 +1023,14 @@ DATEチェック用のモーダル
             </div>
             <!-- ./l-inner -->
         </section>
+
+
+
+    */
+
+
+    </style>
+
 
         <section class="p-zh-flow bg-section-gray" id="link-use">
 
@@ -1009,7 +1041,7 @@ DATEチェック用のモーダル
 
             <p class="p-zh-flow__desc p-zh-flow__desc--tab02 u-tc">中国への渡航は、出国する<span class="c-pink">48時間以内に発行した陰性証明書</span>が必要です。<br class="">渡航用の証明書発行をご希望の方のみ、ご来院いただいております。</p>
 
-            <h3 class="c-inline-paint c-inline-paint--light-blue p-zh-flow-sub-ttl"><span class="c-inline-paint__text c-inline-paint__text--light-blue p-zh-flow-sub-ttl__text">WEBで購入後、来院予約の流れ</span></h3>
+            <h3 class="c-inline-paint c-inline-paint--light-blue p-zh-flow-sub-ttl"><span class="c-inline-paint__text c-inline-paint__text--light-blue p-zh-flow-sub-ttl__text">来院予約の流れ</span></h3>
 
             <ul class="p-zh-flow-list u-flex-wrap u-flex">
 
@@ -1019,19 +1051,21 @@ DATEチェック用のモーダル
                             <span class="p-zh-flow-list__step">step</span>
                             <span class="p-zh-flow-list__number">01</span>
                         </span>
-                        <span class="p-zh-flow-list__ttl-text u-fw600">検査キットの購入</span>
+                        <span class="p-zh-flow-list__ttl-text u-fw600">来院予約</span>
                     </h3>
 
                     <div class="p-zh-flow-list__bottom u-al-cent u-flex">
 
-                        <div class="p-zh-flow-list__left">
-                                <p class="p-zh-flow-list__text">購入の際に、ご来院日時もご入力ください。<br class="">当日の発行は15時までの受付となりますので予めご了承ください。</p>
+                        <div class="p-zh-flow-list__left p-zh-flow-list__left--sp-wide">
+                                <p class="p-zh-flow-list__text">we chatまたはお電話にてご来院の予約をお取り下さい。</p>
 
-                                <a href="<?php echo home_url( '/' ); ?>item-list" class="c-btn-circle-arw p-zh-flow-list__btn">ご購入はこちら</a>
+                                <p class="p-zh-flow-list__note p-zh-flow-list__text c-red">※お電話でのご対応は日本語のみとなります。</p>
+
+                                <a href="https://u.wechat.com/ICEBBX89d1dC9f5990yPa14" class="c-btn-circle-arw p-zh-flow-list__btn p-zh-flow-list__btn--wechat" target="_blank">連絡先追加はこちら</a>
                         </div>
                         <!-- ./p-zh-flow-list__left -->
-                        <div class="p-zh-flow-list__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/flow_zh01.png" alt="検査キットの購入">
+                        <div class="p-zh-flow-list__thumb p-zh-flow-list__thumb--wechat-new">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/zh_new/we_chat_logo_new.png" alt="検査キットの購入">
                         </div>
                         <!-- ./ p-zh-flow-list__thumb-->
 
@@ -1045,13 +1079,15 @@ DATEチェック用のモーダル
                             <span class="p-zh-flow-list__step">step</span>
                             <span class="p-zh-flow-list__number">02</span>
                         </span>
-                        <span class="p-zh-flow-list__ttl-text u-fw600">ご来院</span>
+                        <span class="p-zh-flow-list__ttl-text u-fw600">ご来院・検査料金のお支払い</span>
                     </h3>
 
                     <div class="p-zh-flow-list__bottom u-al-cent u-flex">
 
-                        <div class="p-zh-flow-list__left">
-                                <p class="p-zh-flow-list__text">ご予約いただいた日時にご来院ください。</p>
+                        <div class="p-zh-flow-list__left p-zh-flow-list__left--wide">
+                                <p class="p-zh-flow-list__text">ご予約いただいた日時にご来院ください。<br class="">受付時に検査料金を先にお支払頂きます。<br class="">なお、お支払いは現金または、クレジット払いが可能です。</p>
+
+                                 <p class="p-zh-flow-list__note p-zh-flow-list__text u-fw600">※Alipay、WeChat Payはご利用できません</p>
 
 
                         </div>
@@ -1071,7 +1107,7 @@ DATEチェック用のモーダル
                             <span class="p-zh-flow-list__step">step</span>
                             <span class="p-zh-flow-list__number">03</span>
                         </span>
-                        <span class="p-zh-flow-list__ttl-text u-fw600">検体の採取</span>
+                        <span class="p-zh-flow-list__ttl-text u-fw600">検査料金のお支払い</span>
                     </h3>
 
                     <div class="p-zh-flow-list__bottom u-al-cent u-flex">
@@ -1107,7 +1143,7 @@ DATEチェック用のモーダル
                         </div>
                         <!-- ./p-zh-flow-list__left -->
                         <div class="p-zh-flow-list__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/flow_zh04.png" alt="当院へ返送">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/flow_zh05.png" alt="当院へ返送">
                         </div>
                         <!-- ./ p-zh-flow-list__thumb-->
 
@@ -1144,7 +1180,48 @@ DATEチェック用のモーダル
 
             </ul>
 
-              <h3 class="c-inline-paint c-inline-paint--blue p-zh-flow-sub-ttl"><span class="c-inline-paint__text c-inline-paint__text--blue p-zh-flow-sub-ttl__text">当院へ直接、検査申込をご希望の方</span></h3>
+              <h3 class="c-inline-paint c-inline-paint--blue p-zh-flow-sub-ttl"><span class="c-inline-paint__text c-inline-paint__text--blue p-zh-flow-sub-ttl__text">WEBで購入後、来院予約の流れ</span></h3>
+
+              <p class="c-red u-tc u-fw600 p-new-item-note">WEBで購入後、来院予約希望の方は、下記よりPCR検査キットを購入の際に来院日時をお伝えください。</p>
+
+              <div class="p-new-item-box">
+                    <a data-link="<?php echo home_url( '/' ); ?>visit-set01" class="js-modal-open p-new-item-box__link">
+                        <div class="p-new-item-box__inner">
+                                <h3 class="p-new-item-box__ttl u-fw600">PCR検査・抗体検査・陰性証明書</h3>
+                                <div class="p-new-item-box__thumb">
+                                    <div class="p-new-item-box__thumb-in">
+ <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/visit-set01.jpg" alt="PCR検査・抗体検査・陰性証明書">
+                                    </div>
+
+                                </div>
+                                <p class="p-new-item-box__desc">PCR検査・抗体検査・陰性証明書のセットになります。<br class="u-pc">中国への渡航証明書の発行には原則、PCR検査と抗体検査を受けて頂く必要があります。
+                                </p>
+
+                                <div class="u-flex u-al-cent p-bottom-price p-new-item-box__price-area">
+                                    <div class="u-flex u-al-cent p-bottom-price__box-left">
+                                        <p class="p-bottom-price__p-left">価格</p>
+                                        <div class="p-bottom-price__p-right u-flex u-al-cent">
+                                            <strong class="p-bottom-price__main">26,000</strong>
+
+                                            <p class="u-flex u-jc-cent u-ff-colum p-bottom-price__sub">
+                                                <em class="p-bottom-price__tax">税別</em>
+                                                <span class="p-bottom-price__yen">円</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="p-bottom-price__nots">※複数購入をご希望の方は、カートに<br class="">入れる際、個数をお選びください。</p>
+                                </div>
+                                <div class="p-new-item-btn">
+                                      <p class="p-goto-list__btn">購入ページへ<span class="p-goto-list__btn-arw"><i class="p-goto-list__btn-arw-in"></i></span></p>
+                                </div>
+
+                        </div>
+                    </a>
+              </div>
+
+              <h4 class="p-ttl-right-line p-zh-flow-sub-ttl02">
+                  <span class="p-ttl-right-line__text p-zh-flow-sub-ttl02__text">購入から来院の流れ</span>
+              </h4>
 
                <ul class="p-zh-flow-list u-flex-wrap u-flex u-mb0">
 
@@ -1154,26 +1231,18 @@ DATEチェック用のモーダル
                             <span class="p-zh-flow-list__step">step</span>
                             <span class="p-zh-flow-list__number">01</span>
                         </span>
-                        <span class="p-zh-flow-list__ttl-text p-zh-flow-list__ttl-text--deep-blue u-fw600">来院予約</span>
+                        <span class="p-zh-flow-list__ttl-text p-zh-flow-list__ttl-text--deep-blue u-fw600">検査キットの購入</span>
                     </h3>
 
                     <div class="p-zh-flow-list__col">
+                                <p class="p-zh-flow-list__text u-pl0">購入の際に、ご来院日時もご入力ください。当日の発行は15時までの受付となりますので予めご了承ください。</p>
+                             <!--    <p class="p-zh-flow-list__note c-red">※お電話は日本語のみのご対応となります。</p> -->
 
-
-                                <p class="p-zh-flow-list__text u-pl0">we chatまたはお電話にてご来院の予約をお取り下さい。</p>
-
-                                <p class="p-zh-flow-list__note c-red">※お電話は日本語のみのご対応となります。</p>
-
-                                <div class="p-zh-flow-list__wecaht-wrap">
+                            <!--     <div class="p-zh-flow-list__wecaht-wrap">
                                     <div class="p-zh-flow-list__wecaht"><img src="<?php echo get_template_directory_uri(); ?>/img/zh_new/we_chat_logo_new.png" alt="wechat"></div>
 
                                     <a href="https://u.wechat.com/ICEBBX89d1dC9f5990yPa14" class="c-btn-circle-arw p-zh-flow-list__btn p-zh-flow-list__btn--wechat02 u-mt0" target="_blank">連絡先追加はこちら</a>
-                                </div>
-
-
-
-
-
+                                </div> -->
                     </div>
                     <!-- ./p-zh-flow-list__bottom -->
                 </li>
@@ -1201,12 +1270,12 @@ DATEチェック用のモーダル
                             <span class="p-zh-flow-list__step">step</span>
                             <span class="p-zh-flow-list__number">03</span>
                         </span>
-                        <span class="p-zh-flow-list__ttl-text p-zh-flow-list__ttl-text--deep-blue u-fw600">結果通知・お会計</span>
+                        <span class="p-zh-flow-list__ttl-text p-zh-flow-list__ttl-text--deep-blue u-fw600">結果通知の通知</span>
                     </h3>
 
                     <div class="p-zh-flow-list__col">
 
-                                <p class="p-zh-flow-list__text u-pl0">お待ち頂いたあと、検査結果の通知と証明書をお渡し致します。<br class="">その後、お会計をしてからお帰り頂けます。<br class="">お支払いは現金または、クレジット払いが可能です。<br class=""><span class="u-fw600">※Alipay、WeChat Payはご利用できません</span></p>
+                                <p class="p-zh-flow-list__text u-pl0">お待ちいただいた後、再度ご来院いただき、検査結果の通知と証明書をお渡しいたします。</p>
 
 
                     </div>
@@ -1337,7 +1406,29 @@ DATEチェック用のモーダル
 
 
 
+<div class="p-zh-conversion">
 
+    <ul class="p-zh-conversion__list">
+        <li class="p-zh-conversion__item p-zh-conversion__item--wechat">
+            <a href="https://u.wechat.com/ICEBBX89d1dC9f5990yPa14" class="p-zh-conversion__link" target="_blank">
+                <p class="p-zh-conversion__texts">
+                    <span class="p-zh-conversion__main p-zh-conversion__main--wechat">から来院予約</span>
+                    <span class="p-zh-conversion__sub">連絡先追加後、申請欄からご希望の来院日時を入力して下さい</span>
+                </p>
+            </a>
+        </li>
+
+        <li class="p-zh-conversion__item p-zh-conversion__item--contact">
+            <a href="<?php echo home_url( '/' ); ?>contact" class="p-zh-conversion__link">
+                <p class="p-zh-conversion__texts">
+                    <span class="p-zh-conversion__main p-zh-conversion__main--contact">お問合せフォームから来院予約</span>
+                </p>
+            </a>
+        </li>
+    </ul>
+
+</div>
+<!-- ./conversion -->
 
 
 

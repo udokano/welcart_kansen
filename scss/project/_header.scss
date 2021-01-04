@@ -737,9 +737,13 @@
         }
     }
 
-    &__box {
+    &__content-wrap {
         height: 0;
         visibility: hidden;
+    }
+
+    &__box {
+        margin-bottom: rem(53);
     }
 
     &__desc {
@@ -750,6 +754,329 @@
         @media (max-width: 767px) {
             padding: 0 rem(8);
             font-size: 1.04rem;
+        }
+    }
+}
+
+.p-table-top-wrap {}
+
+.p-table-top {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 3px;
+
+    &__row {}
+
+    &__th {
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        max-width: 492px;
+        text-align: left;
+        padding-bottom: rem(7);
+        font-size: rem(28.18);
+        line-height: 1;
+
+        &:first-of-type {
+            width: 492px;
+        }
+
+        &:last-of-type {
+            width: 657px;
+            border-right: none;
+            padding-left: rem(10);
+        }
+    }
+
+    &__td {
+        padding-bottom: rem(9);
+        font-size: 0;
+        border-right: 1px solid #fff;
+
+        &:last-of-type {
+            border-right: none;
+
+            //padding-left: rem(10);
+       
+        }
+    }
+}
+
+.p-table-date {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: rem(15);
+
+    tr {
+        th, td {
+            border: 1px solid #fff;
+            width: 162px;
+
+            @media (max-width: 767px) {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 14.8vw;
+                vertical-align: middle;
+                border-bottom: none;
+
+                &:last-of-type {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+
+        th {
+            line-height: 1;
+
+            @media (max-width: 767px) {
+                border-right: none;
+            }
+
+            span {
+                vertical-align: middle;
+            }
+        }
+
+        td {}
+    }
+
+    &__head {
+        @media (max-width: 767px) {
+            float: left;
+            width: 40%;
+        }
+    }
+
+    &__head-th {
+        vertical-align: middle;
+        padding: rem(14) rem(7);
+        color: #ffffff;
+
+        @media (max-width: 767px) {
+            padding: 0;
+            justify-content: flex-end;
+            padding-right: rem(28);
+        }
+    }
+
+    &__head-text {
+        font-size: rem(34.4);
+
+        @media (max-width: 767px) {
+            font-size: rem(28.4);
+        }
+    }
+
+    &__head-sub {
+        font-size: rem(26.34);
+        vertical-align: middle;
+
+        @media (max-width: 767px) {
+            font-size: rem(20.4);
+        }
+    }
+
+    &__body {
+        @media (max-width: 767px) {
+            float: left;
+            width: 60%;
+        }
+    }
+
+    &__td {
+        padding: rem(7) rem(11) rem(7);
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 1;
+
+        @media (max-width: 767px) {
+            text-align: center;
+            justify-content: center;
+            padding: 0;
+            padding-left: rem(15);
+            padding-right: rem(130);
+        }
+
+        &--white {
+            background-color: #fff;
+            vertical-align: middle;
+            color: #454545;
+            font-size: rem(25.1);
+            padding: rem(14) rem(7);
+            line-height: 1.13;
+
+            @media (max-width: 767px) {
+                justify-content: center;
+            }
+        }
+    }
+
+    &__tr {
+        @media (max-width: 767px) {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__span {
+        padding: rem(8) 0;
+        display: inline-block;
+        background: url(../img/common/c_year_cal_batu.png.png) no-repeat 50% 50%;
+        background-size: rem(36) auto;
+        font-size: rem(22.97);
+        line-height: 1;
+        white-space: nowrap;
+
+        @media (max-width: 767px) {
+            background-size: rem(50) auto;
+            padding: rem(14) 0;
+        }
+
+        &--ccl {
+            background-image: url(../img/common/c_year_cal_cricle.png.png);
+            background-size: rem(35.03) auto;
+
+            @media (max-width: 767px) {
+                background-size: rem(50) auto;
+            }
+        }
+
+        &--bg-none {
+            background: none;
+        }
+    }
+
+    &__not {
+        position: relative;
+        padding-bottom: rem(48);
+        margin-top: rem(4);
+
+        @media (max-width: 767px) {
+            padding-bottom: 0;
+            display: inline-block;
+            padding-right: 0%;
+            margin-top: 0;
+        }
+    }
+
+    &__not-in {
+        position: absolute;
+        background-color: #fff;
+        color: #5e5e5e;
+        text-align: center;
+        font-weight: 600;
+        left: 0;
+        top: 0;
+        width: 635px;
+        font-size: rem(21);
+        padding: rem(12) 0;
+        line-height: 1;
+
+        @media (max-width: 767px) {
+            width: auto;
+            writing-mode: vertical-rl;
+            height: 53vw;
+            left: auto;
+            right: -6.25rem;
+            line-height: 1.37;
+            top: rem(-25);
+            padding: rem(12) rem(18);
+            text-align: left;
+            font-size: rem(17);
+            white-space: nowrap;
+        }
+    }
+
+    &__not-arw {
+        background-color: #fff;
+        text-align: left;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #5e5e5e;
+        width: 151px;
+        padding: rem(5) 0;
+        padding-left: rem(8);
+        font-size: rem(17.81);
+        font-weight: lighter;
+        letter-spacing: 0;
+        z-index: 500;
+
+        @media (min-width: 768px) {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 767px) {
+            text-align: center;
+            left: auto;
+            right: -8.9125rem;
+            top: rem(-27);
+            padding: rem(12) rem(6);
+            width: 28vw;
+            font-size: rem(14);
+            line-height: 1.24;
+        }
+    }
+
+    &__not-arw-img {
+        position: absolute;
+        top: 0;
+        right: rem(-22);
+        height: 100%;
+        width: rem(23);
+        display: inline-block;
+        background: url(../img/common/c_table_arw.png) no-repeat 50% 50%;
+        background-size: 100% auto;
+
+        @media (max-width: 767px) {
+            background-image: url(../img/common/c_table_arw_sp.png);
+            top: auto;
+            right: 0;
+            bottom: rem(-13);
+            height: auto;
+            padding: rem(9);
+            width: 100%;
+        }
+    }
+}
+
+.p-table-note {
+    font-size: rem(16);
+    line-height: 1.38;
+    padding-left: 1em;
+    text-indent: -1em;
+    font-weight: lighter;
+    letter-spacing: 0;
+
+    @media (max-width: 767px) {
+        text-align: left;
+
+        &:last-child {
+            margin-right: rem(7);
+        }
+    }
+}
+
+.p-table-note-large {
+    font-size: rem(22.79);
+    line-height: 1.45;
+    font-weight: 600;
+    margin: rem(36) 0 rem(63);
+
+    @media (max-width: 767px) {
+        font-size: rem(19);
+        margin-bottom: rem(42);
+        line-height: 1.55;
+    }
+
+    span {
+        //font-size: rem(25.29);
+        font-weight: 800;
+        padding-bottom: rem(3);
+        border-bottom: rem(3.22) solid #ffea78;
+
+        @media (max-width: 767px) {
+            font-size: rem(22);
         }
     }
 }
