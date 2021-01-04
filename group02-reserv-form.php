@@ -12,7 +12,7 @@ Template Name: 教育機関・医療機関用、予約フォーム02
         <div class="p-pages-ttl-area__inner">
               <div class="p-pages-ttl-area__texts --company">
                         <h1 class="p-pages-ttl-area__ttl">無償検査</h1>
-                <p class="p-pages-ttl-area__sub">こちらの検査は教育機関・医療機関の方<br>専用の申込フォームになります。</p>
+                <p class="p-pages-ttl-area__sub">こちらの検査は教育機関・医療機関の方<br>専用のお問い合わせページになります。</p>
               </div>
         </div>
 </div>
@@ -24,6 +24,12 @@ Template Name: 教育機関・医療機関用、予約フォーム02
     }?>
 </div>
 
+
+
+<style>
+
+
+/*
 
 
 <section class="p-contact-form-area" id="link-form">
@@ -49,6 +55,47 @@ Template Name: 教育機関・医療機関用、予約フォーム02
 
 
 </section>
+
+
+*/
+
+
+
+</style>
+
+
+
+<div class="p-contact-note u-tc">
+
+             <!--  <h3 class="p-contact-note__ttl c-pink u-fw600">現在、大変多くのメールフォーム経由での<br class="u-sp">お問い合わせをいただいている関係で、<br class="">
+              お問い合わせの方法をお電話のみ<br class="u-sp">とさせていただいております。</h3> -->
+
+
+
+              <p class="p-contact-note__desc">※お電話でお問い合わせする前に、<br class="u-sp"><a href="<?php echo home_url( '/' ); ?>faq-personal" class="c-pink">よくある質問</a>をご確認くださいませ。</p>
+
+                 <p class="p-contact-note__desc p-contact-note__sub-note c-red">※検査した検体が当院に<br class="u-sp">届いているかのご確認につきましては、<br class="">検体をご郵送いただきました<span class="u-text-under-line">管轄の郵便局へ</span><br class="u-sp">お問い合わせいただきますようお願い致します。</p>
+
+              <div class="p-contact-note__tel-wrap">
+
+                  <p class="p-contact-note__desc02 c-blue">お問い合わせ先</p>
+
+              <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-contact-note__tel" target="_blank">
+                     <p class="p-header__number"><span class="p-header__number-sq">個人</span>
+                        <span class="p-header__number-num">0120-088-120</span></p>
+              </a>
+
+              <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-contact-note__tel" target="_blank">
+                  <p class="p-header__number"><span class="p-header__number-sq">企業・団体</span>
+                  <span class="p-header__number-num">06-4708-8082</span></p>
+              </a>
+
+              <p class="p-contact-note__time">受付時間：9:00~19:00</p>
+
+              </div>
+
+
+      </div>
 
 
 

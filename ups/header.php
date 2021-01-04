@@ -263,7 +263,47 @@ jQuery(document).ready(function(){
 
 <div class="l-wrapper">
 
+<div class="p-not-yearEnd" id="js-pages-head">
+
+<input type="checkbox" id="radio-note" class="u-all-hidden is-radio">
+<label for="radio-note" class="p-not-yearEnd__label">
+
+<strong class="p-not-yearEnd__ttl-in">年末年始の検査のお知らせ（重要）</strong>
+<i class="p-not-yearEnd__arw">
+</i>
+</label>
+
+
+<div class="p-not-yearEnd__box is-toggle-box">
+<p class="p-not-yearEnd__desc">
+<span style="    background-color: #fff;
+    display: block;
+    color: #000;
+    font-size: 96%;
+    padding: 10px 10px ;
+    line-height: 1.4;
+    max-width: 900px;
+    margin: 0 auto 10px;
+    "><span style="    background: #f5ff59;
+    color: #af0202; " class="trg">年末年始も休まず出荷作業は行っておりますが、</span>
+<br class="">日本郵便による普通郵便の配達休止・遅延等の影響を受けるため、12月29日～1月3日まで検体の返送をご遠慮いただいております。<br class="">
+その他の輸送手段につきましては、運送会社様より検体輸送の受付はしていない旨を言われているため、
+誠に勝手ながら、当クリニックの検体は12月29日までの当院到着分にて、年内検査終了となります。</span>
+<p class="p-not-yearEnd__desc">年始は、1月4日からの検査受付とさせていただきます。</p>
+<p class="p-not-yearEnd__desc u-mb0">12月30日～1月3日までに届いた検体は十分な状態での保存が厳しい関係で、検査をお受けすることができません。
+<br class="u-pc">予めご了承くださいませ。</p>
+</div>
+<!-- ./box -->
+
+</div>
+<!-- ./yearEnd -->
+
   <header class="l-header p-header p-header--top" id="js-header">
+
+
+
+
+
 
     <div class="p-header__inner p-header__inner--top">
 
@@ -460,50 +500,3 @@ jQuery(document).ready(function(){
 
 
   </header>
-
-
-
-<script>
-
-if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-
-  var header = document.getElementById("js-header");
-  var space_top = document.getElementById("js-pages-head");
-  var header_hight = header.offsetHeight;
-
-  space_top.style.marginTop = header_hight + "px";
-
-
-  /*   console.log(header_hight); */
-
-
-
-  window.onresize = function () {
-    header_hight = header.offsetHeight;
-    space_top.style.marginTop = header_hight + "px";
-  }
-
-  var startPos = 0, win_sc = 0;
-
-  //関数にする
-  var head_sc_event = function () {
-    win_sc = window.scrollY;
-    console.log(win_sc);
-    if (win_sc >= startPos) {
-      if (win_sc >= 200) {
-        header.style.top = - header_hight + "px";
-      }
-    }
-
-    else {
-      header.style.top = 0;
-    }
-    startPos = win_sc;
-  }
-
-  window.addEventListener('scroll', head_sc_event);
-
-}
-
-
-</script>

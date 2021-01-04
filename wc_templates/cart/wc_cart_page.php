@@ -25,7 +25,7 @@ get_header();
 
 							<h1 class="cart_page_title tc"><?php _e('In the cart', 'usces'); ?></h1>
 
-
+<p class="c-red u-fw600 u-tc u-text-under-line u-fz-large">キットや証明書発行は手配の性質上、<br class="u-sp">キャンセル・返品はお受けできません。<br class="">ご同意いただける方のみ、<br class="u-sp">お申し込みください。</p>
 
 		<div class="entry">
 
@@ -33,8 +33,6 @@ get_header();
 
 				<div class="usccart_navi">
 					<ol class="ucart">
-
-
 
 									<li class="ucart usccart usccart_cart"><?php _e('1.Cart', 'usces'); ?></li>
 									<li class="ucart usccustomer"><?php _e('2.Customer Info', 'usces'); ?></li>

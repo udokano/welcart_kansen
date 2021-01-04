@@ -2,6 +2,7 @@
 
 
 
+
 <div class="p-key-visual">
     <div class="l-inner p-key-visual__inner">
             <div class="p-key-visual__text-wrap">
@@ -1404,6 +1405,12 @@
     </div>
 </section>
 
+<style>
+
+
+/*
+
+
 <section class="p-banner-area">
 
 <div class="l-inner">
@@ -1434,6 +1441,14 @@
 </div>
 
 </section>
+
+
+*/
+
+
+</style>
+
+
 
 <!-- <section class="p-about-clinic bg-section-gray" id="link-about">
 
@@ -1564,7 +1579,14 @@
 
 </section> -->
 
-<section class="p-guidance">
+
+<style>
+
+
+/*
+
+
+                    <section class="p-guidance">
 
     <h2 class="c-sq-row-ttl p-guidance__ttl">
         <span class="c-sq-row-ttl__sq">迅速検査・通常検査</span>
@@ -1639,6 +1661,14 @@
     <!-- ./p-guidance-slide-wrap -->
 
 </section>
+
+
+*/
+
+
+</style>
+
+
 
 
 <section class="p-online">

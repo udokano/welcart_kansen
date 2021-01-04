@@ -154,6 +154,12 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?6dbddba84c650683"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.autoKana.js?6dbddba84c650683"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?<?php echo filemtime( get_stylesheet_directory() . '/js/scripts.js'); ?>"></script>
+
+<?php if( is_singular('post') ) : ?>
+<script src="<?php echo get_template_directory_uri(); ?>/js/price.js?<?php echo filemtime( get_stylesheet_directory() . '/js/scripts.js'); ?>"></script>
+
+<?php endif; ?>
+
 <script src="<?php echo get_template_directory_uri(); ?>/js/garlic.js?6dbddba84c650683"></script>
 
 

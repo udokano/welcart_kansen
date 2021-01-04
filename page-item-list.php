@@ -10,7 +10,6 @@ Template Name: 商品一覧
 
 
 
-
 <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
