@@ -256,7 +256,7 @@ Template Name: 商品一覧-迅速検査
              <dl class="p-clinic-info-table">
                 <dt class="p-clinic-info-table__ttl">電話番号</dt>
                 <dd class="p-clinic-info-table__desc">
-                    <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="c-pink" target="_blank">個人 0120-088-120</a><br>
+                    <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="c-pink" target="_blank">個人 0120-936-760</a><br>
             <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="c-pink" target="_blank">企業・団体 06-4708-8082</a>
         </dd>
             </dl>

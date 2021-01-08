@@ -1443,12 +1443,23 @@ if (current_user_can('editor')) { // 編集者を対象
     }
     add_action('admin_menu', 'add_page_to_admin_menu001_03');
 
-    function add_page_to_admin_menu_coupon()
+
+     function add_page_to_admin_menu_coupon()
     {
         add_menu_page('引換コード管理', '引換コード管理', 'edit_posts', 'admin.php?page=coupon_list', '', 'dashicons-editor-code
-', 1);
+', 2);
     }
     add_action('admin_menu', 'add_page_to_admin_menu_coupon');
+
+
+     function add_page_to_admin_menu001_04()
+    {
+        add_menu_page('リクルートフォーム管理', 'リクルートフォーム管理', 'edit_posts', 'edit.php?post_type=mwf_5606', '', 'dashicons-email
+', 1);
+    }
+    add_action('admin_menu', 'add_page_to_admin_menu001_04');
+
+
 
     /*  function add_page_to_admin_menu03()
      {
@@ -1556,6 +1567,13 @@ function add_page_to_admin_menu001_01()
 ', 2);
     }
     add_action('admin_menu', 'add_page_to_admin_menu001_03');
+
+    function add_page_to_admin_menu001_04()
+    {
+        add_menu_page('リクルートフォーム管理', 'リクルートフォーム管理', 'edit_posts', 'edit.php?post_type=mwf_5606', '', 'dashicons-email
+', 2);
+    }
+    add_action('admin_menu', 'add_page_to_admin_menu001_04');
 }
 
 

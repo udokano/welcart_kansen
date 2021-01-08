@@ -121,7 +121,7 @@ Template Name: 唾液採取・抗体検査の手順
 
 
 
-<ul class="p-flow-list">
+                            <ul class="p-flow-list">
                                 <li class="p-flow-list__item">
                                     <p class="p-flow-list__step c-bdc-use-green">
                                         <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">01</span></span>
@@ -153,7 +153,7 @@ Template Name: 唾液採取・抗体検査の手順
                                     <p class="p-flow-list__step c-bdc-use-green">
                                         <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">03</span></span>
                                     </p>
-                                    <h3 class="c-text-use-green p-flow-list__ttl">保存液の添加</h3>
+                                    <h3 class="c-text-use-green p-flow-list__ttl">不活化保存液の添加</h3>
                                     <div class="p-flow-list__thumb">
                                             <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb03.jpg?a7729d12e239877esaaaasss" alt="">
                                     </div>
@@ -174,32 +174,117 @@ Template Name: 唾液採取・抗体検査の手順
                                     <p class="p-flow-list__desc">チューブを縦に持ち、上のファネル部分を取り外します。<br class="">次の工程に進む前に必ずファネルは取り外してください。</p>
                                 </li>
 
-                                <li class="p-flow-list__item">
-                                    <p class="p-flow-list__step c-bdc-use-green">
-                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">05</span></span>
-                                    </p>
-                                    <h3 class="c-text-use-green p-flow-list__ttl">キャップを締め、名前の記入</h3>
-                                    <div class="p-flow-list__thumb">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb05.jpg?a7729d12e239877esaaaasss" alt="">
+
+                                <li class="p-flow-list__sq p-code u-tc">
+                                    <p class="u-fw600 p-code__desc">step.04以降の手順はお手元に届いている<br class="">検査結果確認申込書・問診票に<br class="u-sp">よって異なります。<br class="">ご確認の上、該当の物を選択し案内に従って採取を行ってください。</p>
+
+                                    <div class="u-flex p-code__row u-fw600">
+                                        <dl class="p-application">
+                                            <dt class="p-application__thumb">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/img/use/application01.jpg" alt="申込書バーコードシール無し">
+                                            </dt>
+                                            <dd class="p-application__desc">
+                                            バーコード<br class="u-sp">シール無し
+                                            </dd>
+                                        </dl>
+                                        <dl class="p-application">
+                                            <dt class="p-application__thumb">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/img/use/application02.jpg" alt="申込書バーコードシール有り">
+                                            </dt>
+                                            <dd class="p-application__desc">
+                                            バーコード<br class="u-sp">シール有り
+                                            </dd>
+                                        </dl>
                                     </div>
-
-                                    <p class="p-flow-list__desc">チューブのキャップをしっかりと締めて下さい。<br class="">チューブの白色の枠内にお名前を、油性マジックでご記入をお願い致します。</p>
+                                    <!-- ./row -->
                                 </li>
-
-                                <li class="p-flow-list__item">
-                                    <p class="p-flow-list__step c-bdc-use-green">
-                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">06</span></span>
-                                    </p>
-                                    <h3 class="c-text-use-green p-flow-list__ttl">不活化保存液と唾液を混ぜる</h3>
-                                    <div class="p-flow-list__thumb">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb06.jpg?a7729d12e239877esaaaasss" alt="">
-                                    </div>
-
-                                    <p class="p-flow-list__desc"><span class="p-flow-list__desc-red">唾液漏れを防ぐため、キャップが完全に閉まっている事を確認してから振り混ぜてください。</span><br class="">おおよそ10秒間ほど振り、不活化保存液と唾液を混ぜます。</p>
-                                </li>
-
-
                             </ul>
+
+
+                                <div class="p-use-sub-tab">
+                                <input type="radio" name="sub-tab" class="u-all-hidden" id="sub-tab01" checked>
+                                <input type="radio" name="sub-tab" class="u-all-hidden" id="sub-tab02">
+                                    <div class="p-use-sub-btn u-flex">
+
+                                        <label for="sub-tab01" class="p-use-sub-btn__item p-use-sub-btn__item--tab01">バーコードシールが付属していない方はこちら</label>
+
+                                        <label for="sub-tab02" class="p-use-sub-btn__item p-use-sub-btn__item--tab02">バーコードシールが付属している方はこちら</label>
+                                    </div>
+
+                                    <div class="p-use-sub-contents p-use-sub-contents--01" id="sub-tab-contents01">
+                                            <ul class="p-flow-list">
+                                                <li class="p-flow-list__item p-flow-list__item--sub">
+                                                    <p class="p-flow-list__step c-bdc-use-green">
+                                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">05</span></span>
+                                                    </p>
+                                                    <h3 class="c-text-use-green p-flow-list__ttl">キャップを締め、名前の記入</h3>
+                                                    <div class="p-flow-list__thumb">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb05.jpg?a7729d12e239877esaaaasss" alt="">
+                                                    </div>
+                                                    <p class="p-flow-list__desc">チューブのキャップをしっかりと締めて下さい。チューブに(FILL TO)と記載されている下の余白にお名前を、油性マジックでご記入をお願い致します。</p>
+                                                </li>
+                                                <li class="p-flow-list__item p-flow-list__item--sub u-sp-mb0">
+                                                    <p class="p-flow-list__step c-bdc-use-green">
+                                                        <span class="p-flow-list__step-text c-bg-use-green">step.<span class="p-flow-list__step-num">06</span></span>
+                                                    </p>
+                                                    <h3 class="c-text-use-green p-flow-list__ttl">不活化保存液と唾液を混ぜる</h3>
+                                                    <div class="p-flow-list__thumb">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/saliva2_take_thumb06.jpg?a7729d12e239877esaaaasss" alt="">
+                                                    </div>
+
+                                                    <p class="p-flow-list__desc"><span class="p-flow-list__desc-red">唾液漏れを防ぐため、キャップが完全に閉まっている事を確認してから振り混ぜてください。</span><br class="">おおよそ10秒間ほど振り、不活化保存液と唾液を混ぜます。</p>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                    <!-- ./tab01 -->
+
+                                    <div class="p-use-sub-contents p-use-sub-contents--02" id="sub-tab-contents02">
+  <ul class="p-flow-list">
+                                    <li class="p-flow-list__item p-flow-list__item--sub">
+                                                    <p class="p-flow-list__step c-bdc-use-orange">
+                                                        <span class="p-flow-list__step-text c-bg-orange02">step.<span class="p-flow-list__step-num">05</span></span>
+                                                    </p>
+                                                    <h3 class="c-text-use-orange p-flow-list__ttl p-flow-list__ttl--height p-flow-list__ttl--text-left ">キャップを締めて<br class="">バーコードシールの貼り付け</h3>
+                                                    <div class="p-flow-list__thumb">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/code_thumb01.jpg?a7729d12e239877esaaaasss" alt="">
+                                                    </div>
+                                                    <p class="p-flow-list__desc">チューブのキャップをしっかりと締めてください。<br class="">チューブの白色の枠内に、検査結果確認申込書に貼り付けられているバーコードシールの貼り付けをお願い致します。<br><br>
+                                                <span class="p-flow-list__desc-red">バーコードシールの貼り付けを忘れずに行ってください。<br class="">向きは必ず縦向きで貼ってください。横向きで貼り付ける、シールにシワやヨレがありますと、バーコードの読み取りが出来ず、検査が行えません。<br class="">予め、ご注意ください。</span>
+                                                </p>
+                                                </li>
+                                                <li class="p-flow-list__item p-flow-list__item--sub">
+                                                    <p class="p-flow-list__step c-bdc-use-orange">
+                                                        <span class="p-flow-list__step-text c-bg-orange02">step.<span class="p-flow-list__step-num">06</span></span>
+                                                    </p>
+                                                    <h3 class="c-text-use-orange p-flow-list__ttl--height p-flow-list__ttl">不活化保存液と唾液を混ぜる</h3>
+                                                    <div class="p-flow-list__thumb">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/code_thumb02.jpg?a7729d12e239877esaaaasss" alt="">
+                                                    </div>
+
+                                                    <p class="p-flow-list__desc"><span class="p-flow-list__desc-red">唾液漏れを防ぐため、キャップが完全に閉まっている事を確認してから振り混ぜてください。</span><br class="">おおよそ10秒間ほど振り、不活化保存液と唾液を混ぜます。</p>
+                                                </li>
+
+                                                 <li class="p-flow-list__item p-flow-list__item--sub u-sp-mb0">
+                                                    <p class="p-flow-list__step c-bdc-use-orange">
+                                                        <span class="p-flow-list__step-text c-bg-orange02">step.<span class="p-flow-list__step-num">07</span></span>
+                                                    </p>
+                                                    <h3 class="c-text-use-orange p-flow-list__ttl--height p-flow-list__ttl">マイページへの登録 <span class="p-flow-list__recom">推奨</span></h3>
+                                                    <div class="p-flow-list__thumb">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/use/code_thumb03.jpg?a7729d12e239877esaaaasss" alt="">
+                                                    </div>
+
+                                                    <p class="p-flow-list__desc">検体到着通知、検査結果通知のご連絡をメールにてご希望の方は検査結果確認申込書上部QRコードから、マイページ登録をお願い致します。</p>
+
+                                                    <p class="p-flow-list__desc-sub">※検査結果確認申込書へ直接記入された場合、情報の登録にお時間を要します。予めご了承ください。</p>
+                                                </li>
+</ul>
+
+                                    </div>
+                                     <!-- ./tab02 -->
+
+                                </div>
+                                <!-- ./タブの中のタブt -->
+
                         </div>
                         <!-- ./p-flow-list-over -->
 
@@ -366,10 +451,10 @@ Template Name: 唾液採取・抗体検査の手順
             <div class="p-clinic-info-right">
                 <h3 class="p-clinic-info-right__ttl">アクセス</h3>
                 <p class="p-clinic-info-right__address">〒542-0086　大阪府大阪市中央区西心斎橋2-13-16 <br>おおきに西心斎橋BirthPlaceビル　3階</p>
-                <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-clinic-info-right__tel" target="_blank"><span class="p-clinic-info-right__tel-sq">個人</span>
-                <span class="p-clinic-info-right__tel-num">0120-088-120</span></a>
+                <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-clinic-info-right__tel" target="_blank"><span class="p-clinic-info-right__tel-sq">個人</span>
+                <span class="p-clinic-info-right__tel-num">0120-936-760</span></a>
                   <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-clinic-info-right__tel" target="_blank"><span class="p-clinic-info-right__tel-sq">企業・団体</span><span class="p-clinic-info-right__tel-num">06-4708-8082</span></a>
-                <p class="p-clinic-info-right__guide">FAX : 06-4708-8105<br>受付 9:00～19:00  不定休</p>
+                <p class="p-clinic-info-right__guide">FAX : 06-4708-8105<br>受付時間<br>個人：9:00～18:00  企業・団体：9:00～19:00 不定休</p>
                 <!--<p class="p-clinic-info-right__guide"><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span></p>-->
                 <p class="p-clinic-info-right__guide-sub">直接、ご来院する場合は感染対策の都合上、<br class="u-sp">事前にご連絡ください。<br>
                 <span style="color:red;">新型コロナウイルス感染疑いの症状がある方は入室できません。

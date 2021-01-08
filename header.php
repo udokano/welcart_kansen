@@ -263,15 +263,182 @@ jQuery(document).ready(function(){
 
 <div class="l-wrapper">
 
+
+  <div class="p-not-yearEnd" id="js-pages-head">
+
+<input type="checkbox" id="radio-note" class="u-all-hidden is-radio">
+<label for="radio-note" class="p-not-yearEnd__label">
+
+<strong class="p-not-yearEnd__ttl-in">年末年始の検査のお知らせ（重要）</strong>
+<i class="p-not-yearEnd__arw">
+</i>
+</label>
+
+<div class="p-not-yearEnd__content-wrap is-toggle-box">
+
+  <div class="p-not-yearEnd__box ">
+      <!-- 28日までの検体は預かる　でも30日まで回せとの指示みたいです。 数日中に結果が出るみたいです。-->
+     <!--  <p class="p-not-yearEnd__desc">誠に勝手ながら、当クリニックの検査につきましては、12月29日までの到着分にて、<br class="">年内の検査を終了とさせていただきます。<br class="">新年は1月4日より、検体受付開始となります。</p>
+      <p class="p-not-yearEnd__desc u-mb0">12月30日～1月2日の間に投函されますと、<br class="u-sp">検体は当院へ届かず郵便局に<br class="">一時保管され、検査に十分な状態での<br class="u-sp">保存が期待出来ないため、<br class="">この期間中は、ポスト等への投函をご遠慮ください。</p> -->
+
+
+      <p class="p-not-yearEnd__desc">
+<span style="    background-color: #fff;
+    display: block;
+    color: #000;
+    font-size: 96%;
+    padding: 10px 10px ;
+    line-height: 1.4;
+    max-width: 900px;
+    margin: 0 auto 10px;
+    "><span style="    background: #f5ff59;
+    color: #af0202; " class="trg">年末年始も休まず出荷作業を行っております。</span>
+<br class="">しかし年末年始の日本郵便による郵便配達休止・遅延等の影響により、12月30日～1月3日までの検体採取及び投函につきましては、ご遠慮いただいております。その他の輸送手段につきましては、運送会社様より検体輸送のお受けしていない旨伺っているため、 誠に勝手ながら、当クリニックの検体は12月29日までの当院到着分にて、年内検査終了となります。
+</span>
+<p class="p-not-yearEnd__desc">年始の検査は1月4日当院到着分から<br class="u-sp">スタートとなります。</p>
+<p class="p-not-yearEnd__desc u-mb0">そのため12月30日～1月3日までに届いた検体は<br class="u-sp">十分な状態での保存が難しい関係で、<br class="u-sp">検査をお受けすることができません。
+<br class="">予めご了承くださいませ。</p>
+  </div>
+    <!-- ./box -->
+
+    <div class="l-inner p-table-wrap">
+
+    <table class="p-table-top u-pc">
+      <tr class="p-table-top__row">
+        <th class="p-table-top__th">2020年 12月</th>
+        <th class="p-table-top__th">2021年 1月</th>
+      </tr>
+      <tr class="p-table-top__row">
+        <td class="p-table-top__td">&nbsp;</td>
+        <td class="p-table-top__td">&nbsp;</td>
+      </tr>
+    </table>
+
+    <table class="p-table-date">
+      <thead class="p-table-date__head">
+        <tr class="p-table-date__tr">
+          <th class="p-table-date__head-th">
+            <span class="p-table-date__head-text">29日</span><span class="p-table-date__head-sub">(火)</span>
+          </th>
+          <th class="p-table-date__head-th">
+            <span class="p-table-date__head-text">30日</span><span class="p-table-date__head-sub">(水)</span>
+          </th>
+           <th class="p-table-date__head-th">
+            <span class="p-table-date__head-text">31日</span><span class="p-table-date__head-sub">(木)</span>
+          </th>
+           <th class="p-table-date__head-th">
+            <span class="p-table-date__head-text">1日</span><span class="p-table-date__head-sub">(金)</span>
+          </th>
+           <th class="p-table-date__head-th">
+            <span class="p-table-date__head-text">2日</span><span class="p-table-date__head-sub">(土)</span>
+          </th>
+           <th class="p-table-date__head-th">
+            <span class="p-table-date__head-text">3日</span><span class="p-table-date__head-sub">(日)</span>
+          </th>
+           <th class="p-table-date__head-th">
+            <span class="p-table-date__head-text">4日</span><span class="p-table-date__head-sub">(月)</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="p-table-date__body">
+        <tr class="p-table-date__tr">
+          <td class="p-table-date__td p-table-date__td--white">
+            検体受付<br class="u-pc">最終日
+          </td>
+          <td class="p-table-date__td">
+            <span class="p-table-date__span p-table-date__span--bg-none">検査最終日</span>
+            <div class="p-table-date__not">
+                  <p class="p-table-date__not-in">この期間中は、検体の採取、<br class="u-sp">返送はしないでください。</p>
+            </div>
+          </td>
+           <td class="p-table-date__td">
+            <span class="p-table-date__span">休診日</span>
+          </td>
+           <td class="p-table-date__td">
+            <span class="p-table-date__span">休診日</span>
+          </td>
+           <td class="p-table-date__td">
+            <span class="p-table-date__span">休診日</span>
+
+          </td>
+           <td class="p-table-date__td">
+            <span class="p-table-date__span p-table-date__span--ccl">休診日</span>
+             <div class="p-table-date__not">
+                  <p class="p-table-date__not-arw">最短で検査<br class="">ご希望の方は投函
+ <span class="p-table-date__not-arw-img"></span>
+                </p>
+
+            </div>
+          </td>
+             <td class="p-table-date__td p-table-date__td--white">
+            順次検査<br class="u-pc">受付開始
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <!--   <p class="p-table-note">※12月30日〜1月3日までの間、購入後、キャンセルは不可となりますのでご注意ください。</p> -->
+      <p class="p-table-note">※年末年始はお電話が大変繋がりにくい状況となります。予めご了承ください。</p>
+
+      <p class="p-table-note-large">
+
+		2021年の検体受付開始後、検査を<br class="u-sp">
+		お急ぎの方は、<span>1月3日</span>に検体の採取、<br class="">
+		ご投函下さいますよう、お願い申し上げます。<br class="">
+		ただし、年始は大変混み合う事が予想される為、お急ぎでない場合は日付を<br class="">
+		置いてからご投函されますよう、お願い申し上げます。
+
+
+		なお、年末の検査結果並びに年始の検査結果は、<br class="u-sp">
+		通常よりお時間を頂戴致します。<br class="">
+		ご理解賜りますようお願い申し上げます。
+
+
+
+      </p>
+    </div>
+    <!-- ./table-wrap -->
+
+
+
+  </div>
+  <!-- ./__content-wrap -->
+</div>
+<!-- ./__yearEnd -->
+
+
+
   <header class="l-header p-header p-header--top" id="js-header">
+
+
+
+
+
 
     <div class="p-header__inner p-header__inner--top">
 
-        <div class="p-header__logo p-header__logo--top">
-          <a href="<?php echo home_url( '/' ); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
-          </a>
-        </div>
+    <?php if ( wp_is_mobile() ) : ?>
+          <?php if(is_page("recruit") || is_page("recruit-confirm") || is_page("recruit-thanks")): ?>
+                  <div class="p-header__logo p-header__logo--recruit">
+                    <a href="<?php echo home_url( '/' ); ?>">
+                      <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_logo_recruit.png?6dbddba84c650683" alt="感染症検査クリニック">
+                    </a>
+                  </div>
+           <?php else: ?>
+           <div class="p-header__logo p-header__logo--top">
+                <a href="<?php echo home_url( '/' ); ?>">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
+                </a>
+              </div>
+          <?php endif; ?>
+      <?php else: ?>
+             <div class="p-header__logo p-header__logo--top">
+                <a href="<?php echo home_url( '/' ); ?>">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
+                </a>
+              </div>
+      <?php endif; ?>
+
+
         <!-- ./p-header__logo -->
 
         <a href="https://souki-kai.or.jp/rslt/" class="p-header__sp-gray-btn u-sp-display"  target="_blank">
@@ -308,15 +475,15 @@ jQuery(document).ready(function(){
 
               <div class="p-header-tels u-pc-display">
 
-                          <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-header__tel p-header__tel--top u-pc-display">
-                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">個人</span><span class="p-header__number-num">0120-088-120</span></p>
+                          <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel p-header__tel--top u-pc-display">
+                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">個人</span><span class="p-header__number-num">0120-936-760</span></p>
               </a>
 
                 <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel p-header__tel--top u-pc-display">
                 <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">企業・団体</span><span class="p-header__number-num p-header__number-num--campany">06-4708-8082</span></p>
               </a>
 
-                <p class="p-header__time p-header__time--top">受付時間：9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+                <p class="p-header__time p-header__time--top">個人：9:00~18:00<br class="">企業・団体：9:00~19:00</p>
               </div>
         </div>
         <!-- ./p-header__right -->
@@ -392,7 +559,7 @@ jQuery(document).ready(function(){
                         <p class="p-header__number "><span class="p-header__number-sq bg-green-blue-i">渋谷院</span>
                         <span class="p-header__number-num c-green-blue-i"><!-- 0120-000-000 -->開院準備中</span></p>
 
-                          <p class="p-header__time p-header__time--zh">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+                          <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
 
                   </a>
 
@@ -401,18 +568,18 @@ jQuery(document).ready(function(){
                         <p class="p-header__number"><span class="p-header__number-sq bg-light-blue-i ">福岡院</span>
                         <span class="p-header__number-num c-light-blue-i "><!-- 0120-133-220 -->開院準備中</span></p>
 
-                             <p class="p-header__time p-header__time--zh">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+                             <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
 
                   </a>
 
 
-                    <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
+                    <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
 
                         <p class="p-header__number"><span class="p-header__number-sq">大阪院</span>
-                        <span class="p-header__number-num">0120-088-120</span></p>
+                        <span class="p-header__number-num">0120-936-760</span></p>
 
 
-                   <p class="p-header__time p-header__time--zh">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+                   <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
 
                   </a>
 
@@ -433,10 +600,10 @@ jQuery(document).ready(function(){
 
                    <p class="p-header__guide">お電話でのお問い合わせ</p>
 
-                  <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-header__tel u-sp-display" target="_blank">
+                  <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel u-sp-display" target="_blank">
 
                         <p class="p-header__number"><span class="p-header__number-sq">個人</span>
-                        <span class="p-header__number-num">0120-088-120</span></p>
+                        <span class="p-header__number-num">0120-936-760</span></p>
 
                   </a>
 
@@ -450,7 +617,7 @@ jQuery(document).ready(function(){
 
                   </a>
 
-                   <p class="p-header__time">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+                   <p class="p-header__time">受付時間<br class="">個人：9:00~18:00<br class="">企業・団体：9:00~19:00</p>
 
                      <?php endif; ?>
                 </div>
@@ -474,7 +641,7 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
   space_top.style.marginTop = header_hight + "px";
 
 
-  /*   console.log(header_hight); */
+    console.log(header_hight);
 
 
 
@@ -487,6 +654,7 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
 
   //関数にする
   var head_sc_event = function () {
+    //header_hight = header.offsetHeight;
     win_sc = window.scrollY;
     console.log(win_sc);
     if (win_sc >= startPos) {

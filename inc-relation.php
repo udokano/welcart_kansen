@@ -5,7 +5,7 @@
 
                         <!-- 企業用のレコメンド カテゴリーがgroupのものだけ表示 -->
 
-                                      <h2 class="p-relation-ttl">関連アイテム</h2>
+                    <h2 class="p-relation-ttl">関連アイテム</h2>
 
                     <ul class="p-relation">
 
@@ -82,10 +82,6 @@
 
                         </ul>
 
-
-
-
-
                         <?php elseif(in_category("visit")) :?>
 
 
@@ -145,7 +141,7 @@
                                      'post_status' => 'publish',
                                     'category_name' => 'item',
                                      'post__not_in' => array($post->ID),
-                                    'category__not_in' => array(19,25,62),  //*** ここをちょくちょく変える  *** */
+                                    'category__not_in' => array(19,25,28),  //*** ここをちょくちょく変える  *** */
                                     'posts_per_page' => 3,
                                     'orderby' => 'rand',
                                     'order' => 'DESC',

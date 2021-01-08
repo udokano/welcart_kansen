@@ -1,0 +1,115 @@
+.p-mail {
+    &__ttl {
+        margin-bottom: 3.75rem;
+        font-size: 1.58rem;
+    }
+}
+
+.p-mail-list {
+    font-size: 0;
+    text-align: center;
+    padding: 2.58rem 0 0;
+    margin-bottom: 3.78rem;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    font-weight: 600;
+
+    &__item {
+        display: inline-block;
+        font-size: 1.42rem;
+        letter-spacing: .05em;
+        width: 270px;
+        margin: 0 .65rem;
+        padding: 1.4rem 0;
+        color: #666;
+        background-color: #ededed;
+        cursor: pointer;
+
+        &.is-tab-active {
+            color: #ffffff;
+        }
+
+        &--gmail.is-tab-active {
+            background-color: #267beb;
+        }
+
+        &--yahoo.is-tab-active {
+            background-color: #d63d25;
+        }
+
+        &--other.is-tab-active {
+            background-color: #f2c145;
+        }
+    }
+}
+
+.p-mail-contents {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+
+    &.is-tab-active {
+        visibility: visible;
+        overflow: inherit;
+        height: auto;
+        opacity: 1;
+    }
+}
+
+.p-pc-mail {
+    &__list {
+        border-bottom: 1px dotted #e4e4e4;
+        margin-bottom: 2.88rem;
+        padding-bottom: 2.88rem;
+    }
+
+    &__inner {}
+
+    &__thumb {
+        max-width: 580px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e4e4e4;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__texts {
+        max-width: 480px;
+        width: 50%;
+    }
+
+    &__top {
+        margin-bottom: 1.35rem;
+        padding-bottom: .7rem;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    &__step, &__ttl {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+    }
+
+    &__step {
+        font-size: 1.55rem;
+        margin-right: .8em;
+    }
+
+    &__step-num {
+        font-size: 1.88rem;
+    }
+
+    &__ttl {
+        font-size: 1.34rem;
+        letter-spacing: .025em;
+    }
+}

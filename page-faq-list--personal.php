@@ -19,7 +19,7 @@ Template Name: よくある質問-個人
         </div>
 </div>
 
-
+<?php include("nenmatu.php"); ?>
 
 <div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
     <?php if(function_exists('bcn_display'))
