@@ -13,27 +13,27 @@ jQuery('.iopt_label').remove();
 /* ラジオボタンにID付与 */
 
 jQuery('#js-option01 input').each(function (i) {
-    jQuery(this).attr('id', 'option-radio' + (i + 1));
+  jQuery(this).attr('id', 'option-radio' + (i + 1));
 });
 
 jQuery('#js-option01 label').each(function (i) {
-    jQuery(this).attr('for', 'option-radio' + (i + 1));
+  jQuery(this).attr('for', 'option-radio' + (i + 1));
 });
 
 
 
 
 jQuery("#js-rd input").each(function (i) {
-    jQuery(this).attr('id', 'op-rds' + (i + 1));
+  jQuery(this).attr('id', 'op-rds' + (i + 1));
 
 });
 
 jQuery("#js-rd label").each(function (i) {
-    jQuery(this).attr('for', 'op-rds' + (i + 1));
+  jQuery(this).attr('for', 'op-rds' + (i + 1));
 
 });
 
-/* jQuery("#op-rds1").attr("data-price", "0");
+jQuery("#op-rds1").attr("data-price", "0");
 
 jQuery("#op-rds2").attr("data-price", "3000");
 
@@ -65,13 +65,13 @@ jQuery(function () {
   });
 
 });
- */
+
 
 
 /*-------------------------------
         カンマ処理
         -------------------------------*/
-/* function addFigure(str) {
+function addFigure(str) {
   var num = new String(str).replace(/,/g, "");
   while (num != (num = num.replace(/^(-?\d+)(\d{3})/, "$1,$2")));
   return num;
@@ -82,7 +82,7 @@ function removeFigure(str) {
   num = Number(num);
   return num;
 }
- */
+
 
 
 
@@ -99,11 +99,11 @@ jQuery('.js-option option:first-child').val('');
 */
 
 jQuery('.js-option > select').on('change', function () {
-    /*   var ssss = jQuery(".js-option select option:selected").val("");
-      console.log(ssss); */
-    if (jQuery(this).find('option:selected').val() === '') {
-        jQuery(this).removeClass('is-select');
-    } else {
-        jQuery(this).addClass('is-select');
-    }
+  /*   var ssss = jQuery(".js-option select option:selected").val("");
+    console.log(ssss); */
+  if (jQuery(this).find('option:selected').val() === '') {
+    jQuery(this).removeClass('is-select');
+  } else {
+    jQuery(this).addClass('is-select');
+  }
 });
