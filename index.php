@@ -1166,7 +1166,7 @@
 
                        <li class="p-use-chart-list-item p-chert-right-row05 p-chert-right-row05--02 p-pos-right c-bdc-pink">
                            <div class="p-use-chart-list-item__inner p-inner-right ">
-                       <p class="p-use-chart-list-item__text u-tl">検体が当院へ到着後、順に患者様の唾液のPCR検査を行います。<br class="u-pc">混雑状況にもよりますが、検体がクリニックに届いてから、おおよそ当日から翌日を目安<span class="u-text-under-line">(※迅速検査の場合)</span>に結果をお知らせいたします。</p>
+                       <p class="p-use-chart-list-item__text u-tl">検体が当院へ到着後、順に患者様の唾液のPCR検査を行います。<br class="u-pc">混雑状況にもよりますが、検体到着後おおよそ1～2日を目安<span class="u-text-under-line">(※迅速検査の場合)</span>に結果をお知らせいたします。</p>
                             <a href="https://souki-kai.or.jp/rslt/" class="c-btn-circle-arw p-use-chart-list-item__btn p-use-chart-list-item__btn--wide c-bg-deep-pink" target="_blank">
                             <span class="u-pc-display">検査結果確認サイトへ進む</span>
                             <span class="u-sp-display"><!-- 検査結果確認<br>サイトへ進む -->検査結果サイトへ</span>
@@ -1208,7 +1208,7 @@
                     <div class="p-use-chart-list-top__inner p-chart-bottom-top__inner">
                             <i class="p-use-chart-list-top__icon p-chart-bottom-top__icon c-bg-purple">
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/front/flow_icon03.png?6dbddba84c650683" alt="アイコン"></i>
-                            <p class="p-chart-bottom-top__desc">検査結果は<span class="c-yellow02">ウェブ</span>にて行います。<br>検体到着<span class="c-yellow02">当日から翌日(※迅速検査の場合)</span>を目安にログインし<br class="u-pc">確認を<br class="u-sp">行ってください。<!-- <span class="c-yellow02">電話、ウェブ上にて通知など</span><br>ご希望の方法で結果をお知らせいたします。Web案内時に専任スタッフへお伝えください。 --></p>
+                            <p class="p-chart-bottom-top__desc">検査結果は<span class="c-yellow02">ウェブ</span>にて行います。<br>検体到着後<span class="c-yellow02">おおよそ1～2日(※迅速検査の場合)</span>を目安にログインし<br class="u-pc">確認を<br class="u-sp">行ってください。<!-- <span class="c-yellow02">電話、ウェブ上にて通知など</span><br>ご希望の方法で結果をお知らせいたします。Web案内時に専任スタッフへお伝えください。 --></p>
                             <p class="p-chart-bottom-top__nunber u-f-black-sword">Check!</p>
                             <!-- <span href="https://souki-kai.or.jp/rslt/" class="c-btn-arw-sq p-use-chart-list-top__btn" target="_blank">検査結果通知サイト<span class="c-btn-arw-sq__right-box p-use-chart-list-top__btn-right"><i class="c-btn-arw-sq__arw p-use-chart-list-top__btn-arw"></i></span></a> -->
                     </div>
