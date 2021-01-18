@@ -13187,7 +13187,15 @@ FV
 
 .p-mail__ttl {
   font-size: 1.58rem;
-  margin-bottom: 3.75rem;
+  margin-bottom: 1.8rem;
+}
+
+.p-mail__ttl-sub-heading {
+  color: #5b5b5b;
+  font-size: 1.32rem;
+  font-weight: 600;
+  margin: 1.88rem 0;
+  padding-bottom: .55rem;
 }
 
 .p-mail-list {
@@ -13212,6 +13220,15 @@ FV
   width: 270px;
 }
 
+@media (max-width: 767px) {
+  .p-mail-list__item {
+    font-size: 1.08rem;
+    margin: 0 .24rem;
+    padding: 1.1rem 0;
+    width: 30%;
+  }
+}
+
 .p-mail-list__item.is-tab-active {
   color: #ffffff;
 }
@@ -13229,9 +13246,11 @@ FV
 }
 
 .p-mail-contents {
+  -webkit-transition: opacity .32s ease-in;
   height: 0;
   opacity: 0;
   overflow: hidden;
+  transition: opacity .32s ease-in;
   visibility: hidden;
 }
 
@@ -13244,13 +13263,30 @@ FV
 
 .p-pc-mail__list {
   border-bottom: 1px dotted #e4e4e4;
+  /*  margin-bottom: 2.88rem; */
+  padding: 2.88rem 0;
+}
+
+.p-pc-mail__list:last-of-type {
   margin-bottom: 2.88rem;
-  padding-bottom: 2.88rem;
+}
+
+@media (max-width: 767px) {
+  .p-pc-mail__inner {
+    display: block;
+  }
 }
 
 .p-pc-mail__thumb {
   max-width: 580px;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .p-pc-mail__thumb {
+    margin-bottom: 2.25rem;
+    width: 100%;
+  }
 }
 
 .p-pc-mail__thumb::after {
@@ -13267,6 +13303,12 @@ FV
 .p-pc-mail__texts {
   max-width: 480px;
   width: 50%;
+}
+
+@media (max-width: 767px) {
+  .p-pc-mail__texts {
+    width: 100%;
+  }
 }
 
 .p-pc-mail__top {
@@ -13293,6 +13335,152 @@ FV
 .p-pc-mail__ttl {
   font-size: 1.34rem;
   letter-spacing: .025em;
+}
+
+.p-sp-mail__list {
+  border-bottom: 1px dotted #e4e4e4;
+  margin-bottom: 2.88rem;
+  padding-bottom: 2.88rem;
+}
+
+@media (max-width: 767px) {
+  .p-sp-mail__inner {
+    -ms-flex-pack: justify !important;
+    -webkit-box-pack: justify !important;
+    justify-content: space-between !important;
+  }
+}
+
+.p-sp-mail__thumb {
+  max-width: 580px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .p-sp-mail__thumb {
+    width: 50%;
+  }
+}
+
+.p-sp-mail__thumb::after {
+  border: 1px solid #e4e4e4;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.p-sp-mail__texts {
+  margin-left: 2.55rem;
+  max-width: 480px;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .p-sp-mail__texts {
+    margin-left: 0;
+    width: 45%;
+  }
+}
+
+.p-sp-mail__top {
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 1.35rem;
+  padding-bottom: .7rem;
+}
+
+.p-sp-mail__step, .p-sp-mail__ttl {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.p-sp-mail__step {
+  font-size: 1.55rem;
+  margin-right: .8em;
+}
+
+@media (max-width: 767px) {
+  .p-sp-mail__step {
+    display: block;
+    margin-bottom: .88rem;
+  }
+}
+
+.p-sp-mail__step-num {
+  font-size: 1.88rem;
+}
+
+.p-sp-mail__ttl {
+  font-size: 1.34rem;
+  letter-spacing: .025em;
+}
+
+@media (max-width: 767px) {
+  .p-sp-mail__ttl {
+    line-height: 1.28;
+  }
+}
+
+.p-mail-sub-btn-wrap {
+  font-size: 0;
+  margin-bottom: 3.55rem;
+  text-align: center;
+}
+
+.p-mail-sub-btn {
+  border: 1px solid #a5a5a5;
+  color: #666;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.22rem;
+  margin: 0 .55rem;
+  padding: 1.04rem 0;
+  text-align: center;
+  width: 240px;
+}
+
+@media (max-width: 767px) {
+  .p-mail-sub-btn {
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-mail-sub-btn:last-of-type {
+    margin-top: .62rem;
+  }
+}
+
+.p-sub-tab-wrap {
+  -webkit-transition: opacity ease-in .25s;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity ease-in .25s;
+  visibility: hidden;
+}
+
+#lb-tab-btn01:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--01,
+#lb-tab-btn02:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--02,
+#lb-tab-btn03:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--03,
+#lb-tab-btn04:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--04 {
+  background-color: #666;
+  border: 1px solid #666;
+  color: #ffffff;
+}
+
+#lb-tab-btn01:checked ~ .lb-sub-content01,
+#lb-tab-btn02:checked ~ .lb-sub-content02,
+#lb-tab-btn03:checked ~ .lb-sub-content03,
+#lb-tab-btn04:checked ~ .lb-sub-content04 {
+  height: auto;
+  opacity: 1;
+  overflow: inherit;
+  visibility: visible;
 }
 
 input, select {

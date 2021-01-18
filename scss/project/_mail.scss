@@ -1,7 +1,18 @@
 .p-mail {
     &__ttl {
-        margin-bottom: 3.75rem;
+        margin-bottom: 1.8rem;
         font-size: 1.58rem;
+    }
+
+    &__ttl-sub-heading {
+        font-size: 1.32rem;
+        font-weight: 600;
+        padding-bottom: .55rem;
+        margin: 1.88rem 0;
+        color: #5b5b5b;
+
+        //border-bottom: 1px solid #000;
+   
     }
 }
 
@@ -24,6 +35,13 @@
         color: #666;
         background-color: #ededed;
         cursor: pointer;
+
+        @media (max-width: 767px) {
+            font-size: 1.08rem;
+            width: 30%;
+            margin: 0 .24rem;
+            padding: 1.1rem 0;
+        }
 
         &.is-tab-active {
             color: #ffffff;
@@ -48,6 +66,7 @@
     opacity: 0;
     height: 0;
     overflow: hidden;
+    transition: opacity .32s ease-in;
 
     &.is-tab-active {
         visibility: visible;
@@ -60,15 +79,34 @@
 .p-pc-mail {
     &__list {
         border-bottom: 1px dotted #e4e4e4;
-        margin-bottom: 2.88rem;
-        padding-bottom: 2.88rem;
+
+        /*  margin-bottom: 2.88rem; */
+        padding: 2.88rem 0;
+
+        &:nth-of-type(even) {
+            //background-color: #fcfcfc;
+       
+        }
+
+        &:last-of-type {
+            margin-bottom: 2.88rem;
+        }
     }
 
-    &__inner {}
+    &__inner {
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
 
     &__thumb {
         max-width: 580px;
         position: relative;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 2.25rem;
+        }
 
         &::after {
             content: "";
@@ -85,6 +123,10 @@
     &__texts {
         max-width: 480px;
         width: 50%;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
     }
 
     &__top {
@@ -112,4 +154,140 @@
         font-size: 1.34rem;
         letter-spacing: .025em;
     }
+}
+
+.p-sp-mail {
+    &__list {
+        border-bottom: 1px dotted #e4e4e4;
+        margin-bottom: 2.88rem;
+        padding-bottom: 2.88rem;
+    }
+
+    &__inner {
+        @media (max-width: 767px) {
+            //display: block;
+            justify-content: space-between !important;
+        }
+    }
+
+    &__thumb {
+        max-width: 580px;
+        position: relative;
+
+        @media (max-width: 767px) {
+            width: 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e4e4e4;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__texts {
+        max-width: 480px;
+        width: 50%;
+        margin-left: 2.55rem;
+
+        @media (max-width: 767px) {
+            width: 45%;
+            margin-left: 0;
+        }
+    }
+
+    &__top {
+        margin-bottom: 1.35rem;
+        padding-bottom: .7rem;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    &__step, &__ttl {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+    }
+
+    &__step {
+        font-size: 1.55rem;
+        margin-right: .8em;
+
+        @media (max-width: 767px) {
+            margin-bottom: .88rem;
+            display: block;
+        }
+    }
+
+    &__step-num {
+        font-size: 1.88rem;
+    }
+
+    &__ttl {
+        font-size: 1.34rem;
+        letter-spacing: .025em;
+
+        @media (max-width: 767px) {
+            line-height: 1.28;
+        }
+    }
+}
+
+.p-mail-sub-btn-wrap {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 3.55rem;
+}
+
+.p-mail-sub-btn {
+    display: inline-block;
+    font-size: 1.22rem;
+    width: 240px;
+    color: #666;
+    border: 1px solid #a5a5a5;
+    text-align: center;
+    padding: 1.04rem 0;
+    margin: 0 .55rem;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+        width: 75%;
+    }
+
+    &:last-of-type {
+        @media (max-width: 767px) {
+            margin-top: .62rem;
+        }
+    }
+}
+
+.p-sub-tab-wrap {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity ease-in .25s;
+}
+
+#lb-tab-btn01:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--01,
+#lb-tab-btn02:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--02,
+#lb-tab-btn03:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--03,
+#lb-tab-btn04:checked ~ .p-mail-sub-btn-wrap .p-mail-sub-btn--04 {
+    color: #ffffff;
+    background-color: #666;
+    border: 1px solid #666;
+}
+
+#lb-tab-btn01:checked ~ .lb-sub-content01,
+#lb-tab-btn02:checked ~ .lb-sub-content02,
+#lb-tab-btn03:checked ~ .lb-sub-content03,
+#lb-tab-btn04:checked ~ .lb-sub-content04 {
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    overflow: inherit;
 }
