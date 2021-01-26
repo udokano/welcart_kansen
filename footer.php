@@ -1,8 +1,12 @@
 
 
 
+<style>
 
-    <?php if ( is_home() || is_front_page() || is_page("ch") ) : ?>
+
+/*
+
+ <?php if ( is_home() || is_front_page() || is_page("ch") ) : ?>
 
             <div class="p-fix-btn" id="js-fix-btn">
                 <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-fix-btn__inner">
@@ -19,6 +23,13 @@
 
     <?php endif; ?>
     <!-- ./ is_home() || is_front_page() -->
+
+*/
+
+
+</style>
+
+
 
 
 
@@ -146,6 +157,35 @@
 <?php endif; ?>
 
   <p class="u-tc p-footer__copy --copy-top">copyright©感染症検査クリニック all rights reserved.</p>
+
+
+
+<?php if ( is_home() || is_front_page() ) : ?>
+
+
+<!--------------------------
+
+チャットシステム挿入
+
+----------------------------->
+
+
+
+<script>(function(){
+var w=window,d=document;
+var s="https://app.chatplus.jp/cp.js";
+d["__cp_d"]="https://app.chatplus.jp";
+d["__cp_c"]="6b3c02e9_1";
+var a=d.createElement("script"), m=d.getElementsByTagName("script")[0];
+a.async=true,a.src=s,m.parentNode.insertBefore(a,m);})();</script>
+
+
+<?php endif; ?>
+
+
+
+
+
 </footer>
 
 
