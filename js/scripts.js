@@ -719,3 +719,55 @@ var radio_event = function () {
 }
 
 window.addEventListener("change", radio_event, false); */
+
+
+/* const et = document.getElementById("js-test");
+window.addEventListener('scroll', function () {
+  console.log("横スクロール：" + this.offsetLeft);
+  // console.log("縦スクロール：" + window.scrollY);
+}); */
+
+/* $(window).scroll(function () {
+
+  var sss = $("#js-test").scrollLeft();
+  console.log(sss);
+});
+ */
+
+/* var flashing_arw = function () {
+  var target = document.querySelector(".js-sp-arrow");
+
+  var x = target.scrollLeft;
+  var sss = this;
+  console.log(sss);
+  console.log(x);
+  if (x > 0) {
+    console.log("OK");
+
+  }
+
+  else {
+    console.log("ng");
+  }
+}
+
+document.querySelector(".js-sp-arrow").addEventListener("scroll", flashing_arw, true); */
+
+
+const target = $(".js-sp-arrow");
+
+target.on("scroll", function () {
+  var active_table = $(this);
+  var x = active_table.scrollLeft();;
+  if (x > 0) {
+    console.log("OK");
+    active_table.removeClass("is-flashing-arw");
+
+
+  }
+
+  else {
+    console.log("ng");
+    active_table.addClass("is-flashing-arw");
+  }
+})

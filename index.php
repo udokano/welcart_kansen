@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<?php include("nenmatu.php"); ?>
+<!-- <?php include("nenmatu.php"); ?> -->
 
 
-<div class="p-key-visual">
+<div class="p-key-visual" id="js-pages-head">
     <div class="l-inner p-key-visual__inner">
             <div class="p-key-visual__text-wrap">
                                 <div class="p-key-visual__text-left">
@@ -54,10 +54,17 @@
 <section class="p-cost p-cost--top">
     <div class="l-inner">
         <h2 class="c-ttl-under-center p-cost__ttl c-blue">検査費用</h2>
-        <p class="c-pink p-cost__desc u-text-under-line">※料金改定のお知らせ<br class="">昨今の感染者拡大に伴い、よりPCR検査をご利用いただきやすくするため、料金の値下げを行いました。</p>
+       <!--  <p class="c-pink p-cost__desc u-text-under-line">※料金改定のお知らせ<br class="">昨今の感染者拡大に伴い、よりPCR検査をご利用いただきやすくするため、料金の値下げを行いました。</p> -->
+        <p class="c-pink p-cost__desc u-text-under-line">※ミニマムパック追加のお知らせ<br class="">昨今の感染者拡大に伴い、<br class="u-sp">よりPCR検査をご利用いただきやすくするため、<br>PCR検査キットミニマムパックを追加いたしました。</p>
         <p class="p-cost__desc c-blue">検査キット、郵送、採取案内、検査実施を含むお値段です。</p>
 
-        <dl class="p-cost-price u-mb10">
+
+        <style>
+
+
+        /*
+
+         <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--1st"><span class="p-cost-price__name-in">PCR検査</span></dt>
                 <dd class="p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">12,000</span><span class="p-cost-price__text-sub">円(税別)</span></dd>
         </dl>
@@ -105,6 +112,13 @@
             </dd>
         </dl>
 
+        */
+
+
+        </style>
+
+
+
 
   <!-- <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査</span></dt>
@@ -150,6 +164,118 @@
 
 
 
+        <div class="p-table-price-wrap js-sp-arrow is-flashing-arw">
+
+
+            <table class="p-table-price">
+                <tr>
+                    <th class="p-table-price__th p-table-price__th--normal">PCR検査</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">12,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td p-table-price__td--bdl-none"></td>
+                </tr>
+                 <tr>
+                    <th class="p-table-price__th p-table-price__th--normal">5回セット</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">1回あたり 9,600</span><span class="p-table-price-text__sub">円(税別)</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price__sub">合計 48,000円(税別)</p>
+                    </td>
+                </tr>
+                 <tr>
+                    <th class="p-table-price__th p-table-price__th--normal">10回セット</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">1回あたり 8,880</span><span class="p-table-price-text__sub">円(税別)</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td">
+                          <p class="p-table-price__sub">合計 88,800円(税別)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="p-table-price__th p-table-price__th--quick">PCR迅速検査</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">12,000+3,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__note">速達でのご対応、<br class="u-sp">優先的に検査いたします。</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td"><p class="p-table-price__sub">合計 15,000円(税別)</p></td>
+                </tr>
+                 <tr>
+                    <th class="p-table-price__th p-table-price__th--quick">5回セット</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">48,000+15,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__note">速達でのご対応、<br class="u-sp">優先的に検査いたします。</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price__sub">合計 63,000円(税別)</p>
+                    </td>
+                </tr>
+                 <tr>
+                    <th class="p-table-price__th p-table-price__th--quick">10回セット</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">88,800+30,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__note">速達でのご対応、<br class="u-sp">優先的に検査いたします。</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td">
+                          <p class="p-table-price__sub">合計 118,800円(税別)</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="p-table-price__th p-table-price__th--minimum">ミニマム<br class="u-sp">パック</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">6,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td p-table-price__td--bdl-none"><!-- <p class="p-table-price__sub">合計 15,000円(税別)</p> --></td>
+                </tr>
+
+                  <tr>
+                    <th class="p-table-price__th p-table-price__th--minimum">10回セット</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">1回あたり 4,440</span><span class="p-table-price-text__sub">円(税別)</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td"><p class="p-table-price__sub">合計 44,400円(税別)</p></td>
+                </tr>
+
+
+                 <tr>
+                    <th class="p-table-price__th p-table-price__th--cri">陰性証明書</th>
+                    <td class="p-table-price__td">
+                        <p class="p-table-price-text">
+                            <span class="p-table-price-text__main">+5,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                        </p>
+                    </td>
+                    <td class="p-table-price__td p-table-price__td--bdl-none">
+
+                    </td>
+                </tr>
+
+            </table>
+
+
+
+        </div>
+        <!-- ./p-table-price -->
+
+
+
         <p class="p-cost__under-desc">当院のPCR 検査は希望する方皆様を対象にした検査のため、自由診療となります。<br>「渡航歴があり体調が優れない」「感染者との濃厚接触歴があり<br class="aaaaa">体調が優れない」方など、行政検査条件を満たす方は自治体管轄の施設で<br class="u-pc">保険診療としてお受けできる場合がございますので、お住まい地域の保健所のご相談窓口へご相談ください。</p>
 
 
@@ -165,6 +291,489 @@
     </div>
     <!-- ./l-inner -->
 </section>
+
+
+<section class="p-handling">
+    <div class="l-inner">
+        <h2 class="c-ttl-under-center p-handling__ttl c-blue u-fw600">お取り扱い検査</h2>
+        <p class="p-handling__desc u-tc">
+            低価格なミニマム検査を開始致しました。<br class=""><span class="c-pink u-fw600 p-handling__large">一般的に低価格帯で普及している検査はこのミニマムパックとなっているかと思います。</span><br class="">通常検査・迅速検査では、1つの検体を2つに分けて検査を行なっておりますが、<br class="">ミニマムパックでは１つの検体に対して、１つの検査となる為、検査工数と検査にかかる薬品や消耗品を減らし、検査費用を抑えております。<!-- <br class="">正確性・検出率が必要となる検査をご希望の場合、通常検査または、迅速検査にてPCR検査をお受けください。 -->
+        </p>
+      </div>
+    <!-- ./l-inner -->
+
+        <div class="u-pc p-effect">
+             <div class="l-inner">
+                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/front/effect_table_pc.png" alt=""> -->
+
+<!-- PC版の表 -->
+
+                    <div class="p-pc-table-wrap">
+                        <table class="p-pc-table">
+                            <thead>
+                                <tr>
+                                    <th class="p-pc-table__head p-pc-table__head--transparent">&nbsp;</th>
+                                    <th class="p-pc-table__head p-pc-table__head--quick" colspan="2">迅速検査</th>
+                                    <th class="p-pc-table__head p-pc-table__head--normal" colspan="2">通常検査</th>
+                                    <th class="p-pc-table__head p-pc-table__head--minimum" colspan="2">ミニマムパック</th>
+                                </tr>
+                            </thead>
+
+                                <tr>
+                                    <th class="p-pc-table__th" rowspan="2">検査費用</th>
+                                    <td class="p-pc-table__td p-pc-table__td--bg-triangle" colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-table__desc">優先的に検査を実施するが<br><span class="c-pink">検査費用が高い</span></p>
+                                          <!--   <p class="p-pc-tb-price">
+                                                <span class="p-pc-tb-price__main">15,000</span><span class="p-pc-tb-price__sub">円(税別)</span>
+                                            </p> -->
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--normal p-pc-table__td--bg-circle" colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-table__desc">最もスタンダートな検査費用</p>
+                                            <!-- <p class="p-pc-tb-price">
+                                                <span class="p-pc-tb-price__main">12,000</span><span class="p-pc-tb-price__sub">円(税別)</span>
+                                            </p> -->
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--bg-circle02 p-pc-table__td--minimum-top" colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-table__desc u-mb0">通常検査・迅速検査と比べ<br><span class="c-pink">検査費用が控えめ</span></p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                 <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--minimum-btm">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-tb-price-minimum">
+                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">15,000</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            </p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--minimum-btm">
+                                        <div class="p-pc-table__td-in">
+                                         <p class="p-pc-table__desc p-pc-table__desc--minimum u-mb0">10回セット(1回あたり)</p>
+                                            <p class="p-pc-tb-price-minimum">
+                                                <span class="p-pc-tb-price-minimum__main">11,880</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            </p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--normal p-pc-table__td--minimum-btm">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-tb-price-minimum">
+                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">12,000</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            </p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--normal p-pc-table__td--minimum-btm">
+                                        <div class="p-pc-table__td-in">
+                                         <p class="p-pc-table__desc p-pc-table__desc--minimum u-mb0">10回セット(1回あたり)</p>
+                                            <p class="p-pc-tb-price-minimum">
+                                                <span class="p-pc-tb-price-minimum__main">8,880</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            </p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--minimum-btm">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-tb-price-minimum">
+                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">6,000</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            </p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--minimum  p-pc-table__td--minimum-btm">
+                                        <div class="p-pc-table__td-in">
+                                         <p class="p-pc-table__desc p-pc-table__desc--minimum u-mb0">10回セット(1回あたり)</p>
+                                            <p class="p-pc-tb-price-minimum">
+                                                <span class="p-pc-tb-price-minimum__main">4,440</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            </p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                </tr>
+
+                                 <tr>
+                                    <th class="p-pc-table__th" >正確性・<br>検出率</th>
+                                    <td class="p-pc-table__td p-pc-table__td--bg-circle02"  colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-table__desc u-mb0">１つの検体を2つに分けて検査を<br>実施する為、<span class="c-pink">高い精度の<br>正確性・検出率</span></p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--normal p-pc-table__td--bg-circle02"  colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                             <p class="p-pc-table__desc u-mb0">１つの検体を2つに分けて検査を<br>実施する為、<span class="c-pink">高い精度の<br>正確性・検出率</span></p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--bg-triangle"  colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                              <p class="p-pc-table__desc u-mb0">検体を分ける事なく検査を行う為、<br><span class="c-pink">最低限の正確性・検出率</span></p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <th class="p-pc-table__th" >検体採取<br>返送手順</th>
+                                    <td class="p-pc-table__td p-pc-table__td--bg-circle02"  colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-table__desc u-mb0"><span class="c-pink">ご自宅で唾液採取</span>後、<br>当院まで返送</p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--normal p-pc-table__td--bg-circle02" colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                             <p class="p-pc-table__desc u-mb0"><span class="c-pink">ご自宅で唾液採取</span>後、<br>当院まで返送</p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--bg-triangle" colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                             <p class="p-pc-table__desc u-mb0"><span class="c-pink">ご自宅で唾液採取</span>後、当院まで返送
+                                            <br><span class="p-pc-table__note">※返送の際は切手を患者様ご自身でご用意<br>していただく必要がございます。</span></p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th class="p-pc-table__th" >検査優先度</th>
+                                    <td class="p-pc-table__td p-pc-table__td--bg-circle02"  colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                            <p class="p-pc-table__desc u-mb0">当院へ検体が到着後、<span class="c-pink">迅速検査の<br>方は優先的に検査を実施</span></p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--normal p-pc-table__td--normal-last p-pc-table__td--bg-circle" colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                             <p class="p-pc-table__desc u-mb0">当院へ検体が到着後、<span class="c-pink">迅速検査が<br>終了次第、検査を実施</span></p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                    <td class="p-pc-table__td p-pc-table__td--bg-triangle" colspan="2">
+                                        <div class="p-pc-table__td-in">
+                                              <p class="p-pc-table__desc u-mb0">当院へ検体が到着後、<br><span class="c-pink">迅速検査・通常検査が終了次第、</span>検査を実施</p>
+                                        </div>
+                                        <!-- ./td-in -->
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+             </div>
+            <!-- ./l-inner -->
+        </div>
+        <!-- ./p-effect-tb -->
+
+
+        <!-- SP版の表 -->
+
+
+        <div class="u-sp p-effect-sp js-sp-arrow is-flashing-arw">
+
+
+            <table class="p-sp-table js-sp-table ">
+                <thead>
+                    <tr>
+                        <th class="p-sp-table__head p-sp-table__head--bg-gray p-sp-table--bg-sticky">&nbsp;</th>
+                        <th class="p-sp-table__head " colspan="2">検査費用</th>
+                        <th class="p-sp-table__head ">正確性・検出率</th>
+                        <th class="p-sp-table__head ">検体採取・返送手順</th>
+                         <th class="p-sp-table__head ">検査優先度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="p-sp-table__th p-sp-table__th--normal p-sp-table--bg-sticky p-sp-table--bg-sticky--bb-none" rowspan="2">通常<br>検査</th>
+                        <td class="p-sp-table__td p-sp-table__td--normal p-sp-table__td--normal-bbnone p-sp-table__td--bg-circle" colspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">最もスタンダートな検査費用</p>
+                             <!--    <p class="p-sp-table-price">
+                                    <span class="p-sp-table-price__main">12,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p> -->
+                            </div>
+                        </td>
+                        <td class="p-sp-table__td p-sp-table__td--normal p-sp-table__td--bg-circle" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">１つの検体を2つに分けて検査を<br>実施する為、<span class="c-pink">高い精度の<br>正確性・検出率</span></p>
+                            </div>
+                        </td>
+                         <td class="p-sp-table__td p-sp-table__td--normal p-sp-table__td--bg-circle02" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc"><span class="c-pink">ご自宅で唾液採取</span>後、当院まで返送</p>
+                            </div>
+                        </td>
+
+                        <td class="p-sp-table__td p-sp-table__td--normal p-sp-table__td--bg-circle" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">当院へ検体が到着後、<span class="c-pink">迅速検査の<br>方は優先的に検査を実施</span></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-sp-table__td p-sp-table__td--minimum p-sp-table__td--normal">
+                               <div class="p-sp-table__in">
+                                   <p class="p-sp-table-price p-sp-table-price--minimum">
+                                       <span class="p-sp-table-price__sub">1回</span>
+                                    <span class="p-sp-table-price__main">12,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p>
+                               </div>
+                        </td>
+                        <td class="p-sp-table__td p-sp-table__td--minimum p-sp-table__td--normal">
+                               <div class="p-sp-table__in">
+                                   <p class="p-sp-table__desc">10回セット（1回あたり）</p>
+                                   <p class="p-sp-table-price p-sp-table-price--minimum">
+                                    <span class="p-sp-table-price__main">8,880</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p>
+                               </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="p-sp-table__th p-sp-table__th--quick p-sp-table--bg-sticky p-sp-table--bg-sticky--bt-none" rowspan="2">迅速<br>検査</th>
+                        <td class="p-sp-table__td p-sp-table__td--bg-triangle" colspan="2" >
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc p-sp-table__desc--mb">優先的に検査を実施するが<br><span class="c-pink">検査費用が高い</span></p>
+                              <!--   <p class="p-sp-table-price">
+                                    <span class="p-sp-table-price__main">15,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p> -->
+                            </div>
+                        </td>
+                        <td class="p-sp-table__td p-sp-table__td--bg-circle02" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">１つの検体を2つに分けて検査を<br>実施する為、<span class="c-pink">高い精度の<br>正確性・検出率</span></p>
+                            </div>
+                        </td>
+                         <td class="p-sp-table__td p-sp-table__td--bg-circle02" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc"><span class="c-pink">ご自宅で唾液採取</span>後、当院まで返送</p>
+                            </div>
+                        </td>
+
+                        <td class="p-sp-table__td p-sp-table__td--bg-circle02" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">当院へ検体が到着後、<span class="c-pink">迅速検査が<br>終了次第、検査を実施</span></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-sp-table__td p-sp-table__td--minimum">
+                               <div class="p-sp-table__in">
+                                   <p class="p-sp-table-price p-sp-table-price--minimum">
+                                       <span class="p-sp-table-price__sub">1回</span>
+                                    <span class="p-sp-table-price__main">15,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p>
+                               </div>
+                        </td>
+                        <td class="p-sp-table__td p-sp-table__td--minimum">
+                               <div class="p-sp-table__in">
+                                   <p class="p-sp-table__desc">10回セット（1回あたり）</p>
+                                   <p class="p-sp-table-price p-sp-table-price--minimum">
+                                    <span class="p-sp-table-price__main">11,880</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p>
+                               </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="p-sp-table__th p-sp-table__th--minimum p-sp-table--bg-sticky p-sp-table--bg-sticky--last" rowspan="2">ミニマム<br>パック</th>
+                        <td class="p-sp-table__td p-sp-table__td--bg-circle02" colspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">通常検査・迅速検査と比べ<br><span class="c-pink">検査費用が控えめ</span></p>
+
+                            </div>
+                        </td>
+                        <td class="p-sp-table__td p-sp-table__td--bg-circle02" rowspan="2" >
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">検体を分ける事なく検査を<br>行う為<span class="c-pink">最低限の正確性・検出率</span></p>
+                            </div>
+                        </td>
+                         <td class="p-sp-table__td p-sp-table__td--bg-triangle" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc"><span class="c-pink">ご自宅で唾液採取</span>後、当院まで返送</p>
+                                <p class="p-sp-table__note">※返送の際は切手を患者様ご自身でご用意<br>していただく必要がございます。</p>
+                            </div>
+                        </td>
+
+                        <td class="p-sp-table__td p-sp-table__td--bg-triangle" rowspan="2">
+                            <div class="p-sp-table__in">
+                                <p class="p-sp-table__desc">当院へ検体が到着後、<br><span class="c-pink">迅速検査・通常検査が終了次第、</span><br>検査を実施</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-sp-table__td p-sp-table__td--minimum">
+                               <div class="p-sp-table__in">
+                                   <p class="p-sp-table-price p-sp-table-price--minimum">
+                                       <span class="p-sp-table-price__sub">1回</span>
+                                    <span class="p-sp-table-price__main">6,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p>
+                               </div>
+                        </td>
+                        <td class="p-sp-table__td p-sp-table__td--minimum">
+                               <div class="p-sp-table__in">
+                                   <p class="p-sp-table__desc">10回セット（1回あたり）</p>
+                                   <p class="p-sp-table-price p-sp-table-price--minimum">
+                                    <span class="p-sp-table-price__main">4,440</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                </p>
+                               </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+        <!-- SP版の表終了 -->
+
+        <div class="l-inner">
+            <dl class="p-tb-box">
+                <dt class="p-tb-box__ttl">
+以下に当てはまる方は、<br class="u-sp">ミニマムパックでの検査は極力ご遠慮ください
+                </dt>
+                <dd class="p-tb-box__btm">
+                    <ul class="p-tb-box__list">
+                        <li class="p-tb-box__item">・仕事などで陰性証明の提出を求められている方</li>
+                        <li class="p-tb-box__item">・陽性判定の方との濃厚接触者に該当する方</li>
+                        <li class="p-tb-box__item">・すでに新型コロナウイルスと疑わしき自覚症状がある方</li>
+                        <li class="p-tb-box__item">・海外渡航の為にPCR検査を受ける方</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <!-- ./l-inner -->
+
+
+        <div class="l-inner">
+
+                <h3 class="c-blue u-tc u-fw600 p-apply-ttl u-pc">検査のお申込みはこちらから</h3>
+
+                <h3 class="u-sp u-mb1-5rem"><img src="<?php echo get_template_directory_uri(); ?>/img/front/aiply_ttl_sp.png" alt="検査のお申込みはこちらから"></h3>
+
+                <ul class="p-apply u-flex">
+                    <li class="p-apply__btn p-apply__btn--quick ">
+                        <a href="<?php echo home_url( '/' ); ?>item-list-quick" class="p-apply__link u-flex u-jc-cent u-al-cent">迅速検査</a>
+                    </li>
+                    <li class="p-apply__btn p-apply__btn--normal">
+                        <a href="<?php echo home_url( '/' ); ?>item-list" class="p-apply__link u-flex u-jc-cent u-al-cent">通常検査</a>
+                    </li>
+                    <li class="p-apply__btn p-apply__btn--minimum">
+                        <a href="<?php echo home_url( '/' ); ?>item-list-easy" class="p-apply__link u-flex u-jc-cent u-al-cent">ミニマムパック</a>
+                    </li>
+                </ul>
+
+
+                <div class="p-minimum-note u-tc">
+
+                        <h4 class="p-minimum-note__ttl">注意事項</h4>
+
+                        <p class="p-minimum-note__desc">ミニマムパックでは、確定的な診断が難しく、参考程度の効力しかございません。<br class="">それに伴い、陰性証明書の発行をお受けする事ができませんので、予めご了承ください。<br><br>
+                    <span class="u-text-under-line u-fw600">ただし、陽性判定が出た方に関しては、<br class="">通常検査・迅速検査と同様に患者様と保健所に連絡させていただきます。</span></p>
+                </div>
+                <!-- ./p-minimum-note -->
+
+        </div>
+          <!-- ./l-inner -->
+
+</section>
+
+
+<section class="p-minimum-diff">
+    <div class="l-inner">
+        <h2 class="c-ttl-under-center p-minimum-diff__ttl c-blue u-fw600">通常検査・迅速検査と<br class="">ミニマムパックの違いについて</h2>
+
+       <div class="p-minimum-diff-box u-flex u-al-top">
+
+            <dl class="p-minimum-diff-box__dl">
+                <dt class="p-minimum-diff-box__ttl">通常検査・迅速検査</dt>
+                <dd class="p-minimum-diff-box__content">
+                    <div class="p-minimum-diff-box__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst01.png?20210129" alt="通常検査・迅速検査" class="u-pc">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst01_sp.png?20210129" alt="通常検査・迅速検査" class="u-sp">
+                    </div>
+                    <!-- ./p-minimum-diff-box__img -->
+                   <!--  <p class="p-minimum-diff-box__desc">誤判定のリスクを減らす為に1つの検体を2つに<br class="">分けて検査しております。</p> -->
+                </dd>
+            </dl>
+
+             <dl class="p-minimum-diff-box__dl p-minimum-diff-box__dl--minimum">
+                <dt class="p-minimum-diff-box__ttl p-minimum-diff-box__ttl--minimum">ミニマムパック</dt>
+                <dd class="p-minimum-diff-box__content">
+                    <div class="p-minimum-diff-box__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst02.png?20210129" alt="ミニマムパック" class="u-pc">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst02_sp.png?20210129" alt="ミニマムパック" class="u-sp">
+                    </div>
+                    <!-- ./p-minimum-diff-box__img -->
+                    <p class="p-minimum-diff-box__desc p-minimum-diff-box__desc--minimum">極端に安価な料金設定の検査は検査精度を犠牲にしている<br class="u-pc">場合が多いと考えられます。<br class="">メリット・デメリットを理解した上でご利用する事が重要となります。</p>
+                </dd>
+            </dl>
+
+       </div>
+       <!-- ./p-minimum-diff-box -->
+
+
+       <div class="p-minimum-diff-note">
+
+       <p class="p-minimum-diff-note__desc">PCR検査は、特異性は非常に高いですが、<br class="u-sp">正確性・検出率は約70%前後になります。<br class="">精度を補い、検出率を担保するためにも当院では<br class="u-sp">通常検査、迅速検査の場合、1つの検体を2つに分けてそれぞれ検査をする事で、<br class="u-pc">より100％に近い数字で<br class="u-sp">陰性・陽性の検出できる通常検査、迅速検査の<br class="u-sp">ご利用を推奨しております。</p>
+
+       </div>
+       <!-- ./ p-minimum-note-->
+    </div>
+    <!-- ./l-inner -->
+</section>
+
+
+<section class="p-pcr-kit bg-section-gray" id="link-kit">
+    <div class="l-inner">
+        <h2 class="c-ttl-under-center p-pcr-kit__ttl c-blue">PCR検査キットについて</h2>
+        <div class="p-pcr-kit-row">
+            <div class="p-pcr-item-box">
+                <div class="p-pcr-item-box__thumb">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/Inspection_Item_old.jpg?33b09c8d99b80172" alt="PCR検体採取キット">
+                </div>
+                <!-- ./p-pcr-item-box__thumb -->
+                <dl class="p-pcr-item-box__desc">
+                    <dt class="p-pcr-item-box__name">附属品</dt>
+                    <dd class="p-pcr-item-box__desc-text">
+                        <ul class="p-pcr-item-box__list">
+                            <li class="p-pcr-item-box__list-item">・手順説明書</li>
+                            <li class="p-pcr-item-box__list-item">・唾液採取用漏斗</li>
+                                <li class="p-pcr-item-box__list-item">・パウチ袋 小</li>
+                                 <li class="p-pcr-item-box__list-item">・パウチ袋 大</li>
+                            <li class="p-pcr-item-box__list-item">・クッション袋</li>
+
+                                 <li class="p-pcr-item-box__list-item">・吸水紙</li>
+                            <li class="p-pcr-item-box__list-item">・確認申込書</li>
+                                <li class="p-pcr-item-box__list-item">・返送用封筒</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <!-- ./p-pcr-item-box -->
+
+            <div class="p-pcr-right-contents">
+                    <p class="p-pcr-right-contents__desc">キット購入後は、同封された手順説明書を確認してください。<br>
+ご不明点がありましたら「オンライン案内」で、唾液採取のご案内や段取りのご説明などを行います。<br class="">
+その際、ビデオ通話はクリニクスを介して行いますので、インストール済みのスマートフォン、もしくはカメラがついているPCをご用意の上、ご利用ください。</p>
+                    <a href="<?php echo home_url( '/' ); ?>item-list" class="c-btn-circle-arw p-pcr-right-contents__btn">ご購入はこちら</a>
+            </div>
+            <!-- ./p-pcr-right-contents -->
+        </div>
+        <!-- ./p-pcr-kit-row -->
+    </div>
+    <!-- ./l-inner -->
+</section>
+
 
 <!-- <section class="p-top-menu-area">
    <div class="l-inner p-top-menu-area__inner">
@@ -214,182 +823,7 @@
 
 
 
-<section class="p-top-menu-area">
-   <div class="l-inner p-inner-case p-top-menu-area__inner">
 
-          <h2 class="c-ttl-under-center p-cost__ttl c-blue">企業・団体様のご利用事例</h2>
-       <ul class="p-case-slide-wrap" id="js-case-slide">
-           <li class="p-case-slide">
-            <dl class="p-case-slide-box">
-                <dt class="p-case-slide-box__ttl">飲食店</dt>
-                <dd class="p-case-slide-box__desc">
-                    <div class="p-case-slide-top">
-                        <p class="p-case-slide-top__ttl">検査人数 </p>
-                        <span class="p-case-slide-top__right">
-                        <i class="p-case-slide-top__icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
-                        </i>5人</span>
-                    </div>
-                    <!-- ./p-case-slide-top -->
-                    <div class="p-case-slide-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide01.jpg?055555" alt="">
-                    </div>
-                    <!-- ./p-case-slide-thumb -->
-                     <ul class="p-case-slide-check">
-                        <li class="p-case-slide-check__item">従業員全員を一斉検査</li>
-                         <li class="p-case-slide-check__item">店先に「陰性証明ポスター」を掲示</li>
-                    </ul>
-                    <p class="p-case-slide-desc">
-                    接客には、つり銭の受け渡し等、どうしても避けられない感染リスクが伴います。<br class="">そんな中業務を行うのは従業員の精神的負担も大きく、メンタルケアという意味でも検査を行っていただくといいかもしれません。<br class="">また、お越しいただくお客様に対しても、安心してご来店いただくために従業員の一斉検査をオススメしております。<br class="">陰性証明ポスターをご用意しておりますので、ご希望の店舗様はご相談ください。
-                    </p>
-                </dd>
-            </dl>
-           </li>
-
-            <li class="p-case-slide">
-            <dl class="p-case-slide-box">
-                <dt class="p-case-slide-box__ttl">テレビ局</dt>
-                <dd class="p-case-slide-box__desc">
-                    <div class="p-case-slide-top">
-                        <p class="p-case-slide-top__ttl">検査人数 </p>
-                        <span class="p-case-slide-top__right">
-                        <i class="p-case-slide-top__icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
-                        </i>30人</span>
-                    </div>
-                    <!-- ./p-case-slide-top -->
-                    <div class="p-case-slide-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide02.jpg?5555555" alt="">
-                    </div>
-                    <!-- ./p-case-slide-thumb -->
-                    <ul class="p-case-slide-check">
-                        <li class="p-case-slide-check__item">撮影で県をまたぐ移動前に一斉検査</li>
-                         <li class="p-case-slide-check__item">撮影前に陰性証明書を発行し備える</li>
-                    </ul>
-                    <p class="p-case-slide-desc">
-                    撮影の前に関係者の一斉検査をご利用いただきました。<br class="">演出上、マスクやフェイスガードの着用が難しい場合や、観客を入れる場合など、事前にPCR検査をし、万全を期した状態で撮影をおこなってらっしゃます。<br class=""><br class="">また、クラスター発生に備えて、事前に陰性を証明をしておく事は、運営上のリスクヘッジにもなります。
-                    </p>
-                </dd>
-            </dl>
-           </li>
-
-            <li class="p-case-slide">
-            <dl class="p-case-slide-box">
-                <dt class="p-case-slide-box__ttl">総合商社</dt>
-                <dd class="p-case-slide-box__desc">
-                    <div class="p-case-slide-top">
-                        <p class="p-case-slide-top__ttl">検査人数 </p>
-                        <span class="p-case-slide-top__right">
-                        <i class="p-case-slide-top__icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
-                        </i>100人</span>
-                    </div>
-                    <!-- ./p-case-slide-top -->
-                    <div class="p-case-slide-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide03.jpg?555555555" alt="">
-                    </div>
-                    <!-- ./p-case-slide-thumb -->
-                      <ul class="p-case-slide-check">
-                        <li class="p-case-slide-check__item">定期的な検査で早期発見、早期復帰</li>
-                         <li class="p-case-slide-check__item">海外出張に必須な陰性証明書の発行</li>
-                    </ul>
-                    <p class="p-case-slide-desc">
-                    定期的に従業員の一斉検査をご利用いただいております。無症状でも陽性者がいればすぐに療養に切替え、<br class="">従業員を守りながらも業務を止めない体制づくりをされていらっしゃいます。<br class=""><br class="">また、出張で海外渡航が必要な際には、海外用の陰性証明書をご用意させていただいております。<br class="">ご入用の企業様はお気軽にご相談ください。
-                    </p>
-                </dd>
-            </dl>
-           </li>
-
-            <li class="p-case-slide">
-            <dl class="p-case-slide-box">
-                <dt class="p-case-slide-box__ttl">食品製造メーカー</dt>
-                <dd class="p-case-slide-box__desc">
-                    <div class="p-case-slide-top">
-                        <p class="p-case-slide-top__ttl">検査人数 </p>
-                        <span class="p-case-slide-top__right">
-                        <i class="p-case-slide-top__icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
-                        </i>500人</span>
-                    </div>
-                    <!-- ./p-case-slide-top -->
-                    <div class="p-case-slide-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide04.jpg?55555555411" alt="">
-                    </div>
-                    <!-- ./p-case-slide-thumb -->
-                      <ul class="p-case-slide-check">
-                        <li class="p-case-slide-check__item">大規模クラスターを未然に防ぐ</li>
-                         <li class="p-case-slide-check__item">従業員の一斉検査で陽性者の早期発見</li>
-                    </ul>
-                    <p class="p-case-slide-desc">
-                   製造職、事務職、技能職など、１つの敷地に各部門が集まり大人数が密集する事が多くなる工場等の製造現場。一人でも感染者が出てしまうと、大規模クラスター発生のリスクが伴い、最悪全ての業務がストップしてしまう可能性もあります。<br class="">全従業員に検査を行う事により陽性者がいた場合、すぐに療養に切り替え、新たな感染を防ぎ、社内外への感染の拡大防止ならびに、従業員の安全確保につながります。
-                    </p>
-                </dd>
-            </dl>
-           </li>
-
-             <li class="p-case-slide">
-            <dl class="p-case-slide-box">
-                <dt class="p-case-slide-box__ttl">演劇関連事業</dt>
-                <dd class="p-case-slide-box__desc">
-                    <div class="p-case-slide-top">
-                        <p class="p-case-slide-top__ttl">検査人数 </p>
-                        <span class="p-case-slide-top__right">
-                        <i class="p-case-slide-top__icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
-                        </i>200人</span>
-                    </div>
-                    <!-- ./p-case-slide-top -->
-                    <div class="p-case-slide-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide05.jpg?eb0af1f9c343d4c0" alt="">
-                    </div>
-                    <!-- ./p-case-slide-thumb -->
-                      <ul class="p-case-slide-check">
-                        <li class="p-case-slide-check__item">スタッフ・出演者のリスクヘッジ</li>
-                         <li class="p-case-slide-check__item">徹底した健康、衛生管理</li>
-                    </ul>
-                    <p class="p-case-slide-desc">
-                   劇場公演、イベントなど不特定多数の方が集まりやすい演劇関連事業。<br class="">昨今のコロナ禍の中、クラスタの発生を危惧し多くの公演が軒並み中止となってしまう状況でした。<br class="">現在は少しずつではありますが、経済活動の再開に伴い、公演等を開催する動きが見られてきました、そこで、劇場スタッフや出演者のPCR検査を行い、万が一感染者がいた場合、治療に専念して頂き、クラスタの発生を未然に防ぎます。<br class="">検査に掛かる費用も<a href="https://www.bunka.go.jp/shinsei_boshu/kobo/20200706.html" class="c-pink" target="_blank">文化庁</a>の補助制度を利用する事で負担が少なく、検査を受けることが可能です。<br class="">また、検査後にお客様に安心して劇場へ足を運んで頂く為に、陰性証明ポスターをご用意しております。
-                    </p>
-                </dd>
-            </dl>
-           </li>
-
-           <li class="p-case-slide">
-            <dl class="p-case-slide-box">
-                <dt class="p-case-slide-box__ttl">スポーツイベント</dt>
-                <dd class="p-case-slide-box__desc">
-                    <div class="p-case-slide-top">
-                        <p class="p-case-slide-top__ttl">検査人数 </p>
-                        <span class="p-case-slide-top__right">
-                        <i class="p-case-slide-top__icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
-                        </i>120人</span>
-                    </div>
-                    <!-- ./p-case-slide-top -->
-                    <div class="p-case-slide-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide06.jpg?55555555411" alt="">
-                    </div>
-                    <!-- ./p-case-slide-thumb -->
-                      <ul class="p-case-slide-check">
-                        <li class="p-case-slide-check__item">イベント中止といった最悪の事態を未然に防ぐ</li>
-                         <li class="p-case-slide-check__item">安心・安全の為に備える</li>
-                    </ul>
-                    <p class="p-case-slide-desc">
-                  昨今のコロナ禍で厳しい状況が続いているスポーツイベント<br class="">今後の開催に向けての課題として、安心・安全な環境の整備が一層求められる事となります。<br class="">それに掛かる負担を少しでも軽くする為<a href="https://www.mext.go.jp/sports/b_menu/sports/mcatetop01/list/detail/jsa_00008.html" class="c-pink" target="_blank">スポーツ庁</a>がPCR検査費を補助する制度が用意されており、それを利用するイベント主催者様もいらっしゃいます。<br class="">スタッフ、選手の一斉検査によって予め感染状況を把握することにより、感染のリスクを減らし、予定していたイベントを中止する事なく、円滑にかつ本格的な開催を可能とします。
-                    </p>
-                </dd>
-            </dl>
-           </li>
-       </ul>
-
-       <div class="p-pcr-slide-nav --nav-case" id="js-nav-wrap">
-
-       </div>
-
-       <p class="p-case-note">この他にも、<span class="p-case-note__inn">政府機関、通信業者様、自動車メーカー様、銀行様、アパレルブランド様</span>など<br class="">たくさんの業種の企業・団体様にご利用いただいております。</p>
-</div>
-
-</section>
 
 
 <!-- <div class="p-top-menu-area">
@@ -967,46 +1401,8 @@
 </style>
 
 
-<section class="p-pcr-kit bg-section-gray" id="link-kit">
-    <div class="l-inner">
-        <h2 class="c-ttl-under-center p-pcr-kit__ttl c-blue">PCR検査キットについて</h2>
-        <div class="p-pcr-kit-row">
-            <div class="p-pcr-item-box">
-                <div class="p-pcr-item-box__thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/Inspection_Item_old.jpg?33b09c8d99b80172" alt="PCR検体採取キット">
-                </div>
-                <!-- ./p-pcr-item-box__thumb -->
-                <dl class="p-pcr-item-box__desc">
-                    <dt class="p-pcr-item-box__name">附属品</dt>
-                    <dd class="p-pcr-item-box__desc-text">
-                        <ul class="p-pcr-item-box__list">
-                            <li class="p-pcr-item-box__list-item">・手順説明書</li>
-                            <li class="p-pcr-item-box__list-item">・唾液採取用漏斗</li>
-                                <li class="p-pcr-item-box__list-item">・パウチ袋 小</li>
-                                 <li class="p-pcr-item-box__list-item">・パウチ袋 大</li>
-                            <li class="p-pcr-item-box__list-item">・クッション袋</li>
 
-                                 <li class="p-pcr-item-box__list-item">・吸水紙</li>
-                            <li class="p-pcr-item-box__list-item">・確認申込書</li>
-                                <li class="p-pcr-item-box__list-item">・返送用封筒</li>
-                        </ul>
-                    </dd>
-                </dl>
-            </div>
-            <!-- ./p-pcr-item-box -->
 
-            <div class="p-pcr-right-contents">
-                    <p class="p-pcr-right-contents__desc">キット購入後は、同封された手順説明書を確認してください。<br>
-ご不明点がありましたら「オンライン案内」で、唾液採取のご案内や段取りのご説明などを行います。<br class="">
-その際、ビデオ通話はクリニクスを介して行いますので、インストール済みのスマートフォン、もしくはカメラがついているPCをご用意の上、ご利用ください。</p>
-                    <a href="<?php echo home_url( '/' ); ?>item-list" class="c-btn-circle-arw p-pcr-right-contents__btn">ご購入はこちら</a>
-            </div>
-            <!-- ./p-pcr-right-contents -->
-        </div>
-        <!-- ./p-pcr-kit-row -->
-    </div>
-    <!-- ./l-inner -->
-</section>
 
 
 
@@ -1403,6 +1799,184 @@
                 <!-- ./p-question-list -->
 
     </div>
+</section>
+
+
+<section class="p-top-menu-area">
+   <div class="l-inner p-inner-case p-top-menu-area__inner">
+
+          <h2 class="c-ttl-under-center p-cost__ttl c-blue">企業・団体様のご利用事例</h2>
+       <ul class="p-case-slide-wrap" id="js-case-slide">
+           <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">飲食店</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>5人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide01.jpg?055555" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                     <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">従業員全員を一斉検査</li>
+                         <li class="p-case-slide-check__item">店先に「陰性証明ポスター」を掲示</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                    接客には、つり銭の受け渡し等、どうしても避けられない感染リスクが伴います。<br class="">そんな中業務を行うのは従業員の精神的負担も大きく、メンタルケアという意味でも検査を行っていただくといいかもしれません。<br class="">また、お越しいただくお客様に対しても、安心してご来店いただくために従業員の一斉検査をオススメしております。<br class="">陰性証明ポスターをご用意しておりますので、ご希望の店舗様はご相談ください。
+                    </p>
+                </dd>
+            </dl>
+           </li>
+
+            <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">テレビ局</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>30人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide02.jpg?5555555" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                    <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">撮影で県をまたぐ移動前に一斉検査</li>
+                         <li class="p-case-slide-check__item">撮影前に陰性証明書を発行し備える</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                    撮影の前に関係者の一斉検査をご利用いただきました。<br class="">演出上、マスクやフェイスガードの着用が難しい場合や、観客を入れる場合など、事前にPCR検査をし、万全を期した状態で撮影をおこなってらっしゃます。<br class=""><br class="">また、クラスター発生に備えて、事前に陰性を証明をしておく事は、運営上のリスクヘッジにもなります。
+                    </p>
+                </dd>
+            </dl>
+           </li>
+
+            <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">総合商社</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>100人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide03.jpg?555555555" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                      <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">定期的な検査で早期発見、早期復帰</li>
+                         <li class="p-case-slide-check__item">海外出張に必須な陰性証明書の発行</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                    定期的に従業員の一斉検査をご利用いただいております。無症状でも陽性者がいればすぐに療養に切替え、<br class="">従業員を守りながらも業務を止めない体制づくりをされていらっしゃいます。<br class=""><br class="">また、出張で海外渡航が必要な際には、海外用の陰性証明書をご用意させていただいております。<br class="">ご入用の企業様はお気軽にご相談ください。
+                    </p>
+                </dd>
+            </dl>
+           </li>
+
+            <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">食品製造メーカー</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>500人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide04.jpg?55555555411" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                      <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">大規模クラスターを未然に防ぐ</li>
+                         <li class="p-case-slide-check__item">従業員の一斉検査で陽性者の早期発見</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                   製造職、事務職、技能職など、１つの敷地に各部門が集まり大人数が密集する事が多くなる工場等の製造現場。一人でも感染者が出てしまうと、大規模クラスター発生のリスクが伴い、最悪全ての業務がストップしてしまう可能性もあります。<br class="">全従業員に検査を行う事により陽性者がいた場合、すぐに療養に切り替え、新たな感染を防ぎ、社内外への感染の拡大防止ならびに、従業員の安全確保につながります。
+                    </p>
+                </dd>
+            </dl>
+           </li>
+
+             <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">演劇関連事業</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>200人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide05.jpg?eb0af1f9c343d4c0" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                      <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">スタッフ・出演者のリスクヘッジ</li>
+                         <li class="p-case-slide-check__item">徹底した健康、衛生管理</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                   劇場公演、イベントなど不特定多数の方が集まりやすい演劇関連事業。<br class="">昨今のコロナ禍の中、クラスタの発生を危惧し多くの公演が軒並み中止となってしまう状況でした。<br class="">現在は少しずつではありますが、経済活動の再開に伴い、公演等を開催する動きが見られてきました、そこで、劇場スタッフや出演者のPCR検査を行い、万が一感染者がいた場合、治療に専念して頂き、クラスタの発生を未然に防ぎます。<br class="">検査に掛かる費用も<a href="https://www.bunka.go.jp/shinsei_boshu/kobo/20200706.html" class="c-pink" target="_blank">文化庁</a>の補助制度を利用する事で負担が少なく、検査を受けることが可能です。<br class="">また、検査後にお客様に安心して劇場へ足を運んで頂く為に、陰性証明ポスターをご用意しております。
+                    </p>
+                </dd>
+            </dl>
+           </li>
+
+           <li class="p-case-slide">
+            <dl class="p-case-slide-box">
+                <dt class="p-case-slide-box__ttl">スポーツイベント</dt>
+                <dd class="p-case-slide-box__desc">
+                    <div class="p-case-slide-top">
+                        <p class="p-case-slide-top__ttl">検査人数 </p>
+                        <span class="p-case-slide-top__right">
+                        <i class="p-case-slide-top__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/front/icon_human.png?6dbddba84c650683" alt="icon">
+                        </i>120人</span>
+                    </div>
+                    <!-- ./p-case-slide-top -->
+                    <div class="p-case-slide-thumb">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/case_slide06.jpg?55555555411" alt="">
+                    </div>
+                    <!-- ./p-case-slide-thumb -->
+                      <ul class="p-case-slide-check">
+                        <li class="p-case-slide-check__item">イベント中止といった最悪の事態を未然に防ぐ</li>
+                         <li class="p-case-slide-check__item">安心・安全の為に備える</li>
+                    </ul>
+                    <p class="p-case-slide-desc">
+                  昨今のコロナ禍で厳しい状況が続いているスポーツイベント<br class="">今後の開催に向けての課題として、安心・安全な環境の整備が一層求められる事となります。<br class="">それに掛かる負担を少しでも軽くする為<a href="https://www.mext.go.jp/sports/b_menu/sports/mcatetop01/list/detail/jsa_00008.html" class="c-pink" target="_blank">スポーツ庁</a>がPCR検査費を補助する制度が用意されており、それを利用するイベント主催者様もいらっしゃいます。<br class="">スタッフ、選手の一斉検査によって予め感染状況を把握することにより、感染のリスクを減らし、予定していたイベントを中止する事なく、円滑にかつ本格的な開催を可能とします。
+                    </p>
+                </dd>
+            </dl>
+           </li>
+       </ul>
+
+       <div class="p-pcr-slide-nav --nav-case" id="js-nav-wrap">
+
+       </div>
+
+       <p class="p-case-note">この他にも、<span class="p-case-note__inn">政府機関、通信業者様、自動車メーカー様、銀行様、アパレルブランド様</span>など<br class="">たくさんの業種の企業・団体様にご利用いただいております。</p>
+</div>
+
 </section>
 
 <style>

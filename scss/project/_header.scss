@@ -1099,3 +1099,15 @@
         margin-top: 1.02rem;
     }
 }
+
+.p-heat-bnr {
+    &__img {
+        max-width: 960px;
+        margin: 0 auto;
+        width: 90%;
+
+        @media (max-width: 767px) {
+            padding: 2.25rem;
+        }
+    }
+}

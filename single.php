@@ -33,6 +33,8 @@
 
 
 
+
+
 <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
@@ -110,7 +112,48 @@
 
                                     </div>
 
-                                     <div class="p-item-row__right-bottom">
+                                <div class="p-item-row__right-bottom">
+
+                                    <?php if(in_category("certificate-couponssssss")): ?>
+
+                                    <!-- 陰性証明書の時だけ検体採取日を選択のボックスを表示させる -->
+
+                                    <div class="p-op-wrap">
+                                         <p class="p-tokou-ttl u-fw600">検体採取済みの方は日付を入力してください。<br class="">※これから採取される方は未入力でも可能です。</p>
+                                        <div class="p-item-option u-border-bottom-none">
+                                                                <p class="p-item-option__name">検体採取日 :</p>
+                                                                <div class="p-item-option__inp --take-day --inp-tokou" id="js-take-day">
+                                                                    <?php echo usces_the_itemOption("検体採取日");?>
+                                                                </div>
+                                                                <!-- ./-item-option__inp -->
+                                        </div>
+                                        <!-- ./p-item-option -->
+                                    </div>
+                                    <!-- ./p-op-wrap -->
+
+                                    <?php endif; ?>
+
+                                     <?php if(in_category("certificate02-couponssssss")): ?>
+
+                                    <!-- 陰性証明書の時だけ検体採取日を選択のボックスを表示させる -->
+
+                                    <div class="p-op-wrap">
+                                         <p class="p-tokou-ttl u-fw600">渡航予定日を入力してください。<br class="">
+                                        日本語のみではなく英語のものも対応可能です。<br><span class="u-text-under-line">※日本語版の見本も必ず必要になります。</span></p>
+                                        <div class="p-item-option u-border-bottom-none">
+                                                                <p class="p-item-option__name">渡航予定日 :</p>
+                                                                <div class="p-item-option__inp --take-day --inp-tokou js-tokou-day" id="js-take-day">
+                                                                    <?php echo usces_the_itemOption("渡航予定日");?>
+                                                                </div>
+                                                                <!-- ./-item-option__inp -->
+                                        </div>
+                                        <!-- ./p-item-option -->
+                                    </div>
+                                    <!-- ./p-op-wrap -->
+
+                                    <?php endif; ?>
+
+
                                                  <?php if( is_single('pcr-set02') || is_single('certificate02') || is_single("certificate02-group") ) : ?>
                                                  <!-- 渡航用の証明書が含まれる場合」にはオプション出力 -->
                                                   <div class="p-hidden-text-area p-neddddd" id="js-hidden-text">

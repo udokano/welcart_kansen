@@ -1,9 +1,11 @@
 <?php
 /*
-Template Name: 商品一覧-迅速検査
+Template Name: 商品一覧--簡単検査
 */
 ?>
 <?php get_header();?>
+
+
 
 
 
@@ -16,6 +18,10 @@ Template Name: 商品一覧-迅速検査
               </div>
         </div>
 </div>
+
+
+<!-- <?php include("nenmatu.php"); ?> -->
+
 
 
 <div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
@@ -31,10 +37,9 @@ Template Name: 商品一覧-迅速検査
 
 <div class="l-inner">
 
-
-<ul class="p-item-tab">
-<li class="p-item-tab__btn">
-            <a href="<?php echo home_url( '/' ); ?>item-list-easy" class="p-item-tab__link">
+<ul class="p-item-tab  ">
+<li class="p-item-tab__btn is-item-active">
+            <a href="<?php echo home_url( '/' ); ?>item-list-easy" class="p-item-tab__link ">
                 <span class="p-item-tab__text">ミニマムパック<br><!-- <span class="u-text-under-line p-item-tab__coming">準備中</span> --></span>
             </a>
     </li>
@@ -45,7 +50,7 @@ Template Name: 商品一覧-迅速検査
             </a>
     </li>
 
-    <li class="p-item-tab__btn is-item-active">
+    <li class="p-item-tab__btn">
             <a href="<?php echo home_url( '/' ); ?>item-list-quick" class="p-item-tab__link">
                 <span class="p-item-tab__text">迅速検査</span>
             </a>
@@ -53,47 +58,24 @@ Template Name: 商品一覧-迅速検査
 </ul>
 
 
-<p class="p-quick-note u-tc u-fw600">速達でのご対応、優先的に検査いたします。</p>
+
+
 
 
   <ul class="p-items">
              <li class="p-items__contents">
-                <a href="<?php echo home_url( '/' ); ?>pcr-quick">
-                <p class="p-items__name">PCR迅速検査</p>
+                <a href="<?php echo home_url( '/' ); ?>pcr-easy">
+                <p class="p-items__name">PCR検査【ミニマムパック】</p>
                 <div class="p-items__row">
                         <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item01-quick.jpg?3aed4b4a772c69be" alt="PCR検査">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/pcr-easy.jpg?3aed4b4a772c69be" alt="PCR検査">
                         </div>
 
                         <div class="p-items__right">
-                            <p class="p-items__desc">PCR検査の迅速検査になります。</p>
+                            <p class="p-items__desc">PCR検査のミニマムパックになります。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">15,000</span>
-                                <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
-                                    <span class="p-items__tax">円</span>
-                                </span>
-                            </div>
-                        </div>
-                </div>
-                <p class="c-btn-circle-arw p-items__btn">購入へ進む</p>
-                </a>
-            </li>
-
-             <li class="p-items__contents">
-                <a href="<?php echo home_url( '/' ); ?>pcr-quick-set5">
-                <p class="p-items__name">PCR迅速検査5回セット</p>
-                <div class="p-items__row">
-                        <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item01-quick-set05.jpg?3aed4b4a772c6559be2111" alt="PCR検査">
-                        </div>
-
-                        <div class="p-items__right">
-                            <p class="p-items__desc">PCR検査の迅速検査の5回セットになります。</p>
-                            <div class="p-items__price-wrap">
-                                <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">63,000</span>
+                                <span class="p-items__p-center">6,000<!-- 準備中 --></span>
                                 <span class="p-items__p-right">
                                     <span class="p-items__tax-sub">(税別)</span>
                                     <span class="p-items__tax">円</span>
@@ -106,19 +88,19 @@ Template Name: 商品一覧-迅速検査
             </li>
 
 
-            <li class="p-items__contents">
-                <a href="<?php echo home_url( '/' ); ?>pcr-quick-set10">
-                <p class="p-items__name">PCR迅速検査10回セット</p>
+               <li class="p-items__contents">
+                <a href="<?php echo home_url( '/' ); ?>pcr-set10-easy">
+                <p class="p-items__name">PCR検査10回セット【ミニマムパック】</p>
                 <div class="p-items__row">
                         <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item01-quick-set10.jpg?3aed4b4a772c69be" alt="PCR検査">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/pcr-set10-easy.jpg?3aed4b4a772c69be" alt="PCR検査">
                         </div>
 
                         <div class="p-items__right">
-                            <p class="p-items__desc">PCR検査の迅速検査の10回セットになります。</p>
+                            <p class="p-items__desc">PCR検査ミニマムパックの10回セット販売になります。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">118,800</span>
+                                 <span class="p-items__p-center">44,400<!-- 準備中 --></span>
                                 <span class="p-items__p-right">
                                     <span class="p-items__tax-sub">(税別)</span>
                                     <span class="p-items__tax">円</span>
@@ -130,77 +112,7 @@ Template Name: 商品一覧-迅速検査
                 </a>
             </li>
 
-             <li class="p-items__contents">
-                <a href="<?php echo home_url( '/' ); ?>pcr-quick-antibody-set">
-                <p class="p-items__name">PCR迅速検査＋抗体検査</p>
-                <div class="p-items__row">
-                        <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item-quick-antibody-set.jpg?3aed4b4a772c69be" alt="PCR検査">
-                        </div>
 
-                        <div class="p-items__right">
-                            <p class="p-items__desc">PCR迅速検査と抗体検査のセットになります。</p>
-                            <div class="p-items__price-wrap">
-                                <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">20,000</span>
-                                <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
-                                    <span class="p-items__tax">円</span>
-                                </span>
-                            </div>
-                        </div>
-                </div>
-                <p class="c-btn-circle-arw p-items__btn">購入へ進む</p>
-                </a>
-            </li>
-
-             <li class="p-items__contents">
-                <a href="<?php echo home_url( '/' ); ?>pcr-quick-antibody-set5">
-                <p class="p-items__name">PCR迅速検査＋抗体検査5回セット</p>
-                <div class="p-items__row">
-                        <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item-quick-antibody-set05.jpg?3aed4b4a772c69be" alt="PCR検査">
-                        </div>
-
-                        <div class="p-items__right">
-                            <p class="p-items__desc">PCR迅速検査と抗体検査の5回セットになります。</p>
-                            <div class="p-items__price-wrap">
-                                <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">83,000</span>
-                                <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
-                                    <span class="p-items__tax">円</span>
-                                </span>
-                            </div>
-                        </div>
-                </div>
-                <p class="c-btn-circle-arw p-items__btn">購入へ進む</p>
-                </a>
-            </li>
-
-            <li class="p-items__contents">
-                <a href="<?php echo home_url( '/' ); ?>pcr-quick-antibody-set10">
-                <p class="p-items__name">PCR迅速検査＋抗体検査10回セット</p>
-                <div class="p-items__row">
-                        <div class="p-items__thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/item-quick-antibody-set10.jpg?3aed4b4a772c69be" alt="PCR検査">
-                        </div>
-
-                        <div class="p-items__right">
-                            <p class="p-items__desc">PCR迅速検査と抗体検査の10回セットになります。</p>
-                            <div class="p-items__price-wrap">
-                                <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">148,800</span>
-                                <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
-                                    <span class="p-items__tax">円</span>
-                                </span>
-                            </div>
-                        </div>
-                </div>
-                <p class="c-btn-circle-arw p-items__btn">購入へ進む</p>
-                </a>
-            </li>
 
 
         </ul>
@@ -303,8 +215,6 @@ Template Name: 商品一覧-迅速検査
 </div>
 
 </section>
-
-
 
 
 

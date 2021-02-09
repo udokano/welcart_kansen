@@ -1,6 +1,6 @@
 /*
 
-FORM 関連
+商品詳細ページ関連
 
 -------------------------------------*/
 
@@ -107,3 +107,68 @@ jQuery('.js-option > select').on('change', function () {
     jQuery(this).addClass('is-select');
   }
 });
+
+
+
+/*
+
+陰性証明書にピッカー追加
+---------------------------------*/
+
+const $elm_take_day = document.getElementById("js-take-day");
+
+//検体採取日の要素が存在していれば発動
+
+if ($elm_take_day !== null) {
+
+  const $elm_input = $elm_take_day.querySelector("input");
+
+  //const value_inp = $elm_input.value;
+
+  //$elm_input.removeAttribute("id");
+
+  $elm_input.setAttribute("placeholder", "クリックして日付を選択してください");
+  $elm_input.setAttribute("autocomplete", "off");
+
+
+  //通常と渡航用でカレンダーの設定変える
+
+  //通常
+  if (!$elm_take_day.classList.contains('js-tokou-day')) {
+    const picer_config = {
+      //defaultDate: 'today',
+      position: 'below',
+      monthSelectorType: 'static',
+      'locale': 'ja',
+      disableMobile: "true",
+      maxDate: "today",
+      dateFormat: "Y年m月d日",
+
+
+    }
+
+    flatpickr($elm_input, picer_config);
+  }
+  //渡航用
+  else {
+
+    const picer_config = {
+      //defaultDate: 'today',
+      position: 'below',
+      monthSelectorType: 'static',
+      'locale': 'ja',
+      disableMobile: "true",
+      minDate: "today",
+      //maxDate: "today",
+      dateFormat: "Y年m月d日",
+
+    }
+
+    flatpickr($elm_input, picer_config);
+
+  }
+
+
+
+
+}

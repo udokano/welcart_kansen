@@ -878,13 +878,29 @@ p.p-conf-note {
             text-align: center;
         }
     }
+
+    .--take-day {
+        input[type='text'] {
+            width: 330px;
+            padding-top: .48rem;
+            padding-bottom: .48rem;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+
+            &:focus {
+                border-color: #666;
+            }
+        }
+    }
 }
 
 .--inp-tokou {
     position: relative;
 
     @media (max-width: 767px) {
-        width: 61%;
+        width: 72%;
     }
 }
 

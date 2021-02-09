@@ -20,7 +20,7 @@ Template Name: 商品一覧
 </div>
 
 
-<?php include("nenmatu.php"); ?>
+<!-- <?php include("nenmatu.php"); ?> -->
 
 
 
@@ -38,8 +38,14 @@ Template Name: 商品一覧
 <div class="l-inner">
 
 <ul class="p-item-tab  ">
-    <li class="p-item-tab__btn is-item-active">
-            <a href="<?php echo home_url( '/' ); ?>item-list" class="p-item-tab__link">
+<li class="p-item-tab__btn">
+            <a href="<?php echo home_url( '/' ); ?>item-list-easy" class="p-item-tab__link">
+                <span class="p-item-tab__text">ミニマムパック<br><!-- <span class="u-text-under-line p-item-tab__coming">準備中</span> --></span>
+            </a>
+    </li>
+
+    <li class="p-item-tab__btn is-item-active ">
+            <a href="<?php echo home_url( '/' ); ?>item-list" class="p-item-tab__link is-item-recommend">
                 <span class="p-item-tab__text">通常商品</span>
             </a>
     </li>

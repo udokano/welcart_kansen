@@ -44,9 +44,9 @@ ytag({"type":"ycl_cookie"});
 </script>
 
 <?php if (is_page('group-form-thanks')): ?>
-<!-- Event snippet for PCR検査　無償検査メール conversion page -->
+<!-- Event snippet for PCR 企業用申し込み conversion page -->
 <script>
-  gtag('event', 'conversion', {'send_to': 'AW-824377490/9KK6CJSwwtcBEJKBjIkD'});
+  gtag('event', 'conversion', {'send_to': 'AW-824377490/qvyFCKCmxfEBEJKBjIkD'});
 </script>
 <?php endif; ?>
 
@@ -264,7 +264,15 @@ jQuery(document).ready(function(){
 <div class="l-wrapper">
 
 
-  <div class="p-not-yearEnd" id="js-pages-head">
+<style>
+
+
+
+/*
+
+年末年始のお知らせを非表示
+
+<div class="p-not-yearEnd" id="js-pages-head">
 
 <input type="checkbox" id="radio-note" class="u-all-hidden is-radio">
 <label for="radio-note" class="p-not-yearEnd__label">
@@ -404,6 +412,36 @@ jQuery(document).ready(function(){
   <!-- ./__content-wrap -->
 </div>
 <!-- ./__yearEnd -->
+
+
+*/
+
+
+
+</style>
+
+
+
+<?php if ( is_home() || is_front_page() ) : ?>
+
+<div class="p-heat-bnr" id="js-pages-head">
+
+<div class="p-heat-bnr__img">
+<a href="<?php echo home_url( '/' ); ?>outpatient-fever" class="">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr.jpg" alt="" class="u-pc">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr_sp.jpg" alt="" class="u-sp">
+</a>
+</div>
+
+
+</div>
+
+
+<?php endif; ?>
+
+
+
+
 
 
 
@@ -633,6 +671,7 @@ jQuery(document).ready(function(){
 <script>
 
 if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+  document.addEventListener('DOMContentLoaded', function() {
 
   var header = document.getElementById("js-header");
   var space_top = document.getElementById("js-pages-head");
@@ -641,7 +680,8 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
   space_top.style.marginTop = header_hight + "px";
 
 
-    console.log(header_hight);
+
+    //console.log(header_hight);
 
 
 
@@ -656,7 +696,7 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
   var head_sc_event = function () {
     //header_hight = header.offsetHeight;
     win_sc = window.scrollY;
-    console.log(win_sc);
+   // console.log(win_sc);
     if (win_sc >= startPos) {
       if (win_sc >= 200) {
         header.style.top = - header_hight + "px";
@@ -669,7 +709,10 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
     startPos = win_sc;
   }
 
+
+
   window.addEventListener('scroll', head_sc_event);
+ });
 
 }
 

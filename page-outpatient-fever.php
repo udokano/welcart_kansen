@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: クリニクスについて
+Template Name: 発熱外来
 */
 ?>
 <?php get_header();?>
@@ -14,6 +14,17 @@ Template Name: クリニクスについて
                 <p class="p-pages-ttl-area__sub">クリニクスのアカウント作成と<br>予約について</p>
               </div>
         </div>
+</div>
+
+
+<div class="p-hatunetu">
+
+
+
+<a href="https://karte.medley.life/clinics/5ef96b32a201cb4543d99a75" class="p-hatunetu__btn" target="_blank">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/cinics/btn.png" alt="">
+</a>
+
 </div>
 
 
@@ -456,7 +467,7 @@ Template Name: クリニクスについて
 
 
 
-<section class="p-clinic-info u-bg-cover" >
+<section class="p-clinic-info u-bg-cover">
     <div class="l-access-inner">
         <div class="p-clinic-info-row">
             <div class="p-clinic-info-logo">
