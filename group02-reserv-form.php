@@ -80,9 +80,9 @@ Template Name: 教育機関・医療機関用、予約フォーム02
 
                   <p class="p-contact-note__desc02 c-blue">お問い合わせ先</p>
 
-              <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-contact-note__tel" target="_blank">
+              <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-contact-note__tel" target="_blank">
                      <p class="p-header__number"><span class="p-header__number-sq">個人</span>
-                        <span class="p-header__number-num">0120-088-120</span></p>
+                        <span class="p-header__number-num">0120-936-760</span></p>
               </a>
 
               <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-contact-note__tel" target="_blank">
@@ -90,7 +90,7 @@ Template Name: 教育機関・医療機関用、予約フォーム02
                   <span class="p-header__number-num">06-4708-8082</span></p>
               </a>
 
-              <p class="p-contact-note__time">受付時間：9:00~19:00</p>
+              <p class="p-contact-note__time">受付時間：9:00~18:00</p>
 
               </div>
 

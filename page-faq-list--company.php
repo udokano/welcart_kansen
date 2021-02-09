@@ -9,6 +9,12 @@ Template Name: よくある質問-法人
 
 
 
+
+
+
+
+
+
 <div class="p-pages-ttl-area --ttl-bg-items u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-item">
               <div class="p-pages-ttl-area__texts --texts--item-list">
@@ -17,6 +23,10 @@ Template Name: よくある質問-法人
               </div>
         </div>
 </div>
+
+<?php include("nenmatu.php"); ?>
+
+
 
 
 <div class="c-breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
@@ -39,10 +49,6 @@ Template Name: よくある質問-法人
         <a href="<?php echo home_url( '/' ); ?>faq-corporation" class="p-faq-tab__link is-tab-active">法人</a>
       </li>
   </ul>
-
-
-
-
 
 
                                 <ul class="p-faq__list">

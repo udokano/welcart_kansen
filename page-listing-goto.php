@@ -646,12 +646,12 @@ Template Name: GOTOキャンペーン
                       </div>
                       <div class="p-goto-info__right">
 
-                        <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-clinic-info-right__tel p-goto-info__tel" target="_blank"><span class="p-clinic-info-right__tel-sq p-goto-info__tel-sq">個人</span><span class="p-clinic-info-right__tel-num p-goto-info__tel-num">0120-088-120</span></a>
+                        <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-clinic-info-right__tel p-goto-info__tel" target="_blank"><span class="p-clinic-info-right__tel-sq p-goto-info__tel-sq">個人</span><span class="p-clinic-info-right__tel-num p-goto-info__tel-num">0120-936-760</span></a>
                         <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-clinic-info-right__tel p-goto-info__tel  p-goto-info__tel--second" target="_blank"><span class="p-clinic-info-right__tel-sq p-goto-info__tel-sq">企業・団体</span><span class="p-clinic-info-right__tel-num p-goto-info__tel-num">06-4708-8082</span></a>
 
                         <div class="p-goto-info__row">
                           <p class="p-goto-info__fax">FAX : 06-4708-8105</p>
-                          <p class="p-goto-info__time">受付 10:00～19:00  不定休</p>
+                          <p class="p-goto-info__time">受付 10:00～18:00  不定休</p>
                         </div>
 
                       </div>

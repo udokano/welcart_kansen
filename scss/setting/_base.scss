@@ -233,6 +233,13 @@ textarea {
     src: local("FuturaPTBook"), url("../fonts/FuturaPTBook.woff") format("woff");
 }
 
+@font-face {
+    font-family: "AvenirNext";
+    font-style: normal;
+    font-weight: normal;
+    src: local("AvenirNext"), url("../fonts/AvenirNext.woff") format("woff");
+}
+
 /* #ui-id-2 {
     color: transparent;
     position: relative;

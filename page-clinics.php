@@ -7,7 +7,7 @@ Template Name: クリニクスについて
 
 
 
-<div class="p-pages-ttl-area --ttl-bg-clinics u-bg-cover">
+<div class="p-pages-ttl-area --ttl-bg-clinics u-bg-cover" id="js-pages-head">
         <div class="p-pages-ttl-area__inner --inner-clinics">
               <div class="p-pages-ttl-area__texts --texts--clinics">
                         <h1 class="p-pages-ttl-area__ttl --ttl--clinics">オンライン案内</h1>
@@ -349,7 +349,7 @@ Template Name: クリニクスについて
                                           <span class="p-tab-flow__step-num">01</span>
                                 </span>
                               </i>
-                             プラウザでCLINICSと検索
+                             ブラウザでCLINICSと検索
                             </h3>
                             <p class="p-tab-flow__desc">ブラウザでの案内をご希望の方は、グーグルクロームからCLINICS(<br class="u-pc">クリニクス)のサイトにアクセスしてください。</p>
                           </div>
@@ -456,7 +456,7 @@ Template Name: クリニクスについて
 
 
 
-<section class="p-clinic-info u-bg-cover">
+<section class="p-clinic-info u-bg-cover" >
     <div class="l-access-inner">
         <div class="p-clinic-info-row">
             <div class="p-clinic-info-logo">
@@ -466,10 +466,10 @@ Template Name: クリニクスについて
             <div class="p-clinic-info-right">
                 <h3 class="p-clinic-info-right__ttl">アクセス</h3>
                 <p class="p-clinic-info-right__address">〒542-0086　大阪府大阪市中央区西心斎橋2-13-16 <br>おおきに西心斎橋BirthPlaceビル　3階</p>
-               <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-clinic-info-right__tel" target="_blank"><span class="p-clinic-info-right__tel-sq">個人</span>
-                <span class="p-clinic-info-right__tel-num">0120-088-120</span></a>
+               <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-clinic-info-right__tel" target="_blank"><span class="p-clinic-info-right__tel-sq">個人</span>
+                <span class="p-clinic-info-right__tel-num">0120-936-760</span></a>
                   <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-clinic-info-right__tel" target="_blank"><span class="p-clinic-info-right__tel-sq">企業・団体</span><span class="p-clinic-info-right__tel-num">06-4708-8082</span></a>
-                <p class="p-clinic-info-right__guide">FAX : 06-4708-8105<br>受付 9:00～19:00  不定休</p>
+                <p class="p-clinic-info-right__guide">FAX : 06-4708-8105<br>受付時間<br>個人：9:00～18:00  企業・団体：9:00～19:00 不定休</p>
                  <!--<p class="p-clinic-info-right__guide"><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span></p>-->
                 <p class="p-clinic-info-right__guide-sub">直接、ご来院する場合は感染対策の都合上、<br class="u-sp">事前にご連絡ください。</p>
             </div>

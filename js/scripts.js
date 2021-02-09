@@ -4,7 +4,7 @@
 
 -------------------------------------*/
 
-if (window.matchMedia("(max-width: 768px)").matches) {
+/* if (window.matchMedia("(max-width: 768px)").matches) {
 
   var $pages_header_hight = jQuery("#js-header").outerHeight();
   jQuery("#js-pages-head").css("margin-top", $pages_header_hight);
@@ -12,7 +12,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 } else {
 
 }
-
+ */
 
 
 
@@ -21,7 +21,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 ----------------------------------------- */
 
 //スマホ追従フッター
-if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+/* if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 
   var header = jQuery("#js-header");
 
@@ -45,7 +45,7 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
   });
 
 }
-
+ */
 
 /*
 
@@ -86,8 +86,8 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
 
   window.addEventListener('scroll', head_sc_event);
 
-}
- */
+} */
+
 
 
 /*
@@ -695,7 +695,7 @@ jQuery(".js-modal-form-open").on('click', function () {
 
 });
 
-document.querySelector(".customkey_add_name").style.display = "none";
+/* document.querySelector(".customkey_add_name").style.display = "none";
 
 var radio_event = function () {
   var radioElm = document.getElementsByName("custom_customer[add]");
@@ -718,4 +718,56 @@ var radio_event = function () {
   }
 }
 
-window.addEventListener("change", radio_event, false);
+window.addEventListener("change", radio_event, false); */
+
+
+/* const et = document.getElementById("js-test");
+window.addEventListener('scroll', function () {
+  console.log("横スクロール：" + this.offsetLeft);
+  // console.log("縦スクロール：" + window.scrollY);
+}); */
+
+/* $(window).scroll(function () {
+
+  var sss = $("#js-test").scrollLeft();
+  console.log(sss);
+});
+ */
+
+/* var flashing_arw = function () {
+  var target = document.querySelector(".js-sp-arrow");
+
+  var x = target.scrollLeft;
+  var sss = this;
+  console.log(sss);
+  console.log(x);
+  if (x > 0) {
+    console.log("OK");
+
+  }
+
+  else {
+    console.log("ng");
+  }
+}
+
+document.querySelector(".js-sp-arrow").addEventListener("scroll", flashing_arw, true); */
+
+
+const target = $(".js-sp-arrow");
+
+target.on("scroll", function () {
+  var active_table = $(this);
+  var x = active_table.scrollLeft();;
+  if (x > 0) {
+    console.log("OK");
+    active_table.removeClass("is-flashing-arw");
+
+
+  }
+
+  else {
+    console.log("ng");
+    active_table.addClass("is-flashing-arw");
+  }
+})

@@ -22,7 +22,7 @@ ytag({"type":"ycl_cookie"});
 	<?php if(get_field("description")): ?>
 		<meta name="description" content="<?php echo the_field('description'); ?>" />
 	<?php else: ?>
-		<meta name="description" content="<?php if(have_posts()): ?><?php while(have_posts()): the_post(); ?><?php 
+		<meta name="description" content="<?php if(have_posts()): ?><?php while(have_posts()): the_post(); ?><?php
 		$des = get_the_content();
 		$des = strip_tags($des);
 		$des = str_replace(array("\r\n","&nbsp;"), '', $des);
@@ -30,7 +30,7 @@ ytag({"type":"ycl_cookie"});
 		echo $desp;
 		?><?php endwhile; ?><?php endif; ?>" />
 	<?php endif; ?>
-	
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 <meta name="format-detection" content="telephone=no">
 
@@ -332,15 +332,15 @@ jQuery(document).ready(function(){
 
               <div class="p-header-tels u-pc-display">
 
-                          <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-header__tel p-header__tel--top u-pc-display">
-                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">個人</span><span class="p-header__number-num">0120-088-120</span></p>
+                          <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel p-header__tel--top u-pc-display">
+                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">個人</span><span class="p-header__number-num">0120-936-760</span></p>
               </a>
 
                 <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel p-header__tel--top u-pc-display">
                 <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">企業・団体</span><span class="p-header__number-num p-header__number-num--campany">06-4708-8082</span></p>
               </a>
 
-                <p class="p-header__time p-header__time--top">受付時間：9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+                <p class="p-header__time p-header__time--top">受付時間：9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
               </div>
         </div>
         <!-- ./p-header__right -->
@@ -405,10 +405,10 @@ jQuery(document).ready(function(){
                 <div class="u-sp-display">
                    <p class="p-header__guide">お電話でのお問い合わせ</p>
 
-                  <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-header__tel u-sp-display" target="_blank">
+                  <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel u-sp-display" target="_blank">
 
                         <p class="p-header__number"><span class="p-header__number-sq">個人</span>
-                        <span class="p-header__number-num">0120-088-120</span></p>
+                        <span class="p-header__number-num">0120-936-760</span></p>
 
                   </a>
 
@@ -419,7 +419,7 @@ jQuery(document).ready(function(){
 
                   </a>
 
-                   <p class="p-header__time">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+                   <p class="p-header__time">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
                 </div>
 
 

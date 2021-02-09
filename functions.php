@@ -607,6 +607,7 @@ add_filter('usces_filter_orderlist_process_status', 'ag_usces_filter_orderlist_p
 function my_filter_management_status($management_status){
     $management_status += array(
         'mail_ok' => '保留',
+        'test' => '追加',
     );
     return $management_status;
 }
@@ -619,8 +620,13 @@ function my_filter_orderlist_process_status($process_status, $value, $management
         $process_status = esc_html($management_status['cancel']);
         }elseif( $usces->is_status('mail_ok', $value) ){
                 $process_status = esc_html($management_status['mail_ok']);
+    }
 
-    }elseif( $usces->is_status('completion', $value) ){
+    elseif( $usces->is_status('test', $value) ){
+                $process_status = esc_html($management_status['test']);
+    }
+
+    elseif( $usces->is_status('completion', $value) ){
         $process_status = esc_html($management_status['completion']);
     }elseif( $usces->is_status('preparation', $value) ){
         $process_status = esc_html($management_status['preparation']);
@@ -1443,12 +1449,23 @@ if (current_user_can('editor')) { // 編集者を対象
     }
     add_action('admin_menu', 'add_page_to_admin_menu001_03');
 
-    function add_page_to_admin_menu_coupon()
+
+     function add_page_to_admin_menu_coupon()
     {
         add_menu_page('引換コード管理', '引換コード管理', 'edit_posts', 'admin.php?page=coupon_list', '', 'dashicons-editor-code
-', 1);
+', 2);
     }
     add_action('admin_menu', 'add_page_to_admin_menu_coupon');
+
+
+     function add_page_to_admin_menu001_04()
+    {
+        add_menu_page('リクルートフォーム管理', 'リクルートフォーム管理', 'edit_posts', 'edit.php?post_type=mwf_5606', '', 'dashicons-email
+', 1);
+    }
+    add_action('admin_menu', 'add_page_to_admin_menu001_04');
+
+
 
     /*  function add_page_to_admin_menu03()
      {
@@ -1556,6 +1573,13 @@ function add_page_to_admin_menu001_01()
 ', 2);
     }
     add_action('admin_menu', 'add_page_to_admin_menu001_03');
+
+    function add_page_to_admin_menu001_04()
+    {
+        add_menu_page('リクルートフォーム管理', 'リクルートフォーム管理', 'edit_posts', 'edit.php?post_type=mwf_5606', '', 'dashicons-email
+', 2);
+    }
+    add_action('admin_menu', 'add_page_to_admin_menu001_04');
 }
 
 

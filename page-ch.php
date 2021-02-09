@@ -1541,10 +1541,10 @@ DATEチェック用のモーダル
             <div class="p-clinic-info-right">
                 <h3 class="p-clinic-info-right__ttl">交通指南</h3>
                 <p class="p-clinic-info-right__address">〒542-0086　大阪府大阪市中央区西心斋桥2-13-16 <br>OOKINI西心斋桥BirthPlace大厦3楼</p>
-                <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-clinic-info-right__tel" target="_blank"><!-- <span class="p-clinic-info-right__tel-sq">个人</span> -->
-                <span class="p-clinic-info-right__tel-num">0120-088-120</span></a>
+                <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-clinic-info-right__tel" target="_blank"><!-- <span class="p-clinic-info-right__tel-sq">个人</span> -->
+                <span class="p-clinic-info-right__tel-num">0120-936-760</span></a>
                   <!-- <span href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-clinic-info-right__tel" target="_blank"><span class="p-clinic-info-right__tel-sq">企业及团体</span><span class="p-clinic-info-right__tel-num">06-4708-8082</span></a> -->
-                <p class="p-clinic-info-right__guide">FAX : 06-4708-8105<br>挂号时间 9:00～19:00  休息不定期<br><span class="u-fw600">※お電話は日本語の対応となります。</span></p>
+                <p class="p-clinic-info-right__guide">FAX : 06-4708-8105<br>挂号时间 9:00～18:00  休息不定期<br><span class="u-fw600">※お電話は日本語の対応となります。</span></p>
                 <!--<p class="p-clinic-info-right__guide"><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span></p>-->
                 <p class="p-clinic-info-right__guide-sub">由于预防感染的原因，如果直接来医院的话，请事先联系。<br>
                 <span style="color:red;">有疑似新冠肺炎症状的人士不能入内。
@@ -1580,7 +1580,7 @@ DATEチェック用のモーダル
                                    <!--  <p class="p-new-info__number">0120-000-000</p>
                                     <div class="p-new-info__bottom">
                                         <p class="p-new-info__btm-text">FAX : 00-0000-0000</p>
-                                        <p class="p-new-info__btm-text">受付 10:00～19:00  不定休</p>
+                                        <p class="p-new-info__btm-text">受付 10:00～18:00  不定休</p>
                                     </div> -->
 
                                 </a>
@@ -1589,11 +1589,11 @@ DATEチェック用のモーダル
                                 <h3 class="p-new-info__name">大阪院</h3>
                                 <p class="p-new-info__sq">アクセス</p>
                                 <p class="p-new-info__text">〒542-0086 <br class="">大阪府大阪市中央区西心斋桥2-13-16 <br class="">OOKINI西心斋桥BirthPlace大厦3楼</p>
-                                <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="p-new-info__tel">
-                                    <p class="p-new-info__number">0120-088-120</p>
+                                <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-new-info__tel">
+                                    <p class="p-new-info__number">0120-936-760</p>
                                     <div class="p-new-info__bottom">
                                         <p class="p-new-info__btm-text">FAX : 06-4708-8105</p>
-                                        <p class="p-new-info__btm-text">受付 10:00～19:00  不定休</p>
+                                        <p class="p-new-info__btm-text">受付 10:00～18:00  不定休</p>
                                     </div>
                                     <!-- ./p-new-info__bottom -->
                                 </a>
@@ -1606,7 +1606,7 @@ DATEチェック用のモーダル
                                    <!--  <p class="p-new-info__number">0120-133-220</p>
                                     <div class="p-new-info__bottom">
                                         <p class="p-new-info__btm-text">FAX : 092-401-1802</p>
-                                        <p class="p-new-info__btm-text">受付 10:00～19:00  不定休</p>
+                                        <p class="p-new-info__btm-text">受付 10:00～18:00  不定休</p>
                                     </div> -->
                                     <!-- ./p-new-info__bottom -->
                                 </a>

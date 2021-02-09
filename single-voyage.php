@@ -58,13 +58,18 @@
           <div class="p-voyage-box">
 
             <?php if (get_field('price_ttl')): ?>
-                  <h3 class="p-voyage-box__ttl c-ttl-bl-line"><span class="c-ttl-bl-line__text p-voyage-box__ttl-sub"><?php the_field('price_ttl'); ?></span></h3>
+                  <h3 class="p-voyage-box__ttl c-ttl-bl-line"><span class="c-ttl-bl-line__text p-voyage-box__ttl-sub"><!-- <?php the_field('price_ttl'); ?> -->
+PCR検査陰性証明書や、PCR検査の費用
+                  </span></h3>
             <?php endif; ?>
 
             <?php if (get_field('price_contents')): ?>
                   <div class="p-voyage-box__desc">
                       <?php remove_filter('acf_the_content', 'wpautop'); ?>
-                      <?php the_field('price_contents'); ?>
+                      <!-- <?php the_field('price_contents'); ?> -->
+
+                      迅速PCR検査は15,000円(税別)を頂戴しております。<br class="">（海外渡航用の陰性証明書は、各大使館からの陰性証明書有効期間を考慮致しまして、迅速プランでの検査をお願いしております。）<br class="">また、渡航用の陰性証明書の作成には、10,000円(税別)の費用を頂戴しております。<br>
+                      <span class="c-red u-text-under-line u-fw600">※海外渡航用陰性証明書は、患者様ぞれぞれにフォーマットの取得並びに当院への送付をお願いしております。</span>
                   </div>
             <?php endif; ?>
 

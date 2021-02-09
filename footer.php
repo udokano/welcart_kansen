@@ -1,8 +1,12 @@
 
 
 
+<style>
 
-    <?php if ( is_home() || is_front_page() || is_page("ch") ) : ?>
+
+/*
+
+ <?php if ( is_home() || is_front_page() || is_page("ch") ) : ?>
 
             <div class="p-fix-btn" id="js-fix-btn">
                 <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-fix-btn__inner">
@@ -19,6 +23,13 @@
 
     <?php endif; ?>
     <!-- ./ is_home() || is_front_page() -->
+
+*/
+
+
+</style>
+
+
 
 
 
@@ -146,6 +157,35 @@
 <?php endif; ?>
 
   <p class="u-tc p-footer__copy --copy-top">copyright©感染症検査クリニック all rights reserved.</p>
+
+
+
+<?php if ( is_home() || is_front_page() ) : ?>
+
+
+<!--------------------------
+
+チャットシステム挿入
+
+----------------------------->
+
+
+
+<script>(function(){
+var w=window,d=document;
+var s="https://app.chatplus.jp/cp.js";
+d["__cp_d"]="https://app.chatplus.jp";
+d["__cp_c"]="6b3c02e9_1";
+var a=d.createElement("script"), m=d.getElementsByTagName("script")[0];
+a.async=true,a.src=s,m.parentNode.insertBefore(a,m);})();</script>
+
+
+<?php endif; ?>
+
+
+
+
+
 </footer>
 
 
@@ -156,7 +196,11 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?<?php echo filemtime( get_stylesheet_directory() . '/js/scripts.js'); ?>"></script>
 
 <?php if( is_singular('post') ) : ?>
-<script src="<?php echo get_template_directory_uri(); ?>/js/price.js?<?php echo filemtime( get_stylesheet_directory() . '/js/scripts.js'); ?>"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/ec-item.js?<?php echo filemtime( get_stylesheet_directory() . '/js/ec-item.js'); ?>"></script>
 
 <?php endif; ?>
 

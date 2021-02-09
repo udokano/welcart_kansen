@@ -33,8 +33,14 @@ Template Name: 商品一覧-迅速検査
 
 
 <ul class="p-item-tab">
+<li class="p-item-tab__btn">
+            <a href="<?php echo home_url( '/' ); ?>item-list-easy" class="p-item-tab__link">
+                <span class="p-item-tab__text">ミニマムパック<br><!-- <span class="u-text-under-line p-item-tab__coming">準備中</span> --></span>
+            </a>
+    </li>
+
     <li class="p-item-tab__btn">
-            <a href="<?php echo home_url( '/' ); ?>item-list" class="p-item-tab__link">
+            <a href="<?php echo home_url( '/' ); ?>item-list" class="p-item-tab__link is-item-recommend">
                 <span class="p-item-tab__text">通常商品</span>
             </a>
     </li>
@@ -256,7 +262,7 @@ Template Name: 商品一覧-迅速検査
              <dl class="p-clinic-info-table">
                 <dt class="p-clinic-info-table__ttl">電話番号</dt>
                 <dd class="p-clinic-info-table__desc">
-                    <a href="<?php echo home_url( '/' ); ?>tel/kansenshou.html" class="c-pink" target="_blank">個人 0120-088-120</a><br>
+                    <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="c-pink" target="_blank">個人 0120-936-760</a><br>
             <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="c-pink" target="_blank">企業・団体 06-4708-8082</a>
         </dd>
             </dl>

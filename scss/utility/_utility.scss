@@ -170,6 +170,12 @@
     margin-bottom: 0 !important;
 }
 
+.u-sp-mb0 {
+    @media (max-width: 767px) {
+        margin-bottom: 0 !important;
+    }
+}
+
 .u-mb10 {
     margin-bottom: 10px !important;
 }
@@ -239,6 +245,10 @@
 
 .u-font-futura {
     font-family: "Futura-Bk-Book";
+}
+
+.u-font-avenir-next {
+    font-family: "AvenirNext";
 }
 
 .u-bg-cover {
