@@ -607,7 +607,7 @@ add_filter('usces_filter_orderlist_process_status', 'ag_usces_filter_orderlist_p
 function my_filter_management_status($management_status){
     $management_status += array(
         'mail_ok' => '保留',
-        'test' => '追加',
+
     );
     return $management_status;
 }
@@ -622,9 +622,7 @@ function my_filter_orderlist_process_status($process_status, $value, $management
                 $process_status = esc_html($management_status['mail_ok']);
     }
 
-    elseif( $usces->is_status('test', $value) ){
-                $process_status = esc_html($management_status['test']);
-    }
+
 
     elseif( $usces->is_status('completion', $value) ){
         $process_status = esc_html($management_status['completion']);
