@@ -300,10 +300,336 @@
 
 <section class="p-handling">
     <div class="l-inner">
-        <h2 class="c-ttl-under-center p-handling__ttl c-blue u-fw600">お取り扱い検査</h2>
+        <h2 class="c-ttl-under-center p-handling__ttl c-blue u-fw600">取り扱い検査一覧と検査費用</h2>
        <!--  <p class="p-handling__desc u-tc">
             低価格なミニマム検査を開始致しました。<br class=""><span class="c-pink u-fw600 p-handling__large">一般的に低価格帯で普及している検査はこのミニマムパックとなっているかと思います。</span><br class="">通常検査・迅速検査では、1つの検体を2つに分けて検査を行なっておりますが、<br class="">ミニマムパックでは１つの検体に対して、１つの検査となる為、検査工数と検査にかかる薬品や消耗品を減らし、検査費用を抑えております。
         </p> -->
+
+    <div class="js-tab-wrap p-new-price">
+
+        <ul class="p-price-tab-list u-flex">
+            <li class="js-tab-btn p-price-tab-list__btn p-price-tab-list__btn--normal is-tab-active u-flex u-al-cent u-jc-cent">通常検査</li>
+            <li class="js-tab-btn p-price-tab-list__btn p-price-tab-list__btn--quick u-flex u-al-cent u-jc-cent">迅速検査</li>
+            <li class="js-tab-btn p-price-tab-list__btn p-price-tab-list__btn--minimum u-flex u-al-cent u-jc-cent">ミニマムパック</li>
+        </ul>
+
+        <ul class="p-price-tab-contents">
+            <li class="js-tab-contents p-price-tab-contents__item p-price-tab-contents__item--normal is-tab-active">
+                <div class="u-flex p-new-price-row">
+                    <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">PCR検査1回</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--normal u-fw600 ">
+                                        <em class="p-new-price-row__main">12,000</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+
+                     <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">5回セット</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--normal u-fw600 u-jc-cent u-al-cent">
+                                    <span class="u-flex p-new-price-row__about">1回あたり</span>
+                                        <em class="p-new-price-row__main">9,600</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                                     <p class="p-new-price-row__total">合計48,000円（税別）</p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr-set05" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+
+                     <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">10回セット</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--normal u-fw600 u-jc-cent u-al-cent">
+                                      <span class="u-flex p-new-price-row__about">1回あたり</span>
+                                        <em class="p-new-price-row__main">8,880</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                                    <p class="p-new-price-row__total">合計88,800円（税別）</p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr-set10" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- ./p-new-price-row -->
+
+
+                <div class="p-new-price-bottom p-new-price-bottom--normal">
+                    <h3 class="p-new-price-bottom__ttl p-new-price-bottom__ttl--normal">通常検査について</h3>
+                    <ul class="p-new-price-bottom__list u-flex u-tc">
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">正確性・検出率</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p>１つの検体を2つに分けて検査を<br class="">実施する為、<span class="c-pink">高い精度の正確性・検出率</span></p></dd>
+                            </dl>
+                        </li>
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">検体採取返送手順</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p><span class="c-pink">ご自宅で唾液採取後、</span>当院まで返送</p></dd>
+                            </dl>
+                        </li>
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">検査優先度</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p>当院へ検体が到着後、<span class="c-pink">迅速検査が<br class="">終了次第、検査を実施</span></p></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ./p-new-price-bottom -->
+            </li>
+             <li class="js-tab-contents p-price-tab-contents__item p-price-tab-contents__item--quick">
+                <div class="u-flex p-new-price-row">
+                    <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">PCR迅速検査1回</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--quick u-fw600 ">
+                                        <em class="p-new-price-row__main">15,000</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr-quick" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+
+                     <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">5回セット</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--quick u-fw600 u-jc-cent u-al-cent">
+                                    <span class="u-flex p-new-price-row__about">1回あたり</span>
+                                        <em class="p-new-price-row__main">12,600</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                                     <p class="p-new-price-row__total">合計63,000円（税別）</p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr-quick-set5" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+
+                     <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">10回セット</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--quick u-fw600 u-jc-cent u-al-cent">
+                                      <span class="u-flex p-new-price-row__about">1回あたり</span>
+                                        <em class="p-new-price-row__main">11,880</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                                    <p class="p-new-price-row__total">合計118,800円（税別）</p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr-quick-set10" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- ./p-new-price-row -->
+
+
+                <div class="p-new-price-bottom p-new-price-bottom--quick">
+                    <h3 class="p-new-price-bottom__ttl p-new-price-bottom__ttl--quick">迅速検査について</h3>
+                    <ul class="p-new-price-bottom__list u-flex u-tc">
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">正確性・検出率</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p>１つの検体を2つに分けて検査を<br class="">実施する為、<span class="c-pink">高い精度の正確性・検出率</span></p></dd>
+                            </dl>
+                        </li>
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">検体採取返送手順</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p><span class="c-pink">ご自宅で唾液採取後、</span>当院まで返送</p></dd>
+                            </dl>
+                        </li>
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">検査優先度</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p>当院へ検体が到着後、<span class="c-pink">迅速検査の方は<br class="">優先的に検査を実施</span></p></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ./p-new-price-bottom -->
+            </li>
+
+            <li class="js-tab-contents p-price-tab-contents__item p-price-tab-contents__item--minimum">
+                <div class="u-flex p-new-price-row">
+                    <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">PCRミニマムパック1回</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--minimum u-fw600 ">
+                                        <em class="p-new-price-row__main">6,000</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr-easy" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+
+                     <dl class="p-new-price-row__item">
+                        <dt class="p-new-price-row__ttl u-tc">5回セット</dt>
+                        <dd class="p-new-price-row__contents">
+                            <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
+
+                                    <p class="u-flex p-new-price-row__texts p-new-price-row__texts--minimum u-fw600 u-jc-cent u-al-cent">
+                                    <span class="u-flex p-new-price-row__about">1回あたり</span>
+                                        <em class="p-new-price-row__main">4,440</em>
+                                        <span class="p-new-price-row__sub u-flex u-al-cent u-jc-cent u-ff-colum">
+                                            <span class="p-new-price-row__tax">税別</span>
+                                            <span class="p-new-price-row__yen">円</span>
+                                        </span>
+                                    </p>
+
+                                     <p class="p-new-price-row__total">合計44,400円（税別）</p>
+
+                            </div>
+                            <!-- ./p-new-price-row__contents-in -->
+                            <a href="<?php echo home_url( '/' ); ?>pcr-set10-easy" class="p-new-price-row__btn u-fw600">購入へ進む</a>
+                        </dd>
+                    </dl>
+
+                     <dl class="p-new-price-row__item p-new-price-row__item-note">
+                        <dt class="p-new-price-row__item-note-ttl">注意事項</dt>
+                        <dd class="p-new-price-row__item-note-desc">ミニマムパックでは、確定的な診断が難しく、参考程度の効力しかございません。<br class="">それに伴い、陰性証明書の発行をお受けする事ができませんので、予めご了承ください。</dd>
+                    </dl>
+                </div>
+                <!-- ./p-new-price-row -->
+
+
+                <div class="p-new-price-bottom p-new-price-bottom--minimum">
+                    <h3 class="p-new-price-bottom__ttl p-new-price-bottom__ttl--minimum">ミニマムパックについて</h3>
+                    <ul class="p-new-price-bottom__list u-flex u-tc">
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">正確性・検出率</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p>検体を分ける事なく検査を行う為、<br class=""><span class="c-pink">最低限の正確性・検出率</span></p></dd>
+                            </dl>
+                        </li>
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">検体採取返送手順</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p><span class="c-pink">ご自宅で唾液採取後、</span>当院まで返送<br><span class="p-new-price-bottom__data-desc--note">※返送の際は切手を患者様ご自身で<br class="">ご用意していただく必要がございます。</span></p></dd>
+                            </dl>
+                        </li>
+                        <li class="p-new-price-bottom__item">
+                            <dl class="p-new-price-bottom__data">
+                                <dt class="p-new-price-bottom__data-ttl">検査優先度</dt>
+                                <dd class="p-new-price-bottom__data-desc"><p>当院へ検体が到着後、<span class="c-pink">迅速検査・通常検査が終了次第、</span>検査を実施</p></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ./p-new-price-bottom -->
+            </li>
+        </ul>
+
+
+
+
+    </div>
+    <!-- ./p-new-price -->
+
+
+    <section class="p-minimum-diff">
+    <div class="l-inner">
+        <h2 class="c-ttl-under-center p-minimum-diff__ttl c-blue u-fw600">通常検査・迅速検査と<br class="">ミニマムパックの違いについて</h2>
+
+       <div class="p-minimum-diff-box u-flex u-al-top">
+
+            <dl class="p-minimum-diff-box__dl">
+                <dt class="p-minimum-diff-box__ttl">通常検査・迅速検査</dt>
+                <dd class="p-minimum-diff-box__content">
+                    <div class="p-minimum-diff-box__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst01.png?20210129" alt="通常検査・迅速検査" class="u-pc">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst01_sp.png?20210129" alt="通常検査・迅速検査" class="u-sp">
+                    </div>
+                    <!-- ./p-minimum-diff-box__img -->
+                   <!--  <p class="p-minimum-diff-box__desc">誤判定のリスクを減らす為に1つの検体を2つに<br class="">分けて検査しております。</p> -->
+                </dd>
+            </dl>
+
+             <dl class="p-minimum-diff-box__dl p-minimum-diff-box__dl--minimum">
+                <dt class="p-minimum-diff-box__ttl p-minimum-diff-box__ttl--minimum">ミニマムパック</dt>
+                <dd class="p-minimum-diff-box__content">
+                    <div class="p-minimum-diff-box__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst02.png?20210129" alt="ミニマムパック" class="u-pc">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst02_sp.png?20210129" alt="ミニマムパック" class="u-sp">
+                    </div>
+                    <!-- ./p-minimum-diff-box__img -->
+                    <p class="p-minimum-diff-box__desc p-minimum-diff-box__desc--minimum">極端に安価な料金設定の検査は検査精度を犠牲にしている<br class="u-pc">場合が多いと考えられます。<br class="">メリット・デメリットを理解した上でご利用する事が重要となります。</p>
+                </dd>
+            </dl>
+
+       </div>
+       <!-- ./p-minimum-diff-box -->
+
+
+       <div class="p-minimum-diff-note">
+
+       <p class="p-minimum-diff-note__desc">PCR検査は、特異性は非常に高いですが、<br class="u-sp">正確性・検出率は約70%前後になります。<br class="">精度を補い、検出率を担保するためにも当院では<br class="u-sp">通常検査、迅速検査の場合、1つの検体を2つに分けてそれぞれ検査をする事で、<br class="u-pc">より100％に近い数字で<br class="u-sp">陰性・陽性の検出できる通常検査、迅速検査の<br class="u-sp">ご利用を推奨しております。</p>
+
+       </div>
+       <!-- ./ p-minimum-note-->
+    </div>
+    <!-- ./l-inner -->
+</section>
+
 
 
 
@@ -713,49 +1039,7 @@
 </section>
 
 
-<section class="p-minimum-diff">
-    <div class="l-inner">
-        <h2 class="c-ttl-under-center p-minimum-diff__ttl c-blue u-fw600">通常検査・迅速検査と<br class="">ミニマムパックの違いについて</h2>
 
-       <div class="p-minimum-diff-box u-flex u-al-top">
-
-            <dl class="p-minimum-diff-box__dl">
-                <dt class="p-minimum-diff-box__ttl">通常検査・迅速検査</dt>
-                <dd class="p-minimum-diff-box__content">
-                    <div class="p-minimum-diff-box__img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst01.png?20210129" alt="通常検査・迅速検査" class="u-pc">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst01_sp.png?20210129" alt="通常検査・迅速検査" class="u-sp">
-                    </div>
-                    <!-- ./p-minimum-diff-box__img -->
-                   <!--  <p class="p-minimum-diff-box__desc">誤判定のリスクを減らす為に1つの検体を2つに<br class="">分けて検査しております。</p> -->
-                </dd>
-            </dl>
-
-             <dl class="p-minimum-diff-box__dl p-minimum-diff-box__dl--minimum">
-                <dt class="p-minimum-diff-box__ttl p-minimum-diff-box__ttl--minimum">ミニマムパック</dt>
-                <dd class="p-minimum-diff-box__content">
-                    <div class="p-minimum-diff-box__img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst02.png?20210129" alt="ミニマムパック" class="u-pc">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/diff_ilst02_sp.png?20210129" alt="ミニマムパック" class="u-sp">
-                    </div>
-                    <!-- ./p-minimum-diff-box__img -->
-                    <p class="p-minimum-diff-box__desc p-minimum-diff-box__desc--minimum">極端に安価な料金設定の検査は検査精度を犠牲にしている<br class="u-pc">場合が多いと考えられます。<br class="">メリット・デメリットを理解した上でご利用する事が重要となります。</p>
-                </dd>
-            </dl>
-
-       </div>
-       <!-- ./p-minimum-diff-box -->
-
-
-       <div class="p-minimum-diff-note">
-
-       <p class="p-minimum-diff-note__desc">PCR検査は、特異性は非常に高いですが、<br class="u-sp">正確性・検出率は約70%前後になります。<br class="">精度を補い、検出率を担保するためにも当院では<br class="u-sp">通常検査、迅速検査の場合、1つの検体を2つに分けてそれぞれ検査をする事で、<br class="u-pc">より100％に近い数字で<br class="u-sp">陰性・陽性の検出できる通常検査、迅速検査の<br class="u-sp">ご利用を推奨しております。</p>
-
-       </div>
-       <!-- ./ p-minimum-note-->
-    </div>
-    <!-- ./l-inner -->
-</section>
 
 
 <section class="p-pcr-kit bg-section-gray" id="link-kit">

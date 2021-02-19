@@ -1,15 +1,17 @@
 .p-handling {
     padding: rem(110) 0;
-    border-top: 1px solid #2f79a3;
+
+    //border-top: 1px solid #2f79a3;
     background-color: #ffffff;
     background-image: repeating-linear-gradient(to bottom, transparent 7px, rgba(204, 204, 204, 0.2) 8px, rgba(204, 204, 204, 0.2) 8px, transparent 9px, transparent 15px, rgba(204, 204, 204, 0.2) 16px, rgba(204, 204, 204, 0.2) 16px, transparent 17px, transparent 23px, rgba(204, 204, 204, 0.2) 24px, rgba(204, 204, 204, 0.2) 24px, transparent 25px, transparent 31px, rgba(204, 204, 204, 0.2) 32px, rgba(204, 204, 204, 0.2) 32px, transparent 33px, transparent 39px, rgba(204, 204, 204, 0.2) 40px, rgba(204, 204, 204, 0.2) 40px), repeating-linear-gradient(to right, transparent 7px, rgba(204, 204, 204, 0.2) 8px, rgba(204, 204, 204, 0.2) 8px, transparent 9px, transparent 15px, rgba(204, 204, 204, 0.2) 16px, rgba(204, 204, 204, 0.2) 16px, transparent 17px, transparent 23px, rgba(204, 204, 204, 0.2) 24px, rgba(204, 204, 204, 0.2) 24px, transparent 25px, transparent 31px, rgba(204, 204, 204, 0.2) 32px, rgba(204, 204, 204, 0.2) 32px, transparent 33px, transparent 39px, rgba(204, 204, 204, 0.2) 40px, rgba(204, 204, 204, 0.2) 40px);
 
     @media (max-width: 767px) {
         padding: rem(70) 0;
+        padding-top: rem(400);
     }
 
     &__ttl {
-        margin-bottom: rem(33);
+        margin-bottom: rem(85);
     }
 
     &__desc {
@@ -210,7 +212,7 @@
 }
 
 .p-minimum-diff {
-    background-color: #edf8ff;
+    //background-color: #edf8ff;
     padding: rem(85) 0;
 
     &__ttl {
@@ -323,7 +325,8 @@
 }
 
 .p-minimum-diff-note {
-    background-color: #fff;
+    //background-color: #fff;
+    background-color: #f1f9ff;
     text-align: center;
     padding: rem(22) 0;
 
