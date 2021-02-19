@@ -12,8 +12,11 @@
         background-color: #dadada;
         border-radius: rem(19.5) rem(19.5) 0 0;
         height: 64px;
-        transition: .1s ease;
         cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
 
         @media (max-width: 767px) {
             width: 32.9%;

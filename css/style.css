@@ -14001,7 +14001,6 @@ input, select {
 }
 
 .p-price-tab-list__btn {
-  -webkit-transition: .1s ease;
   background-color: #dadada;
   border-radius: 1.21875rem 1.21875rem 0 0;
   color: #727272;
@@ -14010,8 +14009,11 @@ input, select {
   height: 64px;
   max-width: 377px;
   text-align: center;
-  transition: .1s ease;
   width: 50%;
+}
+
+.p-price-tab-list__btn:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 767px) {
