@@ -51,6 +51,11 @@
 </div>
 <!-- ./key-visual -->
 
+
+<style>
+
+
+/*
 <section class="p-cost p-cost--top">
     <div class="l-inner">
         <h2 class="c-ttl-under-center p-cost__ttl c-blue">検査費用</h2>
@@ -59,10 +64,7 @@
         <p class="p-cost__desc c-blue">検査キット、郵送、採取案内、検査実施を含むお値段です。</p>
 
 
-        <style>
 
-
-        /*
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--1st"><span class="p-cost-price__name-in">PCR検査</span></dt>
@@ -112,10 +114,7 @@
             </dd>
         </dl>
 
-        */
 
-
-        </style>
 
 
 
@@ -291,18 +290,33 @@
     </div>
     <!-- ./l-inner -->
 </section>
+*/
+
+
+</style>
+
+
 
 
 <section class="p-handling">
     <div class="l-inner">
         <h2 class="c-ttl-under-center p-handling__ttl c-blue u-fw600">お取り扱い検査</h2>
-        <p class="p-handling__desc u-tc">
-            低価格なミニマム検査を開始致しました。<br class=""><span class="c-pink u-fw600 p-handling__large">一般的に低価格帯で普及している検査はこのミニマムパックとなっているかと思います。</span><br class="">通常検査・迅速検査では、1つの検体を2つに分けて検査を行なっておりますが、<br class="">ミニマムパックでは１つの検体に対して、１つの検査となる為、検査工数と検査にかかる薬品や消耗品を減らし、検査費用を抑えております。<!-- <br class="">正確性・検出率が必要となる検査をご希望の場合、通常検査または、迅速検査にてPCR検査をお受けください。 -->
-        </p>
+       <!--  <p class="p-handling__desc u-tc">
+            低価格なミニマム検査を開始致しました。<br class=""><span class="c-pink u-fw600 p-handling__large">一般的に低価格帯で普及している検査はこのミニマムパックとなっているかと思います。</span><br class="">通常検査・迅速検査では、1つの検体を2つに分けて検査を行なっておりますが、<br class="">ミニマムパックでは１つの検体に対して、１つの検査となる為、検査工数と検査にかかる薬品や消耗品を減らし、検査費用を抑えております。
+        </p> -->
+
+
+
+
       </div>
     <!-- ./l-inner -->
 
-        <div class="u-pc p-effect">
+
+    <style>
+
+    /*
+
+    <div class="u-pc p-effect">
              <div class="l-inner">
                     <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/front/effect_table_pc.png" alt=""> -->
 
@@ -636,7 +650,7 @@
         </div>
         <!-- SP版の表終了 -->
 
-        <div class="l-inner">
+          <div class="l-inner">
             <dl class="p-tb-box">
                 <dt class="p-tb-box__ttl">
 以下に当てはまる方は、<br class="u-sp">ミニマムパックでの検査は極力ご遠慮ください
@@ -653,8 +667,7 @@
         </div>
         <!-- ./l-inner -->
 
-
-        <div class="l-inner">
+          <div class="l-inner">
 
                 <h3 class="c-blue u-tc u-fw600 p-apply-ttl u-pc">検査のお申込みはこちらから</h3>
 
@@ -684,6 +697,18 @@
 
         </div>
           <!-- ./l-inner -->
+
+
+    */
+
+
+    </style>
+
+
+
+
+
+
 
 </section>
 
