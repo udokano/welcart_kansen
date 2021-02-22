@@ -11958,6 +11958,10 @@ p.p-conf-note {
   width: 4.25rem;
 }
 
+.is-item-recommend--top::after {
+  background-image: url(../img/common/c_ballon_rec__top.png);
+}
+
 @-webkit-keyframes goDownAndUp {
   0% {
     -webkit-transform: translate(0, 0px);
@@ -14008,6 +14012,7 @@ input, select {
   font-size: 1.5625rem;
   height: 64px;
   max-width: 377px;
+  position: relative;
   text-align: center;
   width: 50%;
 }
@@ -14365,6 +14370,25 @@ input, select {
 
 .p-new-price-bottom__data-desc--note {
   font-size: 0.875rem;
+}
+
+/*
+ミニマムの導入理由追加
+--------*/
+.p-minimum-reason {
+  margin-bottom: 2.55rem;
+}
+
+.p-minimum-reason__ttl {
+  color: #117E7D;
+  font-size: 1.55rem;
+  margin-bottom: 2.25rem;
+}
+
+.p-minimum-reason__desc {
+  font-size: 1.02rem;
+  line-height: 1.45;
+  margin-bottom: 1.55rem;
 }
 
 .p-pages-ttl-area {
