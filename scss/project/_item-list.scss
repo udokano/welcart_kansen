@@ -83,6 +83,12 @@
         animation-direction: alternate;
         animation-duration: .69s;
     }
+
+    &--top {
+        &::after {
+            background-image: url(../img/common/c_ballon_rec__top.png);
+        }
+    }
 }
 
 @keyframes goDownAndUp {

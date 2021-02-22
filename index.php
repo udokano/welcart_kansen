@@ -308,7 +308,7 @@
     <div class="js-tab-wrap p-new-price">
 
         <ul class="p-price-tab-list u-flex">
-            <li class="js-tab-btn p-price-tab-list__btn p-price-tab-list__btn--normal is-tab-active u-flex u-al-cent u-jc-cent">通常検査</li>
+            <li class="js-tab-btn p-price-tab-list__btn p-price-tab-list__btn--normal is-tab-active u-flex u-al-cent u-jc-cent is-item-recommend is-item-recommend--top">通常検査</li>
             <li class="js-tab-btn p-price-tab-list__btn p-price-tab-list__btn--quick u-flex u-al-cent u-jc-cent">迅速検査</li>
             <li class="js-tab-btn p-price-tab-list__btn p-price-tab-list__btn--minimum u-flex u-al-cent u-jc-cent">ミニマムパック</li>
         </ul>
@@ -502,6 +502,12 @@
             </li>
 
             <li class="js-tab-contents p-price-tab-contents__item p-price-tab-contents__item--minimum">
+                <div class="p-minimum-reason u-tc">
+                    <h3 class="p-minimum-reason__ttl u-fw600">低価格なPCR検査「ミニマムパック」を開始いたしました。</h3>
+                    <p class="p-minimum-reason__desc">通常検査・迅速検査では１つの検体を２つに分けて検査を行なっておりますが、<br class="u-pc">ミニマムパックでは１つの検体を分ける事なく検査を実施しております。<br class=""><span class="c-pink u-fw600">また、一般的に低価格で広く普及している検査は、このミニマムパックと同じ検査方法にて実施されているかと思われます。</span></p>
+                    <p class="p-minimum-reason__desc u-mb0"><span class="u-text-under-line">低価格の理由として、通常の検査と比べ少ない工数、使用する薬品・消耗品を減らすことにより検査費用を抑えております。</span></p>
+                </div>
+                <!-- ./p-minimum-reason -->
                 <div class="u-flex p-new-price-row">
                     <dl class="p-new-price-row__item">
                         <dt class="p-new-price-row__ttl u-tc">PCRミニマムパック1回</dt>

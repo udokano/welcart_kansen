@@ -13,6 +13,7 @@
         border-radius: rem(19.5) rem(19.5) 0 0;
         height: 64px;
         cursor: pointer;
+        position: relative;
 
         &:hover {
             opacity: 0.8;
@@ -357,5 +358,25 @@
 
             p {}
         }
+    }
+}
+
+/*
+ミニマムの導入理由追加
+--------*/
+
+.p-minimum-reason {
+    margin-bottom: 2.55rem;
+
+    &__ttl {
+        font-size: 1.55rem;
+        margin-bottom: 2.25rem;
+        color: #117E7D;
+    }
+
+    &__desc {
+        font-size: 1.02rem;
+        line-height: 1.45;
+        margin-bottom: 1.55rem;
     }
 }
