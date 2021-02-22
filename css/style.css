@@ -8147,7 +8147,7 @@ p.p-conf-note {
 }
 
 .p-minimum-diff {
-  padding: 5.3125rem 0;
+  padding: 5.3125rem 0 0;
 }
 
 .p-minimum-diff__ttl {
@@ -14035,7 +14035,7 @@ input, select {
 @media (max-width: 767px) {
   .p-price-tab-list__btn.is-tab-active {
     font-size: 1.15rem;
-    height: 18vw;
+    height: 16.6vw;
   }
 }
 
@@ -14211,6 +14211,10 @@ input, select {
   font-size: 3.375rem;
 }
 
+.p-new-price-row__sub {
+  margin-left: .2rem;
+}
+
 .p-new-price-row__about {
   color: #666666;
   font-size: 1rem;
@@ -14337,7 +14341,7 @@ input, select {
   font-size: 1.14375rem;
   font-weight: 600;
   line-height: 1;
-  padding: 0.625rem 0;
+  padding: 0.875rem 0;
 }
 
 .p-new-price-bottom__data-desc {
@@ -14350,6 +14354,7 @@ input, select {
   align-content: center;
   background-color: #fff;
   border: 1px solid #f3f3f3;
+  color: #5e5e5e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

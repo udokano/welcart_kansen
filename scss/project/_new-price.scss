@@ -33,7 +33,7 @@
 
             @media (max-width: 767px) {
                 font-size: 1.15rem;
-                height: 18vw;
+                height: 16.6vw;
             }
         }
 
@@ -206,7 +206,9 @@
         font-size: rem(54);
     }
 
-    &__sub {}
+    &__sub {
+        margin-left: .2rem;
+    }
 
     &__about {
         font-size: rem(16);
@@ -336,7 +338,7 @@
             font-weight: 600;
             background-color: #f3f3f3;
             line-height: 1;
-            padding: rem(10) 0;
+            padding: rem(14) 0;
         }
 
         &-desc {
@@ -347,6 +349,7 @@
             align-content: center;
             height: 80px;
             flex-flow: column;
+            color: #5e5e5e;
 
             &--note {
                 font-size: rem(14);

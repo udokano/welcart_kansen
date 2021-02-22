@@ -523,7 +523,7 @@
                     </dl>
 
                      <dl class="p-new-price-row__item">
-                        <dt class="p-new-price-row__ttl u-tc">5回セット</dt>
+                        <dt class="p-new-price-row__ttl u-tc">10回セット</dt>
                         <dd class="p-new-price-row__contents">
                             <div class="p-new-price-row__contents-in u-flex u-jc-cent u-al-cent u-ff-colum">
 
@@ -622,7 +622,7 @@
 
        <div class="p-minimum-diff-note">
 
-       <p class="p-minimum-diff-note__desc">PCR検査は、特異性は非常に高いですが、<br class="u-sp">正確性・検出率は約70%前後になります。<br class="">精度を補い、検出率を担保するためにも当院では<br class="u-sp">通常検査、迅速検査の場合、1つの検体を2つに分けてそれぞれ検査をする事で、<br class="u-pc">より100％に近い数字で<br class="u-sp">陰性・陽性の検出できる通常検査、迅速検査の<br class="u-sp">ご利用を推奨しております。</p>
+       <p class="p-minimum-diff-note__desc">PCR検査は、特異性は非常に高いですが、<br class="u-sp">正確性・検出率は約70%前後になります。<br class="">精度を補い、検出率を担保するためにも当院では<br class="u-sp">通常検査、迅速検査の場合、1つの検体を2つに分けてそれぞれ検査をする事で、<br class="u-pc">より100％に近い数字で陰性・陽性の検出できる通常検査、迅速検査のご利用を推奨しております。</p>
 
        </div>
        <!-- ./ p-minimum-note-->
