@@ -104,8 +104,8 @@ jQuery(".payment_0 > input").addClass("validate[required]");
 						<th scope="row"><?php _e('Notes', 'usces'); ?></th>
 						<td colspan="2"><textarea name="offer[note]" id="note" class="notes"><?php echo esc_html($entry_order_note); ?></textarea><br>
 						<?php if (!is_group_item_in_cart()) : ?>
-						<span style="color: red; font-size: 130%; line-height: 1.4; padding-top: 10px; display: block;">領収書が必要な方は備考欄に【領収書】と記載ください。<br>
-ご注文者様のお名前でメールでご案内させて頂いております。</span>
+						<!-- <span style="color: red; font-size: 130%; line-height: 1.4; padding-top: 10px; display: block;">領収書が必要な方は備考欄に【領収書】と記載ください。<br>
+ご注文者様のお名前でメールでご案内させて頂いております。</span> -->
 						<?php endif; ?>
 						</td>
 					</tr>

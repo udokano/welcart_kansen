@@ -151,5 +151,5 @@ get_header();
 
 jQuery("#address3_row th").text("建物名");
 
-
+jQuery("input[name*='company']").after("<p class='c-red u-fw600 u-mt05'>※企業・団体名義の領収書が必要な場合は必ずご入力ください。</p>");
 </script>

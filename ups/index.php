@@ -688,7 +688,7 @@
 </section>
 
 
-<section class="p-minimum-diff p-minimum-diff--front-page">
+<section class="p-minimum-diff">
     <div class="l-inner">
         <h2 class="c-ttl-under-center p-minimum-diff__ttl c-blue u-fw600">通常検査・迅速検査と<br class="">ミニマムパックの違いについて</h2>
 

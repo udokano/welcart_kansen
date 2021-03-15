@@ -215,6 +215,10 @@
     //background-color: #edf8ff;
     padding: rem(85) 0 0;
 
+    &--front-page {
+        padding-bottom: rem(85);
+    }
+
     &__ttl {
         line-height: 1.48;
         font-size: rem(40);
