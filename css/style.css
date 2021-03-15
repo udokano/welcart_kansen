@@ -560,6 +560,10 @@ body.home {
   margin-top: 1.220rem;
 }
 
+.u-mt20-i {
+  margin-top: 1.220rem !important;
+}
+
 .u-mb50 {
   margin-bottom: 50px !important;
 }
@@ -3463,6 +3467,14 @@ input.quantity {
   #cart_table thead tr .quantity-conf {
     width: 30% !important;
   }
+}
+
+.p-conf-notes {
+  background-color: #f95883;
+  color: #fff;
+  font-size: 1.34rem;
+  margin: 2.55rem 0;
+  padding: .38rem 0;
 }
 
 /*
@@ -8148,6 +8160,10 @@ p.p-conf-note {
 
 .p-minimum-diff {
   padding: 5.3125rem 0 0;
+}
+
+.p-minimum-diff--front-page {
+  padding-bottom: 5.3125rem;
 }
 
 .p-minimum-diff__ttl {
