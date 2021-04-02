@@ -317,7 +317,7 @@ input.quantity {
                         display: inline-block;
 
                         //align-items: center;
-                   
+
                     }
 
                     input {
@@ -829,4 +829,12 @@ input.quantity {
             }
         }
     }
+}
+
+.p-conf-notes {
+    background-color: #f95883;
+    color: #fff;
+    padding: .38rem 0;
+    font-size: 1.34rem;
+    margin: 2.55rem 0;
 }

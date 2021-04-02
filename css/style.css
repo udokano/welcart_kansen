@@ -560,6 +560,10 @@ body.home {
   margin-top: 1.220rem;
 }
 
+.u-mt20-i {
+  margin-top: 1.220rem !important;
+}
+
 .u-mb50 {
   margin-bottom: 50px !important;
 }
@@ -3465,6 +3469,14 @@ input.quantity {
   }
 }
 
+.p-conf-notes {
+  background-color: #f95883;
+  color: #fff;
+  font-size: 1.34rem;
+  margin: 2.55rem 0;
+  padding: .38rem 0;
+}
+
 /*
 
 チャートエリア
@@ -4802,6 +4814,12 @@ input.quantity {
   line-height: 1;
   margin-bottom: .48rem;
   padding: 0.30625rem 0.35625rem 0.26875rem;
+}
+
+.p-clinic-person {
+  display: block;
+  max-width: 70px;
+  width: 45%;
 }
 
 .p-clinic-map {
@@ -7917,6 +7935,11 @@ p.p-conf-note {
 @media (max-width: 767px) {
   .p-handling {
     padding: 4.375rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-handling--listing-top {
     padding-top: 25rem;
   }
 }
@@ -8148,6 +8171,10 @@ p.p-conf-note {
 
 .p-minimum-diff {
   padding: 5.3125rem 0 0;
+}
+
+.p-minimum-diff--front-page {
+  padding-bottom: 5.3125rem;
 }
 
 .p-minimum-diff__ttl {

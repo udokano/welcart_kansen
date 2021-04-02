@@ -23,7 +23,7 @@ Template Name: リクルートの紹介価格のご案内
             <!-- ./point -->
 
             <div class="p-recruit-fv__item u-pc">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/recruit/fv_item.png" alt="検査費用6000円">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/recruit/fv_item.png" alt="検査費用6600円">
             </div>
             <!-- ./p-recruit-fv__item -->
 
@@ -285,21 +285,21 @@ Template Name: リクルートの紹介価格のご案内
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--1st"><span class="p-cost-price__name-in">PCR検査</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">6,000</span><span class="p-cost-price__text-sub">円(税別)</span></dd>
+                <dd class="p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">6,600</span><span class="p-cost-price__text-sub">円(税込)</span></dd>
         </dl>
 
 
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--2st"><span class="p-cost-price__name-in">抗体検査</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">5,000</span><span class="p-cost-price__text-sub">円(税別)</span></dd>
+                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">5,500</span><span class="p-cost-price__text-sub">円(税込)</span></dd>
         </dl>
 
 
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--3st"><span class="p-cost-price__name-in">陰性証明書</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--3st"><span class="p-cost-price__text-main">5,000</span><span class="p-cost-price__text-sub">円(税別)</span>
+                <dd class="p-cost-price__text p-cost-price__text--3st"><span class="p-cost-price__text-main">5,500</span><span class="p-cost-price__text-sub">円(税込)</span>
             </dd>
         </dl>
 

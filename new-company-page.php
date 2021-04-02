@@ -279,12 +279,12 @@ Template Name: 新設企業用案内ページ
                         </div>
 
                         <div class="p-items__right">
-                            <p class="p-items__desc">PCR検査によって患者様の<br class="">新型コロナ感染の有無を検査致します。<br><span class="u-fw600">5個購入した場合　1個あたり 9,600円<br class="">10個購入した場合　1個あたり 8,880円</span></p>
+                            <p class="p-items__desc">PCR検査によって患者様の<br class="">新型コロナ感染の有無を検査致します。<br><span class="u-fw600">5個購入した場合　1個あたり 10,560円<br class="">10個購入した場合　1個あたり 9,768円</span></p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 18,000 -->12,000</span>
+                                <span class="p-items__p-center">13,200</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -308,7 +308,7 @@ Template Name: 新設企業用案内ページ
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">59,200</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -332,7 +332,7 @@ Template Name: 新設企業用案内ページ
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">88,800</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -352,12 +352,12 @@ Template Name: 新設企業用案内ページ
                                 </div>
 
                                 <div class="p-items__right">
-                                    <p class="p-items__desc">PCR検査と抗体検査のセット。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 13,600円<br class="">10個購入した場合　1個あたり 11,880円</span></p>
+                                     <p class="p-items__desc">PCR検査と抗体検査のセット。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 14,960円<br class="">10個購入した場合　1個あたり 13,068円</span></p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">17,000</span>
+                                        <span class="p-items__p-center">18,700</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -379,12 +379,12 @@ Template Name: 新設企業用案内ページ
                                 </div>
 
                                 <div class="p-items__right">
-                                    <p class="p-items__desc">PCR検査の迅速検査になります。<br class="">速達でのご対応、優先的に検査いたします。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 12,600円<br class="">10個購入した場合　1個あたり 11,880円</span></p>
+                                    <p class="p-items__desc">PCR検査の迅速検査になります。<br class="">速達でのご対応、優先的に検査いたします。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 13,860円<br class="">10個購入した場合　1個あたり 13,068円</span></p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">15,000</span>
+                                        <span class="p-items__p-center">16,500</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -406,12 +406,12 @@ Template Name: 新設企業用案内ページ
                                 </div>
 
                                 <div class="p-items__right">
-                                    <p class="p-items__desc">PCR迅速検査と抗体検査のセットになります。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 16,600円<br class="">10個購入した場合　1個あたり 14,880円</span></p>
+                                     <p class="p-items__desc">PCR迅速検査と抗体検査のセットになります。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 18,260円<br class="">10個購入した場合　1個あたり 16,368円</span></p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">20,000</span>
+                                        <span class="p-items__p-center">22,000</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -438,7 +438,7 @@ Template Name: 新設企業用案内ページ
                                         <span class="p-items__p-left">価格</span>
                                         <span class="p-items__p-center">79,200</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -465,7 +465,7 @@ Template Name: 新設企業用案内ページ
                                         <span class="p-items__p-left">価格</span>
                                         <span class="p-items__p-center">118,800</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -490,9 +490,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">検査の結果陰性だった方の証明書の発行も承っております。<br>サイズはA5または名刺サイズからお選び出来ます。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">5,000</span>
+                                <span class="p-items__p-center">5,500</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -515,7 +515,7 @@ Template Name: 新設企業用案内ページ
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">25,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -537,9 +537,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">渡航先指定のフォーマットに合わせて陰性証明書を発行致します。<br>事前にフォーマットやテンプレートの送付をお願い致します。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">10,000</span>
+                                <span class="p-items__p-center">11,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -562,9 +562,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">診断書の作成を行っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">10,000</span>
+                                <span class="p-items__p-center">11,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -586,9 +586,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">紹介状の作成を行っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">5,000</span>
+                                <span class="p-items__p-center">5,500</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -612,7 +612,7 @@ Template Name: 新設企業用案内ページ
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">32,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -636,7 +636,7 @@ Template Name: 新設企業用案内ページ
                                         <span class="p-items__p-left">価格</span>
                                         <span class="p-items__p-center">5,800</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -674,12 +674,12 @@ Template Name: 新設企業用案内ページ
                         </div>
 
                         <div class="p-items__right">
-                             <p class="p-items__desc">PCR検査によって患者様の<br class="">新型コロナ感染の有無を検査致します。<br><span class="u-fw600">5個購入した場合　1個あたり 9,600円<br class="">10個購入した場合　1個あたり 8,880円</span></p>
+                             <p class="p-items__desc">PCR検査によって患者様の<br class="">新型コロナ感染の有無を検査致します。<br><span class="u-fw600">5個購入した場合　1個あたり 10,560円<br class="">10個購入した場合　1個あたり 9,768円</span></p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 18,000 -->12,000</span>
+                                <span class="p-items__p-center">13,200</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -698,12 +698,12 @@ Template Name: 新設企業用案内ページ
                                 </div>
 
                                 <div class="p-items__right">
-                                     <p class="p-items__desc">PCR検査と抗体検査のセット。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 13,600円<br class="">10個購入した場合　1個あたり 11,880円</span></p>
+                                     <p class="p-items__desc">PCR検査と抗体検査のセット。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 14,960円<br class="">10個購入した場合　1個あたり 13,068円</span></p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">17,000</span>
+                                        <span class="p-items__p-center">18,700</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -726,12 +726,12 @@ Template Name: 新設企業用案内ページ
                                 </div>
 
                                 <div class="p-items__right">
-                                    <p class="p-items__desc">PCR検査の迅速検査になります。<br class="">速達でのご対応、優先的に検査いたします。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 12,600円<br class="">10個購入した場合　1個あたり 11,880円</span></p>
+                                    <p class="p-items__desc">PCR検査の迅速検査になります。<br class="">速達でのご対応、優先的に検査いたします。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 13,860円<br class="">10個購入した場合　1個あたり 13,068円</span></p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">15,000</span>
+                                        <span class="p-items__p-center">16,500</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -753,12 +753,12 @@ Template Name: 新設企業用案内ページ
                                 </div>
 
                                 <div class="p-items__right">
-                                    <p class="p-items__desc">PCR迅速検査と抗体検査のセットになります。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 16,600円<br class="">10個購入した場合　1個あたり 14,880円</span></p>
+                                    <p class="p-items__desc">PCR迅速検査と抗体検査のセットになります。<br class="">抗体検査では、過去の感染歴を検査出来ます。<br class=""><span class="u-fw600">5個購入した場合　1個あたり 18,260円<br class="">10個購入した場合　1個あたり 16,368円</span></p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">20,000</span>
+                                        <span class="p-items__p-center">22,000</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -784,9 +784,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">検査の結果陰性だった方の証明書の発行も承っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 10,000 -->5,000</span>
+                                <span class="p-items__p-center">5,500</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -809,7 +809,7 @@ Template Name: 新設企業用案内ページ
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">25,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -831,9 +831,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">渡航先指定のフォーマットに合わせて陰性証明書を発行致します。<br>事前にフォーマットやテンプレートの送付をお願い致します。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 20,000 -->10,000</span>
+                                <span class="p-items__p-center">11,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -855,9 +855,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">診断書の作成を行っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">10,000</span>
+                                <span class="p-items__p-center">11,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -879,9 +879,9 @@ Template Name: 新設企業用案内ページ
                             <p class="p-items__desc">紹介状の作成を行っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">5,000</span>
+                                <span class="p-items__p-center">5,500</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>

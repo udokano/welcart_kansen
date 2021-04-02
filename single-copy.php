@@ -105,7 +105,7 @@
                             </ul>
                         </dt>
                         <dd class="p-item__price">
-                                <?php usces_the_itemPrice(); ?><span class="p-item__price-tax">円（税別）</span>
+                                <?php usces_the_itemPrice(); ?><span class="p-item__price-tax">円（税込）</span>
                         </dd>
                     </dl>
                 </div>
@@ -135,7 +135,7 @@
                             </ul>
                         </dt>
                         <dd class="p-item__price">
-                                <?php usces_the_itemPrice(); ?><span class="p-item__price-tax">円（税別）</span>
+                                <?php usces_the_itemPrice(); ?><span class="p-item__price-tax">円（税込）</span>
                         </dd>
                     </dl>
                 </div>
@@ -174,7 +174,7 @@
                             </ul>
                         </dt>
                         <dd class="p-item__price">
-                                <?php usces_the_itemPrice(); ?><span class="p-item__price-tax">円（税別）</span>
+                                <?php usces_the_itemPrice(); ?><span class="p-item__price-tax">円（税込）</span>
                         </dd>
                     </dl>
                 </div>
@@ -342,7 +342,7 @@
 
                                         <div class="p-option-table__th -bg-blue02 ">お支払い金額</div>
                                         <div class="p-option-table__td -price ">
-                                            <span class="-price__text" id="js-out-price"><?php usces_the_itemPrice(); ?></span><span class="p-item__price-tax">円（税別）</span>
+                                            <span class="-price__text" id="js-out-price"><?php usces_the_itemPrice(); ?></span><span class="p-item__price-tax">円（税込）</span>
                                         </div>
                                 </div>
 
