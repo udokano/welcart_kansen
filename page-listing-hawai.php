@@ -52,11 +52,11 @@ Template Name: ハワイの渡航者案内
 
         <dl class="p-cost-price u-mb10 p-cost-price-hawaii">
                 <dt class="p-cost-price__name p-cost-price-hawaii__name"><span class="p-cost-price__name-in p-cost-price-hawaii__name-in p-cost-price-hawaii__name-in--pcr">PCR検査</span></dt>
-                <dd class="p-cost-price__text p-cost-price-hawaii__text"><span class="p-cost-price__text-main p-cost-price-hawaii__text-main"><!-- 18,000 -->14,800</span><span class="p-cost-price__text-sub p-cost-price-hawaii__text-sub">円(税別)</span></dd>
+                <dd class="p-cost-price__text p-cost-price-hawaii__text"><span class="p-cost-price__text-main p-cost-price-hawaii__text-main">13,200</span><span class="p-cost-price__text-sub p-cost-price-hawaii__text-sub">円(税込)</span></dd>
         </dl>
          <dl class="p-cost-price  u-mb50">
                 <dt class="p-cost-price__name p-cost-price-hawaii__name"><span class="p-cost-price__name-in p-cost-price-hawaii__name-in">【ハワイ用】<br class="u-sp">陰性証明書発行</span></dt>
-                <dd class="p-cost-price__text p-cost-price-hawaii__text"><span class="p-cost-price__text-main p-cost-price-hawaii__text-main">10,000</span><span class="p-cost-price__text-sub p-cost-price-hawaii__text-sub">円(税別)</span><!-- <span class="aaaaa">＊1個あたり</span> -->
+                <dd class="p-cost-price__text p-cost-price-hawaii__text"><span class="p-cost-price__text-main p-cost-price-hawaii__text-main">11,000</span><span class="p-cost-price__text-sub p-cost-price-hawaii__text-sub">円(税込)</span><!-- <span class="aaaaa">＊1個あたり</span> -->
                 </dd>
         </dl>
 

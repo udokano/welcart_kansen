@@ -35,10 +35,10 @@ Template Name: 中国人用の案内ページ
                     <dl class="p-new-zh-main__right p-new-zh-fv-price">
                         <dt class="p-new-zh-fv-price__item-name u-tc u-fw600">PCR検査・抗体検査・陰性証明書</dt>
                         <dd class="p-new-zh-fv-price__bottom u-flex u-jc-cent u-al-cent">
-                            <strong class="p-new-zh-fv-price__price-text u-fw600">26,000</strong>
+                            <strong class="p-new-zh-fv-price__price-text u-fw600">28,600</strong>
                             <p class="p-new-zh-fv-price__price-right u-flex u-ju-st u-al-cent">
                                 <span class="p-new-zh-fv-price__sub u-flex u-ff-colum u-al-cent">
-                                    <span class="p-new-zh-fv-price__sub-tax">税別</span>
+                                    <span class="p-new-zh-fv-price__sub-tax">税込</span>
                                     <span class="p-new-zh-fv-price__sub-yen u-fw600">円</span>
                                 </span>
                                 <span class="p-new-zh-fv-price__sub-wave">~</span>
@@ -459,9 +459,9 @@ Template Name: 中国人用の案内ページ
                                 <div class="p-visit-item__price-area">
                                     <p class="p-visit-item__price-left">価格</p>
                                     <div class="p-visit-item__price-right">
-                                        <strong class="p-visit-item__price-text">12,000</strong>
+                                        <strong class="p-visit-item__price-text">13,200</strong>
                                         <span class="p-visit-item__price-sub">
-                                            <span class="p-visit-item__price-tax">税別</span>
+                                            <span class="p-visit-item__price-tax">税込</span>
                                             <em class="p-visit-item__price-yen">円</em>
                                         </span>
                                     </div>
@@ -485,9 +485,9 @@ Template Name: 中国人用の案内ページ
                                 <div class="p-visit-item__price-area">
                                     <p class="p-visit-item__price-left">価格</p>
                                     <div class="p-visit-item__price-right">
-                                        <strong class="p-visit-item__price-text">48,000</strong>
+                                        <strong class="p-visit-item__price-text">52,800</strong>
                                         <span class="p-visit-item__price-sub">
-                                            <span class="p-visit-item__price-tax">税別</span>
+                                            <span class="p-visit-item__price-tax">税込</span>
                                             <em class="p-visit-item__price-yen">円</em>
                                         </span>
                                     </div>
@@ -511,9 +511,9 @@ Template Name: 中国人用の案内ページ
                                 <div class="p-visit-item__price-area">
                                     <p class="p-visit-item__price-left">価格</p>
                                     <div class="p-visit-item__price-right">
-                                        <strong class="p-visit-item__price-text">88,800</strong>
+                                        <strong class="p-visit-item__price-text">97,680</strong>
                                         <span class="p-visit-item__price-sub">
-                                            <span class="p-visit-item__price-tax">税別</span>
+                                            <span class="p-visit-item__price-tax">税込</span>
                                             <em class="p-visit-item__price-yen">円</em>
                                         </span>
                                     </div>
@@ -918,7 +918,7 @@ DATEチェック用のモーダル
                                 <p class="p-goto-list__price-text">
                                     <span class="p-goto-list__price">26,000</span>
                                     <span class="p-goto-list__sub">
-                                    <em class="p-goto-list__tax">税別</em>
+                                    <em class="p-goto-list__tax">税込</em>
                                     <span class="p-goto-list__yen">円</span>
                                     </span>
                                 </p>
@@ -949,7 +949,7 @@ DATEチェック用のモーダル
                                     <div class="p-visit-item__price-right">
                                         <strong class="p-visit-item__price-text">27,000</strong>
                                         <span class="p-visit-item__price-sub">
-                                            <span class="p-visit-item__price-tax">税別</span>
+                                            <span class="p-visit-item__price-tax">税込</span>
                                             <em class="p-visit-item__price-yen">円</em>
                                         </span>
                                     </div>
@@ -976,7 +976,7 @@ DATEチェック用のモーダル
                                     <div class="p-visit-item__price-right">
                                         <strong class="p-visit-item__price-text">118,000</strong>
                                         <span class="p-visit-item__price-sub">
-                                            <span class="p-visit-item__price-tax">税別</span>
+                                            <span class="p-visit-item__price-tax">税込</span>
                                             <em class="p-visit-item__price-yen">円</em>
                                         </span>
                                     </div>
@@ -1002,7 +1002,7 @@ DATEチェック用のモーダル
                                     <div class="p-visit-item__price-right">
                                         <strong class="p-visit-item__price-text">218,800</strong>
                                         <span class="p-visit-item__price-sub">
-                                            <span class="p-visit-item__price-tax">税別</span>
+                                            <span class="p-visit-item__price-tax">税込</span>
                                             <em class="p-visit-item__price-yen">円</em>
                                         </span>
                                     </div>
@@ -1201,10 +1201,10 @@ DATEチェック用のモーダル
                                     <div class="u-flex u-al-cent p-bottom-price__box-left">
                                         <p class="p-bottom-price__p-left">価格</p>
                                         <div class="p-bottom-price__p-right u-flex u-al-cent">
-                                            <strong class="p-bottom-price__main">26,000</strong>
+                                            <strong class="p-bottom-price__main">28,600</strong>
 
                                             <p class="u-flex u-jc-cent u-ff-colum p-bottom-price__sub">
-                                                <em class="p-bottom-price__tax">税別</em>
+                                                <em class="p-bottom-price__tax">税込</em>
                                                 <span class="p-bottom-price__yen">円</span>
                                             </p>
                                         </div>

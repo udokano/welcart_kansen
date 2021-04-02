@@ -79,7 +79,7 @@
                                         <p class="p-item-price">
                                         <span id="js-item-price" data-itemprice="<?php usces_the_itemPrice(); ?>">
                                         <?php usces_the_itemPrice(); ?></span>
-                                        <span class="p-item-price__tax">円（税別）</span></p>
+                                        <span class="p-item-price__tax">円（税込）</span></p>
                                         <div class="p-item-desc">
 
                                             <?php if(post_custom('wccs_item_desc')) :?>

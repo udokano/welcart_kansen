@@ -75,9 +75,9 @@ Template Name: 商品一覧
                             <p class="p-items__desc">PCR検査によって患者様の感染の有無を検査致します。<br>早めに発見することにより、感染拡大を防ぎます。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 18,000 -->12,000</span>
+                                <span class="p-items__p-center">13,200</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -99,9 +99,9 @@ Template Name: 商品一覧
                             <p class="p-items__desc">PCR検査キットの5回セット販売になります。まとめて購入されたい方はこちらのプランがおすすめです。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">48,000</span>
+                                <span class="p-items__p-center">52,800</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -123,9 +123,9 @@ Template Name: 商品一覧
                             <p class="p-items__desc">PCR検査キットの10回セット販売になります。まとめて購入されたい方はこちらのプランがおすすめです。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 18,000 -->88,800</span>
+                                <span class="p-items__p-center">97,680</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -148,9 +148,9 @@ Template Name: 商品一覧
                                     <p class="p-items__desc">PCR検査と抗体検査のセットになります。検査から抗体の有無の確認までスムーズに行いたい方にはこちらのプランが向いています。</p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">17,000</span>
+                                        <span class="p-items__p-center">18,700</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -175,9 +175,9 @@ Template Name: 商品一覧
                                     <p class="p-items__desc">PCR検査と抗体検査の5回セットになります。検査から抗体の有無の確認までをまとめて行いたい方にはこちらのプランが向いています。</p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">68,000</span>
+                                        <span class="p-items__p-center">74,800</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -202,9 +202,9 @@ Template Name: 商品一覧
                                     <p class="p-items__desc">PCR検査と抗体検査の10回セットになります。検査から抗体の有無の確認までをまとめて行いたい方にはこちらのプランが向いています。</p>
                                     <div class="p-items__price-wrap">
                                         <span class="p-items__p-left">価格</span>
-                                        <span class="p-items__p-center">118,800</span>
+                                        <span class="p-items__p-center">130,680</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -229,9 +229,9 @@ Template Name: 商品一覧
                             <p class="p-items__desc">検査の結果陰性だった方の証明書の発行も承っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 10,000 -->5,000</span>
+                                <span class="p-items__p-center">5,500</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -254,7 +254,7 @@ Template Name: 商品一覧
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">25,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -276,9 +276,9 @@ Template Name: 商品一覧
                             <p class="p-items__desc">渡航先指定のフォーマットに合わせて陰性証明書を発行致します。<br>事前にフォーマットやテンプレートの送付をお願い致します。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center"><!-- 20,000 -->10,000</span>
+                                <span class="p-items__p-center">11,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -300,9 +300,9 @@ Template Name: 商品一覧
                             <p class="p-items__desc">診断書の作成を行っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">10,000</span>
+                                <span class="p-items__p-center">11,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -324,9 +324,9 @@ Template Name: 商品一覧
                             <p class="p-items__desc">紹介状の作成を行っております。</p>
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
-                                <span class="p-items__p-center">5,000</span>
+                                <span class="p-items__p-center">5,500</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -350,7 +350,7 @@ Template Name: 商品一覧
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">32,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -374,7 +374,7 @@ Template Name: 商品一覧
                                         <span class="p-items__p-left">価格</span>
                                         <span class="p-items__p-center">5,800</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -427,6 +427,12 @@ Template Name: 商品一覧
             <dl class="p-clinic-info-table  ">
                 <dt class="p-clinic-info-table__ttl">院名</dt>
                 <dd class="p-clinic-info-table__desc"><a href="https://souki-kai.or.jp/group.html" class="u-text-under-line c-blue" target="_blank">医療法人社団 創輝会</a>  <br class="u-sp">感染症検査クリニック</dd>
+            </dl>
+              <dl class="p-clinic-info-table">
+                <dt class="p-clinic-info-table__ttl">販売責任者</dt>
+                <dd class="p-clinic-info-table__desc">
+                    <img src="data:image/png;base64,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" alt="" class="p-clinic-person">
+                </dd>
             </dl>
           <!--   <dl class="p-clinic-info-table">
                 <dt class="p-clinic-info-table__ttl">設立年月日</dt>

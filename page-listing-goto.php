@@ -77,7 +77,7 @@ Template Name: GOTOキャンペーン
           <div class="p-goto-fv__price">
                 <p class="p-goto-fv__price-left">PCR検査 1回</p>
                 <p class="p-goto-fv__price-right">
-                    <span class="p-goto-fv__price-text">9,000</span>
+                    <span class="p-goto-fv__price-text">9,900</span>
                     <span class="p-goto-fv__price-yen">円〜</span>
                 </p>
           </div>
@@ -296,7 +296,7 @@ Template Name: GOTOキャンペーン
                       <p class="p-goto-list__price-text">
                         <span class="p-goto-list__price">00,000</span>
                         <span class="p-goto-list__sub">
-                          <em class="p-goto-list__tax">税別</em>
+                          <em class="p-goto-list__tax">税込</em>
                           <span class="p-goto-list__yen">円</span>
                         </span>
                       </p>
@@ -323,9 +323,9 @@ Template Name: GOTOキャンペーン
                                 <div class="p-goto-list__price-wrap p-goto-list__item--bottom__price-wrap">
                       <p class="p-goto-list__left p-goto-list__item--bottom__left">割引<br class="u-sp">価格</p>
                       <p class="p-goto-list__price-text p-goto-list__item--bottom__price-text">
-                        <span class="p-goto-list__price p-goto-list__item--bottom__price">9,000</span>
+                        <span class="p-goto-list__price p-goto-list__item--bottom__price">9,900</span>
                         <span class="p-goto-list__sub  p-goto-list__item--bottom__sub">
-                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税別</em>
+                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税込</em>
                           <span class="p-goto-list__yen  p-goto-list__item--bottom__yen">円</span>
                         </span>
                       </p>
@@ -361,9 +361,9 @@ Template Name: GOTOキャンペーン
                                 <div class="p-goto-list__price-wrap p-goto-list__item--bottom__price-wrap">
                       <p class="p-goto-list__left p-goto-list__item--bottom__left">割引<br class="u-sp">価格</p>
                       <p class="p-goto-list__price-text p-goto-list__item--bottom__price-text">
-                        <span class="p-goto-list__price p-goto-list__item--bottom__price">80,000</span>
+                        <span class="p-goto-list__price p-goto-list__item--bottom__price">88,000</span>
                         <span class="p-goto-list__sub  p-goto-list__item--bottom__sub">
-                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税別</em>
+                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税込</em>
                           <span class="p-goto-list__yen  p-goto-list__item--bottom__yen">円</span>
                         </span>
                       </p>
@@ -400,9 +400,9 @@ Template Name: GOTOキャンペーン
                                 <div class="p-goto-list__price-wrap p-goto-list__item--bottom__price-wrap">
                       <p class="p-goto-list__left p-goto-list__item--bottom__left">割引<br class="u-sp">価格</p>
                       <p class="p-goto-list__price-text p-goto-list__item--bottom__price-text">
-                        <span class="p-goto-list__price p-goto-list__item--bottom__price">14,000</span>
+                        <span class="p-goto-list__price p-goto-list__item--bottom__price">15,400</span>
                         <span class="p-goto-list__sub  p-goto-list__item--bottom__sub">
-                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税別</em>
+                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税込</em>
                           <span class="p-goto-list__yen  p-goto-list__item--bottom__yen">円</span>
                         </span>
                       </p>
@@ -438,9 +438,9 @@ Template Name: GOTOキャンペーン
                                 <div class="p-goto-list__price-wrap p-goto-list__item--bottom__price-wrap">
                       <p class="p-goto-list__left p-goto-list__item--bottom__left">割引<br class="u-sp">価格</p>
                       <p class="p-goto-list__price-text p-goto-list__item--bottom__price-text">
-                        <span class="p-goto-list__price p-goto-list__item--bottom__price">130,000</span>
+                        <span class="p-goto-list__price p-goto-list__item--bottom__price">143,000</span>
                         <span class="p-goto-list__sub  p-goto-list__item--bottom__sub">
-                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税別</em>
+                          <em class="p-goto-list__tax  p-goto-list__item--bottom__tax">税込</em>
                           <span class="p-goto-list__yen  p-goto-list__item--bottom__yen">円</span>
                         </span>
                       </p>

@@ -66,32 +66,32 @@
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--1st"><span class="p-cost-price__name-in">PCR検査</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">12,000</span><span class="p-cost-price__text-sub">円(税別)</span></dd>
+                <dd class="p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">12,000</span><span class="p-cost-price__text-sub">円(税込)</span></dd>
         </dl>
 
 
         <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--1st"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">5回セット</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">1回あたり 9,600</span><span class="p-cost-price__text-sub">円(税別)</span>
-               <div class="aaaaa" style="padding-top:10px;">合計 48,000円(税別)</div></dd>
+                <dd class="p-cost-price__text p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">1回あたり 9,600</span><span class="p-cost-price__text-sub">円(税込)</span>
+               <div class="aaaaa" style="padding-top:10px;">合計 48,000円(税込)</div></dd>
         </dl>
 
 
         <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--1st"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">10回セット</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">1回あたり 8,880</span><span class="p-cost-price__text-sub">円(税別)</span>
-               <div class="aaaaa" style="padding-top:10px;">合計 88,800円(税別)</div></dd>
+                <dd class="p-cost-price__text p-cost-price__text p-cost-price__text--1st"><span class="p-cost-price__text-main">1回あたり 8,880</span><span class="p-cost-price__text-sub">円(税込)</span>
+               <div class="aaaaa" style="padding-top:10px;">合計 88,800円(税込)</div></dd>
         </dl>
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--2st"><span class="p-cost-price__name-in">PCR迅速検査</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">12,000+3,000</span><span class="p-cost-price__text-sub">円(税別)</span><div class="aaaaa" style="padding-top:10px;">速達でのご対応、<br class="u-sp">優先的に検査いたします。</div></dd>
+                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">12,000+3,000</span><span class="p-cost-price__text-sub">円(税込)</span><div class="aaaaa" style="padding-top:10px;">速達でのご対応、<br class="u-sp">優先的に検査いたします。</div></dd>
         </dl>
 
 
         <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--2st"><span class="p-cost-price__name-in">PCR迅速検査<br class="u-sp">5回セット</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">48,000+15,000</span><span class="p-cost-price__text-sub">円(税別)</span><div class="aaaaa" style="padding-top:10px;">速達でのご対応、<br class="u-sp">優先的に検査いたします。</div>
+                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">48,000+15,000</span><span class="p-cost-price__text-sub">円(税込)</span><div class="aaaaa" style="padding-top:10px;">速達でのご対応、<br class="u-sp">優先的に検査いたします。</div>
 
             </dd>
         </dl>
@@ -100,7 +100,7 @@
 
         <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--2st"><span class="p-cost-price__name-in">PCR迅速検査<br class="u-sp">10回セット</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">88,800+30,000</span><span class="p-cost-price__text-sub">円(税別)</span><div class="aaaaa" style="padding-top:10px;">速達でのご対応、<br class="u-sp">優先的に検査いたします。</div>
+                <dd class="p-cost-price__text p-cost-price__text--2st"><span class="p-cost-price__text-main">88,800+30,000</span><span class="p-cost-price__text-sub">円(税込)</span><div class="aaaaa" style="padding-top:10px;">速達でのご対応、<br class="u-sp">優先的に検査いたします。</div>
 
             </dd>
         </dl>
@@ -108,7 +108,7 @@
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name p-cost-price__name--3st"><span class="p-cost-price__name-in">陰性証明書</span></dt>
-                <dd class="p-cost-price__text p-cost-price__text--3st"><span class="p-cost-price__text-main">+5,000</span><span class="p-cost-price__text-sub">円(税別)</span>
+                <dd class="p-cost-price__text p-cost-price__text--3st"><span class="p-cost-price__text-main">+5,000</span><span class="p-cost-price__text-sub">円(税込)</span>
             </dd>
         </dl>
 
@@ -122,44 +122,44 @@
 
   <!-- <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査</span></dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">14,800</span><span class="p-cost-price__text-sub">円(税別)</span></dd>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">14,800</span><span class="p-cost-price__text-sub">円(税込)</span></dd>
         </dl>
          <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">5回セット</span></dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 11,840</span><span class="p-cost-price__text-sub">円(税別)</span>
-                <div class="aaaaa" style="padding-top:10px;">合計 59,200円(税別)</div>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 11,840</span><span class="p-cost-price__text-sub">円(税込)</span>
+                <div class="aaaaa" style="padding-top:10px;">合計 59,200円(税込)</div>
                 </dd>
         </dl>
 
          <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">10回セット</span></dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 8,880</span><span class="p-cost-price__text-sub">円(税別)</span>
-               <div class="aaaaa" style="padding-top:10px;">合計 88,800円(税別)</div></dd>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 8,880</span><span class="p-cost-price__text-sub">円(税込)</span>
+               <div class="aaaaa" style="padding-top:10px;">合計 88,800円(税込)</div></dd>
         </dl>
 
 
         <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">100回セット</span></dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 7,500</span><span class="p-cost-price__text-sub">円(税別)</span>
-               <div class="aaaaa" style="padding-top:10px;">合計 750,000円(税別)</div></dd>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 7,500</span><span class="p-cost-price__text-sub">円(税込)</span>
+               <div class="aaaaa" style="padding-top:10px;">合計 750,000円(税込)</div></dd>
         </dl>
 
         <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">500回セット</span></dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 7,000</span><span class="p-cost-price__text-sub">円(税別)</span>
-               <div class="aaaaa" style="padding-top:10px;">合計 3,500,000円(税別)</div></dd>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 7,000</span><span class="p-cost-price__text-sub">円(税込)</span>
+               <div class="aaaaa" style="padding-top:10px;">合計 3,500,000円(税込)</div></dd>
         </dl>
 
         <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">1000回セット</span></dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 6,500</span><span class="p-cost-price__text-sub">円(税別)</span>
-               <div class="aaaaa" style="padding-top:10px;">合計 6,500,000円(税別)</div></dd>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 6,500</span><span class="p-cost-price__text-sub">円(税込)</span>
+               <div class="aaaaa" style="padding-top:10px;">合計 6,500,000円(税込)</div></dd>
         </dl>
 
         <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name"><span class="p-cost-price__name-in">PCR検査 <br class="u-sp">5000回セット</span></dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 6,000</span><span class="p-cost-price__text-sub">円(税別)</span>
-               <div class="aaaaa" style="padding-top:10px;">合計 30,000,000円(税別)</div></dd>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 6,000</span><span class="p-cost-price__text-sub">円(税込)</span>
+               <div class="aaaaa" style="padding-top:10px;">合計 30,000,000円(税込)</div></dd>
         </dl> -->
 
 
@@ -172,7 +172,7 @@
                     <th class="p-table-price__th p-table-price__th--normal">PCR検査</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">12,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">13,200</span><span class="p-table-price-text__sub">円(税込)</span>
                         </p>
                     </td>
                     <td class="p-table-price__td p-table-price__td--bdl-none"></td>
@@ -181,56 +181,56 @@
                     <th class="p-table-price__th p-table-price__th--normal">5回セット</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">1回あたり 9,600</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">1回あたり 10,560</span><span class="p-table-price-text__sub">円(税込)</span>
                         </p>
                     </td>
                     <td class="p-table-price__td">
-                        <p class="p-table-price__sub">合計 48,000円(税別)</p>
+                        <p class="p-table-price__sub">合計 52,800円(税込)</p>
                     </td>
                 </tr>
                  <tr>
                     <th class="p-table-price__th p-table-price__th--normal">10回セット</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">1回あたり 8,880</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">1回あたり 9,768</span><span class="p-table-price-text__sub">円(税込)</span>
                         </p>
                     </td>
                     <td class="p-table-price__td">
-                          <p class="p-table-price__sub">合計 88,800円(税別)</p>
+                          <p class="p-table-price__sub">合計 97,680円(税込)</p>
                     </td>
                 </tr>
                 <tr>
                     <th class="p-table-price__th p-table-price__th--quick">PCR迅速検査</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">12,000+3,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">13,200+3,300</span><span class="p-table-price-text__sub">円(税込)</span>
                             <span class="p-table-price-text__note">速達でのご対応、<br class="u-sp">優先的に検査いたします。</span>
                         </p>
                     </td>
-                    <td class="p-table-price__td"><p class="p-table-price__sub">合計 15,000円(税別)</p></td>
+                    <td class="p-table-price__td"><p class="p-table-price__sub">合計 16,500円(税込)</p></td>
                 </tr>
                  <tr>
                     <th class="p-table-price__th p-table-price__th--quick">5回セット</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">48,000+15,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">52,800+16,500</span><span class="p-table-price-text__sub">円(税込)</span>
                             <span class="p-table-price-text__note">速達でのご対応、<br class="u-sp">優先的に検査いたします。</span>
                         </p>
                     </td>
                     <td class="p-table-price__td">
-                        <p class="p-table-price__sub">合計 63,000円(税別)</p>
+                        <p class="p-table-price__sub">合計 69,300円(税込)</p>
                     </td>
                 </tr>
                  <tr>
                     <th class="p-table-price__th p-table-price__th--quick">10回セット</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">88,800+30,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">97,680+33,000</span><span class="p-table-price-text__sub">円(税込)</span>
                             <span class="p-table-price-text__note">速達でのご対応、<br class="u-sp">優先的に検査いたします。</span>
                         </p>
                     </td>
                     <td class="p-table-price__td">
-                          <p class="p-table-price__sub">合計 118,800円(税別)</p>
+                          <p class="p-table-price__sub">合計 130,680円(税込)</p>
                     </td>
                 </tr>
 
@@ -238,20 +238,20 @@
                     <th class="p-table-price__th p-table-price__th--minimum">ミニマム<br class="u-sp">パック</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">6,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">6,600</span><span class="p-table-price-text__sub">円(税込)</span>
                         </p>
                     </td>
-                    <td class="p-table-price__td p-table-price__td--bdl-none"><!-- <p class="p-table-price__sub">合計 15,000円(税別)</p> --></td>
+                    <td class="p-table-price__td p-table-price__td--bdl-none"><!-- <p class="p-table-price__sub">合計 15,000円(税込)</p> --></td>
                 </tr>
 
                   <tr>
                     <th class="p-table-price__th p-table-price__th--minimum">10回セット</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">1回あたり 4,440</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">1回あたり 4,884</span><span class="p-table-price-text__sub">円(税込)</span>
                         </p>
                     </td>
-                    <td class="p-table-price__td"><p class="p-table-price__sub">合計 44,400円(税別)</p></td>
+                    <td class="p-table-price__td"><p class="p-table-price__sub">合計 48,840円(税込)</p></td>
                 </tr>
 
 
@@ -259,7 +259,7 @@
                     <th class="p-table-price__th p-table-price__th--cri">陰性証明書</th>
                     <td class="p-table-price__td">
                         <p class="p-table-price-text">
-                            <span class="p-table-price-text__main">+5,000</span><span class="p-table-price-text__sub">円(税別)</span>
+                            <span class="p-table-price-text__main">+5,500</span><span class="p-table-price-text__sub">円(税込)</span>
                         </p>
                     </td>
                     <td class="p-table-price__td p-table-price__td--bdl-none">
@@ -325,7 +325,7 @@
                                         <div class="p-pc-table__td-in">
                                             <p class="p-pc-table__desc">優先的に検査を実施するが<br><span class="c-pink">検査費用が高い</span></p>
                                           <!--   <p class="p-pc-tb-price">
-                                                <span class="p-pc-tb-price__main">15,000</span><span class="p-pc-tb-price__sub">円(税別)</span>
+                                                <span class="p-pc-tb-price__main">15,000</span><span class="p-pc-tb-price__sub">円(税込)</span>
                                             </p> -->
                                         </div>
                                         <!-- ./td-in -->
@@ -334,7 +334,7 @@
                                         <div class="p-pc-table__td-in">
                                             <p class="p-pc-table__desc">最もスタンダートな検査費用</p>
                                             <!-- <p class="p-pc-tb-price">
-                                                <span class="p-pc-tb-price__main">12,000</span><span class="p-pc-tb-price__sub">円(税別)</span>
+                                                <span class="p-pc-tb-price__main">12,000</span><span class="p-pc-tb-price__sub">円(税込)</span>
                                             </p> -->
                                         </div>
                                         <!-- ./td-in -->
@@ -351,7 +351,7 @@
                                  <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--minimum-btm">
                                         <div class="p-pc-table__td-in">
                                             <p class="p-pc-tb-price-minimum">
-                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">15,000</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">16,500</span><span class="p-pc-tb-price-minimum__sub">円(税込)</span>
                                             </p>
                                         </div>
                                         <!-- ./td-in -->
@@ -360,7 +360,7 @@
                                         <div class="p-pc-table__td-in">
                                          <p class="p-pc-table__desc p-pc-table__desc--minimum u-mb0">10回セット(1回あたり)</p>
                                             <p class="p-pc-tb-price-minimum">
-                                                <span class="p-pc-tb-price-minimum__main">11,880</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                                <span class="p-pc-tb-price-minimum__main">13,068</span><span class="p-pc-tb-price-minimum__sub">円(税込)</span>
                                             </p>
                                         </div>
                                         <!-- ./td-in -->
@@ -368,7 +368,7 @@
                                 <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--normal p-pc-table__td--minimum-btm">
                                         <div class="p-pc-table__td-in">
                                             <p class="p-pc-tb-price-minimum">
-                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">12,000</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">13,200</span><span class="p-pc-tb-price-minimum__sub">円(税込)</span>
                                             </p>
                                         </div>
                                         <!-- ./td-in -->
@@ -377,7 +377,7 @@
                                         <div class="p-pc-table__td-in">
                                          <p class="p-pc-table__desc p-pc-table__desc--minimum u-mb0">10回セット(1回あたり)</p>
                                             <p class="p-pc-tb-price-minimum">
-                                                <span class="p-pc-tb-price-minimum__main">8,880</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                                <span class="p-pc-tb-price-minimum__main">9,768</span><span class="p-pc-tb-price-minimum__sub">円(税込)</span>
                                             </p>
                                         </div>
                                         <!-- ./td-in -->
@@ -385,7 +385,7 @@
                                     <td class="p-pc-table__td p-pc-table__td--minimum p-pc-table__td--minimum-btm">
                                         <div class="p-pc-table__td-in">
                                             <p class="p-pc-tb-price-minimum">
-                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">6,000</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                            <span class="p-pc-tb-price-minimum__sub">1回</span><span class="p-pc-tb-price-minimum__main">6,600</span><span class="p-pc-tb-price-minimum__sub">円(税込)</span>
                                             </p>
                                         </div>
                                         <!-- ./td-in -->
@@ -394,7 +394,7 @@
                                         <div class="p-pc-table__td-in">
                                          <p class="p-pc-table__desc p-pc-table__desc--minimum u-mb0">10回セット(1回あたり)</p>
                                             <p class="p-pc-tb-price-minimum">
-                                                <span class="p-pc-tb-price-minimum__main">4,440</span><span class="p-pc-tb-price-minimum__sub">円(税別)</span>
+                                                <span class="p-pc-tb-price-minimum__main">4,884</span><span class="p-pc-tb-price-minimum__sub">円(税込)</span>
                                             </p>
                                         </div>
                                         <!-- ./td-in -->
@@ -500,7 +500,7 @@
                             <div class="p-sp-table__in">
                                 <p class="p-sp-table__desc">最もスタンダートな検査費用</p>
                              <!--    <p class="p-sp-table-price">
-                                    <span class="p-sp-table-price__main">12,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">12,000</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p> -->
                             </div>
                         </td>
@@ -526,7 +526,7 @@
                                <div class="p-sp-table__in">
                                    <p class="p-sp-table-price p-sp-table-price--minimum">
                                        <span class="p-sp-table-price__sub">1回</span>
-                                    <span class="p-sp-table-price__main">12,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">13,200</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p>
                                </div>
                         </td>
@@ -534,7 +534,7 @@
                                <div class="p-sp-table__in">
                                    <p class="p-sp-table__desc">10回セット（1回あたり）</p>
                                    <p class="p-sp-table-price p-sp-table-price--minimum">
-                                    <span class="p-sp-table-price__main">8,880</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">9,768</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p>
                                </div>
                         </td>
@@ -545,7 +545,7 @@
                             <div class="p-sp-table__in">
                                 <p class="p-sp-table__desc p-sp-table__desc--mb">優先的に検査を実施するが<br><span class="c-pink">検査費用が高い</span></p>
                               <!--   <p class="p-sp-table-price">
-                                    <span class="p-sp-table-price__main">15,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">15,000</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p> -->
                             </div>
                         </td>
@@ -571,7 +571,7 @@
                                <div class="p-sp-table__in">
                                    <p class="p-sp-table-price p-sp-table-price--minimum">
                                        <span class="p-sp-table-price__sub">1回</span>
-                                    <span class="p-sp-table-price__main">15,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">16,500</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p>
                                </div>
                         </td>
@@ -579,7 +579,7 @@
                                <div class="p-sp-table__in">
                                    <p class="p-sp-table__desc">10回セット（1回あたり）</p>
                                    <p class="p-sp-table-price p-sp-table-price--minimum">
-                                    <span class="p-sp-table-price__main">11,880</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">13,068</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p>
                                </div>
                         </td>
@@ -616,7 +616,7 @@
                                <div class="p-sp-table__in">
                                    <p class="p-sp-table-price p-sp-table-price--minimum">
                                        <span class="p-sp-table-price__sub">1回</span>
-                                    <span class="p-sp-table-price__main">6,000</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">6,600</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p>
                                </div>
                         </td>
@@ -624,7 +624,7 @@
                                <div class="p-sp-table__in">
                                    <p class="p-sp-table__desc">10回セット（1回あたり）</p>
                                    <p class="p-sp-table-price p-sp-table-price--minimum">
-                                    <span class="p-sp-table-price__main">4,440</span><span class="p-sp-table-price__sub">円(税別)</span>
+                                    <span class="p-sp-table-price__main">4,884</span><span class="p-sp-table-price__sub">円(税込)</span>
                                 </p>
                                </div>
                         </td>

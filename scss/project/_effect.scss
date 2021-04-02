@@ -7,7 +7,14 @@
 
     @media (max-width: 767px) {
         padding: rem(70) 0;
-        padding-top: rem(400);
+
+
+    }
+
+    &--listing-top {
+        @media (max-width: 767px) {
+            padding-top: rem(400);
+        }
     }
 
     &__ttl {

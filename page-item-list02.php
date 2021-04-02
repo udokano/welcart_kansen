@@ -55,7 +55,7 @@ Template Name: 商品一覧追加
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center"><!-- 18,000 -->14,800</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -79,7 +79,7 @@ Template Name: 商品一覧追加
                                         <span class="p-items__p-left">価格</span>
                                         <span class="p-items__p-center">19,800</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
@@ -107,7 +107,7 @@ Template Name: 商品一覧追加
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">5,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -130,7 +130,7 @@ Template Name: 商品一覧追加
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">25,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -154,7 +154,7 @@ Template Name: 商品一覧追加
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center"><!-- 20,000 -->5,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -178,7 +178,7 @@ Template Name: 商品一覧追加
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">32,000</span>
                                 <span class="p-items__p-right">
-                                    <span class="p-items__tax-sub">(税別)</span>
+                                    <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>
                                 </span>
                             </div>
@@ -201,7 +201,7 @@ Template Name: 商品一覧追加
                                         <span class="p-items__p-left">価格</span>
                                         <span class="p-items__p-center">5,800</span>
                                         <span class="p-items__p-right">
-                                            <span class="p-items__tax-sub">(税別)</span>
+                                            <span class="p-items__tax-sub">(税込)</span>
                                             <span class="p-items__tax">円</span>
                                         </span>
                                     </div>
