@@ -196,17 +196,17 @@ Template Name: 教育機関・医療機関用、予約フォーム
 
          <dl class="p-cost-price u-mb10">
                 <dt class="p-cost-price__name">PCR検査</dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main"><!-- 18,000 -->14,800</span><span class="p-cost-price__text-sub">円(税別)</span></dd>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main"><!-- 18,000 -->14,800</span><span class="p-cost-price__text-sub">円(税込)</span></dd>
         </dl>
          <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name">PCR検査 <br class="u-sp">5回</dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 11,840</span><span class="p-cost-price__text-sub">円(税別)</span>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 11,840</span><span class="p-cost-price__text-sub">円(税込)</span>
                 <br class="u-sp"><!-- <span class="aaaaa">＊1個あたり</span> --></dd>
         </dl>
 
          <dl class="p-cost-price  u-mb10">
                 <dt class="p-cost-price__name">PCR検査 <br class="u-sp">10回</dt>
-                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 8,880</span><span class="p-cost-price__text-sub">円(税別)</span>
+                <dd class="p-cost-price__text"><span class="p-cost-price__text-main">1回あたり 8,880</span><span class="p-cost-price__text-sub">円(税込)</span>
                 <br class="u-sp"><!-- <span class="aaaaa">＊1個あたり</span> --></dd>
         </dl>
 

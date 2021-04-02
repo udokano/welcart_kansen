@@ -4816,6 +4816,12 @@ input.quantity {
   padding: 0.30625rem 0.35625rem 0.26875rem;
 }
 
+.p-clinic-person {
+  display: block;
+  max-width: 70px;
+  width: 45%;
+}
+
 .p-clinic-map {
   padding: 2.625rem 5.1875rem 3.125rem;
 }
@@ -7929,6 +7935,11 @@ p.p-conf-note {
 @media (max-width: 767px) {
   .p-handling {
     padding: 4.375rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-handling--listing-top {
     padding-top: 25rem;
   }
 }
