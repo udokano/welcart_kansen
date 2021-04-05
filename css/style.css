@@ -11883,15 +11883,35 @@ p.p-conf-note {
   visibility: visible;
 }
 
+.p-heat-bnr {
+  font-size: 0;
+  padding: 3.78rem 0;
+  text-align: center;
+}
+
+.p-heat-bnr__ttl {
+  color: #e60012;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  margin-bottom: 1.95rem;
+  text-align: center;
+}
+
+.p-heat-bnr__ttl::after {
+  font-size: .78rem;
+}
+
 .p-heat-bnr__img {
-  margin: 0 auto;
-  max-width: 960px;
+  display: inline-block;
+  margin: 0 .78rem;
+  max-width: 580px;
   width: 90%;
 }
 
 @media (max-width: 767px) {
-  .p-heat-bnr__img {
-    padding: 2.25rem;
+  .p-heat-bnr__img:first-of-type {
+    margin-bottom: 1.34rem;
   }
 }
 
@@ -15616,6 +15636,29 @@ input, select {
 .p-table-price-text__note {
   display: block;
   font-size: 1.11rem;
+}
+
+.p-services-ttl {
+  color: #1892bf;
+  font-size: 2.75188rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .p-services-ttl {
+    font-size: 1.625rem;
+  }
+}
+
+.p-services-catch {
+  font-size: 1.80937rem;
+  margin-bottom: 1.875rem;
+}
+
+@media (max-width: 767px) {
+  .p-services-catch {
+    font-size: 1.3125rem;
+  }
 }
 
 .p-top-menu-area {

@@ -422,35 +422,35 @@ jQuery(document).ready(function(){
 
 
 
+
+
+
 <?php if ( is_home() || is_front_page() ) : ?>
 
 <div class="p-heat-bnr" id="js-pages-head">
 
-<div class="p-heat-bnr__img">
-<a href="<?php echo home_url( '/' ); ?>outpatient-fever" class="">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr.jpg" alt="" class="u-pc">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr_sp.jpg" alt="" class="u-sp">
+<p class="p-heat-bnr__ttl c-title-under-circle">当院からのお知らせ</p>
+
+
+<a href="<?php echo home_url( '/' ); ?>outpatient-fever" class="p-heat-bnr__img">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr.jpg?20210402" alt="発熱外来">
 </a>
+
+<a href="#link-free-services" class="p-heat-bnr__img">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr.jpg?20210402" alt="無償で対応変異株特定サービス">
+</a>
+
+
+
 </div>
 
 
-</div>
 
 
 <?php endif; ?>
 
 
-
-
-
-
-
   <header class="l-header p-header p-header--top" id="js-header">
-
-
-
-
-
 
     <div class="p-header__inner p-header__inner--top">
 
