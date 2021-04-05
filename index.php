@@ -873,6 +873,45 @@
 <!-- ./p-menu-area -->
 
 
+
+
+<section class="p-free-inspection-area" id="link-free-services">
+
+<div class="c-ttl-skew">
+
+    <h2 class="c-title-under-circle --circle-small c-ttl-skew__text">
+    無償の変異体サービスの実施
+    </h2>
+
+</div>
+<!-- ./skew-ttl -->
+
+    <div class="p-free-inspection p-bg-light-blue">
+
+        <div class="l-inner">
+                <h3 class="p-services-ttl u-tc u-fw600">2021年4月15日より実施開始予定</h3>
+                <p class="p-services-catch u-tc u-fw600">新たな社会貢献活動として変異体の<br class="u-sp">特定サービスを無償で開始いたします</p>
+
+                <div class="p-services-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/servise_desc.png" alt="検査の流れ" class="u-pc">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/servise_desc_sp.png" alt="検査の流れ" class="u-sp">
+                </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="p-free-inspection-area" id="link-free-inspection">
 
 <div class="c-ttl-skew">

@@ -1,3 +1,22 @@
+.p-services-ttl {
+    color: #1892bf;
+    font-size: rem(44.03);
+    margin-bottom: rem(8);
+    @media (max-width: 767px) {
+        font-size: rem(26);
+    }
+}
+
+.p-services-catch {
+    font-size: rem(28.95);
+    margin-bottom: rem(30);
+    @media (max-width: 767px) {
+        font-size: rem(21);
+    }
+}
+
+
+
 .p-top-menu-area {
     padding: rem(63) 0;
 
