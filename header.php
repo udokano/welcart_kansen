@@ -433,11 +433,13 @@ jQuery(document).ready(function(){
 
 
 <a href="<?php echo home_url( '/' ); ?>outpatient-fever" class="p-heat-bnr__img">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr.jpg?20210402" alt="発熱外来">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr.jpg?48798562231464664" alt="発熱外来" class="u-pc">
+   <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_heat_bnr_sp.jpg?487561156495666" alt="発熱外来" class="u-sp">
 </a>
 
 <a href="#link-free-services" class="p-heat-bnr__img">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr.jpg?20210402" alt="無償で対応変異株特定サービス">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr.jpg?484566464646464" alt="無償で対応変異株特定サービス" class="u-pc">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr_sp.jpg?555555555555" alt="無償で対応変異株特定サービス" class="u-sp">
 </a>
 
 

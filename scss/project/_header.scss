@@ -1120,11 +1120,17 @@
         display: inline-block;
         max-width: 580px;
         margin: 0 .78rem;
-        width: 90%;
+        width: 47%;
 
         @media (max-width: 767px) {
+            margin: 0;
             &:first-of-type {
-                margin-bottom: 1.34rem;
+                //margin-bottom: 1.34rem;
+                margin-right: .25rem;
+            }
+
+            &:last-of-type {
+                margin-left: .25rem;
             }
         }
     }

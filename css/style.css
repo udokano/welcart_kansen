@@ -11906,12 +11906,18 @@ p.p-conf-note {
   display: inline-block;
   margin: 0 .78rem;
   max-width: 580px;
-  width: 90%;
+  width: 47%;
 }
 
 @media (max-width: 767px) {
+  .p-heat-bnr__img {
+    margin: 0;
+  }
   .p-heat-bnr__img:first-of-type {
-    margin-bottom: 1.34rem;
+    margin-right: .25rem;
+  }
+  .p-heat-bnr__img:last-of-type {
+    margin-left: .25rem;
   }
 }
 
