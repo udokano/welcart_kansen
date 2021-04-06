@@ -11889,6 +11889,12 @@ p.p-conf-note {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .p-heat-bnr {
+    padding: 1.28rem 0;
+  }
+}
+
 .p-heat-bnr__ttl {
   color: #e60012;
   font-size: 1.75rem;

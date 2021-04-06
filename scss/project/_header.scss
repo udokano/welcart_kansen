@@ -1104,6 +1104,9 @@
     text-align: center;
     padding: 3.78rem 0;
     font-size: 0;
+    @media (max-width: 767px) {
+        padding: 1.28rem 0;
+    }
     &__ttl {
         text-align: center;
         font-weight: 600;
