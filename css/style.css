@@ -15650,6 +15650,12 @@ input, select {
   font-size: 1.11rem;
 }
 
+@media (max-width: 767px) {
+  .p-free-inspection--services {
+    margin-top: 24rem;
+  }
+}
+
 .p-services-ttl {
   color: #1892bf;
   font-size: 2.75188rem;
@@ -15670,6 +15676,22 @@ input, select {
 @media (max-width: 767px) {
   .p-services-catch {
     font-size: 1.3125rem;
+  }
+}
+
+.p-services-img {
+  margin-bottom: 1.08rem;
+}
+
+.p-services-bottom {
+  font-size: 1.28rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .p-services-bottom {
+    font-size: 1.14rem;
   }
 }
 

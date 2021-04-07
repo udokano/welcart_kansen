@@ -1,7 +1,14 @@
+.p-free-inspection--services {
+    @media (max-width: 767px) {
+        margin-top: 24rem;
+    }
+}
+
 .p-services-ttl {
     color: #1892bf;
     font-size: rem(44.03);
     margin-bottom: rem(8);
+
     @media (max-width: 767px) {
         font-size: rem(26);
     }
@@ -10,12 +17,25 @@
 .p-services-catch {
     font-size: rem(28.95);
     margin-bottom: rem(30);
+
     @media (max-width: 767px) {
         font-size: rem(21);
     }
 }
 
+.p-services-img {
+    margin-bottom: 1.08rem;
+}
 
+.p-services-bottom {
+    font-size: 1.28rem;
+    font-weight: 600;
+    text-align: center;
+
+    @media (max-width: 767px) {
+        font-size: 1.14rem;
+    }
+}
 
 .p-top-menu-area {
     padding: rem(63) 0;
@@ -280,6 +300,8 @@
         }
     }
 }
+
+.p-free-inspection-area {}
 
 .p-free-inspection {
     padding: rem(94) 0 rem(85);
