@@ -3078,3 +3078,7 @@ function get_custom_order_amount( $period ) {
     else
         return $res['price'] - $res['point'] + $res['discount'] + $res['shipping'] + $res['cod'] + $res['tax'];
 }
+
+
+//送り状番号、発送完了メール一括登録カスタマイズ
+require_once("inc/_loader.php"); //2021.4.7 collne added.
