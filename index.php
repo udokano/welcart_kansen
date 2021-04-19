@@ -51,7 +51,37 @@
 </div>
 <!-- ./key-visual -->
 
-<section class="p-cost p-cost--top">
+<section class="p-free-inspection-area p-free-inspection--services" id="link-free-services">
+
+<div class="c-ttl-skew">
+
+    <h2 class="c-title-under-circle --circle-small c-ttl-skew__text">
+    無償の変異体サービスの実施
+    </h2>
+
+</div>
+<!-- ./skew-ttl -->
+
+    <div class="p-free-inspection  p-bg-light-blue">
+
+        <div class="l-inner">
+                <h3 class="p-services-ttl u-tc u-fw600">2021年4月15日より実施開始予定</h3>
+                <p class="p-services-catch u-tc u-fw600">新たな社会貢献活動として変異体の<br class="u-sp">特定サービスを無償で開始いたします</p>
+
+                <div class="p-services-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/servise_desc.png" alt="検査の流れ" class="u-pc">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/servise_desc_sp.png" alt="検査の流れ" class="u-sp">
+                </div>
+                <!-- ./p-services-img -->
+                <p class="p-services-bottom">N501Y、E484K変異体の特定サービスは、当院のPCR検査の通常検査・迅速検査を<br class="">ご利用いただいた方のみご利用いただけます。</p>
+        </div>
+        <!-- ./l-inner -->
+    </div>
+    <!-- ./p-free-inspection -->
+</section>
+
+
+<section class="p-cost ">
     <div class="l-inner">
         <h2 class="c-ttl-under-center p-cost__ttl c-blue">検査費用</h2>
        <!--  <p class="c-pink p-cost__desc u-text-under-line">※料金改定のお知らせ<br class="">昨今の感染者拡大に伴い、よりPCR検査をご利用いただきやすくするため、料金の値下げを行いました。</p> -->
@@ -291,6 +321,8 @@
     </div>
     <!-- ./l-inner -->
 </section>
+
+
 
 
 <section class="p-handling">
@@ -871,45 +903,6 @@
 
 </div> -->
 <!-- ./p-menu-area -->
-
-
-
-
-<section class="p-free-inspection-area" id="link-free-services">
-
-<div class="c-ttl-skew">
-
-    <h2 class="c-title-under-circle --circle-small c-ttl-skew__text">
-    無償の変異体サービスの実施
-    </h2>
-
-</div>
-<!-- ./skew-ttl -->
-
-    <div class="p-free-inspection p-bg-light-blue">
-
-        <div class="l-inner">
-                <h3 class="p-services-ttl u-tc u-fw600">2021年4月15日より実施開始予定</h3>
-                <p class="p-services-catch u-tc u-fw600">新たな社会貢献活動として変異体の<br class="u-sp">特定サービスを無償で開始いたします</p>
-
-                <div class="p-services-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/servise_desc.png" alt="検査の流れ" class="u-pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/servise_desc_sp.png" alt="検査の流れ" class="u-sp">
-                </div>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
 
 
 <section class="p-free-inspection-area" id="link-free-inspection">

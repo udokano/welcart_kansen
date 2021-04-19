@@ -11456,7 +11456,7 @@ p.p-conf-note {
 
 @media (max-width: 767px) {
   .p-not-yearEnd__label {
-    font-size: 1.48rem;
+    font-size: 1.08rem;
   }
 }
 
@@ -11518,6 +11518,12 @@ p.p-conf-note {
   }
 }
 
+.p-letter-img {
+  margin: 0 auto 1.88rem;
+  max-width: 600px;
+  width: 100%;
+}
+
 .p-table-top {
   border-collapse: collapse;
   margin-bottom: 3px;
@@ -11535,7 +11541,7 @@ p.p-conf-note {
 }
 
 .p-table-top__th:first-of-type {
-  width: 492px;
+  width: 461px;
 }
 
 .p-table-top__th:last-of-type {
@@ -11562,7 +11568,7 @@ p.p-conf-note {
 
 .p-table-date tr th, .p-table-date tr td {
   border: 1px solid #fff;
-  width: 162px;
+  width: 115px;
 }
 
 @media (max-width: 767px) {
@@ -11621,7 +11627,7 @@ p.p-conf-note {
 }
 
 .p-table-date__head-text {
-  font-size: 2.15rem;
+  font-size: 1.3375rem;
 }
 
 @media (max-width: 767px) {
@@ -11631,7 +11637,7 @@ p.p-conf-note {
 }
 
 .p-table-date__head-sub {
-  font-size: 1.64625rem;
+  font-size: 1.08375rem;
   vertical-align: middle;
 }
 
@@ -11670,7 +11676,7 @@ p.p-conf-note {
 .p-table-date__td--white {
   background-color: #fff;
   color: #454545;
-  font-size: 1.56875rem;
+  font-size: 1.00625rem;
   line-height: 1.13;
   padding: 0.875rem 0.4375rem;
   vertical-align: middle;
@@ -11741,7 +11747,7 @@ p.p-conf-note {
 .p-table-date__not-in {
   background-color: #fff;
   color: #5e5e5e;
-  font-size: 1.3125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   left: 0;
   line-height: 1;
@@ -11749,15 +11755,24 @@ p.p-conf-note {
   position: absolute;
   text-align: center;
   top: 0;
-  width: 635px;
+  width: 438px;
 }
 
 @media (max-width: 767px) {
   .p-table-date__not-in {
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
     -ms-writing-mode: tb-rl;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
     -webkit-writing-mode: vertical-rl;
-    font-size: 1.0625rem;
-    height: 53vw;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.125rem;
+    height: 100vw;
+    justify-content: center;
     left: auto;
     line-height: 1.37;
     padding: 0.75rem 1.125rem;
@@ -11770,10 +11785,31 @@ p.p-conf-note {
   }
 }
 
+.p-table-date__not-in--yellow {
+  background-color: #f7f025;
+  color: #e92330;
+  left: -11px;
+  width: 342px;
+}
+
+.p-table-date__not-in--yellow::after {
+  -webkit-transform: translateY(-50%);
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, transparent), color-stop(50%, #f7f025)) top left/100% 50% no-repeat, -webkit-gradient(linear, right bottom, left top, color-stop(50%, transparent), color-stop(50%, #f7f025)) bottom left/100% 50% no-repeat;
+  background: -webkit-linear-gradient(top right, transparent 50%, #f7f025 50%) top left/100% 50% no-repeat, -webkit-linear-gradient(bottom right, transparent 50%, #f7f025 50%) bottom left/100% 50% no-repeat;
+  background: linear-gradient(to bottom left, transparent 50%, #f7f025 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #f7f025 50%) bottom left/100% 50% no-repeat;
+  content: "";
+  height: 3.5rem;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.22rem;
+}
+
 .p-table-date__not-arw {
   background-color: #fff;
   color: #5e5e5e;
-  font-size: 1.11312rem;
+  font-size: 0.73813rem;
   font-weight: lighter;
   left: 0;
   letter-spacing: 0;
@@ -11782,7 +11818,7 @@ p.p-conf-note {
   position: absolute;
   text-align: left;
   top: 0;
-  width: 151px;
+  width: 101px;
   z-index: 500;
 }
 
@@ -11889,6 +11925,12 @@ p.p-conf-note {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .p-heat-bnr {
+    padding: 1.28rem 0;
+  }
+}
+
 .p-heat-bnr__ttl {
   color: #e60012;
   font-size: 1.75rem;
@@ -11906,12 +11948,18 @@ p.p-conf-note {
   display: inline-block;
   margin: 0 .78rem;
   max-width: 580px;
-  width: 90%;
+  width: 47%;
 }
 
 @media (max-width: 767px) {
+  .p-heat-bnr__img {
+    margin: 0;
+  }
   .p-heat-bnr__img:first-of-type {
-    margin-bottom: 1.34rem;
+    margin-right: .25rem;
+  }
+  .p-heat-bnr__img:last-of-type {
+    margin-left: .25rem;
   }
 }
 
@@ -15638,6 +15686,12 @@ input, select {
   font-size: 1.11rem;
 }
 
+@media (max-width: 767px) {
+  .p-free-inspection--services {
+    margin-top: 24rem;
+  }
+}
+
 .p-services-ttl {
   color: #1892bf;
   font-size: 2.75188rem;
@@ -15658,6 +15712,22 @@ input, select {
 @media (max-width: 767px) {
   .p-services-catch {
     font-size: 1.3125rem;
+  }
+}
+
+.p-services-img {
+  margin-bottom: 1.08rem;
+}
+
+.p-services-bottom {
+  font-size: 1.28rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .p-services-bottom {
+    font-size: 1.14rem;
   }
 }
 
