@@ -128,7 +128,7 @@ add_action( 'admin_enqueue_scripts', 'add_admin_style' );
 function add_admin_script($hook_suffix){
    if( 'toplevel_page_usces_orderlist' === $hook_suffix || 'toplevel_page_usces_orderlist' === $hook_suffix ) {
     // jQuery依存かつ、body要素終了直前で読み込む
-    wp_enqueue_script( 'my_admin_script', get_template_directory_uri().'/admin/add.js?4455555555', '', '', true);
+    wp_enqueue_script( 'my_admin_script', get_template_directory_uri().'/admin/add.js?455555', '', '', true);
    }
 }
 add_action( 'admin_enqueue_scripts', 'add_admin_script' );
@@ -3078,7 +3078,6 @@ function get_custom_order_amount( $period ) {
     else
         return $res['price'] - $res['point'] + $res['discount'] + $res['shipping'] + $res['cod'] + $res['tax'];
 }
-
 
 //送り状番号、発送完了メール一括登録カスタマイズ
 require_once("inc/_loader.php"); //2021.4.7 collne added.

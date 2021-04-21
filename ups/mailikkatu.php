@@ -91,7 +91,7 @@ function my_action_order_list_page( $order_action ) {
 	}
 }
 
-//add_filter( 'usces_filter_orderlist_sql_select', 'collne_filter_orderlist_sql_select', 10, 4 );
+add_filter( 'usces_filter_orderlist_sql_select', 'collne_filter_orderlist_sql_select', 10, 4 );
 function collne_filter_orderlist_sql_select( $query, $cscs, $csod, $orderlist ) {
 	global $wpdb;
 

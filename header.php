@@ -273,18 +273,6 @@ jQuery(document).ready(function(){
 -->
 
 
-
-<!--
-
-
----GWの案内---
-
-
--->
-
-
-
-
 <div class="p-not-yearEnd" id="js-pages-head">
 		<input type="checkbox" id="radio-note" class="u-all-hidden is-radio">
 		<label for="radio-note" class="p-not-yearEnd__label"> <strong class="p-not-yearEnd__ttl-in">ＧＷ期間中の検体返送について（重要）</strong> <i class="p-not-yearEnd__arw"> </i> </label>
@@ -298,7 +286,7 @@ jQuery(document).ready(function(){
 							line-height: 1.4;
 							max-width: 900px;
 							margin: 0 auto 10px;
-							"> 
+							">
 									<span style="    background: #f5ff59;
 									color: #af0202; " class="trg">ＧＷ明けは混雑が予想されるため、検査結果は通常より日数をいただく可能性がございます。予めご了承ください。<br class="">
 														<br class="">
@@ -308,27 +296,25 @@ jQuery(document).ready(function(){
 												この期間中に「普通郵便」としてポストに投函いただいても当院の受け取りが5月6日以降となります。<br class="">
 												この場合、十分な状態での保存が難しい関係で、検査をお受けできない場合がございます。
 							</span>
-						
+
 						つきましては、4月30日～5月5日のポスト投函をお控えいただくか、以下「速達」での返送をご利用ください。<br class=""><br class="">
-						
-						
-						    <div class="l-inner p-table-wrap"> <div class="p-letter-img"><img src="<?php echo get_template_directory_uri(); ?>/img/front/img-quick.jpg?42654" alt=""></div></div>
+
+
+						    <div class="l-inner p-table-wrap">
+                  <div class="p-letter-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/img-quick.jpg?42654" alt="">
+                  </div>
+                </div>
 				</div>
 				<!-- ./box -->
 
 
-				<!-- ./table-wrap --> 
-				
+				<!-- ./table-wrap -->
+
 		</div>
-		<!-- ./__content-wrap --> 
+		<!-- ./__content-wrap -->
 </div>
-<!-- ./__yearEnd --> 
-
-
-
-
-
-
+<!-- ./__yearEnd -->
 
 
 
