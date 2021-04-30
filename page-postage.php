@@ -33,7 +33,7 @@ Template Name: 送料一覧
     <div class="l-inner">
             <h2 class="p-transport-price__ttl">送料料金表一覧</h2>
             <div class="p-transport-price__sq-box">
-                <p class="p-transport-price__sq-main">5万円(税込)以上のご購入の方は、<br class="">送料が無料となります。</p>
+                <p class="p-transport-price__sq-main">55,000(税込)以上のご購入の方は、<br class="">送料が無料となります。</p>
                 <p class="p-transport-price__sq-sub">※下記料金表は商品１つあたりの金額になります。</p>
             </div>
              <img src="<?php echo get_template_directory_uri(); ?>/img/item-list/transport_price.jpg?f06519422ffaeb1c" alt="" class="p-transport-price__img">
