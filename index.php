@@ -1489,7 +1489,7 @@
                     </li>
                      <li class="p-use-chart-list-item p-chert-left-row03 p-chert-left-row03--02 p-pos-left c-bdc-water-blue">
                            <div class="p-use-chart-list-item__inner p-inner-left ">
-                        <p class="p-use-chart-list-item__text u-tl u-mb0">検体採取キットが届きましたら、同封されている案内を見ながら同梱物の確認を行ってください。</p>
+                        <p class="p-use-chart-list-item__text u-tl u-mb0">検体採取キットが届きましたら、同封されている案内を見ながら同梱物の確認を行ってください。<br><span class="u-text-under-line c-green">※検査の仕様は予告なく変更する場合がございます。予めご了承くださいませ。</span></p>
 
                           </div>
                     </li>
@@ -1513,18 +1513,15 @@
                        <li class="p-use-chart-list-item p-chert-left-row09 p-pos-left c-bdc-water-blue">
                           <div class="p-use-chart-list-item__inner p-inner-left  p-inner-row04">
                         <div class="p-use-chart-list-item__text u-tl u-mb0">
-                                   検体の採取が完了しましたら<span class="c-green">「PCR検査の唾液採取の流れ」</span>の裏面の案内に従い梱包作業を行って下さい。
+                                  検体の採取が完了しましたら、問診票へのご記入と、QRコードからマイページへの登録を忘れずに行なってください。<br>
+                                  <span class="c-red">マイページ登録が完了していない場合、当院で検査をお受けする事が出来ませんのでご注意ください。</span>
                         </div>
                            </div>
                     </li>
                      <li class="p-use-chart-list-item p-chert-left-row06 p-chert-left-row06--02 p-pos-left c-bdc-water-blue">
                           <div class="p-use-chart-list-item__inner p-inner-left  p-inner-row04">
-                        <div class="p-use-chart-list-item__row">
-                                    <div class="p-use-chart-list-item__thumb --thumb-letter">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/front/chart_letter.jpg?36d7dca331e72df0" alt="thumb">
-                                    </div>
-
-                                    <p class="p-use-chart-list-item__l-text">梱包できましたら、当院への送付をお願い致します。</p>
+                         <div class="p-use-chart-list-item__text u-tl u-mb0">
+                                  問診票への記入とマイページ登録を行いましたら<span class="c-green">「PCR検査の唾液採取の流れ」</span>裏面の案内に従い梱包し、当院へ送付をお願い致します。
                         </div>
                            </div>
                     </li>
@@ -1595,10 +1592,10 @@
                        <li class="p-use-chart-list-item p-chert-right-row05 p-chert-right-row05--02 p-pos-right c-bdc-pink">
                            <div class="p-use-chart-list-item__inner p-inner-right ">
                        <p class="p-use-chart-list-item__text u-tl">検体が当院へ到着後、順に患者様の唾液のPCR検査を行います。<br class="u-pc">混雑状況にもよりますが、検体到着後おおよそ1～2日を目安<span class="u-text-under-line">(※迅速検査の場合)</span>に結果をお知らせいたします。</p>
-                            <a href="https://souki-kai.or.jp/rslt/" class="c-btn-circle-arw p-use-chart-list-item__btn p-use-chart-list-item__btn--wide c-bg-deep-pink" target="_blank">
+                           <!--  <a href="https://souki-kai.or.jp/rslt/" class="c-btn-circle-arw p-use-chart-list-item__btn p-use-chart-list-item__btn--wide c-bg-deep-pink" target="_blank">
                             <span class="u-pc-display">検査結果確認サイトへ進む</span>
-                            <span class="u-sp-display"><!-- 検査結果確認<br>サイトへ進む -->検査結果サイトへ</span>
-                        </a>
+                            <span class="u-sp-display">検査結果サイトへ</span>
+                        </a> -->
                           </div>
                     </li>
 
@@ -1608,7 +1605,7 @@
                                    <img src="<?php echo get_template_directory_uri(); ?>/img/cinics/clinics_logo.png?6dbddba84c650683" alt="">
                                </p>
 
-                               <p class="p-chart-clinics-desc u-tc">検体の採取、回収依頼についてご不安・ご不明点がございましたらオンライン相談が可能です。</p>
+                               <p class="p-chart-clinics-desc u-tc">検体の採取、返送についてご不安・ご不明点がございましたらオンライン相談が可能です。</p>
                        <p class="p-use-chart-list-item__text u-tc">クリニクスでアカウント登録後、クリニクス内で「感染症検査クリニック」を検索してオンライン相談の予約を行ってください。<br class="">ご利用にはビデオ通話が行えるスマートフォン、もしくはPCが必要になります。<br class="u-pc">予めご用意ください。</p>
                             <a href="<?php echo home_url( '/' ); ?>clinics" class="c-btn-circle-arw p-use-chart-list-item__btn p-use-chart-list-item__btn--wide c-bg-deep-pink">
                             <span class="u-pc-display">詳しいご説明はこちら</span>

@@ -100,7 +100,7 @@
             //background-color: #e93faa;
 
             //border-color: #e93faa;
-       
+
         }
 
         &--01.is-tab-active {
@@ -120,7 +120,7 @@
             //background-color: #e68f04;
 
             //border-color: #e68f04;
-       
+
         }
 
         &--02.is-tab-active {
@@ -186,11 +186,11 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    height: 1458px;
+    height: 1528px;
     padding-top: 7.25rem;
 
     @media (max-width: 767px) {
-        height: 295vw;
+        height: 331vw;
 
         //padding-top: 2.5rem;
         padding: 0 .45rem;
@@ -725,19 +725,22 @@
     top: 31.575rem;
 
     @media (max-width: 767px) {
-        top: 25.9555rem;
+        top: 29.9555rem;
     }
 
     &--02 {
-        top: 24.55222rem;
+        top: 27.55222rem;
+        @media (max-width: 767px) {
+             top: 29.55222rem;
+        }
     }
 }
 
 .p-chert-left-row09 {
-    top: 41.955rem;
+    top: 44.955rem;
 
     @media (max-width: 767px) {
-        top: 44.52248rem;
+        top: 51.02248rem;
     }
 
     &--other {
@@ -763,10 +766,10 @@
     }
 
     &--02 {
-        top: 52.01455rem;
+        top: 57.61455rem;
 
         @media (max-width: 767px) {
-            top: 53.85477rem;
+            top: 66.85477rem;
         }
 
         &--other {
@@ -785,10 +788,10 @@
     }
 
     &--02 {
-        top: 63.314555rem;
+        top: 67.614555rem;
 
         @media (max-width: 767px) {
-            top: 66.014555rem;
+            top: 78.014555rem;
         }
 
         &--other {
@@ -847,10 +850,10 @@
     }
 
     &--02 {
-        top: 63.96937rem;
+        top: 69.96937rem;
 
         @media (max-width: 767px) {
-            top: 63.952441rem;
+            top: 78.952441rem;
         }
 
         &--other {
@@ -1015,7 +1018,7 @@
         //background-image: url(../img/front/batu_bg.png);
         //background-size: rem(150) auto;
         //background-position-y: 44%;
-   
+
     }
 
     &__radius {
