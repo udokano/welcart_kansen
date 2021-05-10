@@ -264,6 +264,11 @@ jQuery(document).ready(function(){
 <div class="l-wrapper">
 
 
+
+<style>
+
+/*
+
 <!--
 
 
@@ -317,6 +322,15 @@ jQuery(document).ready(function(){
 <!-- ./__yearEnd -->
 
 
+*/
+
+
+</style>
+
+
+
+
+
 
 
 
@@ -335,8 +349,8 @@ jQuery(document).ready(function(){
 </a>
 
 <a href="#link-free-services" class="p-heat-bnr__img">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr.jpg?484566464646464" alt="無償で対応変異株特定サービス" class="u-pc">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr_sp.jpg?555555555555" alt="無償で対応変異株特定サービス" class="u-sp">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr.jpg?495555548852144" alt="無償で対応変異株特定サービス" class="u-pc">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr_sp.jpg?49495856526149954" alt="無償で対応変異株特定サービス" class="u-sp">
 </a>
 
 

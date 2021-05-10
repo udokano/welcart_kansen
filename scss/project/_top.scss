@@ -37,6 +37,19 @@
     }
 }
 
+.p-services-list {
+    max-width: 730px;
+    margin: 1.22rem auto 0;
+    &__item {
+        padding-left: 1em;
+        text-indent: -1em;
+        font-size: 1.04rem;
+        &:first-of-type {
+            margin-bottom: .65rem;
+        }
+    }
+}
+
 .p-top-menu-area {
     padding: rem(63) 0;
 

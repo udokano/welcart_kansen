@@ -65,7 +65,7 @@
     <div class="p-free-inspection  p-bg-light-blue">
 
         <div class="l-inner">
-                <h3 class="p-services-ttl u-tc u-fw600">2021年4月15日より実施開始予定</h3>
+                <h3 class="p-services-ttl u-tc u-fw600">2021年4月より実施開始</h3>
                 <p class="p-services-catch u-tc u-fw600">新たな社会貢献活動として変異体の<br class="u-sp">特定サービスを無償で開始いたします</p>
 
                 <div class="p-services-img">
@@ -74,6 +74,11 @@
                 </div>
                 <!-- ./p-services-img -->
                 <p class="p-services-bottom">N501Y、E484K変異体の特定サービスは、当院のPCR検査の通常検査・迅速検査を<br class="">ご利用いただいた方のみご利用いただけます。</p>
+
+                <ul class="p-services-list">
+                    <li class="p-services-list__item ">※変異株の結果については行政の申請のみ行っており、ご本人様へのお伝えは致しておりません。<br>お知りになりたい方は直接<a href="<?php echo home_url( '/' ); ?>contact" class="c-pink " target="_blank">クリニックまでお問い合わせ</a>ください。</li>
+                    <li class="p-services-list__item">※ウイルス量によっては検査不適応の場合がございます。予めご了承ください。</li>
+                </ul>
         </div>
         <!-- ./l-inner -->
     </div>

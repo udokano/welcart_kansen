@@ -15737,6 +15737,21 @@ input, select {
   }
 }
 
+.p-services-list {
+  margin: 1.22rem auto 0;
+  max-width: 730px;
+}
+
+.p-services-list__item {
+  font-size: 1.04rem;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.p-services-list__item:first-of-type {
+  margin-bottom: .65rem;
+}
+
 .p-top-menu-area {
   padding: 3.9375rem 0;
 }
