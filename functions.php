@@ -1694,6 +1694,8 @@ if ( !function_exists( 'st_add_orignal_quicktags' ) ) {
                    QTags.addButton('ed_text_blue', '青文字', '<span class="c-blue">','</span>');
                     QTags.addButton('ed_text_orange', 'オレンジ文字', '<span class="c-orange02">','</span>');
                    QTags.addButton('ed_text_line', '下線', '<span class="u-text-under-line">','</span>');
+                   QTags.addButton('ed_mokuji', '目次', '<ul class="matome">\n<li><a href="#1">','</a></li>\n</ul>');
+                   QTags.addButton('ed_heading', '見出し', '<h2 class="p-voyage-box__ttl"><a name="1">','</a></h2>');
 			</script>
 <?php
 }
