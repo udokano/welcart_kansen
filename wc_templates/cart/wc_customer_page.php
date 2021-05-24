@@ -23,9 +23,7 @@ get_header();
 
 						<h1 class="cart_page_title tc"><?php _e('Customer Information', 'usces'); ?></h1>
 
-<?php if (is_none_price_item_in_cart()) : ?>
-						<!-- 0円 -->
-						<?php endif; ?>
+
 
 		<div class="entry">
 
