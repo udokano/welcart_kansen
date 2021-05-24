@@ -129,6 +129,7 @@
     GOTOのカテゴリーIDは、テスト　ローカル　59　本番　25
     来院用のカテゴリー ローカル 62 本番　28
     シークレット　本番29
+    〇円商品　本番30
 
  -->
 
@@ -142,7 +143,7 @@
                                      'post_status' => 'publish',
                                     'category_name' => 'item',
                                      'post__not_in' => array($post->ID),
-                                    'category__not_in' => array(19,25,28,29),  //*** ここをちょくちょく変える  *** */
+                                    'category__not_in' => array(19,25,28,29,30),  //*** ここをちょくちょく変える  *** */
                                     'posts_per_page' => 3,
                                     'orderby' => 'rand',
                                     'order' => 'DESC',
