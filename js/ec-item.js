@@ -23,6 +23,7 @@ jQuery('#js-option01 label').each(function (i) {
 
 
 
+
 jQuery("#js-rd input").each(function (i) {
   jQuery(this).attr('id', 'op-rds' + (i + 1));
 
@@ -32,6 +33,22 @@ jQuery("#js-rd label").each(function (i) {
   jQuery(this).attr('for', 'op-rds' + (i + 1));
 
 });
+
+
+
+jQuery('#js-label-item-kind input').each(function (i) {
+  jQuery(this).attr('id', 'item-kind' + (i + 1));
+});
+
+jQuery('#js-label-item-kind label').each(function (i) {
+  jQuery(this).attr('for', 'item-kind' + (i + 1));
+});
+
+jQuery('#js-label-item-kind label').each(function (i) {
+  jQuery(this).attr('id', 'item-kind-label' + (i + 1));
+});
+
+$('#item-kind-label1').after($('#js-item-kind'));
 
 jQuery("#op-rds1").attr("data-price", "0");
 

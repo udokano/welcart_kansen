@@ -312,6 +312,8 @@ Template Name: 商品一覧
                 </a>
             </li>
 
+
+
             <li class="p-items__contents">
                 <a href="<?php echo home_url( '/' ); ?>introduction">
                 <p class="p-items__name">紹介状の作成</p>
@@ -325,6 +327,30 @@ Template Name: 商品一覧
                             <div class="p-items__price-wrap">
                                 <span class="p-items__p-left">価格</span>
                                 <span class="p-items__p-center">5,500</span>
+                                <span class="p-items__p-right">
+                                    <span class="p-items__tax-sub">(税込)</span>
+                                    <span class="p-items__tax">円</span>
+                                </span>
+                            </div>
+                        </div>
+                </div>
+                <p class="c-btn-circle-arw p-items__btn">購入へ進む</p>
+                </a>
+            </li>
+
+             <li class="p-items__contents">
+                <a href="<?php echo home_url( '/' ); ?>introduction">
+                <p class="p-items__name">検体郵送用ボックス</p>
+                <div class="p-items__row">
+                        <div class="p-items__thumb">
+                            <img src="http://souki-kai.or.jp/copy_ec/wp-content/uploads/2021/05/box.jpg" alt="陰性証明書発行">
+                        </div>
+
+                        <div class="p-items__right">
+                            <p class="p-items__desc">現在返送用封筒をお持ちの方で、返送用ボックスを御利用の方は<br>こちらからご購入ください。</p>
+                            <div class="p-items__price-wrap">
+                                <span class="p-items__p-left">価格</span>
+                                <span class="p-items__p-center">0</span>
                                 <span class="p-items__p-right">
                                     <span class="p-items__tax-sub">(税込)</span>
                                     <span class="p-items__tax">円</span>

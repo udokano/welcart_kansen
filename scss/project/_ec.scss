@@ -515,6 +515,21 @@ body.single.single-post {
             margin-right: 1.1rem;
         }
     }
+
+    &--col {
+        padding-left: 0;
+        margin-top: 1.14rem;
+        label {
+            display: block;
+            text-align: left !important;
+            margin-right: 0;
+            margin-bottom: .85rem;
+            font-size: .94rem;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .-op-radio {
@@ -766,7 +781,7 @@ p.p-conf-note {
         background-color: #fff;
 
         //padding: rem(19) rem(25);
-   
+
     }
 }
 
@@ -855,6 +870,15 @@ p.p-conf-note {
 
     &__name {
         margin-right: .32rem;
+        &--large {
+            font-size: 1.36rem;
+            font-weight: 600;
+        }
+    }
+
+    &__desc {
+        font-size: .98rem;
+        margin-top: .95rem ;
     }
 
     &__inp {
@@ -906,6 +930,21 @@ p.p-conf-note {
 
 .--op-last {
     border: none;
+}
+
+.p-item-images {
+    padding: 0 0 1.04rem;
+    padding-left: rem(21);
+    &__item {
+        width: 30%;
+        margin: 0 rem(7);
+    }
+
+    &__name {
+        font-size: .78rem;
+        color: #bdbdbd;
+        margin-top: .52rem;
+    }
 }
 
 /* 新しいファイルアップロードのスタイル */

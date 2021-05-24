@@ -1,0 +1,145 @@
+.p-return {
+    padding: 4.9999999rem 0 0;
+
+    &__btn {
+        margin-bottom: 3.88rem;
+        width: 440px;
+        padding: 1.22rem 0;
+        font-size: 1.85rem;
+
+        @media (max-width: 767px) {
+            width: 78%;
+            font-size: 1.4rem;
+            margin-bottom: 4.3rem;
+        }
+    }
+}
+
+.p-leaflet {
+    @media (max-width: 767px) {
+        display: block;
+    }
+
+    &__item {
+        margin-bottom: 3.55rem;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 2.77rem;
+    }
+
+    &__list {}
+
+    &__name {
+        text-align: center;
+        color: #fff;
+        line-height: 1;
+        padding: 1.18rem 0;
+        background-color: $bd_blue;
+        margin-bottom: 1.88rem;
+        font-size: 1.55rem;
+        font-weight: 600;
+    }
+
+    &__img {
+        /* cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        } */
+    }
+}
+
+/* スマホ */
+
+.p-sp-area {
+    padding: 3.55rem 0 1.22rem;
+}
+
+.p-rt-sp-ttl {
+    background-color: #f90e0e;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.45rem;
+    padding: .42rem 0;
+    margin-bottom: 1.4rem;
+    line-height: 1.45;
+}
+
+.p-rt-sp-desc {
+    padding: 0 .45rem;
+    padding-right: 0;
+    font-size: 1.08rem;
+    margin-bottom: 2.25rem;
+    line-height: 1.62;
+}
+
+.p-sp-row {
+    margin-bottom: 3.2rem;
+
+    &__list {
+        margin-bottom: 1.55rem;
+    }
+
+    &__tt {}
+
+    &__data {
+        color: #e7201a;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: .62rem;
+    }
+
+    &__desc {
+        font-size: 1.29rem;
+        line-height: 1.45;
+        margin-bottom: 2.6rem;
+    }
+}
+
+.p-set {
+    padding: 2.75rem 0;
+    &__ttl {
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.44rem;
+        margin-bottom: 2.28rem;
+    }
+}
+
+
+.p-set-list {
+    &__item {
+        width: 48%;
+        margin-bottom: 2.88rem;
+    }
+}
+
+
+.p-set-midl {
+    margin-bottom: 1.88rem;
+}
+
+
+.p-set02 {
+    padding: 3.55rem 0 0;
+    &__ttl {
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.55rem;
+        margin-bottom: 3.2rem;
+    }
+}
+
+
+.p-set02-list  {
+    &__ttl {
+        margin-bottom: 2.88rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

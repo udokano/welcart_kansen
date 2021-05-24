@@ -1354,7 +1354,7 @@ body.home {
   font-weight: 600;
   height: 12vw;
   line-height: 60px;
-  margin: 0 auto 2.2rem;
+  margin: 1.22rem auto 2.2rem;
   max-height: 60px;
   max-width: 260px;
   text-align: center;
@@ -7224,6 +7224,23 @@ body.single.single-post a:hover {
   margin-right: 1.1rem;
 }
 
+.-op-radio--col {
+  margin-top: 1.14rem;
+  padding-left: 0;
+}
+
+.-op-radio--col label {
+  display: block;
+  font-size: .94rem;
+  margin-bottom: .85rem;
+  margin-right: 0;
+  text-align: left !important;
+}
+
+.-op-radio--col label:last-of-type {
+  margin-bottom: 0;
+}
+
 .-op-radio input:checked + label::after {
   border-color: #fee01d;
 }
@@ -7592,6 +7609,16 @@ p.p-conf-note {
   margin-right: .32rem;
 }
 
+.p-item-option__name--large {
+  font-size: 1.36rem;
+  font-weight: 600;
+}
+
+.p-item-option__desc {
+  font-size: .98rem;
+  margin-top: .95rem;
+}
+
 .p-item-option__inp input[type='text'] {
   background-color: #fff;
   border: 1px solid #e4e4e4;
@@ -7658,6 +7685,22 @@ p.p-conf-note {
 
 .--op-last {
   border: none;
+}
+
+.p-item-images {
+  padding: 0 0 1.04rem;
+  padding-left: 1.3125rem;
+}
+
+.p-item-images__item {
+  margin: 0 0.4375rem;
+  width: 30%;
+}
+
+.p-item-images__name {
+  color: #bdbdbd;
+  font-size: .78rem;
+  margin-top: .52rem;
 }
 
 /* 新しいファイルアップロードのスタイル */
@@ -11950,22 +11993,45 @@ p.p-conf-note {
   font-size: .78rem;
 }
 
+.p-heat-bnr__list {
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .p-heat-bnr__list {
+    -ms-flex-pack: justify;
+    -ms-flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
 .p-heat-bnr__img {
-  display: inline-block;
+  display: block;
   margin: 0 .78rem;
   max-width: 580px;
-  width: 47%;
+  width: 30%;
 }
 
 @media (max-width: 767px) {
   .p-heat-bnr__img {
     margin: 0;
+    width: 48%;
+    /*
+            &:last-of-type {
+                // margin-left: .25rem;
+                display: block;
+                margin: 1.2rem auto 0;
+            } */
   }
-  .p-heat-bnr__img:first-of-type {
-    margin-right: .25rem;
-  }
-  .p-heat-bnr__img:last-of-type {
-    margin-left: .25rem;
+  .p-heat-bnr__img--last {
+    display: block;
+    margin: 1.2rem auto 0;
   }
 }
 
@@ -15090,6 +15156,144 @@ input, select {
 .p-f-list__desc {
   font-size: 1rem;
   line-height: 1.25;
+}
+
+.p-return {
+  padding: 4.9999999rem 0 0;
+}
+
+.p-return__btn {
+  font-size: 1.85rem;
+  margin-bottom: 3.88rem;
+  padding: 1.22rem 0;
+  width: 440px;
+}
+
+@media (max-width: 767px) {
+  .p-return__btn {
+    font-size: 1.4rem;
+    margin-bottom: 4.3rem;
+    width: 78%;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-leaflet {
+    display: block;
+  }
+}
+
+.p-leaflet__item {
+  margin: 0 auto 2.77rem;
+  margin-bottom: 3.55rem;
+  max-width: 700px;
+  width: 100%;
+}
+
+.p-leaflet__name {
+  background-color: #186e8c;
+  color: #fff;
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 1.88rem;
+  padding: 1.18rem 0;
+  text-align: center;
+}
+
+.p-leaflet__img {
+  /* cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        } */
+}
+
+/* スマホ */
+.p-sp-area {
+  padding: 3.55rem 0 1.22rem;
+}
+
+.p-rt-sp-ttl {
+  background-color: #f90e0e;
+  color: #fff;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 1.4rem;
+  padding: .42rem 0;
+  text-align: center;
+}
+
+.p-rt-sp-desc {
+  font-size: 1.08rem;
+  line-height: 1.62;
+  margin-bottom: 2.25rem;
+  padding: 0 .45rem;
+  padding-right: 0;
+}
+
+.p-sp-row {
+  margin-bottom: 3.2rem;
+}
+
+.p-sp-row__list {
+  margin-bottom: 1.55rem;
+}
+
+.p-sp-row__data {
+  color: #e7201a;
+}
+
+.p-sp-row__name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: .62rem;
+}
+
+.p-sp-row__desc {
+  font-size: 1.29rem;
+  line-height: 1.45;
+  margin-bottom: 2.6rem;
+}
+
+.p-set {
+  padding: 2.75rem 0;
+}
+
+.p-set__ttl {
+  font-size: 1.44rem;
+  font-weight: 600;
+  margin-bottom: 2.28rem;
+  text-align: center;
+}
+
+.p-set-list__item {
+  margin-bottom: 2.88rem;
+  width: 48%;
+}
+
+.p-set-midl {
+  margin-bottom: 1.88rem;
+}
+
+.p-set02 {
+  padding: 3.55rem 0 0;
+}
+
+.p-set02__ttl {
+  font-size: 1.55rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.p-set02-list__ttl {
+  margin-bottom: 2.88rem;
+}
+
+.p-set02-list__ttl:last-of-type {
+  margin-bottom: 0;
 }
 
 .p-pc-table {

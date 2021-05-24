@@ -298,6 +298,43 @@
 
                                             <?php endif; ?>
 
+                                            <?php if(is_single("return-box")): ?>
+                                                    <div class="p-op-wrap u-bdb-none ">
+
+
+                                                            <div class="p-item-option u-ff-colum">
+
+                                                               <p class="p-item-option__name p-item-option__name--large">購入した商品の種類</p>
+
+                                                                <ul class="p-item-images u-flex u-jc-cent u-tc" id="js-item-kind">
+                                                                    <li class="p-item-images__item">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/pcr.jpg" alt="" class="p-item-images__thumb">
+
+                                                                    </li>
+                                                                     <li class="p-item-images__item">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/sandrack.jpg" alt="" class="p-item-images__thumb">
+
+                                                                    </li>
+                                                                     <li class="p-item-images__item">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/costco.jpg" alt="" class="p-item-images__thumb">
+
+                                                                    </li>
+                                                                </ul>
+
+
+                                                                <div class="p-item-option__inp u-po_rel u-ff-colum -op-radio -op-radio--col" id="js-label-item-kind">
+                                                                    <?php echo usces_the_itemOption("購入した商品の種類");?>
+                                                                </div>
+
+                                                                 <p class="p-item-option__desc u-text-under-line">この中に購入した商品がない場合には<a href="<?php echo home_url( '/' ); ?>contact" class="c-pink" target="_blank">ご連絡ください</a></p>
+
+                                                            </div>
+
+
+                                                    </div>
+                                             <?php endif; ?>
+
+
 
                                             <div class="p-action">
                                                 <div class="p-action__quantity">
@@ -310,6 +347,7 @@
                                                         <?php usces_the_itemSkuButton('購入へ進む');?>
                                                     <?php endif; ?>
                                                 </div>
+
                                             </div>
                                     </div>
 
