@@ -48,7 +48,29 @@ jQuery('#js-label-item-kind label').each(function (i) {
   jQuery(this).attr('id', 'item-kind-label' + (i + 1));
 });
 
-$('#item-kind-label1').after($('#js-item-kind'));
+$('#item-kind-label1').after($('#js-item-kind-col01'));
+$('#item-kind-label2').after($('#js-item-kind-col02'));
+$('#item-kind-label3').after($('#js-item-kind-col03'));
+
+/* モーダル起動 */
+
+$(".js-envelope-modal").on("click", function () {
+  var clickImgSrc = $(this).find("img").attr("src");
+  var parentList = $(this).parents('ul').attr("id");
+  console.log(parentList);
+  if (parentList === "js-item-kind-col01") {
+    $("#item-kind1").prop("checked",true);
+  }
+  if (parentList === "js-item-kind-col02") {
+    $("#item-kind2").prop("checked", true);
+  }
+  if (parentList === "js-item-kind-col03") {
+    $("#item-kind3").prop("checked", true);
+  }
+  $("#js-modal-img").attr("src", clickImgSrc);
+  $("#js-modal-content").addClass("is-modal-open");
+  $("body").addClass("is-of-hidden");
+});
 
 jQuery("#op-rds1").attr("data-price", "0");
 
@@ -57,11 +79,16 @@ jQuery("#op-rds2").attr("data-price", "3000");
 jQuery("#op-rds3").attr("data-price", "0");
 
 jQuery("#op-rds4").attr("data-price", "3000");
-var $item_price = jQuery("#js-item-price").data("itemprice");
-console.log($item_price);
-var konma = $item_price.replace(/,/g, '');
-console.log(konma);
-jQuery("#js-item-price").attr("data-itemprice", konma);
+
+//料金を可させる時にのみに作動
+
+if ($("#js-item-price").length) {
+    var $item_price = jQuery("#js-item-price").data("itemprice");
+    console.log($item_price);
+    var konma = $item_price.replace(/,/g, '');
+    console.log(konma);
+      jQuery("#js-item-price").attr("data-itemprice", konma);
+}
 
 
 jQuery(function () {

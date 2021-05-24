@@ -519,15 +519,17 @@ body.single.single-post {
     &--col {
         padding-left: 0;
         margin-top: 1.14rem;
+
         label {
             display: block;
             text-align: left !important;
             margin-right: 0;
             margin-bottom: .85rem;
             font-size: .94rem;
-            &:last-of-type {
+
+            /* &:last-of-type {
                 margin-bottom: 0;
-            }
+            } */
         }
     }
 }
@@ -870,6 +872,7 @@ p.p-conf-note {
 
     &__name {
         margin-right: .32rem;
+
         &--large {
             font-size: 1.36rem;
             font-weight: 600;
@@ -878,7 +881,7 @@ p.p-conf-note {
 
     &__desc {
         font-size: .98rem;
-        margin-top: .95rem ;
+        margin-top: 0.95rem;
     }
 
     &__inp {
@@ -935,9 +938,50 @@ p.p-conf-note {
 .p-item-images {
     padding: 0 0 1.04rem;
     padding-left: rem(21);
+
     &__item {
         width: 30%;
         margin: 0 rem(7);
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            opacity: 0;
+            content: "";
+            transition: ease-in .32s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #5b5b5b, $alpha: 0.78);
+        }
+
+        &::after {
+            opacity: 0;
+            content: "拡大する";
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            transition: ease 0.25s;
+            transition-delay: .3s;
+            color: #fff;
+            font-size: rem(12);
+            letter-spacing: .075em;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+
+            &::after {
+                 opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 
     &__name {

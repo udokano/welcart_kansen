@@ -7235,10 +7235,9 @@ body.single.single-post a:hover {
   margin-bottom: .85rem;
   margin-right: 0;
   text-align: left !important;
-}
-
-.-op-radio--col label:last-of-type {
-  margin-bottom: 0;
+  /* &:last-of-type {
+                margin-bottom: 0;
+            } */
 }
 
 .-op-radio input:checked + label::after {
@@ -7616,7 +7615,7 @@ p.p-conf-note {
 
 .p-item-option__desc {
   font-size: .98rem;
-  margin-top: .95rem;
+  margin-top: 0.95rem;
 }
 
 .p-item-option__inp input[type='text'] {
@@ -7693,8 +7692,50 @@ p.p-conf-note {
 }
 
 .p-item-images__item {
+  cursor: pointer;
   margin: 0 0.4375rem;
+  position: relative;
   width: 30%;
+}
+
+.p-item-images__item::before {
+  -webkit-transition: ease-in .32s;
+  background-color: rgba(91, 91, 91, 0.78);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: ease-in .32s;
+  width: 100%;
+}
+
+.p-item-images__item::after {
+  -webkit-transform: translate(-50%, -100%);
+  -webkit-transition: ease 0.25s;
+  -webkit-transition-delay: .3s;
+  color: #fff;
+  content: "拡大する";
+  font-size: 0.75rem;
+  left: 50%;
+  letter-spacing: .075em;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  transition: ease 0.25s;
+  transition-delay: .3s;
+}
+
+.p-item-images__item:hover::before {
+  opacity: 1;
+}
+
+.p-item-images__item:hover::after {
+  -webkit-transform: translate(-50%, -50%);
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 
 .p-item-images__name {

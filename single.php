@@ -306,17 +306,31 @@
 
                                                                <p class="p-item-option__name p-item-option__name--large">購入した商品の種類</p>
 
-                                                                <ul class="p-item-images u-flex u-jc-cent u-tc" id="js-item-kind">
-                                                                    <li class="p-item-images__item">
-                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/pcr.jpg" alt="" class="p-item-images__thumb">
+                                                                <ul class="p-item-images u-flex u-tc" id="js-item-kind-col01">
+                                                                    <li class="p-item-images__item js-envelope-modal">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/item-envelope01.jpg" alt="" class="p-item-images__thumb">
 
                                                                     </li>
-                                                                     <li class="p-item-images__item">
-                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/sandrack.jpg" alt="" class="p-item-images__thumb">
+                                                                     <li class="p-item-images__item js-envelope-modal">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/item-envelope02.jpg" alt="" class="p-item-images__thumb">
 
                                                                     </li>
-                                                                     <li class="p-item-images__item">
-                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/costco.jpg" alt="" class="p-item-images__thumb">
+                                                                     <li class="p-item-images__item js-envelope-modal">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/item-envelope03.jpg" alt="" class="p-item-images__thumb">
+
+                                                                    </li>
+                                                                </ul>
+
+                                                                <ul class="p-item-images u-flex u-tc" id="js-item-kind-col02">
+                                                                    <li class="p-item-images__item js-envelope-modal">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/item-envelope04.jpg" alt="" class="p-item-images__thumb">
+
+                                                                    </li>
+                                                                </ul>
+
+                                                                <ul class="p-item-images u-flex u-tc" id="js-item-kind-col03">
+                                                                    <li class="p-item-images__item js-envelope-modal">
+                                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/ec/item-envelope05.jpg" alt="" class="p-item-images__thumb">
 
                                                                     </li>
                                                                 </ul>
@@ -353,6 +367,21 @@
 
                                 </div>
                         </div>
+
+                        <!-- モーダル追加してみた -->
+
+                        <!-- modal  content -->
+                        <div class="c-modal js-modal" id="js-modal-content">
+                            <div class="c-modal__bg js-modal-close"></div>
+                            <div class="c-modal__inner">
+                                <div class="c-modal__thumb">
+                                    <img src="" alt="" id="js-modal-img">
+                                </div>
+                                <p class="js-modal-close c-blue c-modal__btn u-mb0">閉じる</p>
+                            </div>
+                            <!-- ./c-modal__inner -->
+                        </div>
+                        <!-- ./c-modal -->
 
                         <!--
 
