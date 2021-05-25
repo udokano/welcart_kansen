@@ -38,7 +38,7 @@ Template Name: 返送用ボックスについて
                            <!--  <dt class="p-leaflet__name">表</dt> -->
                             <dd class="p-leaflet__img">
                                 <a href="<?php echo home_url( '/' ); ?>return-box">
-<img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/leaflet01.jpg?045522266" alt=""
+<img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/leaflet01.jpg?555555555555555555" alt=""
                                 class="js-img-scale"></a>
                             </dd>
                         </dl>
@@ -77,17 +77,23 @@ Template Name: 返送用ボックスについて
                             <img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/col01.png" alt="">
                         </li>
 
+
+
                         <li class="p-sp-row__tt">
                             <dl class="p-sp-row__data u-tc c-red">
                                 <dt class="p-sp-row__name u-tc ufw600">＜注意＞</dt>
                                 <dd class="p-sp-row__desc">返送用封筒にてポストへ投函されますと、郵便物として、お取り扱いが出来ず、当院まで検体が送付されませんのでご注意ください。</dd>
                             </dl>
                         </li>
+
+                         <li class="p-sp-row__list">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/col02.jpg" alt="">
+                        </li>
                 </ul>
                 </div>
 
 <a href="<?php echo home_url( '/' ); ?>return-box">
-<img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/box_thumb_btn.jpg?045522266" alt="">
+<img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/box_thumb_btn.jpg?4656565656565" alt="">
 </a>
 
 

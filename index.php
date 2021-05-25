@@ -552,9 +552,9 @@
                             </div>
                         </td>
 
-                        <td class="p-sp-table__td p-sp-table__td--normal p-sp-table__td--bg-circle" rowspan="2">
+                        <td class="p-sp-table__td p-sp-table__td--bg-circle02" rowspan="2">
                             <div class="p-sp-table__in">
-                                <p class="p-sp-table__desc">当院へ検体が到着後、<span class="c-pink">迅速検査の<br>方は優先的に検査を実施</span></p>
+                                <p class="p-sp-table__desc">当院へ検体が到着後、<span class="c-pink">迅速検査が<br>終了次第、検査を実施</span></p>
                             </div>
                         </td>
                     </tr>
@@ -597,9 +597,11 @@
                             </div>
                         </td>
 
-                        <td class="p-sp-table__td p-sp-table__td--bg-circle02" rowspan="2">
+
+
+                        <td class="p-sp-table__td p-sp-table__td--normal p-sp-table__td--bg-circle" rowspan="2">
                             <div class="p-sp-table__in">
-                                <p class="p-sp-table__desc">当院へ検体が到着後、<span class="c-pink">迅速検査が<br>終了次第、検査を実施</span></p>
+                                <p class="p-sp-table__desc">当院へ検体が到着後、<span class="c-pink">迅速検査の<br>方は優先的に検査を実施</span></p>
                             </div>
                         </td>
                     </tr>
@@ -791,7 +793,7 @@
 
                                  <li class="p-pcr-item-box__list-item">・吸水紙</li>
                             <li class="p-pcr-item-box__list-item">・確認申込書</li>
-                                <li class="p-pcr-item-box__list-item">・返送用封筒</li>
+                             <!--    <li class="p-pcr-item-box__list-item">・返送用封筒</li> -->
                         </ul>
                     </dd>
                 </dl>

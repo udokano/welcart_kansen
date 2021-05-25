@@ -2199,6 +2199,108 @@ function get_payment_name($key)
     return isset($data[$key]) ? $data[$key] : '';
 }
 
+
+/*
+
+特定の商品(0円商品)の場合に支払い方法を限定
+-----------------------------------------------*/
+
+
+add_filter('usces_fiter_the_payment_method', 'my_the_payment_method', 10, 2);
+function my_the_payment_method($payments, $value){
+    global $usces;
+    $carts = $usces->cart->get_cart();
+    $mysku = array('return-box'); //特定の商品のSKU
+    foreach($carts as $cart){
+        $sku = $cart['sku'];
+        if(in_array($sku, $mysku)){
+            $payments = array(
+               array(
+                   'id' => 1,
+                   'name' => '返送用ボックス専用', //支払方法名
+                   'explanation' => '', //説明
+                   'settlement' => 'COD', //決済種別
+                   'module' => '', //決済モジュール
+                   'sort' => 0, //表示順序
+                   'use' => 'activate', //activeで「使用」
+               ),
+               /* array(
+                   'id' => 2,
+                   'name' => '引換コード', //支払方法名
+                   'explanation' => '', //説明
+                   'settlement' => 'coupon', //決済種別
+                   'module' => '', //決済モジュール
+                   'sort' => 1, //表示順序
+                   'use' => 'activate', //activeで「使用」
+               ), */
+           );
+        }
+    }
+    return $payments;
+}
+
+
+
+
+/*
+
+特定の商品(0円商品)がある場合にはカートをからにする
+-----------------------------------------------*/
+
+
+function remove_mismatch_division_item02($mes, $post_id, $sku)
+{
+    global $usces;
+
+     $is_none_price_item = in_category('none-price', $post_id);
+    //var_dump(get_the_category($post_id));
+    $carts = $usces->cart->get_cart();
+    $mysku = array('return-box'); //特定の商品のSKU
+    //var_dump($carts);
+
+    if (!$is_none_price_item) {
+            foreach($carts as $cart){
+            $sku = $cart['sku'];
+            //var_dump($sku);
+            if(in_array($sku, $mysku)){
+                $usces->cart->clear_cart();
+                //var_dump($sku);
+            }
+            else {
+                //$usces->cart->clear_cart();
+            }
+        }
+    }
+
+    else {
+        $usces->cart->clear_cart();
+    }
+
+    return $mes;
+}
+add_filter('usces_filter_incart_check', 'remove_mismatch_division_item02', 6, 3);
+
+/* function is_group_item_in_cart11111()
+{
+    global $usces;
+
+    $cart = $usces->cart->get_cart();
+    $cat_slugs = [];
+    foreach ($cart as $item) {
+        $category = get_the_category($item['post_id']);
+        foreach ($category as $cat_obj) {
+            if (isset($cat_obj->slug) && !empty($cat_obj->slug)) {
+                $cat_slugs[] = $cat_obj->slug;
+            }
+        }
+    }
+
+    return in_array('none-price', $cat_slugs, true);
+}
+ */
+
+
+
 /**
  * 支払方法名が引数で指定したものと一致しているか
  *

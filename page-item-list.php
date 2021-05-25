@@ -338,7 +338,7 @@ Template Name: 商品一覧
                 </a>
             </li>
 
-             <li class="p-items__contents">
+             <!-- <li class="p-items__contents">
                 <a href="<?php echo home_url( '/' ); ?>introduction">
                 <p class="p-items__name">検体郵送用ボックス</p>
                 <div class="p-items__row">
@@ -360,7 +360,7 @@ Template Name: 商品一覧
                 </div>
                 <p class="c-btn-circle-arw p-items__btn">購入へ進む</p>
                 </a>
-            </li>
+            </li> -->
 
             <!--  <li class="p-items__contents">
                  <a href="<?php echo home_url( '/' ); ?>pcr-set02">

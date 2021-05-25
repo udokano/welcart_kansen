@@ -356,11 +356,11 @@ jQuery(document).ready(function(){
   <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_survise_bnr_sp.jpg?49495856526149954" alt="無償で対応変異株特定サービス" class="u-sp">
 </a>
 
-<!-- <a href="<?php echo home_url( '/' ); ?>return" class="p-heat-bnr__img p-heat-bnr__img--last">
+<a href="<?php echo home_url( '/' ); ?>return" class="p-heat-bnr__img p-heat-bnr__img--last">
   <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_box_bnr.jpg?48798562231464664" alt="返送封筒切り替えの案内" class="u-pc">
    <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_box_bnr_sp.jpg?487561156495666" alt="返送封筒切り替えの案内" class="u-sp">
 </a>
- -->
+
 </div>
 
 

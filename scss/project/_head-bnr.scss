@@ -1,0 +1,63 @@
+.p-heat-bnr {
+    text-align: center;
+    padding: 3.78rem 0;
+    font-size: 0;
+
+    @media (max-width: 767px) {
+        padding: 1.28rem 0;
+    }
+
+    &__ttl {
+        text-align: center;
+        font-weight: 600;
+        color: #e60012;
+        font-size: 1.75rem;
+        letter-spacing: .1em;
+        margin-bottom: 1.95rem;
+
+        &::after {
+            font-size: .78rem;
+        }
+    }
+
+    &__list {
+        justify-content: center;
+
+        @media (max-width: 767px) {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &__img {
+        display: block;
+        max-width: 580px;
+        margin: 0 .78rem;
+        width: 30%;
+
+        @media (max-width: 767px) {
+            margin: 0;
+            width: 48%;
+
+            &:first-of-type {
+                //margin-bottom: 1.34rem;
+                // margin-right: .25rem;
+
+            }
+
+            /*
+                        &:last-of-type {
+                            // margin-left: .25rem;
+                            display: block;
+                            margin: 1.2rem auto 0;
+                        } */
+
+            &--last {
+                display: block;
+                margin: 1.2rem auto 0;
+            }
+        }
+    }
+}
