@@ -38,7 +38,7 @@ Template Name: 返送用ボックスについて
                            <!--  <dt class="p-leaflet__name">表</dt> -->
                             <dd class="p-leaflet__img">
                                 <a href="<?php echo home_url( '/' ); ?>return-box">
-<img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/leaflet01.jpg?555555555555555555" alt=""
+<img src="<?php echo get_template_directory_uri(); ?>/img/leaflet/leaflet01.jpg?20210629" alt=""
                                 class="js-img-scale"></a>
                             </dd>
                         </dl>

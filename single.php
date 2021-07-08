@@ -302,7 +302,7 @@
                                                     <div class="p-op-wrap u-bdb-none ">
 
 
-                                                            <div class="p-item-option u-ff-colum">
+                                                            <div class="p-item-option u-ff-colum u-po_rel">
 
                                                                <p class="p-item-option__name p-item-option__name--large">購入した商品の種類</p>
 

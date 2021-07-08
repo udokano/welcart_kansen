@@ -48,6 +48,22 @@ jQuery('#js-label-item-kind label').each(function (i) {
   jQuery(this).attr('id', 'item-kind-label' + (i + 1));
 });
 
+if ($("#js-label-item-kind").length) {
+  $("#js-label-item-kind input[type='radio']").addClass("validate[required]");
+  /* jQuery("form").validationEngine('attach', {
+    'custom_error_messages': {
+      'input[type="radio"]': {
+        'required': {
+          'message': "購入した商品の種類を選択してください"
+        }
+      }
+    }
+  }); */
+}
+
+
+
+
 $('#item-kind-label1').after($('#js-item-kind-col01'));
 $('#item-kind-label2').after($('#js-item-kind-col02'));
 $('#item-kind-label3').after($('#js-item-kind-col03'));
