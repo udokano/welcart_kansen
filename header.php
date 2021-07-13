@@ -15,7 +15,7 @@ ytag({"type":"ycl_cookie"});
 
 <meta charset="UTF-8">
 <title>
-<?php bloginfo('title'); ?>
+<?php bloginfo( 'title' ); ?>
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 <meta name="format-detection" content="telephone=no">
@@ -24,7 +24,7 @@ ytag({"type":"ycl_cookie"});
 
 <?php wp_head(); ?>
 <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- User Heat Tag -->
 <script type="text/javascript">
@@ -43,14 +43,14 @@ ytag({"type":"ycl_cookie"});
   gtag('config', 'AW-824377490');
 </script>
 
-<?php if (is_page('group-form-thanks')): ?>
+<?php if ( is_page( 'group-form-thanks' ) ) : ?>
 <!-- Event snippet for PCR 企業用申し込み conversion page -->
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-824377490/qvyFCKCmxfEBEJKBjIkD'});
 </script>
 <?php endif; ?>
 
-<?php if (is_page('contact-thanks')): ?>
+<?php if ( is_page( 'contact-thanks' ) ) : ?>
 <!-- Event snippet for PCR検査　メール conversion page -->
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-824377490/vOEKCIuSwtcBEJKBjIkD'});
@@ -58,46 +58,46 @@ ytag({"type":"ycl_cookie"});
 <?php endif; ?>
 
 
-<?php if(is_single()) :?>
+<?php if ( is_single() ) : ?>
 <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css?6dbddba84c650683"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
+	  rel="stylesheet"
+	  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css?6dbddba84c650683"
+	  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	  crossorigin="anonymous"
+	/>
 <?php endif; ?>
 
   <link href="<?php echo get_template_directory_uri(); ?>/css/jquery-file-upload.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css?6dbddba84c650683"/>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?<?php echo filemtime( get_stylesheet_directory() . '/css/style.css'); ?>">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?<?php echo filemtime( get_stylesheet_directory() . '/css/style.css' ); ?>">
 
-<?php if (is_page('usces-member')): ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/add.css?<?php echo filemtime( get_stylesheet_directory() . '/css/add.css'); ?>">
+<?php if ( is_page( 'usces-member' ) ) : ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/add.css?<?php echo filemtime( get_stylesheet_directory() . '/css/add.css' ); ?>">
 <?php endif; ?>
 
 <!-- ファビコン読み込み -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/img/favicon/apple-touch-icon.png?6dbddba84c650683">
-    <link rel="icon" type="image/png" sizes="32x32" href=".<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-32x32.png?6dbddba84c650683">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-16x16.png?6dbddba84c650683">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/img/favicon/apple-touch-icon.png?6dbddba84c650683">
+	<link rel="icon" type="image/png" sizes="32x32" href=".<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-32x32.png?6dbddba84c650683">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-16x16.png?6dbddba84c650683">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
 
-<?php if (!is_page('usces-cart') ): ?>
+<?php if ( ! is_page( 'usces-cart' ) ) : ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?6dbddba84c650683"></script>
 <?php endif; ?>
 
 
 <script>
   (function(d) {
-    var config = {
-      kitId: 'lcy4fdg',
-      scriptTimeout: 3000,
-      async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	var config = {
+	  kitId: 'lcy4fdg',
+	  scriptTimeout: 3000,
+	  async: true
+	},
+	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
 
@@ -110,7 +110,7 @@ ytag({"type":"ycl_cookie"});
 /*
 リアルタイムバリデーション
 ------------------------------*/
-<?php if (is_single()) : ?>
+<?php if ( is_single() ) : ?>
 
 /* 商品ページ */
 
@@ -122,31 +122,31 @@ jQuery("#js-tokou input").attr("id","");
 jQuery("#js-tokou input").addClass("validate[required]");
 jQuery("select").addClass("validate[required]");
 jQuery("form").validationEngine('attach', {
-    　promptPosition:"topLeft",
+	　promptPosition:"topLeft",
   /*   'custom_error_messages': {
-      '#file__btn': {
-        'required': {
-          'message': 'フォーマットをアップロードしてください'
-        }
-      }
-    } */
+	  '#file__btn': {
+		'required': {
+		  'message': 'フォーマットをアップロードしてください'
+		}
+	  }
+	} */
   　});
 });
 
 <?php endif; ?>
 
-<?php if (is_page('usces-cart')): ?>
+<?php if ( is_page( 'usces-cart' ) ) : ?>
 
 
 
 
 /* お客様情報入力ページ */
 jQuery(function(){
-    jQuery("form").validationEngine();
-    jQuery("#mailaddress1").addClass("validate[required]");
-     jQuery("#mailaddress2").addClass("validate[required,equals[mailaddress1]]");
-    jQuery("#pass01").addClass("validate[required]");
-     jQuery("#pass02").addClass("validate[required,equals[pass01]]");
+	jQuery("form").validationEngine();
+	jQuery("#mailaddress1").addClass("validate[required]");
+	 jQuery("#mailaddress2").addClass("validate[required,equals[mailaddress1]]");
+	jQuery("#pass01").addClass("validate[required]");
+	 jQuery("#pass02").addClass("validate[required,equals[pass01]]");
 jQuery("#name1").addClass("validate[required]");
 jQuery("#name2").addClass("validate[required]");
 jQuery("#tel").addClass("validate[required]");
@@ -197,47 +197,47 @@ jQuery(".back_to_customer_button").on("click", function() {
 
 <?php endif; ?>
 
-<?php if (is_page('contact')): ?>
+<?php if ( is_page( 'contact' ) ) : ?>
 
 /* お問い合わせページ */
 jQuery(document).ready(function(){
 jQuery("input[name='seimei']").addClass("validate[required]");
 jQuery("input[name='your-email']").addClass("validate[required]");
 jQuery(".wpcf7-form").validationEngine('attach', {
-    　promptPosition:"top"
+	　promptPosition:"top"
   　});
 });
 <?php endif; ?>
 
 
-<?php if (is_page('form')): ?>
+<?php if ( is_page( 'form' ) ) : ?>
 
 /* お問い合わせページ */
 jQuery(document).ready(function(){
 jQuery(".result_form").validationEngine('attach', {
-    　promptPosition:"top"
+	　promptPosition:"top"
   　});
 });
 <?php endif; ?>
 
 
-<?php if (is_page('usces-member')): ?>
+<?php if ( is_page( 'usces-member' ) ) : ?>
 
 /* 新規会員入会ページ */
 jQuery(document).ready(function(){
-      jQuery("#mailaddress1").addClass("validate[required]");
-      jQuery("#mailaddress2").addClass("validate[required,equals[mailaddress1]]");
-      jQuery("#password1").addClass("validate[required]");
-      jQuery("#password2").addClass("validate[required,equals[password1]]");
-      jQuery("#name1").addClass("validate[required]");
-      jQuery("#name2").addClass("validate[required]");
-       jQuery("#zipcode").addClass("validate[required]");
-        jQuery("#member_pref").addClass("validate[required]");
-         jQuery("#address1").addClass("validate[required]");
-          jQuery("#address2").addClass("validate[required]");
-           jQuery("#tel").addClass("validate[required]");
-    jQuery("#new__member__form").validationEngine('attach', {
-    　promptPosition:"topLeft"
+	  jQuery("#mailaddress1").addClass("validate[required]");
+	  jQuery("#mailaddress2").addClass("validate[required,equals[mailaddress1]]");
+	  jQuery("#password1").addClass("validate[required]");
+	  jQuery("#password2").addClass("validate[required,equals[password1]]");
+	  jQuery("#name1").addClass("validate[required]");
+	  jQuery("#name2").addClass("validate[required]");
+	   jQuery("#zipcode").addClass("validate[required]");
+		jQuery("#member_pref").addClass("validate[required]");
+		 jQuery("#address1").addClass("validate[required]");
+		  jQuery("#address2").addClass("validate[required]");
+		   jQuery("#tel").addClass("validate[required]");
+	jQuery("#new__member__form").validationEngine('attach', {
+	　promptPosition:"topLeft"
   　});
 });
 <?php endif; ?>
@@ -265,22 +265,11 @@ jQuery(document).ready(function(){
 
 
 
-<style>
-
-/*
-
-<!--
-
-
----GWの案内---
-
-
--->
 
 
 <div class="p-not-yearEnd" id="js-pages-head">
 		<input type="checkbox" id="radio-note" class="u-all-hidden is-radio">
-		<label for="radio-note" class="p-not-yearEnd__label"> <strong class="p-not-yearEnd__ttl-in">ＧＷ期間中の検体返送について（重要）</strong> <i class="p-not-yearEnd__arw"> </i> </label>
+		<label for="radio-note" class="p-not-yearEnd__label"> <strong class="p-not-yearEnd__ttl-in">オリンピック開催に伴う、郵便物等の集配への影響について（重要）</strong> <i class="p-not-yearEnd__arw"> </i> </label>
 		<div class="p-not-yearEnd__content-wrap is-toggle-box">
 				<div class="p-not-yearEnd__box ">
 							<span style="    background-color: #fff;
@@ -293,23 +282,52 @@ jQuery(document).ready(function(){
 							margin: 0 auto 10px;
 							">
 									<span style="    background: #f5ff59;
-									color: #af0202; " class="trg">ＧＷ明けは混雑が予想されるため、検査結果は通常より日数をいただく可能性がございます。予めご了承ください。<br class="">
-														<br class="">
-														また、ＧＷ期間中、日本郵便による普通郵便の配達休止の影響を受けるため、<br class="u-pc">
-														4月30日～5月5日まで「普通郵便」での検体の返送をご遠慮ください。
-									</span><br class="">
-												この期間中に「普通郵便」としてポストに投函いただいても当院の受け取りが5月6日以降となります。<br class="">
-												この場合、十分な状態での保存が難しい関係で、検査をお受けできない場合がございます。
+									color: #af0202; " class="trg">「東京 2020 オリンピック・パラリンピック競技大会」の開催に伴い、<br class="">開催期間中、東京都区内を中心に交通規制が行われるため、郵便物、ゆうパック等(カタログ販売商品を含みます。)のお届けに遅れが発生することが見込まれます。<br class="">
+									</span>ご迷惑をおかけいたしますが、ご理解を賜りますよう、お願い申し上げます。
 							</span>
 
-						つきましては、4月30日～5月5日のポスト投函をお控えいただくか、以下「速達」での返送をご利用ください。<br class=""><br class="">
+				<div class="l-inner c-white">
+						<dl class="p-dl u-flex">
+							<dt class="p-dl__ttl">対象期間</dt>
+							<dd class="p-dl__data">
+								<ol class="p-ol">
+									<li class="p-ol__item">オリンピック期間 7月19日(月)～8月9日(月)</li>
+                                    <li class="p-ol__item">パラリンピック期間 8月24日(火)～9月5日(日)</li>
+								</ol>
+							</dd>
+						</dl>
 
+                        	<dl class="p-dl u-flex">
+							<dt class="p-dl__ttl">東京都内</dt>
+							<dd class="p-dl__data">
+								<ol class="p-ol">
+									<li class="p-ol__item">中央区、千代田区、港区、江東区、品川区、大田区の一部、渋谷区、および新宿区の一部</li>
+                                    <li class="p-ol__item">※パラリンピック期間(8月24日(火)～9月5日(日))中は、競技会場の変更等のため、地域を変更する場合があります。</li>
+								</ol>
+							</dd>
+						</dl>
 
-						    <div class="l-inner p-table-wrap">
-                  <div class="p-letter-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/front/img-quick.jpg?42654" alt="">
-                  </div>
-                </div>
+                        	<dl class="p-dl u-flex">
+							<dt class="p-dl__ttl">東京都以外</dt>
+							<dd class="p-dl__data">
+								<ol class="p-ol">
+									<li class="p-ol__item">オリンピック期間 北海道、宮城県、福島県、茨城県、千葉県、埼玉県、神奈川県、山梨県および静岡県</li>
+                                    <li class="p-ol__item">パラリンピック期間 千葉県および静岡県</li>
+                                     <li class="p-ol__item">※上記の地域の一部</li>
+								</ol>
+							</dd>
+						</dl>
+
+                        <p class="p-nhh">詳しくはこちら</p>
+                        <ul class="p-btn-list">
+                            <li class="p-btn-list__item">
+                                <a href="https://www.post.japanpost.jp/notification/productinformation/2021/0705_01_01.pdf" class="p-btn-list__btn" target="_blank">東京都外</a>
+                            </li>
+                            <li class="p-btn-list__item">
+                                <a href="https://www.post.japanpost.jp/notification/productinformation/2021/0705_01_02.pdf" class="p-btn-list__btn" target="_blank">東京都内</a>
+                            </li>
+                        </ul>
+				</div>
 				</div>
 				<!-- ./box -->
 
@@ -321,11 +339,6 @@ jQuery(document).ready(function(){
 </div>
 <!-- ./__yearEnd -->
 
-
-*/
-
-
-</style>
 
 
 
@@ -378,216 +391,216 @@ jQuery(document).ready(function(){
 
   <header class="l-header p-header p-header--top" id="js-header">
 
-    <div class="p-header__inner p-header__inner--top">
+	<div class="p-header__inner p-header__inner--top">
 
-    <?php if ( wp_is_mobile() ) : ?>
-          <?php if(is_page("recruit") || is_page("recruit-confirm") || is_page("recruit-thanks")): ?>
-                  <div class="p-header__logo p-header__logo--recruit">
-                    <a href="<?php echo home_url( '/' ); ?>">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_logo_recruit.png?6dbddba84c650683" alt="感染症検査クリニック">
-                    </a>
-                  </div>
-           <?php else: ?>
-           <div class="p-header__logo p-header__logo--top">
-                <a href="<?php echo home_url( '/' ); ?>">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
-                </a>
-              </div>
-          <?php endif; ?>
-      <?php else: ?>
-             <div class="p-header__logo p-header__logo--top">
-                <a href="<?php echo home_url( '/' ); ?>">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
-                </a>
-              </div>
-      <?php endif; ?>
-
-
-        <!-- ./p-header__logo -->
-
-        <a href="https://souki-kai.or.jp/rslt/" class="p-header__sp-gray-btn u-sp-display"  target="_blank">
-        <span class="p-header__sp-gray-btn-text">結果通知<br>サイトへ</span></a>
+	<?php if ( wp_is_mobile() ) : ?>
+		  <?php if ( is_page( 'recruit' ) || is_page( 'recruit-confirm' ) || is_page( 'recruit-thanks' ) ) : ?>
+				  <div class="p-header__logo p-header__logo--recruit">
+					<a href="<?php echo home_url( '/' ); ?>">
+					  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_logo_recruit.png?6dbddba84c650683" alt="感染症検査クリニック">
+					</a>
+				  </div>
+		   <?php else : ?>
+		   <div class="p-header__logo p-header__logo--top">
+				<a href="<?php echo home_url( '/' ); ?>">
+				  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
+				</a>
+			  </div>
+		  <?php endif; ?>
+	  <?php else : ?>
+			 <div class="p-header__logo p-header__logo--top">
+				<a href="<?php echo home_url( '/' ); ?>">
+				  <img src="<?php echo get_template_directory_uri(); ?>/img/common/c_header_logo.png?6dbddba84c650683" alt="感染症検査クリニック">
+				</a>
+			  </div>
+	  <?php endif; ?>
 
 
-        <div class="p-header__right p-header__right--top u-pc-display">
-              <ul class="p-top-btns">
+		<!-- ./p-header__logo -->
+
+		<a href="https://souki-kai.or.jp/rslt/" class="p-header__sp-gray-btn u-sp-display"  target="_blank">
+		<span class="p-header__sp-gray-btn-text">結果通知<br>サイトへ</span></a>
 
 
-                <li class="p-top-btns__item c-btn-gray">
-                  <a href="<?php echo home_url( '/' ); ?>group-form" class="p-top-btns__link c-btn-gray__link" >
-                  企業・団体様のご案内
-                  </a>
-                </li>
-                  <li class="p-top-btns__item c-btn-gray">
-                  <a href="https://souki-kai.or.jp/rslt/" class="p-top-btns__link c-btn-gray__link" target="_blank">
-                  結果通知サイトへ
-                  </a>
-                </li>
-
-              <!--   <li class="p-top-btns__item c-btn-gray">
-                  <a href="<?php echo home_url( '/' ); ?>clinics" class="p-top-btns__link c-btn-gray__link" target="_blank">
-                  Web案内予約
-                  </a>
-                </li> -->
-
-                <li class="p-top-btns__item c-btn-gray">
-                  <a href="<?php echo home_url( '/' ); ?>item-list" class="p-top-btns__link c-btn-gray__link">
-                  検体採取キットのご購入
-                  </a>
-                </li>
-              </ul>
-
-              <div class="p-header-tels u-pc-display">
-
-                          <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel p-header__tel--top u-pc-display">
-                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">個人</span><span class="p-header__number-num">0120-936-760</span></p>
-              </a>
-
-                <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel p-header__tel--top u-pc-display">
-                <p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">企業・団体</span><span class="p-header__number-num p-header__number-num--campany">06-4708-8082</span></p>
-              </a>
-
-                <p class="p-header__time p-header__time--top">個人：9:00~18:00<br class="">企業・団体：9:00~19:00</p>
-              </div>
-        </div>
-        <!-- ./p-header__right -->
-
-              <button class="u-sp-display p-top-menu-btn" id="js-menu-top-menu-switch">
-                <div class="p-top-menu-btn__out-inner">
-                  <!--  <img src="<?php echo get_template_directory_uri(); ?>/img/front/menu_switch.png?6dbddba84c650683" alt="ハンバーガー"> -->
-                  <div class="p-top-menu-btn__inner">
-                        <span class="p-top-menu-btn__bar"></span>
-                          <span class="p-top-menu-btn__bar"></span>
-                          <span class="p-top-menu-btn__bar"></span>
-                          <span class="p-top-menu-btn__bar-other"></span>
-                  </div>
-                </div>
-              </button>
+		<div class="p-header__right p-header__right--top u-pc-display">
+			  <ul class="p-top-btns">
 
 
-    </div>
-    <!-- ./p-header__inner -->
-          <div class="p-global-nav --global-top" id="js-global-nav">
+				<li class="p-top-btns__item c-btn-gray">
+				  <a href="<?php echo home_url( '/' ); ?>group-form" class="p-top-btns__link c-btn-gray__link" >
+				  企業・団体様のご案内
+				  </a>
+				</li>
+				  <li class="p-top-btns__item c-btn-gray">
+				  <a href="https://souki-kai.or.jp/rslt/" class="p-top-btns__link c-btn-gray__link" target="_blank">
+				  結果通知サイトへ
+				  </a>
+				</li>
 
-                <ul class="p-global-nav__list --global-top-list">
-                  <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>#link-use" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
-                        検査のご利用方法
-                    </a>
-                  </li>
-                  <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
-                        よくある質問
-                    </a>
-                  </li>
-                  <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>#link-kit" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
-                        検体採取キット
-                    </a>
-                  </li>
-                   <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>clinics" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
-                        クリニクスの使い方
-                    </a>
-                  </li>
-                  <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>clinic" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
-                        当院について
-                    </a>
-                  </li>
+			  <!--   <li class="p-top-btns__item c-btn-gray">
+				  <a href="<?php echo home_url( '/' ); ?>clinics" class="p-top-btns__link c-btn-gray__link" target="_blank">
+				  Web案内予約
+				  </a>
+				</li> -->
 
-                  <li class="p-global-nav__item --global-top-item">
-                    <a href="<?php echo home_url( '/' ); ?>contact" class="p-global-nav__link --global-top-link" target="_blank">
-                        お問合せ
-                    </a>
-                  </li>
-                </ul>
+				<li class="p-top-btns__item c-btn-gray">
+				  <a href="<?php echo home_url( '/' ); ?>item-list" class="p-top-btns__link c-btn-gray__link">
+				  検体採取キットのご購入
+				  </a>
+				</li>
+			  </ul>
 
-                <div class="p-global-nav__sp-btn-wrap u-sp-display">
-                  <a href="<?php echo home_url( '/' ); ?>item-list" class="p-global-nav__sp-btn">検体採取キットのご購入</a>
-                  <a href="https://souki-kai.or.jp/rslt/" class="p-global-nav__sp-btn" target="_blank">検査結果サイトへ</a>
-                </div>
-                <!-- ./p-global-nav__sp-btn-wrap -->
+			  <div class="p-header-tels u-pc-display">
 
-                <div class="u-sp-display">
+						  <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel p-header__tel--top u-pc-display">
+				<p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">個人</span><span class="p-header__number-num">0120-936-760</span></p>
+			  </a>
 
+				<a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel p-header__tel--top u-pc-display">
+				<p class="p-header__number p-header__number--top u-font-futura"><span class="p-header__number-sq">企業・団体</span><span class="p-header__number-num p-header__number-num--campany">06-4708-8082</span></p>
+			  </a>
 
+				<p class="p-header__time p-header__time--top">個人：9:00~18:00<br class="">企業・団体：9:00~19:00</p>
+			  </div>
+		</div>
+		<!-- ./p-header__right -->
 
-
-                  <?php if(is_page("ch")): ?>
-
-                   <p class="p-header__guide u-mb1-5rem u-mt20">お電話でのお問い合わせ</p>
-
-                   <a href="<?php echo home_url( '/' ); ?>tel/shibuya.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
-
-                        <p class="p-header__number "><span class="p-header__number-sq bg-green-blue-i">渋谷院</span>
-                        <span class="p-header__number-num c-green-blue-i"><!-- 0120-000-000 -->開院準備中</span></p>
-
-                          <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
-
-                  </a>
-
-                  <a href="<?php echo home_url( '/' ); ?>tel/fukuoka.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
-
-                        <p class="p-header__number"><span class="p-header__number-sq bg-light-blue-i ">福岡院</span>
-                        <span class="p-header__number-num c-light-blue-i "><!-- 0120-133-220 -->開院準備中</span></p>
-
-                             <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
-
-                  </a>
+			  <button class="u-sp-display p-top-menu-btn" id="js-menu-top-menu-switch">
+				<div class="p-top-menu-btn__out-inner">
+				  <!--  <img src="<?php echo get_template_directory_uri(); ?>/img/front/menu_switch.png?6dbddba84c650683" alt="ハンバーガー"> -->
+				  <div class="p-top-menu-btn__inner">
+						<span class="p-top-menu-btn__bar"></span>
+						  <span class="p-top-menu-btn__bar"></span>
+						  <span class="p-top-menu-btn__bar"></span>
+						  <span class="p-top-menu-btn__bar-other"></span>
+				  </div>
+				</div>
+			  </button>
 
 
-                    <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
+	</div>
+	<!-- ./p-header__inner -->
+		  <div class="p-global-nav --global-top" id="js-global-nav">
 
-                        <p class="p-header__number"><span class="p-header__number-sq">大阪院</span>
-                        <span class="p-header__number-num">0120-936-760</span></p>
+				<ul class="p-global-nav__list --global-top-list">
+				  <li class="p-global-nav__item --global-top-item">
+					<a href="<?php echo home_url( '/' ); ?>#link-use" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+						検査のご利用方法
+					</a>
+				  </li>
+				  <li class="p-global-nav__item --global-top-item">
+					<a href="<?php echo home_url( '/' ); ?>faq-personal" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+						よくある質問
+					</a>
+				  </li>
+				  <li class="p-global-nav__item --global-top-item">
+					<a href="<?php echo home_url( '/' ); ?>#link-kit" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+						検体採取キット
+					</a>
+				  </li>
+				   <li class="p-global-nav__item --global-top-item">
+					<a href="<?php echo home_url( '/' ); ?>clinics" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+						クリニクスの使い方
+					</a>
+				  </li>
+				  <li class="p-global-nav__item --global-top-item">
+					<a href="<?php echo home_url( '/' ); ?>clinic" class="p-global-nav__link --global-top-link js-sp-clink-menu-close">
+						当院について
+					</a>
+				  </li>
 
+				  <li class="p-global-nav__item --global-top-item">
+					<a href="<?php echo home_url( '/' ); ?>contact" class="p-global-nav__link --global-top-link" target="_blank">
+						お問合せ
+					</a>
+				  </li>
+				</ul>
 
-                   <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+				<div class="p-global-nav__sp-btn-wrap u-sp-display">
+				  <a href="<?php echo home_url( '/' ); ?>item-list" class="p-global-nav__sp-btn">検体採取キットのご購入</a>
+				  <a href="https://souki-kai.or.jp/rslt/" class="p-global-nav__sp-btn" target="_blank">検査結果サイトへ</a>
+				</div>
+				<!-- ./p-global-nav__sp-btn-wrap -->
 
-                  </a>
-
-
-
-                   <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
-
-                        <p class="p-header__number"><span class="p-header__number-sq">企業・団体</span>
-                        <span class="p-header__number-num">06-4708-8082</span></p>
-
-                         <p class="p-header__time p-header__time--zh">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
-
-
-                  </a>
-
-
-                  <?php else: ?>
-
-                   <p class="p-header__guide">お電話でのお問い合わせ</p>
-
-                  <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel u-sp-display" target="_blank">
-
-                        <p class="p-header__number"><span class="p-header__number-sq">個人</span>
-                        <span class="p-header__number-num">0120-936-760</span></p>
-
-                  </a>
+				<div class="u-sp-display">
 
 
 
 
-                   <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel u-sp-display" target="_blank">
+				  <?php if ( is_page( 'ch' ) ) : ?>
 
-                        <p class="p-header__number"><span class="p-header__number-sq">企業・団体</span>
-                        <span class="p-header__number-num">06-4708-8082</span></p>
+				   <p class="p-header__guide u-mb1-5rem u-mt20">お電話でのお問い合わせ</p>
 
-                  </a>
+				   <a href="<?php echo home_url( '/' ); ?>tel/shibuya.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
 
-                   <p class="p-header__time">受付時間<br class="">個人：9:00~18:00<br class="">企業・団体：9:00~19:00</p>
+						<p class="p-header__number "><span class="p-header__number-sq bg-green-blue-i">渋谷院</span>
+						<span class="p-header__number-num c-green-blue-i"><!-- 0120-000-000 -->開院準備中</span></p>
 
-                     <?php endif; ?>
-                </div>
+						  <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+
+				  </a>
+
+				  <a href="<?php echo home_url( '/' ); ?>tel/fukuoka.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
+
+						<p class="p-header__number"><span class="p-header__number-sq bg-light-blue-i ">福岡院</span>
+						<span class="p-header__number-num c-light-blue-i "><!-- 0120-133-220 -->開院準備中</span></p>
+
+							 <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+
+				  </a>
 
 
-              </div>
+					<a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
+
+						<p class="p-header__number"><span class="p-header__number-sq">大阪院</span>
+						<span class="p-header__number-num">0120-936-760</span></p>
+
+
+				   <p class="p-header__time p-header__time--zh">受付時間 9:00~18:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+
+				  </a>
+
+
+
+				   <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel p-header__zh-num u-sp-display" target="_blank">
+
+						<p class="p-header__number"><span class="p-header__number-sq">企業・団体</span>
+						<span class="p-header__number-num">06-4708-8082</span></p>
+
+						 <p class="p-header__time p-header__time--zh">受付時間 9:00~19:00<!--<br><span class="u-text-under-line">※日・祝日は電話受付を休止しております。</span>--></p>
+
+
+				  </a>
+
+
+				  <?php else : ?>
+
+				   <p class="p-header__guide">お電話でのお問い合わせ</p>
+
+				  <a href="<?php echo home_url( '/' ); ?>tel/new-tel.html" class="p-header__tel u-sp-display" target="_blank">
+
+						<p class="p-header__number"><span class="p-header__number-sq">個人</span>
+						<span class="p-header__number-num">0120-936-760</span></p>
+
+				  </a>
+
+
+
+
+				   <a href="<?php echo home_url( '/' ); ?>tel/campany.html" class="p-header__tel u-sp-display" target="_blank">
+
+						<p class="p-header__number"><span class="p-header__number-sq">企業・団体</span>
+						<span class="p-header__number-num">06-4708-8082</span></p>
+
+				  </a>
+
+				   <p class="p-header__time">受付時間<br class="">個人：9:00~18:00<br class="">企業・団体：9:00~19:00</p>
+
+					 <?php endif; ?>
+				</div>
+
+
+			  </div>
 
 
   </header>
@@ -607,32 +620,32 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
 
 
 
-    //console.log(header_hight);
+	//console.log(header_hight);
 
 
 
   window.onresize = function () {
-    header_hight = header.offsetHeight;
-    space_top.style.marginTop = header_hight + "px";
+	header_hight = header.offsetHeight;
+	space_top.style.marginTop = header_hight + "px";
   }
 
   var startPos = 0, win_sc = 0;
 
   //関数にする
   var head_sc_event = function () {
-    //header_hight = header.offsetHeight;
-    win_sc = window.scrollY;
+	//header_hight = header.offsetHeight;
+	win_sc = window.scrollY;
    // console.log(win_sc);
-    if (win_sc >= startPos) {
-      if (win_sc >= 200) {
-        header.style.top = - header_hight + "px";
-      }
-    }
+	if (win_sc >= startPos) {
+	  if (win_sc >= 200) {
+		header.style.top = - header_hight + "px";
+	  }
+	}
 
-    else {
-      header.style.top = 0;
-    }
-    startPos = win_sc;
+	else {
+	  header.style.top = 0;
+	}
+	startPos = win_sc;
   }
 
 
