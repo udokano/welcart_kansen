@@ -48,7 +48,7 @@ gulp.task('sass', function () {
 // 保存時のリロード
 gulp.task('browser-sync', function (done) {
     const browserSyncOption = {
-        proxy: "http://kansenec.local/"
+        proxy: "http://localhost:10068/"
     }
     browserSync.init(browserSyncOption)
     done()
